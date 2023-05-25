@@ -12,8 +12,13 @@ def lazy setColor(mcobject $name, mcobject $color){
     /team modify $name color $color
 }
 
-def lazy seeFriendlyInvisibles(mcobject $name, bool $value = true){
-    /team modify $name seeFriendlyInvisibles $value
+def lazy seeFriendlyInvisibles(mcobject $name, bool value = true){
+    if (value){
+        /team modify $name seeFriendlyInvisibles value
+    }
+    else{
+        /team modify $name seeFriendlyInvisibles false
+    }
 }
 
 def lazy hideFriendlyInvisibles(mcobject $name){
@@ -40,8 +45,13 @@ def lazy setName(mcobject $name, rawjson $text){
     /team modify $name displayName $text
 }
 
-def lazy friendlyFire(mcobject $name, bool $value = true){
-    /team modify $name friendlyFire $value
+def lazy friendlyFire(mcobject $name, bool value = true){
+    if (value){
+        /team modify $name friendlyFire true
+    }
+    else{
+        /team modify $name friendlyFire false
+    }
 }
 
 def lazy join(mcobject $name, entity $sel){
