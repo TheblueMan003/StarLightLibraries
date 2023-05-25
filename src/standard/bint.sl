@@ -7,6 +7,10 @@ struct bint{
     def __init__(int bound){
         this.bound = bound
     }
+    def __init__(int value, int bound){
+        this.value = value
+        this.bound = bound
+    }
 
     def lazy __add__(bint other){
         value += other.value
@@ -16,7 +20,7 @@ struct bint{
         value -= other.value
         value %= bound
     }
-    def lazy __mult__(bint other){
+    def lazy __mul__(bint other){
         value *= other.value
         value %= bound
     }
@@ -57,7 +61,7 @@ struct bint{
         value -= other
         value %= bound
     }
-    def lazy __mult__(int other){
+    def lazy __mul__(int other){
         value *= other
         value %= bound
     }
