@@ -45,10 +45,84 @@ def lazy lockPosition(mcposition pos=~~~){
     at(pos)as(@s[distance=0.1..,gamemode=!creative])./tp @s ~ ~ ~
 }
 
+"""
+Call fct if the value of value has changed since the last call
+"""
 def lazy observe(int value, void=>void fct){
     int tmp
     if (value != tmp){
         tmp = value
         fct()
+    }
+}
+
+"""
+Call fct once until reset is called
+"""
+def lazy runOne(void=>void fct){
+    bool ran
+    if (!ran){
+        ran = true
+        fct()
+    }
+    def @reset(){
+        ran = false
+    }
+}
+
+"""
+Call fct once per player and then call repeated until reset is called
+"""
+def lazy runOne(void=>void fct, void=>void repeated){
+    bool ran
+    if (!ran){
+        ran = true
+        fct()
+    }
+    else{
+        repeated()
+    }
+    def @reset(){
+        ran = false
+    }
+}
+
+"""
+Call fct once per player until reset is called
+"""
+def lazy runOncePerPlayer(void=>void fct){
+    int version := 1
+    scoreboard int ran
+
+    if (version != ran){
+        ran = version
+        fct()
+    }
+    else{
+        repeated()
+    }
+
+    def @reset(){
+        version ++
+    }
+}
+
+"""
+Call fct once per player and then call repeated until reset is called
+"""
+def lazy runOncePerPlayer(void=>void fct, void=>void repeated){
+    int version := 1
+    scoreboard int ran
+
+    if (version != ran){
+        ran = version
+        fct()
+    }
+    else{
+        repeated()
+    }
+
+    def @reset(){
+        version ++
     }
 }
