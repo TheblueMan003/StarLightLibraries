@@ -7,7 +7,7 @@ from os.path import isfile, join
 def addOne(name, version):
     pv = version.replace(".", "_")
 
-    os.makedirs("published/"+name, exist_ok=True)
+    os.makedirs("published/"+name.lower(), exist_ok=True)
     shutil.copyfile("src/"+name+".sl", "published/"+name.lower()+"/"+pv+".sl")
 
     with open("published/index.json") as f:
@@ -17,7 +17,7 @@ def addOne(name, version):
         json.dump(data, f)
 
 if (__name__ == "__main__"):
-    action = input("library to add")
+    action = input("library to add: ")
     if (action == "*"):
         mypath = "src/"
         walk = os.walk(mypath)
