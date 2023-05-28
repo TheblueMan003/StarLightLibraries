@@ -52,7 +52,7 @@ def lazy commandBlockOutput(bool value){
 }
 
 """
-/fill, /clone max size (Java Edition only)
+fill, clone max size (Java Edition only)
 """
 def lazy commandModificationBlockLimit(int $value){
     if (Compiler.isJava()){
