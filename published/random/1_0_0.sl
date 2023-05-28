@@ -5,7 +5,7 @@ if (Compiler.isBedrock){
     Return a random number between `x` (included) and `y` (excluded)
     """
     [noReturnCheck=true] lazy int range(int x, int y){
-        if (Compiler.isVariable(x)){
+        /*if (Compiler.isVariable(x)){
             Compiler.random(_ret, -2147483648, 2147483647)
             _ret %= (y - x)
             _ret += x
@@ -15,9 +15,9 @@ if (Compiler.isBedrock){
             _ret %= (y - x)
             _ret += x
         }
-        else{
+        else{*/
             Compiler.random(_ret, x, y-1)
-        }
+        //}
     }
 }
 if (Compiler.isJava){
