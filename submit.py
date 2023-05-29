@@ -41,4 +41,4 @@ if (__name__ == "__main__"):
                 print(name)
                 addOne(name, "1.0.0")
     else:
-        addOne(action, input("version"))
+        addOne(action, input("version: "))

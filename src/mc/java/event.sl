@@ -1358,11 +1358,18 @@ def lazy onVillage(void=>void func){
         },func)
 }
 
-def lazy onUsingItem(void=>void func){
+def lazy onUsingItem(mcobject item, void=>void func){
     eventCreate({
             "requirement": {
                 "trigger": "minecraft:using_item",
-                "conditions": {}
+                "conditions": {
+                    "player": [],
+                    "item": {
+                        "items": [
+                            item
+                        ]
+                    }
+                }
             }
         },func)
 }

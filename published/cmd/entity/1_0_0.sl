@@ -7,7 +7,7 @@ if (Compiler.isJava()){
     private lazy void _summon(mcobject $name){
         /summon $name
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, json data, void=>void fct){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, json data, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             lazy json ndata = {Tags:[tag, "summon.trg"]}
@@ -32,7 +32,7 @@ if (Compiler.isJava()){
             }
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, json data = {}){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, json data = {}){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             lazy json ndata = {Tags:[tag]}
@@ -96,7 +96,7 @@ if (Compiler.isBedrock()){
     private lazy void _summon(mcobject $name, string $skin){
         /summon $name ~ ~ ~ $skin
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, string skin, void=>void fct){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, string skin, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, skin, fct)
@@ -107,7 +107,7 @@ if (Compiler.isBedrock()){
             _summon(name, tag, skin, fct)
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, void=>void fct){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, fct)
@@ -118,7 +118,7 @@ if (Compiler.isBedrock()){
             _summon(name, tag, fct)
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, string skin){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, string skin){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, skin, null)
@@ -127,7 +127,7 @@ if (Compiler.isBedrock()){
             _summon(name, skin)
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, null)
