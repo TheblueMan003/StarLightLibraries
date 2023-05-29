@@ -1357,3 +1357,12 @@ def lazy onVillage(void=>void func){
             }
         },func)
 }
+
+def lazy onUsingItem(void=>void func){
+    eventCreate({
+            "requirement": {
+                "trigger": "minecraft:using_item",
+                "conditions": {}
+            }
+        },func)
+}
