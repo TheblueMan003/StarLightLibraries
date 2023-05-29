@@ -20,27 +20,6 @@ entity snakeTail
 
 bool enabled
 
-entity limeSnake
-entity yellowSnake
-entity orangeSnake
-entity redSnake
-
-lazy var GreenSpeed = 4
-lazy var GreenLength = 20
-
-lazy var YellowSpeed = 6
-lazy var YellowLength = 20
-
-lazy var OrangeSpeed = 6
-lazy var OrangeLength = 15
-
-lazy var RedSpeed = 8
-lazy var RedLength = 20
-
-lazy var limeSnakeBlock = minecraft:purple_glazed_terracotta
-lazy var yellowSnakeBlock = minecraft:gray_glazed_terracotta
-lazy var orangeSnakeBlock = minecraft:black_glazed_terracotta
-lazy var redSnakeBlock = minecraft:red_glazed_terracotta
 lazy var resetBlock = minecraft:obsidian
 
 enum SnakeBlock{
@@ -355,49 +334,6 @@ public void disable(){
     enabled = false
 }
 
-def @playertick(){
-    enabled:=true
-    if (snake.enabled){
-        bool spawn = false
-        int speed
-        int length
-        if(block(~ ~-0.2 ~, limeSnakeBlock)){
-            block.set(~ ~-0.2 ~, resetBlock)
-            limeSnake += pt.newPointer()
-            spawn = true
-            speed = GreenSpeed
-            length = GreenLength
-        }
-        if(block(~ ~-0.2 ~, yellowSnakeBlock)){
-            block.set(~ ~-0.2 ~, resetBlock)
-            yellowSnake += pt.newPointer()
-            spawn = true
-            speed = YellowSpeed
-            length = YellowLength
-        }
-        if(block(~ ~-0.2 ~, orangeSnakeBlock)){
-            block.set(~ ~-0.2 ~, resetBlock)
-            orangeSnake += pt.newPointer()
-            spawn = true
-            speed = OrangeSpeed
-            length = OrangeLength
-        }
-        if(block(~ ~-0.2 ~, redSnakeBlock)){
-            block.set(~ ~-0.2 ~, resetBlock)
-            redSnake += pt.newPointer()
-            spawn = true
-            speed = RedSpeed
-            length = RedLength
-        }
-        if (spawn){
-            at(~ ~-1 ~){
-                summon(speed, length)
-            }
-            reload.start()
-        }
-    }
-}
-
 CProcess main{
     def main(){
         headMain()
@@ -405,39 +341,35 @@ CProcess main{
     }
 }
 
+template SnakeSpawner<block, speed, length>{
+    entity reloader
+    def @playertick(){
+        enabled:=true
+        if (snake.enabled){
+            bool spawn = false
+            if(block(~ ~-0.2 ~, block)){
+                block.set(~ ~-0.2 ~, resetBlock)
+                reloader += pt.newPointer()
+                spawn = true
+            }
+            if (spawn){
+                at(~ ~-1 ~){
+                    summon(speed, length)
+                }
+                reload.start()
+            }
+        }
+    }
 
-CProcess reload{
-    def main(){
-        with(limeSnake,true){
-            SnakeTime ++
-            if (SnakeTime > 125){
-                block.set(~ ~-1 ~, limeSnakeBlock)
-                stop()
-                entity.kill()
-            }
-        }
-        with(yellowSnake,true){
-            SnakeTime ++
-            if (SnakeTime > 125){
-                block.set(~ ~-1 ~, yellowSnakeBlock)
-                stop()
-                entity.kill()
-            }
-        }
-        with(orangeSnake,true){
-            SnakeTime ++
-            if (SnakeTime > 125){
-                block.set(~ ~-1 ~, orangeSnakeBlock)
-                stop()
-                entity.kill()
-            }
-        }
-        with(redSnake,true){
-            SnakeTime ++
-            if (SnakeTime > 125){
-                block.set(~ ~-1 ~, redSnakeBlock)
-                stop()
-                entity.kill()
+    CProcess reload{
+        def main(){
+            with(reloader,true){
+                SnakeTime ++
+                if (SnakeTime > 125){
+                    block.set(~ ~-1 ~, block)
+                    stop()
+                    entity.kill()
+                }
             }
         }
     }
