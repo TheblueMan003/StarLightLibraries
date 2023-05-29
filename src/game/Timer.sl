@@ -96,7 +96,28 @@ struct Timer{
             stat = TimerState.Ended
         }
     }
-        
+
+    """
+    Return true if the timer is running
+    """
+    bool isRunning(){
+        return stat == TimerState.None
+    }
+
+    """
+    Return true if the timer is paused
+    """
+    bool isPaused(){
+        return stat == TimerState.Pause
+    }
+
+    """
+    Return true if the timer is ended
+    """
+    bool isEnded(){
+        return stat == TimerState.Ended
+    }
+
     """
     Return the time in ticks
     """
