@@ -202,7 +202,7 @@ if (Compiler.isBedrock()){
     """
     Set the spawnpoint
     """
-    bool setSpawn(float $sx, float $sz, bool silent = false){
+    lazy bool setSpawn(float $sx, float $sz, bool silent = false){
         if (checkOld()){
             return false
         }

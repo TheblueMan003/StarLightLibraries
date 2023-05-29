@@ -4,19 +4,10 @@ import standard.int as int
 import standard::tell
 import math
 
-private lazy int level_number = 100
-
-"""
-Set the number of levels in the game
-"""
-def setLevelNumber(int nb){
-    level_number = nb
-}
-
 """
 A template to manage time split in a game
 """
-template TimeSplit{
+template TimeSplit<level_number>{
     scoreboard int[level_number] best_times
     scoreboard int[level_number] current_times
     scoreboard int best_time, current_lvl

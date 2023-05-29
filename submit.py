@@ -27,7 +27,7 @@ def addOne(name2, version):
         json.dump(data, f)
 
 if (__name__ == "__main__"):
-    action = input("library to add: ")
+    action = input("library to add: ").replace(".", "/")
     if (action == "*"):
         mypath = "src/"
         walk = os.walk(mypath)
