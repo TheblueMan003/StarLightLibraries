@@ -447,7 +447,7 @@ def lazy pvp(bool value){
         Process main{
             def main(){
                 with(@a){
-                    no_pvp.add(@s)
+                    no_pvp.join(@s)
                 }
             }
         }

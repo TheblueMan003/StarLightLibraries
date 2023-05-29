@@ -32,7 +32,7 @@ lazy var YellowSpeed = 6
 lazy var YellowLength = 20
 
 lazy var OrangeSpeed = 6
-lazy var OrangeLength = 0
+lazy var OrangeLength = 15
 
 lazy var RedSpeed = 8
 lazy var RedLength = 20
