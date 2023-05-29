@@ -18,7 +18,7 @@ scoreboard int SnakeTime = 0
 entity snakeHead
 entity snakeTail
 
-bool enabled
+bool enabled := true
 
 lazy var resetBlock = minecraft:obsidian
 
@@ -94,6 +94,8 @@ def summon(int speed, int length){
         11 -> summon(SnakeBlock.black,    SnakeBlock.yellow, speed, length)
         12 -> summon(SnakeBlock.magenta,  SnakeBlock.pink, speed, length)
     }
+    main.start()
+    main.start()
 }
 
 

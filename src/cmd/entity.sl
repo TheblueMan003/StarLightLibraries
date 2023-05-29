@@ -7,14 +7,10 @@ if (Compiler.isJava()){
     private lazy void _summon(mcobject $name){
         /summon $name
     }
-    private lazy void removetag(string $tag){
-        /tag @e[tag=$tag] remove $tag
-    }
     [noReturnCheck=true] lazy entity summon(mcobject name, json data, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             lazy json ndata = {Tags:[tag]}
-            removetag(tag)
             ndata += data
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
@@ -27,7 +23,6 @@ if (Compiler.isJava()){
             entity tmp
             lazy string tag = Compiler.getVariableTag(tmp)
             lazy json ndata = {Tags:[tag]}
-            removetag(tag)
             ndata += data
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
@@ -40,7 +35,6 @@ if (Compiler.isJava()){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             lazy json ndata = {Tags:[tag]}
-            removetag(tag)
             ndata += data
             lazy string nbt = Compiler.toNBT(ndata)
             _ret += 1
@@ -55,7 +49,6 @@ if (Compiler.isJava()){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             lazy json ndata = {Tags:[tag]}
-            removetag(tag)
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
             _ret += 1
@@ -67,7 +60,6 @@ if (Compiler.isJava()){
             entity tmp
             lazy string tag = Compiler.getVariableTag(tmp)
             lazy json ndata = {Tags:[tag]}
-            removetag(tag)
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
             with(tmp, true){
