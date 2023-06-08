@@ -3,8 +3,25 @@ package game.parkour.snake
 import cmd.entity as entity
 import cmd.block as block
 import utils.CProcess
+import mc.pointer as pt
+import random
 
-/*
+
+scoreboard int SnakeID
+scoreboard int Speed
+scoreboard int Delay
+scoreboard int Length
+scoreboard SnakeBlock Block1
+scoreboard SnakeBlock Block2
+scoreboard int SnakeTime = 0
+
+entity snakeHead
+entity snakeTail
+
+bool enabled := true
+
+lazy var resetBlock = minecraft:obsidian
+
 enum SnakeBlock{
     white, 
     red, 
@@ -43,15 +60,7 @@ blocktag snake_block{
     minecraft:light_gray_wool,
     minecraft:gray_wool
 }
-scoreboard int SnakeID
-scoreboard int Speed
-scoreboard int Delay
-scoreboard int Length
-scoreboard SnakeBlock Block1
-scoreboard SnakeBlock Block2
 
-entity snakeHead
-entity snakeTail
 
 def init(SnakeBlock b1, SnakeBlock b2, int speed, int length){
     SnakeID = 0
@@ -69,12 +78,31 @@ def summon(SnakeBlock b1, SnakeBlock b2, int speed, int length){
         init(b1, b2, speed, length)
     }
 }
+def summon(int speed, int length){
+    switch(random.range(0, 13)){
+        0 -> summon(SnakeBlock.lime,      SnakeBlock.green, speed, length)
+        1 -> summon(SnakeBlock.blue,      SnakeBlock.cyan, speed, length)
+        2 -> summon(SnakeBlock.blue,      SnakeBlock.light_blue, speed, length)
+        3 -> summon(SnakeBlock.yellow,    SnakeBlock.orange, speed, length)
+        4 -> summon(SnakeBlock.orange,    SnakeBlock.red, speed, length)
+        5 -> summon(SnakeBlock.magenta,   SnakeBlock.purple, speed, length)
+        6 -> summon(SnakeBlock.white,     SnakeBlock.black, speed, length)
+        7 -> summon(SnakeBlock.gray,      SnakeBlock.light_gray, speed, length)
+        8 -> summon(SnakeBlock.lime,      SnakeBlock.yellow,speed, length)
+        9 -> summon(SnakeBlock.black,     SnakeBlock.red, speed, length)
+        10 -> summon(SnakeBlock.black,    SnakeBlock.blue, speed, length)
+        11 -> summon(SnakeBlock.black,    SnakeBlock.yellow, speed, length)
+        12 -> summon(SnakeBlock.magenta,  SnakeBlock.pink, speed, length)
+    }
+    main.start()
+    main.start()
+}
 
 
 def setblock(){
     SnakeID = (SnakeID + 1) 
     SnakeID %= 2
-    snakeBlock block
+    SnakeBlock block
     if (SnakeID == 0){
         block = Block1
     }
@@ -108,7 +136,7 @@ def copy(){
     val speed = Speed
     val length = Length
     int i = SnakeID
-    snakeHead += entity.summon(marker){
+    snakeHead += pt.newPointer(){
         init(b1, b2, speed, length)
         SnakeID = i + 1
         setblock()
@@ -199,7 +227,7 @@ def headMain(){
 
 def rmblock(){
     block.set(minecraft:tripwire)
-    particles.sphere(minecraft:end_rod,1,0.1,1)
+    //particles.sphere(minecraft:end_rod,1,0.1,1)
 }
 
 def copyTail(){
@@ -209,7 +237,7 @@ def copyTail(){
     int b1 = Block1
     int b2 = Block2
     int i = SnakeID
-    snakeTail += entity.summon(marker){
+    snakeTail += pt.newPointer(){
         init(b1, b2, speed, length)
         SnakeID = i
     }
@@ -300,67 +328,12 @@ def tailMain(){
     }
 }
 
-bool enabled
-def helper enable(){
+
+public void enable(){
     enabled = true
 }
-def helper disable(){
+public void disable(){
     enabled = false
-}
-
-def @playertick playerticker(){
-    enabled:=true
-    if (snake.enabled){
-        if (__inited == null){
-            __inited = true
-            GreenSpeed := 4
-            GreenLength := 20
-            
-            RedSpeed := 8
-            RedLength := 20
-        }
-        
-        
-        bool spawn = false
-        int speed
-        int length
-        if(block(~ ~-0.2 ~, minecraft:purple_glazed_terracotta)){
-            setblock(~ ~-0.2 ~ minecraft:obsidian)
-            /summon marker ~ ~ ~ {Invisible:1,Tags:["limeSnake","rSnake"],NoGravity:1}
-            spawn = true
-            speed = GreenSpeed
-            length = GreenLength
-        }
-        if(block(~ ~-0.2 ~ red_glazed_terracotta)){
-            setblock(~ ~-0.2 ~ obsidian)
-            /summon marker ~ ~ ~ {Invisible:1,Tags:["redSnake","rSnake"],NoGravity:1}
-            spawn = true
-            speed = RedSpeed
-            length = RedLength
-        }
-        if (spawn){
-            int rand2 = random.range(0, 13)
-            
-            at(~ ~-1 ~){
-                switch(rand2){
-                    0 -> parkour_snake.newSnake(lime, green, speed, length)
-                    1 -> parkour_snake.newSnake(blue, cyan, speed, length)
-                    2 -> parkour_snake.newSnake(blue, light_blue, speed, length)
-                    3 -> parkour_snake.newSnake(yellow, orange, speed, length)
-                    4 -> parkour_snake.newSnake(orange, red, speed, length)
-                    5 -> parkour_snake.newSnake(magenta, purple, speed, length)
-                    6 -> parkour_snake.newSnake(white, black, speed, length)
-                    7 -> parkour_snake.newSnake(gray, light_gray, speed, length)
-                    8 -> parkour_snake.newSnake(lime, yellow,speed, length)
-                    9 -> parkour_snake.newSnake(black, red, speed, length)
-                    10 -> parkour_snake.newSnake(black, blue, speed, length)
-                    11 -> parkour_snake.newSnake(black, yellow, speed, length)
-                    12 -> parkour_snake.newSnake(magenta, pink, speed, length)
-                }
-            }
-            reload.start()
-        }
-    }
 }
 
 CProcess main{
@@ -370,26 +343,36 @@ CProcess main{
     }
 }
 
-
-scoreboard int SnakeTime = 0
-CProcess reload{
-    def main(){
-        with(@e[tag=limeSnake,type=marker],true){
-            SnakeTime ++
-            if (SnakeTime > 125){
-                block.set(~ ~-1 ~, minecraft:purple_glazed_terracotta)
-                stop()
-                kill(@s)
+template SnakeSpawner<block, speed, length>{
+    entity reloader
+    def @playertick(){
+        enabled:=true
+        if (snake.enabled){
+            bool spawn = false
+            if(block(~ ~-0.2 ~, block)){
+                block.set(~ ~-0.2 ~, resetBlock)
+                reloader += pt.newPointer()
+                spawn = true
+            }
+            if (spawn){
+                at(~ ~-1 ~){
+                    summon(speed, length)
+                }
+                reload.start()
             }
         }
-        with(@e[tag=redSnake,type=marker],true){
-            SnakeTime ++
-            if (SnakeTime > 125){
-                block.set(~ ~-1 ~ minecraft:red_glazed_terracotta)
-                stop()
-                kill(@s)
+    }
+
+    CProcess reload{
+        def main(){
+            with(reloader,true){
+                SnakeTime ++
+                if (SnakeTime > 125){
+                    block.set(~ ~-1 ~, block)
+                    stop()
+                    entity.kill()
+                }
             }
         }
     }
 }
-*/

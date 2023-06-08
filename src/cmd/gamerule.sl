@@ -1,5 +1,8 @@
 package cmd.gamerule
 
+import cmd.Team
+import utils.Process
+
 """
 Show Advancements in chat (Java Edition only)
 """
@@ -52,7 +55,7 @@ def lazy commandBlockOutput(bool value){
 }
 
 """
-/fill, /clone max size (Java Edition only)
+fill, clone max size (Java Edition only)
 """
 def lazy commandModificationBlockLimit(int $value){
     if (Compiler.isJava()){
@@ -438,15 +441,13 @@ Whether if players should be able to pvp
 """
 def lazy pvp(bool value){
     if (Compiler.isJava()){
-        import cmd.team
-        import utils.Process
         Team no_pvp = new Team("no_pvp")
         no_pvp.friendlyFire(!value)
         bool pvp = value
         Process main{
             def main(){
                 with(@a){
-                    no_pvp.add(@s)
+                    no_pvp.join(@s)
                 }
             }
         }
@@ -587,7 +588,6 @@ def lazy tntExplodes(bool value){
         }
     }
     if (Compiler.isJava()){
-        import utils.Process
         Process main{
             def main(){
                 /kill @e[type=tnt,nbt={Fuse:1s}]

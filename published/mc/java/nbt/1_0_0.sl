@@ -44,7 +44,7 @@ if (Compiler.isJava()){
     """
     Set the nbt from a scoreboard
     """
-    def lazy setNBT(mcobject value, mcobject field, mcobject type, float scale){
+    def lazy setNBT(mcobject value, mcobject field, mcobject type, float scale = 1){
         lazy mcobject o = Compiler.getObjective(value)
         lazy mcobject s = Compiler.getSelector(value)
         setNBTInner(s, o, field, type, scale)
@@ -68,5 +68,14 @@ if (Compiler.isJava()){
     property z{
         [noReturnCheck=true] lazy float get() getNBT(_ret, "Pos[2]")
         lazy void set(float value) setNBT(value, "Pos[2]", "double")
+    }
+
+    property rotation_x{
+        [noReturnCheck=true] lazy float get() getNBT(_ret, "Rotation[0]")
+        lazy void set(float value) setNBT(value, "Rotation[0]", "float")
+    }
+    property rotation_y{
+        [noReturnCheck=true] lazy float get() getNBT(_ret, "Rotation[1]")
+        lazy void set(float value) setNBT(value, "Rotation[1]", "float")
     }
 }

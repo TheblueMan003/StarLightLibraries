@@ -26,7 +26,7 @@ if (Compiler.isJava){
     """
     Return a random number between `x` (included) and `y` (excluded)
     """
-    [noReturnCheck=true] lazy int range(int x, int y){
+    [noReturnCheck=true,requiresVariable=true] lazy int range(int x, int y){
         /summon marker ~ ~ ~ {Tags:["random.trg"]}
         with(@e[tag=random.trg,limit=1]){
             nbt.getNBT(_ret, "UUID[0]", 1)

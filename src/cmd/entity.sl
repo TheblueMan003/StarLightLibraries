@@ -7,19 +7,16 @@ if (Compiler.isJava()){
     private lazy void _summon(mcobject $name){
         /summon $name
     }
-    private lazy void removetag(string $tag){
-        /tag @e[tag=$tag] remove $tag
-    }
-    [noReturnCheck=true] lazy entity summon(mcobject name, json data, void=>void fct){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, json data, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
-            lazy json ndata = {Tags:[tag]}
-            removetag(tag)
+            lazy json ndata = {Tags:[tag, "summon.trg"]}
             ndata += data
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
             _ret += 1
-            with(_ret, true){
+            with(@e[tag=summon.trg,limit=1], true){
+                /tag @s remove summon.trg
                 fct()
             }
         }
@@ -27,7 +24,6 @@ if (Compiler.isJava()){
             entity tmp
             lazy string tag = Compiler.getVariableTag(tmp)
             lazy json ndata = {Tags:[tag]}
-            removetag(tag)
             ndata += data
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
@@ -36,11 +32,10 @@ if (Compiler.isJava()){
             }
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, json data = {}){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, json data = {}){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             lazy json ndata = {Tags:[tag]}
-            removetag(tag)
             ndata += data
             lazy string nbt = Compiler.toNBT(ndata)
             _ret += 1
@@ -54,23 +49,23 @@ if (Compiler.isJava()){
     [noReturnCheck=true] lazy entity summon(mcobject name, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
-            lazy json ndata = {Tags:[tag]}
-            removetag(tag)
+            lazy json ndata = {Tags:[tag, "summon.trg"]}
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
             _ret += 1
-            with(_ret, true){
+            with(@e[tag=summon.trg], true){
+                /tag @s remove summon.trg
                 fct()
             }
         }
         else{
             entity tmp
             lazy string tag = Compiler.getVariableTag(tmp)
-            lazy json ndata = {Tags:[tag]}
-            removetag(tag)
+            lazy json ndata = {Tags:[tag, "summon.trg"]}
             lazy string nbt = Compiler.toNBT(ndata)
             _summon(name, nbt)
-            with(tmp, true){
+            with(@e[tag=summon.trg], true){
+                /tag @s remove summon.trg
                 fct()
             }
         }
@@ -101,7 +96,7 @@ if (Compiler.isBedrock()){
     private lazy void _summon(mcobject $name, string $skin){
         /summon $name ~ ~ ~ $skin
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, string skin, void=>void fct){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, string skin, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, skin, fct)
@@ -112,7 +107,7 @@ if (Compiler.isBedrock()){
             _summon(name, tag, skin, fct)
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, void=>void fct){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, void=>void fct){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, fct)
@@ -123,7 +118,7 @@ if (Compiler.isBedrock()){
             _summon(name, tag, fct)
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name, string skin){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name, string skin){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, skin, null)
@@ -132,7 +127,7 @@ if (Compiler.isBedrock()){
             _summon(name, skin)
         }
     }
-    [noReturnCheck=true] lazy entity summon(mcobject name){
+    [noReturnCheck=true,requiresVariable=true] lazy entity summon(mcobject name){
         if (Compiler.variableExist(_ret)){
             lazy string tag = Compiler.getVariableTag(_ret)
             _summon(name, tag, null)
