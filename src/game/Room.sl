@@ -76,7 +76,7 @@ Template for a room that need to execute a function when a player enter it, stay
 
 Nested template are supported. The nested room only check if a player is in the parent room.
 """
-template Room{
+template Room<_sx, _sy, _sz, _ex, _ey, _ez>{
     lazy int sx, sy, sz, ex, ey, ez
     Color color
     scoreboard bool IN
@@ -121,6 +121,7 @@ template Room{
         display = true
         color = yellow
     }
+    init(_sx, _sy, _sz, _ex, _ey, _ez)
     """
     Set the color to display in creative
     """
