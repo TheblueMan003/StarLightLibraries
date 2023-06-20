@@ -26,3 +26,14 @@ public lazy void setBlock(mcobject tag, int index) {
         }
     }
 }
+
+"""
+Map the blocks in tag1 to the blocks in tag2
+"""
+public lazy void convert(mcobject tag1, mcobject tag2) {
+    foreach(block1 in tag1){
+        if (block(block1)){
+            b.set(tag2[block1.index])
+        }
+    }
+}
