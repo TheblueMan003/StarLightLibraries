@@ -2,31 +2,6 @@ package game.Level
 
 import cmd.entity as entity
 
-lazy json example = {
-    "name": "level1",
-    "objects": [
-        {
-            "type": "player",
-            "position": [0, 0, 0],
-            "rotation": [0, 0],
-            "scores": {
-                "score1": 0,
-                "score2": 0
-            },
-            "functions":[
-                "test"
-            ],
-            "tags": [
-                "test"
-            ],
-            "events": [
-                "skin"
-            ],
-            "destroy": "test"
-        }
-    ]
-}
-
 template Level{
     scoreboard void=>void destroyer
     entity objects
