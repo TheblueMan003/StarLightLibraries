@@ -30,7 +30,7 @@ lazy json example = {
 template Level{
     scoreboard void=>void destroyer
     entity objects
-    public lazy void summon(json value){
+    public lazy void summonJson(json value){
         Compiler.insert(($x $y $z), (value["position"][0], value["position"][1], value["position"][2])){
             at($x $y $z){
                 objects += entity.summon(value["type"]){
@@ -76,9 +76,56 @@ template Level{
             }
         }
     }
-    public lazy void summonAll(json value){
+    public lazy void summonAllJson(json value){
         foreach(object in value["objects"]){
             summon(object)
+        }
+    }
+    if (Compiler.isJava()){
+        lazy entity summon(mcobject name, json data, void=>void fct){
+            entity tmp = entity.summon(name, data){
+                objects += @s
+                fct()
+            }
+            return tmp
+        }
+        lazy entity summon(mcobject name, json data = {}){
+            entity tmp = entity.summon(name, data)
+            objects += tmp
+            return tmp
+        }
+        lazy entity summon(mcobject name, void=>void fct){
+            entity tmp = entity.summon(name){
+                objects += @s
+                fct()
+            }
+            return tmp
+        }
+    }
+    if (Compiler.isBedrock()){
+        lazy entity summon(mcobject name, string skin, void=>void fct){
+            entity tmp = entity.summon(name, skin){
+                objects += @s
+                fct()
+            }
+            return tmp
+        }
+        lazy entity summon(mcobject name, void=>void fct){
+            entity tmp = entity.summon(name){
+                objects += @s
+                fct()
+            }
+            return tmp
+        }
+        lazy entity summon(mcobject name, string skin){
+            entity tmp = entity.summon(name, skin)
+            objects += tmp
+            return tmp
+        }
+        lazy entity summon(mcobject name){
+            entity tmp = entity.summon(name)
+            objects += tmp
+            return tmp
         }
     }
     public void onStart(){
@@ -92,7 +139,7 @@ template Level{
         onStop()
         with(objects,true){
             destroyer()
-            /kill
+            entity.despawn()
         }
     }
 }
