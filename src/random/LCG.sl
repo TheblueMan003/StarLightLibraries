@@ -1,5 +1,7 @@
 package random.LCG
 
+import math
+
 """
 Struct for Linear Congruent Generator
 Use the value from glibc (https://en.wikipedia.org/wiki/Glibc)
@@ -58,6 +60,17 @@ struct LCG{
     """
     int seed(){
         return s
+    }
+
+    """
+    Return a new random number from a Gaussian distribution with mean and standard deviation
+    """
+    float nextGaussian(float mean = 0.0, float std = 1.0) {
+        float u1 = nextFloat()
+        float u2 = nextFloat()
+
+        float z0 = math.sqrt(-2.0 * math.log(u1)) * math.cos(2.0 * math.pi * u2)
+        return mean + std * z0
     }
 }
 
