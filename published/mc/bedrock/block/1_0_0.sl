@@ -182,6 +182,7 @@ template Block{
             }
         }
     }
+    
 
     """
     Set texture
@@ -198,6 +199,24 @@ template Block{
         _texturesJson = [up, side, down]
         _texturesMod = 2
     }
+
+    """
+    Set texture
+    """
+    def lazy setTexture(string name, json data){
+        _texturesJson = data
+        _texturesMod = 3
+    }
+
+    """
+    Set texture
+    """
+    def lazy addRandomTexture(string texture, int weight){
+        lazy var path = "textures/"+texture
+        _texturesJson += {"path": path,"weight": weight}
+        _texturesMod = 3
+    }
+
 
     """
     Set sound
@@ -230,6 +249,13 @@ template Block{
                 _blocks += {"$fullName": {"textures": {"up": up, "side": side, "down": down}, "sounds": _sound}}
             }
         }
+        else if (_texturesMod == 3){
+            lazy var textureName = "sl.block."+_name
+            textures.addBlockRandom(textureName, _texturesJson)
+            Compiler.insert($fullName, fullName){
+                _blocks += {"$fullName": {"textures": textureName, "sounds": _sound}}
+            }
+        } 
 
         Compiler.insert($name, _name){
             jsonfile blocks.$name{

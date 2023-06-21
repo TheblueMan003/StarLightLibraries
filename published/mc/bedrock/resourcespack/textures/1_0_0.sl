@@ -36,3 +36,15 @@ def lazy addBlock(string path){
         }
     }
 }
+
+def lazy addBlockRandom(string name, json textures){
+    Compiler.insert($name, name){
+        blocks += {"$name": {
+                "textures": 
+                {
+                "variations": textures
+                }
+            }
+        }
+    }
+}
