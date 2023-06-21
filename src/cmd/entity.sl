@@ -439,3 +439,14 @@ lazy bool forall(entity e, bool test){
     }
     return exist
 }
+
+if (Compiler.isBedrock()){
+    def lazy event(string $event){
+        /event entity @s to_death
+    }
+    def lazy event(entity selector, string $event){
+        with(selector){
+            /event entity @s to_death
+        }
+    }
+}
