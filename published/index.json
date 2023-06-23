@@ -178,6 +178,11 @@
                 "url": "cmd/sound/1_0_0.sl",
                 "filename": "cmd/sound.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/sound/1_0_1.sl",
+                "filename": "cmd/sound.sl",
+                "version": "1.0.1"
             }
         ],
         "cmd.spawnpoint": [
