@@ -9,7 +9,7 @@ struct Event{
             func()
         }
     }
-    public lazy void __apply__(void=>void func){
+    public lazy void __apply__(){
         @structs.event()
     }
 }

@@ -33,15 +33,20 @@ public void printVersion(){
     lazy int major = Compiler.getProjectVersionMajor()
     lazy int minor = Compiler.getProjectVersionMinor()
     lazy int patch = Compiler.getProjectVersionPatch()
+
+    lazy int cmajor = Compiler.getCompilerVersionMajor()
+    lazy int cminor = Compiler.getCompilerVersionMinor()
+    lazy int cpatch = Compiler.getCompilerVersionPatch()
+    
     if (major < 1){
         standard.print("============[",name,"]============")
-        standard.print("Compiled with: Star Light v")
+        standard.print("Compiled with: Star Light v", cmajor,".",cminor,".",cpatch)
         standard.print("Project Version: ",type," ", 1,".",minor,".",patch)
         standard.print("==================================")
     }
     else{
         standard.print("============[",name,"]============")
-        standard.print("Compiled with: Star Light v")
+        standard.print("Compiled with: Star Light v", cmajor,".",cminor,".",cpatch)
         standard.print("Project Version: ",type," ", major,".",minor,".",patch)
         standard.print("==================================")
     }
