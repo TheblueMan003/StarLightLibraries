@@ -36,7 +36,7 @@ def lazy bool has(string tag){
     return @s[tag=tag]
 }
 
-def lazy bool has(entity selector, string tag){
-    lazy val sel = Compiler.mergeSelector(selector, @e[tag=tag])
+def lazy bool has(entity selector, string $tag){
+    lazy val sel = Compiler.mergeSelector(selector, @e[tag=$tag])
     return sel
 }
