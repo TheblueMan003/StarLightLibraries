@@ -257,6 +257,131 @@ predicate isHoldingItem(mcobject item){
     }
 }
 
+predicate isHoldingItemHead(mcobject item, int count){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "head": {
+                "items":[ item ],
+                "count": count
+            }
+        }
+    }
+}
+
+predicate isHoldingItemHead(mcobject item){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "head": {
+                "items":[ item ]
+            }
+        }
+    }
+}
+
+predicate isHoldingItemChest(mcobject item, int count){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "chest": {
+                "items":[ item ],
+                "count": count
+            }
+        }
+    }
+}
+
+predicate isHoldingItemChest(mcobject item){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "chest": {
+                "items":[ item ]
+            }
+        }
+    }
+}
+
+predicate isHoldingItemLegs(mcobject item, int count){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "legs": {
+                "items":[ item ],
+                "count": count
+            }
+        }
+    }
+}
+
+predicate isHoldingItemLegs(mcobject item){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "legs": {
+                "items":[ item ]
+            }
+        }
+    }
+}
+
+predicate isHoldingItemFeet(mcobject item, int count){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "feet": {
+                "items":[ item ],
+                "count": count
+            }
+        }
+    }
+}
+
+predicate isHoldingItemFeet(mcobject item){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "feet": {
+                "items":[ item ]
+            }
+        }
+    }
+}
+
+predicate isHoldingItemOffhand(mcobject item, int count){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "offhand": {
+                "items":[ item ],
+                "count": count
+            }
+        }
+    }
+}
+
+predicate isHoldingItemOffhand(mcobject item){
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "equipment": {
+            "offhand": {
+                "items":[ item ]
+            }
+        }
+    }
+}
+
 
 if (Compiler.isBedrock){
     def lazy bool isHoldingItem(mcobject item, int count = 1){
