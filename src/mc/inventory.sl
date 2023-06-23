@@ -387,6 +387,21 @@ if (Compiler.isBedrock){
     def lazy bool isHoldingItem(mcobject item, int count = 1){
         return @s[hasitem={item=item,quantity=count,location=slot.weapon.mainhand,slot=0}]
     }
+    def lazy bool isHoldingItemOffhand(mcobject item, int count = 1){
+        return @s[hasitem={item=item,quantity=count,location=slot.weapon.offhand,slot=0}]
+    }
+    def lazy bool isHoldingItemHead(mcobject item, int count = 1){
+        return @s[hasitem={item=item,quantity=count,location=slot.armor.head,slot=0}]
+    }
+    def lazy bool isHoldingItemChest(mcobject item, int count = 1){
+        return @s[hasitem={item=item,quantity=count,location=slot.armor.chest,slot=0}]
+    }
+    def lazy bool isHoldingItemLegs(mcobject item, int count = 1){
+        return @s[hasitem={item=item,quantity=count,location=slot.armor.legs,slot=0}]
+    }
+    def lazy bool isHoldingItemFeet(mcobject item, int count = 1){
+        return @s[hasitem={item=item,quantity=count,location=slot.armor.feet,slot=0}]
+    }
 }
 
 """
