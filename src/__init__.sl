@@ -16,6 +16,13 @@ def @tick __playertick__(){
         }
     }
 }
+def @tick __itemtick__(){
+    if (@itemtick){
+        with(@e[type=item], true){
+            @itemtick()
+        }
+    }
+}
 
 def lazy aligned(void=>void fct){
     align("xyz")at(~0.5 ~ ~0.5)fct()
