@@ -39,5 +39,5 @@ def lazy disk(mcobject $part, float $radius, float $speed, float $amount){
 Spawn an explosion particle
 """
 def explosion(){
-    particle.sphere(minecraft:explosion_emitter,1,1,1)
+    sphere(minecraft:explosion_emitter,1,1,1)
 }
