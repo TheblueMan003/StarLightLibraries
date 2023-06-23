@@ -730,6 +730,13 @@
                 "filename": "game/ring.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.java.world": [
+            {
+                "url": "mc/java/world/1_0_0.sl",
+                "filename": "mc/java/world.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
