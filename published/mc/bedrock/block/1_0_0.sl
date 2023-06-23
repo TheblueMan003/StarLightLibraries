@@ -14,10 +14,13 @@ template Block{
     private lazy var _components = {}
     private lazy var _description = {}
     private lazy var _properties = {}
+    private lazy var _events = {}
     private lazy var _permutations = []
     private lazy var _texturesSingle = ""
     private lazy var _texturesJson = []
     private lazy var _texturesMod = 0
+    private lazy var _hasGeometry = false
+    private lazy var _renderMethod = "opaque"
 
     private lazy var _sound = "stone"
 
@@ -110,7 +113,7 @@ template Block{
     Set the block light emission
     """
     def lazy setBlockLightEmission(float light){
-        _components += {"minecraft:block_light_emission": light}
+        _components += {"minecraft:light_emission": light}
     }
 
     """
@@ -139,6 +142,29 @@ template Block{
     """
     def lazy setGeometry(string geometry){
         _components += {"minecraft:geometry": geometry}
+        _hasGeometry = true
+    }
+
+    """
+    Set the render Method to alpha
+    """
+    def lazy setTransparent(){
+        _renderMethod = "alpha_test"
+    }
+
+    """
+    Set the render Method to alpha
+    """
+    def lazy setBlend(){
+        _renderMethod = "blend"
+    }
+
+
+    """
+    Set the render Method to be opaque
+    """
+    def lazy setOpaque(){
+        _renderMethod = "opaque"
     }
 
     """
@@ -226,44 +252,123 @@ template Block{
     }
 
 
+    def lazy setRotatable(){
+        _components += {
+            "minecraft:on_player_placing": {
+				"event": "update_rotation"
+			}
+        }
+        _events += {
+			"update_rotation": {
+				"set_block_property": {
+					"block:rotation": "query.cardinal_facing_2d"
+				}
+			}
+		}
+        _properties += {"block:rotation": [0,1,2,3,4,5,6]}
+        _permutations += [
+			{
+				"condition": "query.block_property('block:rotation') == 2",
+				"components": {
+					"minecraft:transformation": {"rotation": [
+						0,
+						0,
+						0
+					]}
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotation') == 3",
+				"components": {
+					"minecraft:transformation": {"rotation": [
+						0,
+						-180,
+						0
+					]}
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotation') == 4",
+				"components": {
+					"minecraft:transformation": {"rotation": [
+						0,
+						90,
+						0
+					]}
+				}
+			},
+			{
+				"condition": "query.block_property('block:rotation') == 5",
+				"components": {
+					"minecraft:transformation": {"rotation": [
+						0,
+						-90,
+						0
+					]}
+				}
+			}
+		]
+    }
+
+
 
     def [Compiler.order=9999] private make(){
         lazy val fullName = _namespace + ":" + _name
         _description += {"identifier": fullName}
         _description += {"properties": _properties}
 
+        lazy var textureName = ""
         if (_texturesMod == 1){
+            textureName = _texturesSingle
             textures.addBlock(_texturesSingle)
-            Compiler.insert($fullName, fullName){
-                _blocks += {"$fullName": {"textures": _texturesSingle, "sounds": _sound}}
+            if (!_hasGeometry){
+                Compiler.insert($fullName, fullName){
+                    _blocks += {"$fullName": {"textures": _texturesSingle, "sounds": _sound}}
+                }
             }
-        } else if (_texturesMod == 2){
+        } 
+        else if (_texturesMod == 2){
+            textureName = fullName
             foreach(texture in _texturesJson){
                 textures.addBlock(texture)
             }
             lazy val up = _texturesJson[0]
             lazy val side = _texturesJson[1]
             lazy val down = _texturesJson[2]
-
-            Compiler.insert($fullName, fullName){
-                _blocks += {"$fullName": {"textures": {"up": up, "side": side, "down": down}, "sounds": _sound}}
+            if (!_hasGeometry){
+                Compiler.insert($fullName, fullName){
+                    _blocks += {"$fullName": {"textures": {"up": up, "side": side, "down": down}, "sounds": _sound}}
+                }
             }
         }
         else if (_texturesMod == 3){
-            lazy var textureName = "sl.block."+_name
+            textureName = "sl.block."+_name
             textures.addBlockRandom(textureName, _texturesJson)
-            Compiler.insert($fullName, fullName){
-                _blocks += {"$fullName": {"textures": textureName, "sounds": _sound}}
+            if (!_hasGeometry){
+                Compiler.insert($fullName, fullName){
+                    _blocks += {"$fullName": {"textures": textureName, "sounds": _sound}}
+                }
             }
-        } 
+        }
+        if (_hasGeometry){
+            _components += {
+                    "minecraft:material_instances": {
+                    "*": {
+                        "texture": textureName,
+                        "render_method": _renderMethod
+                    }
+                }
+            }
+        }
 
         Compiler.insert($name, _name){
             jsonfile blocks.$name{
-                "format_version": "1.19.50",
+                "format_version": "1.20.0",
                 "minecraft:block": {
                     "description": _description,
                     "components": _components,
-                    "permutations": _permutations
+                    "permutations": _permutations,
+                    "events": _events
                 }
             }
         }
