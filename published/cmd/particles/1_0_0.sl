@@ -1,4 +1,4 @@
-package cmd.particle
+package cmd.particles
 
 """
 Spawn a single particle of type `part`
