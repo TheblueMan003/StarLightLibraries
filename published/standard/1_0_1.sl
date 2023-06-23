@@ -29,6 +29,7 @@ def (int,int,int) version(){
 package _
 public void printVersion(){
     lazy string name = Compiler.getProjectFullName()
+    lazy string author = Compiler.getProjectAuthor()
     lazy string type = Compiler.getProjectVersionType()
     lazy int major = Compiler.getProjectVersionMajor()
     lazy int minor = Compiler.getProjectVersionMinor()
@@ -40,12 +41,14 @@ public void printVersion(){
     
     if (major < 1){
         standard.print("============[",name,"]============")
+        standard.print("Made by: ",author)
         standard.print("Compiled with: Star Light v", cmajor,".",cminor,".",cpatch)
         standard.print("Project Version: ",type," ", 1,".",minor,".",patch)
         standard.print("==================================")
     }
     else{
         standard.print("============[",name,"]============")
+        standard.print("Made by: ",author)
         standard.print("Compiled with: Star Light v", cmajor,".",cminor,".",cpatch)
         standard.print("Project Version: ",type," ", major,".",minor,".",patch)
         standard.print("==================================")
