@@ -24,7 +24,7 @@ def addOne(name2, version):
                     break
             data["libraries"][name.replace("/", ".").lower()].append({"url": name.lower()+"/"+pv+".sl", "filename": name.lower()+".sl", "version": version})
         
-        json.dump(data, f)
+        json.dump(data, f, indent=4)
 
 if (__name__ == "__main__"):
     action = input("library to add: ").replace(".", "/")
