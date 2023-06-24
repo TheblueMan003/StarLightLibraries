@@ -749,13 +749,13 @@
                 "filename": "game/parkour/flag_checkpoint.sl",
                 "resourcespack": [
                     {
-                        "url": "resoucespack/flag_checkpoint/bedrock/1_0_0.zip",
+                        "url": "resourcespack/flag_checkpoint/bedrock/1_0_0.zip",
                         "filename": "flag_checkpoint",
                         "version": "1.0.0",
                         "game": "bedrock"
                     },
                     {
-                        "url": "resoucespack/flag_checkpoint/java/1_0_0.zip",
+                        "url": "resourcespack/flag_checkpoint/java/1_0_0.zip",
                         "filename": "flag_checkpoint",
                         "version": "1.0.0",
                         "game": "java"
