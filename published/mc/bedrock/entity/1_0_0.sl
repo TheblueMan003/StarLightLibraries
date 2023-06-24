@@ -18,55 +18,57 @@ template Entity{
     lazy var name = Compiler.getContextName()
 
     def [Compiler.order=999999] make(){
-        Compiler.insert(($name, $pref), (name, namespace)){
-            jsonfile entities.$name{
-                "format_version": "1.8.0",
-                "minecraft:entity": {
-                    "description": {
-                        "identifier": "$pref:$name",
-                        "is_spawnable": isSpawnable,
-                        "is_experimental": isExperimental,
-                        "is_summonable": isSummonable
-                    },
-                    "components": components,
-                    "component_groups": componentGroups,
-                    "events": events
-                }
-            }
-            [bedrock_rp=true]jsonfile entity.$pref.$name{
-                "format_version": "1.8.0",
-                "minecraft:client_entity": {
-                    "description": {
-                        "identifier": "$pref:$name",
-                        "spawn_egg": {
-                            "base_color": eggBaseColor,
-                            "overlay_color": eggOverlayColor
+        if (Compiler.isBedrock()){
+            Compiler.insert(($name, $pref), (name, namespace)){
+                jsonfile entities.$name{
+                    "format_version": "1.8.0",
+                    "minecraft:entity": {
+                        "description": {
+                            "identifier": "$pref:$name",
+                            "is_spawnable": isSpawnable,
+                            "is_experimental": isExperimental,
+                            "is_summonable": isSummonable
                         },
-                        "materials": {
-                            "default": material
-                        },
-                        "textures": entityTextures,
-                        "geometry": {
-                            "default": geometry
-                        },
-                        "render_controllers": [
-                            "controller.render.$pref.$name"
-                        ]
+                        "components": components,
+                        "component_groups": componentGroups,
+                        "events": events
                     }
                 }
-            }
-            [bedrock_rp=true]jsonfile render_controllers.entities.$pref.$name{
-                "format_version": "1.8.0",
-                "render_controllers": {
-                "controller.render.$pref.$name": {
-                        "arrays": {
-                            "textures": {
-                                "Array.skins": entityVariants
-                            }
-                        },
-                        "geometry": "Geometry.default",
-                        "materials": [ { "*": "Material.default" } ],
-                        "textures": ["Array.skins[query.variant]"]
+                [bedrock_rp=true]jsonfile entity.$pref.$name{
+                    "format_version": "1.8.0",
+                    "minecraft:client_entity": {
+                        "description": {
+                            "identifier": "$pref:$name",
+                            "spawn_egg": {
+                                "base_color": eggBaseColor,
+                                "overlay_color": eggOverlayColor
+                            },
+                            "materials": {
+                                "default": material
+                            },
+                            "textures": entityTextures,
+                            "geometry": {
+                                "default": geometry
+                            },
+                            "render_controllers": [
+                                "controller.render.$pref.$name"
+                            ]
+                        }
+                    }
+                }
+                [bedrock_rp=true]jsonfile render_controllers.entities.$pref.$name{
+                    "format_version": "1.8.0",
+                    "render_controllers": {
+                    "controller.render.$pref.$name": {
+                            "arrays": {
+                                "textures": {
+                                    "Array.skins": entityVariants
+                                }
+                            },
+                            "geometry": "Geometry.default",
+                            "materials": [ { "*": "Material.default" } ],
+                            "textures": ["Array.skins[query.variant]"]
+                        }
                     }
                 }
             }

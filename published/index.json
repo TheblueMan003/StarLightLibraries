@@ -379,13 +379,6 @@
                 "version": "1.0.0"
             }
         ],
-        "mc.item": [
-            {
-                "url": "mc/item/1_0_0.sl",
-                "filename": "mc/item.sl",
-                "version": "1.0.0"
-            }
-        ],
         "mc.inventory": [
             {
                 "url": "mc/inventory/1_0_0.sl",
@@ -768,6 +761,13 @@
             {
                 "url": "mc/bedrock/entity/1_0_0.sl",
                 "filename": "mc/bedrock/entity.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.bedrock.item": [
+            {
+                "url": "mc/bedrock/item/1_0_0.sl",
+                "filename": "mc/bedrock/item.sl",
                 "version": "1.0.0"
             }
         ]
