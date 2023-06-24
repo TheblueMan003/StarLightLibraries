@@ -194,7 +194,7 @@ def start(){
     }
     main.start()
 }
-def end(){
+def stop(){
     Started = false
     Color = -1
     main.stop()
