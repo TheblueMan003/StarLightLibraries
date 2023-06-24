@@ -442,11 +442,11 @@ lazy bool forall(entity e, bool test){
 
 if (Compiler.isBedrock()){
     def lazy event(string $event){
-        /event entity @s to_death
+        /event entity @s $event
     }
     def lazy event(entity selector, string $event){
         with(selector){
-            /event entity @s to_death
+            /event entity @s $event
         }
     }
 }

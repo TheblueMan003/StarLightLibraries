@@ -59,7 +59,7 @@ def lazy observe(int value, void=>void fct){
 """
 Call fct once until reset is called
 """
-def lazy runOne(void=>void fct){
+def lazy runOnce(void=>void fct){
     bool ran
     if (!ran){
         ran = true
@@ -73,7 +73,7 @@ def lazy runOne(void=>void fct){
 """
 Call fct once per player and then call repeated until reset is called
 """
-def lazy runOne(void=>void fct, void=>void repeated){
+def lazy runOnce(void=>void fct, void=>void repeated){
     bool ran
     if (!ran){
         ran = true
@@ -97,9 +97,6 @@ def lazy runOncePerPlayer(void=>void fct){
     if (version != ran){
         ran = version
         fct()
-    }
-    else{
-        repeated()
     }
 
     def @reset(){
