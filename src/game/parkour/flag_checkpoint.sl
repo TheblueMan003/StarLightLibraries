@@ -149,6 +149,9 @@ def unmark(){
         entity.event("reset_color")
     }
 }
+def respawn(){
+    parkour_spawnpoint.respawn()
+}
 
 def lazy onCheckpoint(void=>void fct){
     onTakeCallback = fct
