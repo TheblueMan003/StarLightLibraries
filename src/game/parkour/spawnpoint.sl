@@ -5,6 +5,8 @@ import cmd.spawnpoint as spawnpoint
 import cmd.gamemode as gm
 import cmd.entity as entity
 import cmd.tag as tag
+import cmd.sound as sound
+import cmd.particles as particles
 import mc.java.nbt as nbt
 import mc.pointer as pt
 import standard
@@ -25,7 +27,7 @@ private void mark(){
     UUID := guuid
     uuid = UUID
     with(markers,true,UUID==uuid){
-        entity.kill()
+        entity.despawn()
     }
     markers += pt.newPointer(){
         UUID = uuid
@@ -43,15 +45,9 @@ void respawn(){
 Set the spawnpoint
 """
 bool setSpawn(bool silent = false){
-    return setSpawn(0, 0, silent)
-}
-
-"""
-Set the spawnpoint
-"""
-bool setSpawn(float sx, float sz, bool silent = false){
-    lazy var sel = Compiler.mergeSelector(markers, @s[distance=..3])
+    lazy var sel = Compiler.mergeSelector(markers, @e[distance=..3])
     bool found = false
+    uuid = UUID
     with(sel,true,UUID==uuid){
         found = true
     }
@@ -59,8 +55,8 @@ bool setSpawn(float sx, float sz, bool silent = false){
         mark()
         spawnpoint.set()
         if (!silent){
-            /playsound random.levelup @s ~ ~ ~ 1
-            /particle minecraft:totem_particle
+            sound.play(minecraft:entity.player.levelup)
+            particles.sphere(minecraft:totem_of_undying, 1, 1, 20)
         }
         return true
     }
@@ -77,9 +73,11 @@ lazy void checkpoint(mcobject block, void=>void action){
         foreach(z in -1..1){
             Compiler.insert($x,x){
                 Compiler.insert($z,z){
-                    if (block(~$x ~-1 ~$z, block)){
-                        if (setSpawn(x, z)){
-                            action()
+                    at(~$x ~-1 ~$z){
+                        if (block(~ ~-1 ~, block)){
+                            if (setSpawn()){
+                                action()
+                            }
                         }
                     }
                 }

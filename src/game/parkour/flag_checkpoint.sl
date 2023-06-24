@@ -190,7 +190,7 @@ def start(){
     Level = 1
     getColor()
     parkour_spawnpoint.reset()
-    parkour_spawnpoint.setSpawn(0,0)
+    parkour_spawnpoint.setSpawn()
     resetAll()
     if (forceAdventure){
         gamemode.adventure()

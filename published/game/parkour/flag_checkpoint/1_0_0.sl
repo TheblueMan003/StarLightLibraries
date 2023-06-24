@@ -86,7 +86,7 @@ scoreboard int PrevAngle
 def take(){
     WasOnCheckpoint := false
     bool onCheckpoint = false
-    effect_blocks.feet(minecraft:diamond_block, 1){
+    parkour_spawnpoint.checkpoint(minecraft:diamond_block){
         mark()
         if (parkour_spawnpoint.setSpawn()){
             actionbar.show(100, 20, ("Checkpoint !", "yellow", "bold"))
@@ -190,7 +190,7 @@ def start(){
     Level = 1
     getColor()
     parkour_spawnpoint.reset()
-    parkour_spawnpoint.setSpawn(0,0)
+    parkour_spawnpoint.setSpawn()
     resetAll()
     if (forceAdventure){
         gamemode.adventure()
@@ -214,13 +214,6 @@ CProcess main{
                 unmark()
             }
             
-            if (!block(^ ^-1 ^1, minecraft:diamond_block)){/*
-                block.replace(~-3 ~-5 ~-3, ~3 ~5 ~3, minecraft:air, minecraft:smooth_quartz_stairs)
-                block.replace(~-3 ~-5 ~-3, ~3 ~5 ~3, minecraft:air, minecraft:diorite_wall)
-                block.replace(~-3 ~-5 ~-3, ~3 ~5 ~3, minecraft:air, minecraft:smooth_quartz_slab)
-                block.replace(~-3 ~-5 ~-3, ~3 ~5 ~3, minecraft:air, minecraft:chiseled_quartz_block)*/
-                entity.kill()
-            }
             if (GameID != gameID){
                 unmark()
                 GameID = gameID
