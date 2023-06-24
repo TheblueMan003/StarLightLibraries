@@ -192,13 +192,15 @@ def start(){
     if (forceAdventure){
         gamemode.adventure()
     }
+    main.start()
 }
 def end(){
     Started = false
     Color = -1
+    main.stop()
 }
 
-CProcess process{
+CProcess main{
     def main(){
         with(@a, true, Started){
             take()

@@ -747,7 +747,7 @@
             {
                 "url": "game/parkour/flag_checkpoint/1_0_0.sl",
                 "filename": "game/parkour/flag_checkpoint.sl",
-                "resourcespack":[
+                "resourcespack": [
                     {
                         "url": "resoucespack/flag_checkpoint/bedrock/1_0_0.zip",
                         "filename": "flag_checkpoint",
