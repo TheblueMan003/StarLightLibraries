@@ -742,6 +742,34 @@
                 "filename": "mc/java/world.sl",
                 "version": "1.0.0"
             }
+        ],
+        "game.parkour.flag_checkpoint": [
+            {
+                "url": "game/parkour/flag_checkpoint/1_0_0.sl",
+                "filename": "game/parkour/flag_checkpoint.sl",
+                "resourcespack":[
+                    {
+                        "url": "resoucespack/flag_checkpoint/bedrock/1_0_0.zip",
+                        "filename": "flag_checkpoint",
+                        "version": "1.0.0",
+                        "game": "bedrock"
+                    },
+                    {
+                        "url": "resoucespack/flag_checkpoint/java/1_0_0.zip",
+                        "filename": "flag_checkpoint",
+                        "version": "1.0.0",
+                        "game": "java"
+                    }
+                ],
+                "version": "1.0.0"
+            }
+        ],
+        "mc.bedrock.entity": [
+            {
+                "url": "mc/bedrock/entity/1_0_0.sl",
+                "filename": "mc/bedrock/entity.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
