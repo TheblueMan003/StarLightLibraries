@@ -76,7 +76,7 @@ def lazy fill(mcposition start, mcposition end, mcobject block){
 """
 Replace `fro` to `block` from `start` to `end`
 """
-def lazy fill(mcposition start, mcposition end, mcobject block, mcobject fro){
+def lazy replace(mcposition start, mcposition end, mcobject block, mcobject fro){
     if (Compiler.isBedrock){
         lazy mcobject bblock = Compiler.getBedrockBlockName(block)
         lazy int bid = Compiler.getBedrockBlockID(block)
