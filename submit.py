@@ -41,4 +41,13 @@ if (__name__ == "__main__"):
                 print(name)
                 addOne(name, "1.0.0")
     else:
-        addOne(action, input("version: "))
+        with open("published/index.json") as f:
+            data = json.load(f)
+        version = "1.0.0"
+        key = action.replace("/", ".").lower()
+        if key in data["libraries"]:
+            version = data["libraries"][key][-1]["version"]
+        v = input(f"version (Latest = {version}): ")
+        if v != "":
+            version = v
+        addOne(action, version)

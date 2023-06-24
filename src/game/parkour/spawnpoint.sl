@@ -167,19 +167,13 @@ if (Compiler.isBedrock()){
         
     }
 
-    private bool checkOld(){
-        with(markers & @s[distance=..3],true,UUID==uuid){
-            return false
-        }
-        return true
-    }
     private void mark(){
-        guuid++
-        UUID := guuid
-        uuid = UUID
         with(markers,true,UUID==uuid){
-            entity.kill()
+            entity.despawn()
         }
+        guuid++
+        UUID = guuid
+        uuid = UUID
         markers += pt.newPointer(){
             UUID = uuid
         }
@@ -202,8 +196,14 @@ if (Compiler.isBedrock()){
     """
     Set the spawnpoint
     """
-    lazy bool setSpawn(float $sx, float $sz, bool silent = false){
-        if (checkOld()){
+    bool setSpawn(float sx, float sz, bool silent = false){
+        lazy val sel = Compiler.mergeSelector(@e[distance=..3], markers)
+        bool found = false
+        uuid = UUID
+        with(sel,true,UUID==uuid){
+            found = true
+        }
+        if (found){
             return false
         }
         mark()
