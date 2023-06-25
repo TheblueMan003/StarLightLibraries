@@ -771,6 +771,13 @@
                 "filename": "mc/bedrock/item.sl",
                 "version": "1.0.0"
             }
+        ],
+        "game.parkour.manager": [
+            {
+                "url": "game/parkour/manager/1_0_0.sl",
+                "filename": "game/parkour/manager.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }

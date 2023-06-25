@@ -73,7 +73,7 @@ lazy void checkpoint(mcobject block, void=>void action){
         foreach(z in -1..1){
             Compiler.insert($x,x){
                 Compiler.insert($z,z){
-                    at(~$x ~-1 ~$z){
+                    at(~$x ~ ~$z){
                         if (block(~ ~-1 ~, block)){
                             if (setSpawn()){
                                 action()
