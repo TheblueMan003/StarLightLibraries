@@ -3,6 +3,7 @@ package game.parkour.Manager
 import cmd.gamemode as gm
 import cmd.entity as entity
 import cmd.tag as tag
+import cmd.sound as sound
 import mc.inventory as inv
 import game.Timer
 import game.parkour.flag_checkpoint as flag_checkpoint
@@ -14,8 +15,9 @@ template Manager<level, death_block>{
     scoreboard Timer time
     scoreboard bool hasStarted
     scoreboard int Level
-
-    TimeSplit<level+> speedrun{
+    
+    lazy var timesplit_level = level+20
+    TimeSplit<timesplit_level> speedrun{
     }
 
     flag_checkpoint.onCheckpoint(){
@@ -25,7 +27,7 @@ template Manager<level, death_block>{
     }
     CProcess main{
         def main(){
-            with(@a){
+            with(@a,true){
                 cheatDetect()
                 utils.runOncePerPlayer(){
                     hasStarted = false
@@ -40,44 +42,46 @@ template Manager<level, death_block>{
         }
 
         def onStart(){
-            if (!hasStarted){
-                time.setDisplay()
-                time.showDeath()
-                time.setMaxLevel(level)
-                time.showLevel()
-                time.start()
-                hasStarted = true
-                Level = 1
-                time.setLevel(Level)
-                speedrun.start()
-                flag_checkpoint.start()
-            }
+            
         }
 
         def onStop(){
-            if (hasStarted){
-                hasStarted = false
-                if (time.isRunning()){
-                    if (Compiler.isJava()){
-                        sound.play(minecraft:ui.toast.challenge_complete)
-                    }
-                }
-                time.stop()
-                flag_checkpoint.stop()
-                speedrun.stop(Level+1, time.getTime())
-                if(!@s[tag=Cheat] && Compiler.isJava()){
-                    /function parkour:leaderboard/submit
-                }
-            }
+            
         }
     }
 
     def start(){
-        main.start()
+        if (!hasStarted){
+            main.start()
+            time.setDisplay()
+            time.showDeath()
+            time.setMaxLevel(level)
+            time.showLevel()
+            time.start()
+            hasStarted = true
+            Level = 1
+            time.setLevel(Level)
+            speedrun.start()
+            flag_checkpoint.start()
+        }
     }
 
     def stop(){
-        main.stop()
+        if (hasStarted){
+            main.stop()
+            hasStarted = false
+            if (time.isRunning()){
+                if (Compiler.isJava()){
+                    sound.play(minecraft:ui.toast.challenge_complete)
+                }
+            }
+            time.stop()
+            flag_checkpoint.stop()
+            speedrun.stop(Level+1, time.getTime())
+            if(!@s[tag=Cheat] && Compiler.isJava()){
+                /function parkour:leaderboard/submit
+            }
+        }
     }
 
     def restart(){
@@ -112,6 +116,5 @@ template Manager<level, death_block>{
     def debugReset(){
         tag.remove("Cheat")
         time = new Timer()
-        INIT = null
     }
 }
