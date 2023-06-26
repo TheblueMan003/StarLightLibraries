@@ -16,13 +16,13 @@ template Click {
     def onRelease(){
 
     }
-    private lazy void _onClick(){
+    private void _onClick(){
         onClick()
     }
-    private lazy void _onHold(){
+    private void _onHold(){
         onHold()
     }
-    private lazy void _onRelease(){
+    private void _onRelease(){
         onRelease()
     }
 
@@ -30,9 +30,9 @@ template Click {
         setName("click_detector")
         setNamespace("sl")
         setIcon("empty")
-        onClick(_onClick)
-        onHold(_onHold)
-        onRelease(_onRelease)
+        item.onClick(_onClick)
+        item.onHold(_onHold)
+        item.onRelease(_onRelease)
     }
 
     Setup setup{

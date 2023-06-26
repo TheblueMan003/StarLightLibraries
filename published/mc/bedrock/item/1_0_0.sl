@@ -170,7 +170,7 @@ template Item{
     }
 
     [Compile.order=1000] private void build(){
-        Compiler.isBedrock(){
+        if (Compiler.isBedrock()){
             lazy val namespacedName = _namespace + ":" + _name
             createItem(_name, namespacedName, _category, _component)
             createAnimationController(_name, _onClick, _whileClick, _onRelease)
