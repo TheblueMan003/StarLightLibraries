@@ -4,7 +4,7 @@ import mc.bedrock.resourcespack.textures as textures
 
 private lazy var _blocks = {"format_version": "1.19.50"}
 
-[Compiler.order=9999] private void make(){
+[compile.order=99999] private void make(){
     [bedrock_rp=true] jsonfile blocks _blocks
 }
 
