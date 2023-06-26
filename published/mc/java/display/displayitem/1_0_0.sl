@@ -21,6 +21,13 @@ public class DisplayItem extends DisplayEntity with minecraft:item_display for m
     }
 
     """
+    Set the item to be displayed
+    """
+    def lazy setItem(mcobject block, json data){
+        data.set({"item":{"id": block, Count: 1, tag: data}})
+    }
+
+    """
     Set the display mode to none
     """
     def lazy setDisplayModeNone(){
