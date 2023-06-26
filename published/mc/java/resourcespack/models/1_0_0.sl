@@ -23,7 +23,7 @@ private lazy void generate(string name){
     }
 }
 
-[Compiler.order=99999999]
+[compile.order=99999999]
 private void generate(){
     foreach(item in overrides){
         generate(item)

@@ -312,7 +312,7 @@ template Block{
 
 
 
-    def [Compiler.order=9999] private make(){
+    def [compile.order=9999] private make(){
         if (Compiler.isBedrock()){
             lazy val fullName = _namespace + ":" + _name
             _description += {"identifier": fullName}

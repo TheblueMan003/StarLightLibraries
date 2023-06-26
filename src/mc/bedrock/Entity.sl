@@ -17,7 +17,7 @@ template Entity{
     lazy var entityVariants = []
     lazy var name = Compiler.getContextName()
 
-    def [Compiler.order=999999] make(){
+    def [compile.order=999999] make(){
         if (Compiler.isBedrock()){
             Compiler.insert(($name, $pref), (name, namespace)){
                 jsonfile entities.$name{

@@ -629,6 +629,11 @@
                 "url": "utils/process_manager/1_0_0.sl",
                 "filename": "utils/process_manager.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "utils/process_manager/1_0_1.sl",
+                "filename": "utils/process_manager.sl",
+                "version": "1.0.1"
             }
         ],
         "utils.world": [

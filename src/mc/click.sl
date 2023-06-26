@@ -45,10 +45,12 @@ template Click {
 
     def start(){
         setup.add()
+        main.start()
     }
 
     def stop(){
         setup.remove()
+        main.stop()
     }
 
     if (Compiler.isJava()){
