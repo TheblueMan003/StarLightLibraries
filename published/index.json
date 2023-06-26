@@ -778,6 +778,13 @@
                 "filename": "game/parkour/manager.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.click": [
+            {
+                "url": "mc/click/1_0_0.sl",
+                "filename": "mc/click.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }

@@ -329,7 +329,6 @@ private void _(){
             models.add(minecraft:jungle_boat, "item/checkpoint/flag_checkpoint_$i",index)
             index++
         }
-        models.generate(minecraft:jungle_boat)
 
         forgenerate($i, ckp_flag_color){
             [java_rp = true] jsonfile models.item.checkpoint.flag_checkpoint_$i{

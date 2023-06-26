@@ -157,7 +157,7 @@ template Item{
     """
     Set the on while click function
     """
-    def lazy whileClick(void=>void fct){
+    def lazy onHold(void=>void fct){
         _whileClick = fct
         setFood(0)
     }
