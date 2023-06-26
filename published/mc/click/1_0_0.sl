@@ -1,4 +1,4 @@
-package mc.click
+package mc.Click
 
 import mc.java.event as event
 import utils.Process as Process
