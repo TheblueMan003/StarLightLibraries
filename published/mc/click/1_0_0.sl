@@ -68,17 +68,17 @@ template Click {
         scoreboard int wasClicked
         event.onUsingItem(minecraft:shield){
             if (wasClicked <= 0){
-                onClick()
+                _onClick()
             }
             wasClicked = 2
-            onHold()
+            _onHold()
         }
         Process main{
             void main(){
                 with(@a, true){
                     wasClicked--
                     if (wasClicked == 0){
-                        onRelease()
+                        _onRelease()
                     }
                 }
             }
