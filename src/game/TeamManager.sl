@@ -1,6 +1,7 @@
 package game.TeamManager
 
 import cmd.tag as tag
+import standard.int as int
 import random
 
 template TeamManager{
@@ -119,7 +120,7 @@ template TeamManager{
                 with(@a[tag=!game.TeamManager.selected] in players, true, game == minGame){
                     tag.add("game.TeamManager.possible")
                 }
-                while(c < count && @a[tag=game.TeamManager.possible] in players, true){
+                while(c < count && @a[tag=game.TeamManager.possible] in players){
                     with(@r[tag=game.TeamManager.possible] in players, true){
                         tag.add("game.TeamManager.selected")
                         tag.remove("game.TeamManager.possible")

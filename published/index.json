@@ -803,6 +803,13 @@
                 "filename": "game/teammanager.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.positionlock": [
+            {
+                "url": "mc/positionlock/1_0_0.sl",
+                "filename": "mc/positionlock.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
