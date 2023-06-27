@@ -3,10 +3,14 @@ package mc.PositionLock
 import utils.CProcess
 import cmd.inputperssion as ip
 
-template PositionLock<position>{
+template PositionLock{
+    lazy mcposition position
     entity selected
+    def lazy set(mcposition pos){
+        position = pos
+    }
     CProcess inner{
-        def main(){
+        def [compile.order=999] main(){
             with(@a in selected){
                 at(position)as(@s[distance=0.1..,gamemode=!creative]){
                     /tp @s ~ ~ ~
