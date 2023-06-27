@@ -24,7 +24,7 @@ template TeamManager{
             failled = 2
         }
         if (failled > 0){
-            onFail(failled)
+            onFail(failled_message[failled])
         }
         else{
             @templates.onTeamMade()
