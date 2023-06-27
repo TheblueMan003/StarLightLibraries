@@ -796,6 +796,13 @@
                 "filename": "utils/draw.sl",
                 "version": "1.0.0"
             }
+        ],
+        "game.teammanager": [
+            {
+                "url": "game/teammanager/1_0_0.sl",
+                "filename": "game/teammanager.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
