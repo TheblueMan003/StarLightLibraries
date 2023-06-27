@@ -5,7 +5,6 @@ import random
 
 template TeamManager{
     lazy json failled_message = ["Not enough players", "Too much players"]
-    scoreboard bool assigned
     scoreboard void=>void action
     int failled
     entity players
@@ -21,10 +20,8 @@ template TeamManager{
     def [compile.order=9999] start(){
         failled = 0
         @templates.onTeamMake()
-        with(players, true){
-            if (!assigned){
-                failled = 2
-            }
+        with(@a[tag=!game.TeamManager.selected] in players, true){
+            failled = 2
         }
         if (failled > 0){
             onFail(failled)
@@ -42,7 +39,6 @@ template TeamManager{
         with(players, true){
             tag.remove("game.TeamManager.selected")
             tag.remove("game.TeamManager.possible")
-            assigned = false
             action = null
         }
         @templates.reset()
@@ -80,7 +76,6 @@ template TeamManager{
                     if (rng3 < inThis / game && !found){
                         tag.add("game.TeamManager.selected")
                         empty = false
-                        assigned = true
                         c++
                         action = fct
                         found = true
@@ -129,7 +124,6 @@ template TeamManager{
                         tag.add("game.TeamManager.selected")
                         tag.remove("game.TeamManager.possible")
                         empty = false
-                        assigned = true
                         c++
                         action = fct
                     }
@@ -153,7 +147,6 @@ template TeamManager{
                 with(@r[tag=!game.TeamManager.selected] in players, true){
                     tag.add("game.TeamManager.selected")
                     empty = false
-                    assigned = true
                     c++
                     action = fct
                 }
@@ -176,7 +169,6 @@ template TeamManager{
                 with(@r[tag=!game.TeamManager.selected] in players, true){
                     tag.add("game.TeamManager.selected")
                     empty = false
-                    assigned = true
                     c++
                     action = fct
                 }
@@ -199,7 +191,6 @@ template TeamManager{
                 with(@r[tag=!game.TeamManager.selected] in players, true){
                     tag.add("game.TeamManager.selected")
                     empty = false
-                    assigned = true
                     c++
                     action = fct
                 }
