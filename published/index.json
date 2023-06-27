@@ -789,6 +789,13 @@
                 "filename": "mc/click.sl",
                 "version": "1.0.0"
             }
+        ],
+        "utils.draw": [
+            {
+                "url": "utils/draw/1_0_0.sl",
+                "filename": "utils/draw.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
