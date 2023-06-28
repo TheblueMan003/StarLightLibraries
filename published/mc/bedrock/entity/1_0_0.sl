@@ -421,6 +421,13 @@ template Entity{
             }
         }
     }
+    def lazy scale(float scale){
+        components += {
+            "minecraft:scale": {
+                "value": scale
+            }
+        }
+    }
     def lazy transformation(string mob, float time = 0.0, bool keeplevel = false, bool dropinventory = false, bool equipement = false){
         components += {
             "minecraft:transformation": {
