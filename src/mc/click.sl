@@ -16,13 +16,13 @@ template Click {
     def onRelease(){
 
     }
-    private void _onClick(){
+    private void __onClick__(){
         onClick()
     }
-    private void _onHold(){
+    private void __onHold__(){
         onHold()
     }
-    private void _onRelease(){
+    private void __onRelease__(){
         onRelease()
     }
 
@@ -30,9 +30,9 @@ template Click {
         setName("click_detector")
         setNamespace("sl")
         setIcon("empty")
-        item.onClick(_onClick)
-        item.onHold(_onHold)
-        item.onRelease(_onRelease)
+        item.onClick(__onClick__)
+        item.onHold(__onHold__)
+        item.onRelease(__onRelease__)
     }
 
     Setup setup{
@@ -56,29 +56,33 @@ template Click {
 
     def start(){
         setup.add()
-        main.start()
+        if (Compiler.isJava()){
+            main.start()
+        }
     }
 
     def stop(){
         setup.remove()
-        main.stop()
+        if (Compiler.isJava()){
+            main.stop()
+        }
     }
 
     if (Compiler.isJava()){
         scoreboard int wasClicked
         event.onUsingItem(minecraft:shield){
             if (wasClicked <= 0){
-                _onClick()
+                __onClick__()
             }
             wasClicked = 2
-            _onHold()
+            __onHold__()
         }
         Process main{
             void main(){
                 with(@a, true){
                     wasClicked--
                     if (wasClicked == 0){
-                        _onRelease()
+                        __onRelease__()
                     }
                 }
             }
