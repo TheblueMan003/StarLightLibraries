@@ -3,12 +3,18 @@ package cmd.sound
 """
 Play the sound `sound` to `selector` with `volume` and `pitch` on channel `loc`
 """
-def lazy play(entity $selector, mcobject $sound, int $volume, int $pitch, mcobject $loc){
+def lazy play(entity $selector, mcobject sound, int $volume, int $pitch, mcobject $loc){
     if (Compiler.isJava()){
-        /playsound $sound $loc $selector ~ ~ ~ $volume $pitch
+        lazy val s = Compiler.getJavaSound(sound)
+        Compiler.insert($sound, s){
+            /playsound $sound $loc $selector ~ ~ ~ $volume $pitch
+        }
     }
     else{
-        /playsound $sound $selector ~ ~ ~ $volume $pitch
+        lazy val s = Compiler.getBedrockSound(sound)
+        Compiler.insert($sound, s){
+            /playsound $sound $selector ~ ~ ~ $volume $pitch
+        }
     }
 }
 
