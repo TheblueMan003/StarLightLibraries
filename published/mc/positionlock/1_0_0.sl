@@ -1,7 +1,7 @@
 package mc.PositionLock
 
 import utils.CProcess
-import cmd.inputperssion as ip
+import cmd.inputpermission as ip
 
 template PositionLock{
     lazy mcposition position
