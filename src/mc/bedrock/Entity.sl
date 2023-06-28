@@ -283,8 +283,8 @@ template Entity{
             "minecraft:explode":{
                 "breaks_blocks": breakblock,
                 "causes_fire": causesfire,
-                "destroy_affected_by_griefing": false,
-                "fire_affected_by_griefing": false,
+                "destroy_affected_by_griefing": destroygrief,
+                "fire_affected_by_griefing": firegrief,
                 "power": power
             }
         }
@@ -292,13 +292,13 @@ template Entity{
     def lazy setExplodeTime(bool breakblock, bool causesfire, float power, float time, bool destroygrief = false, bool firegrief = false){
         components += {
             "minecraft:explode":{
-                "breaks_blocks": true,
-                "causes_fire": false,
-                "destroy_affected_by_griefing": false,
-                "fire_affected_by_griefing": false,
+                "breaks_blocks": breakblock,
+                "causes_fire": causesfire,
+                "destroy_affected_by_griefing": destroygrief,
+                "fire_affected_by_griefing": firegrief,
                 "fuse_length": [time, time],
                 "fuse_lit": true,
-                "power": 3
+                "power": power
             }
         }
     }
@@ -370,17 +370,17 @@ template Entity{
     def lazy projectile(float power = 1.5, float gravity = 0.03, float angle = 0.0){
         components += {
             "minecraft:projectile": {
-                "power": 1.5,
-                "gravity": 0.03,
-                "angle_offset": 0.0
+                "power": power,
+                "gravity": gravity,
+                "angle_offset": angle
             }
         }
     }
     def lazy isPushable(bool pushable = true, bool piston = true){
         components += {
             "minecraft:pushable":{
-                "is_pushable": true,
-                "is_pushable_by_piston": true
+                "is_pushable": pushable,
+                "is_pushable_by_piston": piston
             }
         }
     }
@@ -490,9 +490,9 @@ template Entity{
     def lazy lookAtPlayer(int priority = 7, float distance = 6.0, float probability = 0.02){
         components += {
             "minecraft:behavior.look_at_player": {
-                "priority": 7,
-                "look_distance": 6.0,
-                "probability": 0.02
+                "priority": priority,
+                "look_distance": distance,
+                "probability": probability
             }
         }
     }
@@ -535,6 +535,10 @@ template Entity{
     def lazy onDamage(void=>void fct){
         event("sl:onDamage", fct)
         onDamage("sl:onDamage")
+    }
+    def lazy onFatalDamage(void=>void fct){
+        event("sl:onFatalDamage", fct)
+        onFatalDamage("sl:onFatalDamage")
     }
     def lazy mobEffect(string effect, float range, int time = 10, string mob = player){
         components += {
