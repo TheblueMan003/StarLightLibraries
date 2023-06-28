@@ -838,6 +838,13 @@
                     }
                 ]
             }
+        ],
+        "utils.pprocess": [
+            {
+                "url": "utils/pprocess/1_0_0.sl",
+                "filename": "utils/pprocess.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
