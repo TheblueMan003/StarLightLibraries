@@ -1,7 +1,7 @@
 package mc.Entity
 
 import cmd.tag as tag
-import mc.java.data as data
+import cmd.java.data as data
 
 class Entity{
     """
