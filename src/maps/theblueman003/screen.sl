@@ -768,7 +768,7 @@ CProcess main{
             user += @s
             int c = click
             raycast.shoot(20, 0.5, block(minecraft:barrier)){
-                with(@e[distance=..2,limit=1,sort=nearest] in buttons,true){
+                with(@e[distance=..1,limit=1,sort=nearest] in buttons,true){
                     if (c == 0){
                         onSelect()
                     }
