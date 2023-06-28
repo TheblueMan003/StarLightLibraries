@@ -3,9 +3,9 @@ package mc.bedrock.Entity
 template Entity{
     lazy var namespace = "sl"
     lazy var components = {}
-    lazy var events = {}
+    lazy var events = {"despawn": {"add": {"component_groups": ["despawn"]}}}
     lazy var eventData = {}
-    lazy var componentGroups = {}
+    lazy var componentGroups = {"despawn": {"minecraft:despawn": {}}}
     lazy var isSpawnable = true
     lazy var isExperimental = false
     lazy var isSummonable = true
