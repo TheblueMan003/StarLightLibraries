@@ -817,6 +817,27 @@
                 "filename": "mc/entity.sl",
                 "version": "1.0.0"
             }
+        ],
+        "maps.theblueman003.screen": [
+            {
+                "url": "maps/theblueman003/screen/1_0_0.sl",
+                "filename": "maps/theblueman003/screen.sl",
+                "version": "1.0.0",
+                "resourcespack": [
+                    {
+                        "url": "resourcespack/theblueman_screen/bedrock/1_0_0.zip",
+                        "filename": "theblueman_screen",
+                        "version": "1.0.0",
+                        "game": "bedrock"
+                    },
+                    {
+                        "url": "resourcespack/theblueman_screen/java/1_0_0.zip",
+                        "filename": "theblueman_screen",
+                        "version": "1.0.0",
+                        "game": "java"
+                    }
+                ]
+            }
         ]
     }
 }
