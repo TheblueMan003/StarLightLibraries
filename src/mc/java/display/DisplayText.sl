@@ -7,9 +7,9 @@ import cmd.java.data as data
 Class representing an text display entity.
 """
 public class DisplayText extends DisplayEntity with minecraft:text_display for mcjava {
-    def __init__(){
+    def lazy __init__(){
     }
-    def __init__(mcobject block){
+    def lazy __init__(mcobject block){
         setBlock(block)
     }
 
