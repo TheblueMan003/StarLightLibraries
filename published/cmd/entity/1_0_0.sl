@@ -147,7 +147,7 @@ def lazy kill(entity selector = @s){
 def lazy despawn(entity e = @s){
 	if(Compiler.isBedrock()){
         def lazy inner(entity $a){
-            /event entity $a to_death
+            /event entity $a despawn
         }
 		inner(e)
 	}
@@ -190,7 +190,7 @@ Despawn the entity e without killing it
 def lazy despawn(entity e = @s){
 	if(Compiler.isBedrock()){
         def lazy inner(entity $a){
-            /event entity $a to_death
+            /event entity $a despawn
         }
 		inner(e)
 	}
