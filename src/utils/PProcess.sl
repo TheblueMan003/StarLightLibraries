@@ -148,4 +148,8 @@ template PProcess{
     }
     def onStart(){
     }
+    def onJoin(){
+    }
+    def onLeave(){
+    }
 }
