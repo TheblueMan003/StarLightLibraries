@@ -810,6 +810,13 @@
                 "filename": "mc/positionlock.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.entity": [
+            {
+                "url": "mc/entity/1_0_0.sl",
+                "filename": "mc/entity.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
