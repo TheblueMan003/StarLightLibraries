@@ -845,6 +845,13 @@
                 "filename": "utils/pprocess.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.hotbarmenu": [
+            {
+                "url": "mc/hotbarmenu/1_0_0.sl",
+                "filename": "mc/hotbarmenu.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
