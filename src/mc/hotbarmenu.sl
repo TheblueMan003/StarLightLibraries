@@ -8,34 +8,16 @@ import mc.inventory.Setup
 import utils.PProcess
 
 lazy int itemCount = 0
-template HotbarMenu{
-    Setup setup{
-        def assignSlot(int slot, mcobject item){
-            forceHotbar(slot, item)
-        }
-    }
-    if (Compiler.isJava()){
-        PProcess main{
-            def main(){
-                input.onClick(){
-                    @templates.click()
-                }
-            }
-        }
-    }
-    def __pass__(){
-
-    }
+template HotbarMenu extends Setup{
     def lazy addButton(int slot, string name, string texture, void=>void action){
         if (Compiler.isJava()){
-            models.flat("item/hotbar_menu_"+texture, "item/"+texture)
-            lazy int index = models.addModel(minecraft:carrot_on_a_stick, "item/hotbar_menu_"+texture)
+            lazy int index = models.add(minecraft:carrot_on_a_stick, models.flat("hotbar_menu_"+texture, "item/"+texture))
             Compiler.insert($name, name){
-                setup.assignSlot(slot, minecraft:carrot_on_a_stick{CustomModelData: index, display:{Name:"[{\"text\":\"$name\",\"italic\":false}]"}})
+                forceHotbar(slot, minecraft:carrot_on_a_stick{CustomModelData: index, display:{Name:"[{\"text\":\"$name\",\"italic\":false}]"}})
             }
             def @templates.click(){
-                Compiler.insert($name, name){
-                    if (inventory.isHoldingItem(minecraft:carrot_on_a_stick{CustomModelData: index, display:{Name:"[{\"text\":\"$name\",\"italic\":false}]"}})){
+                Compiler.insert(($name, $index), (name, index)){
+                    if (inventory.isHoldingItem(minecraft:carrot_on_a_stick, 1, "{CustomModelData: $index}")){
                         action()
                     }
                 }
@@ -52,18 +34,31 @@ template HotbarMenu{
                 item.onHold(__pass__)
                 item.onRelease(__pass__)
             }
-            setup.assignSlot(slot, "sl:"+id)
+            forceHotbar(slot, "sl:"+id)
         }
+    }
+    
+    if (Compiler.isJava()){
+        PProcess main{
+            def [compile.order=99999] main(){
+                input.onClick(){
+                    @templates.parent.click()
+                }
+            }
+        }
+    }
+    def __pass__(){
+
     }
 
     def start(){
-        setup.start()
+        add()
         if (Compiler.isJava()){
             main.start()
         }
     }
     def stop(){
-        setup.stop()
+        remove()
         if (Compiler.isJava()){
             main.stop()
         }

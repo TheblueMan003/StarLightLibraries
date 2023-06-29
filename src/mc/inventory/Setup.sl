@@ -157,7 +157,7 @@ template Setup{
 
 
     if (Compiler.isJava()){
-        def [Compile.order=9999] handler(){
+        def [compile.order=9999] handler(){
             event.onInventoryChanged(){
                 if (@s in applyTo && @s[gamemode=!creative]){
                     inventory.clear()
@@ -179,7 +179,7 @@ template Setup{
             add()
         }
     }
-    def remove(){
+    def lazy remove(){
         applyTo -= @s
         inventory.clear()
     }
