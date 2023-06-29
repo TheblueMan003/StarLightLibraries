@@ -43,18 +43,19 @@ template Manager<level, death_block>{
                 }
             }
         }
+    }
 
-        def onStart(){
-            
-        }
+    def onStart(){
+        
+    }
 
-        def onStop(){
-            
-        }
+    def onStop(){
+        
     }
 
     def start(){
         if (!hasStarted){
+            onStart()
             main.start()
             time.setDisplay()
             time.showDeath()
@@ -71,6 +72,7 @@ template Manager<level, death_block>{
 
     def stop(){
         if (hasStarted){
+            onStop()
             main.stop()
             hasStarted = false
             if (time.isRunning()){
