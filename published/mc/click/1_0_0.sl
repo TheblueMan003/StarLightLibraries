@@ -2,7 +2,7 @@ package mc.Click
 
 import mc.java.event as event
 import mc.java.resourcespack.models as models
-import utils.Process as Process
+import utils.Process as PProcess
 import mc.inventory.Setup
 import mc.bedrock.Item
 
@@ -77,13 +77,11 @@ template Click {
             wasClicked = 2
             __onHold__()
         }
-        Process main{
+        PProcess main{
             void main(){
-                with(@a, true){
-                    wasClicked--
-                    if (wasClicked == 0){
-                        __onRelease__()
-                    }
+                wasClicked--
+                if (wasClicked == 0){
+                    __onRelease__()
                 }
             }
         }
