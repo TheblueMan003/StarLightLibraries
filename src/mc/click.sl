@@ -2,7 +2,7 @@ package mc.Click
 
 import mc.java.event as event
 import mc.java.resourcespack.models as models
-import utils.Process as PProcess
+import utils.PProcess
 import mc.inventory.Setup
 import mc.bedrock.Item
 
