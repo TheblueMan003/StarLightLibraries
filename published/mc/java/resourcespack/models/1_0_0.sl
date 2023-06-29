@@ -3,11 +3,25 @@ package mc.java.resourcespack.models
 lazy var overrides = {}
 
 """
-Add custom `model` to `item` with with CustomModelData = `index`
+Add custom `model` to `item` with CustomModelData = `index`
 """
 public lazy void add(mcobject item, string model, int index){
     lazy val name = Compiler.getNamespaceName(item)
     overrides[name] += [{"predicate": {"custom_model_data": index},"model": model}]
+}
+
+"""
+Add custom `model` to `item` with incremental CustomModelData
+"""
+public lazy int add(mcobject item, string model){
+    lazy int index = 1
+    lazy val name = Compiler.getNamespaceName(item)
+    if (name in overrides){
+        index = Compiler.length(overrides[name]) 
+        index += 1
+    }
+    overrides[name] += [{"predicate": {"custom_model_data": index},"model": model}]
+    return index
 }
 
 private lazy void generate(string name){
