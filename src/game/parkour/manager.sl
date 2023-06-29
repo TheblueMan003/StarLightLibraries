@@ -92,7 +92,7 @@ template Manager<level, death_block>{
     def restart(){
         reset()
         main.stop()
-        main.start()
+        start()
     }
 
     def death(){
