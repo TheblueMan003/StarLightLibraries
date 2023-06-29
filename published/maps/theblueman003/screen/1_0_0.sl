@@ -802,6 +802,6 @@ public @screen.start void stop(){
 
 def lazy onStart(void=>void fct){
     def @screen.start(){
-        fct()
+        with(user, true)fct()
     }
 }

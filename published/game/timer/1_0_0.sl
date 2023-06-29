@@ -224,295 +224,295 @@ struct Timer{
             if (!sKill && !sDeath && !sLevels){
                 if (global){
                     if (m < 10 && s < 10 && ms < 10){
-                        as(@a) actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        as(@a) actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        as(@a) actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        as(@a) actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        as(@a) actionbar.force((h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        as(@a) actionbar.force((h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        as(@a) actionbar.force((h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        as(@a) actionbar.force((h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        as(@a) actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                 }
                 if (!global){
                     if (m < 10 && s < 10 && ms < 10){
-                        actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        actionbar.force((h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        actionbar.force((h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        actionbar.force((h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        actionbar.force((h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        actionbar.force((h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                 }
             }
             if (!sKill && !sDeath && sLevels){
                 if (sCheat){
                     if (m < 10 && s < 10 && ms < 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                 }
                 if (!sCheat){
                     if (m < 10 && s < 10 && ms < 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                 }
             }
             if (!sKill && sDeath && sLevels){
                 if (sCheat){
                     if (m < 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField),(" - Level: ",colorCheatLabel),(level,colorCheatField),("/",colorCheatField),(maxlevel,colorCheatField))
                     }
                 }
                 if (!sCheat){
                     if (m < 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                     }
                 }
             }
             if (!sKill && sDeath && !sLevels){
                 if (sCheat){
                     if (m < 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":0",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":0",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".0",colorCheatField),(ms,colorCheatField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
+                        actionbar.show(10,10,("Death: ",colorCheatLabel),(death,colorCheatField),(" - Time: ",colorCheatLabel),(h,colorCheatField),(":",colorCheatField),(m,colorCheatField),(":",colorCheatField),(s,colorCheatField),(".",colorCheatField),(ms,colorCheatField))
                     }
                 }
                 if (!sCheat){
                     if (m < 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m < 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m < 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m < 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s < 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s < 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms < 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                     }
                     if (m >= 10 && s >= 10 && ms >= 10){
-                        actionbar.force(("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                        actionbar.show(10,10,("Death: ",colorLabel),(death,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                     }
                 }
             }
             if (sKill && !sDeath && !sLevels){
                 if (m < 10 && s < 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m < 10 && s < 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
                 if (m < 10 && s >= 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m < 10 && s >= 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s < 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s < 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s >= 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s >= 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
             }
             if (sKill && !sDeath && sLevels){
                 if (m < 10 && s < 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
                 if (m < 10 && s < 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
                 if (m < 10 && s >= 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
                 if (m < 10 && s >= 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
                 if (m >= 10 && s < 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
                 if (m >= 10 && s < 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
                 if (m >= 10 && s >= 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
                 if (m >= 10 && s >= 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField),(" - Level: ",colorLabel),(level,colorField),("/",colorField),(maxlevel,colorField))
                 }
             }
             if (sKill && sDeath && !sLevels){
                 if (m < 10 && s < 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m < 10 && s < 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
                 if (m < 10 && s >= 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m < 10 && s >= 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":0",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s < 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s < 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":0",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s >= 10 && ms < 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".0",colorField),(ms,colorField))
                 }
                 if (m >= 10 && s >= 10 && ms >= 10){
-                    actionbar.force(("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
+                    actionbar.show(10,10,("Kill: ",colorLabel),(kill,colorField),(" - Death: ",colorLabel),(death,colorField),("- Time: ",colorLabel),(h,colorField),(":",colorField),(m,colorField),(":",colorField),(s,colorField),(".",colorField),(ms,colorField))
                 }
             }
         }

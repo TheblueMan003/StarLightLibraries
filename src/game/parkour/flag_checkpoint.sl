@@ -88,10 +88,8 @@ def take(){
     bool onCheckpoint = false
     parkour_spawnpoint.checkpoint(minecraft:diamond_block){
         mark()
-        if (parkour_spawnpoint.setSpawn()){
-            actionbar.show(100, 20, ("Checkpoint !", "yellow", "bold"))
-            onTakeCallback()
-        }
+        actionbar.show(100, 20, ("Checkpoint !", "yellow", "bold"))
+        onTakeCallback()
         WasOnCheckpoint = true
         onCheckpoint = true
     }
