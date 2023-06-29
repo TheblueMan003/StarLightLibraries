@@ -179,7 +179,7 @@ template Setup{
             add()
         }
     }
-    def lazy remove(){
+    def remove(){
         applyTo -= @s
         inventory.clear()
     }

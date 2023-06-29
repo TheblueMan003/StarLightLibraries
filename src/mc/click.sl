@@ -6,7 +6,7 @@ import utils.PProcess
 import mc.inventory.Setup
 import mc.bedrock.Item
 
-template Click {
+template Click{
     def onClick(){
 
     }
@@ -27,7 +27,7 @@ template Click {
     }
 
     Item item{
-        setName("click_detector")
+        setName("click_detector_" + Compiler.getContextName())
         setNamespace("sl")
         setIcon("empty")
         item.onClick(__onClick__)
@@ -50,7 +50,7 @@ template Click {
             forceHotbar(minecraft:shield{CustomModelData:1,display:{Name:"[{\"text\":\"\",\"italic\":false}]"}})
         }
         if (Compiler.isBedrock()){
-
+            forceHotbar("sl:click_detector_" + Compiler.getContextName())
         }
     }
 

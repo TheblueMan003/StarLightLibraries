@@ -35,7 +35,10 @@ template Manager<level, death_block>{
                     reset()
                 }
                 time.tick()
-                if (block(~ ~-1 ~, death_block)){
+                if (gm.isSurvival()){
+                    gm.adventure()
+                }
+                if (block(~ ~-1 ~, death_block) && gm.isAdventure()){
                     death()
                 }
             }

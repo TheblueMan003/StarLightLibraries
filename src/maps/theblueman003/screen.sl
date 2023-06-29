@@ -692,8 +692,10 @@ private lazy void summonButton(int index, void=>void onCreated = null, void=>voi
         onClickRelease = ()=>{
             if (enabled){
                 button.unselect(index)
-                fct()
-                with(user, true)sound.play(minecraft:block.note_block.bell)
+                with(user, true){
+                    fct()
+                    sound.play(minecraft:block.note_block.bell)
+                }
             }
         }
         onDisable = ()=>{
