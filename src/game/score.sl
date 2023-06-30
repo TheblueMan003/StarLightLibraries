@@ -3,6 +3,56 @@ package game.score
 import standard.int as int
 
 """
+Sum up the value of the scoreboard of the entity in e
+"""
+lazy int sum(entity selector, string score){
+    int c = 0
+    with(selector){
+        c += score
+    }
+    return c
+}
+
+"""
+Get the min value of the scoreboard of the entity in e
+"""
+lazy int min(entity selector, string score){
+    int c = int.maxValue
+    with(selector){
+        if(score < c){
+            c = score
+        }
+    }
+    return c
+}
+
+"""
+Get the max value of the scoreboard of the entity in e
+"""
+lazy int max(entity selector, string score){
+    int c = int.minValue
+    with(selector){
+        if(score > c){
+            c = score
+        }
+    }
+    return c
+}
+
+"""
+Get the average value of the scoreboard of the entity in e
+"""
+lazy int avg(entity selector, string score){
+    int c = 0
+    int c2 = 0
+    with(selector){
+        c += score
+        c2 ++
+    }
+    return c / c2
+}
+
+"""
 Return the entities within `selector` that has the biggest `score`
 """
 def lazy entity winner(entity selector, int score){
@@ -59,8 +109,8 @@ def lazy withLoser(entity selector, int score, void=>void action){
 Execute `action` on all entities within `selector` ordered by ascending `score`
 """
 def lazy forEachOrderedAscending(entity selector, int score, void=>void action){
+	entity rest = selector
 	with(selector, true){
-		entity rest = selector
 		game.score.withLoser(selector in rest, score){
 			rest -= @s
 			action()
@@ -72,8 +122,8 @@ def lazy forEachOrderedAscending(entity selector, int score, void=>void action){
 Execute `action` on all entities within `selector` ordered by descending `score`
 """
 def lazy forEachOrderedDescending(entity selector, int score, void=>void action){
+	entity rest = selector
 	with(selector, true){
-		entity rest = selector
 		game.score.withWinner(selector in rest, score){
 			rest -= @s
 			action()

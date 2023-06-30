@@ -55,11 +55,17 @@ template TeamManager{
         scoreboard float inThis
 
         def @templates.onTeamMade(){
-            with(@a){
+            with(@a,false, action == fct){
                 game ++
                 if (action == fct){
                     inThis ++
                 }
+            }
+        }
+        def @templates.reset(){
+            with(@a){
+                game = 0
+                inThis = 0
             }
         }
         def [tag.order=0] @templates.onTeamMake(){
@@ -97,7 +103,7 @@ template TeamManager{
     def lazy requireRotatingTeam(int count, void=>void fct){
         scoreboard int game
         def @templates.onTeamMade(){
-            with(@a){
+            with(@a, false, action == fct){
                 game ++
             }
         }
