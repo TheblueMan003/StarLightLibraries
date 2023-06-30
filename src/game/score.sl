@@ -61,7 +61,7 @@ Execute `action` on all entities within `selector` ordered by ascending `score`
 def lazy forEachOrderedAscending(entity selector, int score, void=>void action){
 	with(selector, true){
 		entity rest = selector
-		game.score.withLoser(selector in rest, score, action){
+		game.score.withLoser(selector in rest, score){
 			rest -= @s
 			action()
 		}
@@ -74,7 +74,7 @@ Execute `action` on all entities within `selector` ordered by descending `score`
 def lazy forEachOrderedDescending(entity selector, int score, void=>void action){
 	with(selector, true){
 		entity rest = selector
-		game.score.withWinner(selector in rest, score, action){
+		game.score.withWinner(selector in rest, score){
 			rest -= @s
 			action()
 		}
