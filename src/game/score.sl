@@ -24,7 +24,7 @@ def lazy entity best(entity selector, int score){
 Execute `action` on the entity within `selector` that has the biggest `score`
 """
 def lazy withBest(entity selector, int score, void=>void action){
-	with(best(selector, score), true){
+	with(selector in best(selector, score), true){
 		action()
 	}
 }
@@ -50,7 +50,7 @@ def lazy worst(entity selector, int score){
 Execute `action` on the entity within `selector` that has the smallest `score`
 """
 def lazy withWorst(entity selector, int score, void=>void action){
-	with(worst(selector, score), true){
+	with(selector in worst(selector, score), true){
 		action()
 	}
 }
