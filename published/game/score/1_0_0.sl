@@ -3,7 +3,7 @@ package game.score
 """
 Return the entities within `selector` that has the biggest `score`
 """
-def lazy entity winner(entity selector, int score){
+def lazy entity best(entity selector, int score){
 	entity winner
 	int previous = int.minValue
 	as(selector){
@@ -21,8 +21,8 @@ def lazy entity winner(entity selector, int score){
 """
 Execute `action` on the entity within `selector` that has the biggest `score`
 """
-def lazy withWinner(entity selector, int score, void=>void action){
-	with(winner(selector, score), true){
+def lazy withBest(entity selector, int score, void=>void action){
+	with(best(selector, score), true){
 		action()
 	}
 }
@@ -30,7 +30,7 @@ def lazy withWinner(entity selector, int score, void=>void action){
 """
 Return the entities within `selector` that has the smallest `score`
 """
-def lazy loser(entity selector, int score){
+def lazy worst(entity selector, int score){
 	entity winner
 	int previous = int.maxValue
 	as(selector){
@@ -47,8 +47,8 @@ def lazy loser(entity selector, int score){
 """
 Execute `action` on the entity within `selector` that has the smallest `score`
 """
-def lazy withLoser(entity selector, int score, void=>void action){
-	with(loser(selector, score), true){
+def lazy withWorst(entity selector, int score, void=>void action){
+	with(worst(selector, score), true){
 		action()
 	}
 }
