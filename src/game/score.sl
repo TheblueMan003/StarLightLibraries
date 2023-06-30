@@ -52,5 +52,3 @@ def lazy withLoser(entity selector, int score, void=>void action){
 		action()
 	}
 }
-
-"""
