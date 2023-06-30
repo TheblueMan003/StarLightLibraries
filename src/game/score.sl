@@ -1,5 +1,7 @@
 package game.score
 
+import standard.int as int
+
 """
 Return the entities within `selector` that has the biggest `score`
 """
