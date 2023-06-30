@@ -1,6 +1,7 @@
 package game.TeamManager
 
 import cmd.tag as tag
+import standard.int as int
 import random
 
 template TeamManager{
@@ -13,6 +14,8 @@ template TeamManager{
     Try to make team
     """
     def lazy start(entity plys){
+        tag.remove(@a, "game.TeamManager.selected")
+        tag.remove(@a, "game.TeamManager.possible")
         players = plys
         start()
     }
@@ -24,7 +27,7 @@ template TeamManager{
             failled = 2
         }
         if (failled > 0){
-            onFail(failled_message[failled])
+            onFail(failled)
         }
         else{
             @templates.onTeamMade()
@@ -36,7 +39,7 @@ template TeamManager{
     }
 
     def reset(){
-        with(players, true){
+        with(@a, true){
             tag.remove("game.TeamManager.selected")
             tag.remove("game.TeamManager.possible")
             action = null
@@ -119,7 +122,7 @@ template TeamManager{
                 with(@a[tag=!game.TeamManager.selected] in players, true, game == minGame){
                     tag.add("game.TeamManager.possible")
                 }
-                while(c < count && @a[tag=game.TeamManager.possible] in players, true){
+                while(c < count && @a[tag=game.TeamManager.possible] in players){
                     with(@r[tag=game.TeamManager.possible] in players, true){
                         tag.add("game.TeamManager.selected")
                         tag.remove("game.TeamManager.possible")

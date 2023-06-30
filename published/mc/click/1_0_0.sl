@@ -7,6 +7,7 @@ import mc.inventory.Setup
 import mc.bedrock.Item
 
 template Click{
+    lazy val context = Compiler.getContextName()
     def onClick(){
 
     }
@@ -27,7 +28,7 @@ template Click{
     }
 
     Item item{
-        setName("click_detector_" + Compiler.getContextName())
+        setName("click_detector_" + context)
         setNamespace("sl")
         setIcon("empty")
         item.onClick(__onClick__)
@@ -50,7 +51,7 @@ template Click{
             forceHotbar(minecraft:shield{CustomModelData:1,display:{Name:"[{\"text\":\"\",\"italic\":false}]"}})
         }
         if (Compiler.isBedrock()){
-            forceHotbar("sl:click_detector_" + Compiler.getContextName())
+            forceHotbar("sl:click_detector_" + context)
         }
     }
 

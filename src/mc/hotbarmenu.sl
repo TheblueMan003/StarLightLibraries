@@ -25,12 +25,14 @@ template HotbarMenu extends Setup{
         }
         if (Compiler.isBedrock()){
             lazy var id = "hotbar_menu_" + itemCount
+            def f(){
+                action()
+            }
             Item item{
                 setName(id)
                 setNamespace("sl")
                 setIcon("item/" + texture)
-                setDisplayName(name)
-                item.onClick(action)
+                item.onClick(f)
                 item.onHold(__pass__)
                 item.onRelease(__pass__)
             }

@@ -1,20 +1,20 @@
-package math.time
+package math.Time
 
 """
 Struct to represent time
 """
 struct Time{
     int tick
-    def __init__(){
+    def lazy __init__(){
         tick = 0
     }
-    def __init__(int t){
+    def lazy __init__(int t){
         tick = t
     }
-    def __init__(int h, int m, int s){
+    def lazy __init__(int h, int m, int s){
         tick = ((h*60+m)*60+s)*20
     }
-    def __init__(int h, int m, int s, int t){
+    def lazy __init__(int h, int m, int s, int t){
         tick = ((h*60+m)*60+s)*20+t
     }
     def lazy __add__(int i){
@@ -35,10 +35,10 @@ struct Time{
     def lazy __set__(Time other){
         tick = other.tick
     }
-    def lazy __mult__(int i){
+    def lazy __mul__(int i){
         tick*=i
     }
-    def lazy __mult__(Time other){
+    def lazy __mul__(Time other){
         tick*=other.tick
     }
     def lazy __div__(int i){

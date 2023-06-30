@@ -54,6 +54,7 @@ template Manager<level, death_block>{
     }
 
     def start(){
+        hasStarted:=false
         if (!hasStarted){
             onStart()
             main.start()
