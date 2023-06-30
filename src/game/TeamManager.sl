@@ -103,7 +103,7 @@ template TeamManager{
         }
         def @templates.reset(){
             with(@a){
-                game ++
+                game = 0
             }
         }
         def [tag.order=0] @templates.onTeamMake(){
