@@ -71,9 +71,11 @@ template PProcess{
             schedule.asyncwhile(count > 0){
                 schedule.add(crash)
                 if (count > 0){
+                    beforAll()
                     with(@a in players, true){
                         main()
                     }
+                    afterAll()
                 }
                 schedule.remove(crash)
                 crashCount = 0
@@ -141,9 +143,8 @@ template PProcess{
     Stop the process
     """
     def @process.stop stopall(){
-        while(count){
-            stop()
-        }
+        count = 0
+        players -= @s
     }
 
     def virtual onStop(){

@@ -143,9 +143,8 @@ template PProcess{
     Stop the process
     """
     def @process.stop stopall(){
-        while(count){
-            stop()
-        }
+        count = 0
+        players -= @s
     }
 
     def virtual onStop(){
