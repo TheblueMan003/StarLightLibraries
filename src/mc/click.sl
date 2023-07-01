@@ -8,13 +8,13 @@ import mc.bedrock.Item
 
 template Click{
     lazy val context = Compiler.getContextName()
-    def onClick(){
+    def virtual onClick(){
 
     }
-    def onHold(){
+    def virtual onHold(){
 
     }
-    def onRelease(){
+    def virtual onRelease(){
 
     }
     private void __onClick__(){

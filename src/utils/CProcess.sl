@@ -131,8 +131,8 @@ template CProcess{
         }
     }
 
-    def onStop(){
+    def virtual onStop(){
     }
-    def onStart(){
+    def virtual onStart(){
     }
 }

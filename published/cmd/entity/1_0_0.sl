@@ -184,23 +184,6 @@ def lazy swap(entity $a, entity $b){
 	}
 }
 
-"""
-Despawn the entity e without killing it
-"""
-def lazy despawn(entity e = @s){
-	if(Compiler.isBedrock()){
-        def lazy inner(entity $a){
-            /event entity $a despawn
-        }
-		inner(e)
-	}
-	if(Compiler.isJava()){
-		with(e, true){
-		/tp @s ~ -200 ~
-		}
-	}
-}
-
 predicate onFire(){
     "condition": "minecraft:entity_properties",
     "entity": "this",

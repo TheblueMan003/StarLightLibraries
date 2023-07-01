@@ -71,9 +71,11 @@ template PProcess{
             schedule.asyncwhile(count > 0){
                 schedule.add(crash)
                 if (count > 0){
+                    beforAll()
                     with(@a in players, true){
                         main()
                     }
+                    afterAll()
                 }
                 schedule.remove(crash)
                 crashCount = 0
@@ -92,9 +94,11 @@ template PProcess{
                     crash()
                 }
                 crashDetect = true
+                beforAll()
                 with(@a in players, true){
                     main()
                 }
+                afterAll()
                 crashDetect = false
             }
         }
@@ -144,12 +148,16 @@ template PProcess{
         }
     }
 
-    def onStop(){
+    def virtual onStop(){
     }
-    def onStart(){
+    def virtual onStart(){
     }
-    def onJoin(){
+    def virtual onJoin(){
     }
-    def onLeave(){
+    def virtual onLeave(){
+    }
+    def virtual beforAll(){
+    }
+    def virtual afterAll(){
     }
 }

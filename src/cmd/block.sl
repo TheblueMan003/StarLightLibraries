@@ -30,14 +30,10 @@ if (Compiler.isJava){
     private lazy void _fill(mcposition $start, mcposition $end, mcobject $block, string $mod){
         /fill $start $end $block $mod
     }
-    private lazy void _clone(mcposition $start, mcposition $end, mcposition $target, mcobject $block, string $mod2){
-        /clone $start $end $target filtered $mod2 $block $mod2
+    private lazy void _clone(mcposition $start, mcposition $end, mcposition $target, string $mod1, string $mod2){
+        /clone $start $end $target $mod1 $mod2
     }
 }
-private lazy void _clone(mcposition $start, mcposition $end, mcposition $target, string $mod1, string $mod2){
-    /clone $start $end $target $mod1 $mod2
-}
-
 
 """
 Set a `block` at `position`
