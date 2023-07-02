@@ -384,6 +384,13 @@ template Entity{
             }
         }
     }
+    def lazy setScale(float scale){
+        components += {
+            "minecraft:scale": {
+				"value": scale
+			}
+        }
+    }
     def lazy shooter(string shoot){
         components += {
             "minecraft:shooter": {
