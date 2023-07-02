@@ -1,7 +1,7 @@
 package standard.debug
 
 if (Compiler.isJava()){
-    import cmd.bossbar as b
+    import cmd.Bossbar
 
     lazy string name = Compiler.getProjectName()
     lazy string type = Compiler.getProjectVersionType()
@@ -9,7 +9,7 @@ if (Compiler.isJava()){
     lazy int minor = Compiler.getProjectVersionMinor()
     lazy int patch = Compiler.getProjectVersionPatch()
 
-    b.Bossbar bar = new b.Bossbar(name,": ", type," ", 1,".",minor,".",patch)
+    Bossbar bar = new Bossbar(name,": ", type," ", 1,".",minor,".",patch)
 
     if (major < 1){
         bar.setName(name,": ", type," ", 1,".",minor,".",patch)

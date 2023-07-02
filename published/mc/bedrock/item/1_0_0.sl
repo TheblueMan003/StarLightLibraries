@@ -1,4 +1,4 @@
-package mc.Item
+package mc.bedrock.Item
 
 import mc.player as player
 import mc.bedrock.resourcespack.textures as textures
@@ -157,7 +157,7 @@ template Item{
     """
     Set the on while click function
     """
-    def lazy whileClick(void=>void fct){
+    def lazy onHold(void=>void fct){
         _whileClick = fct
         setFood(0)
     }
@@ -170,8 +170,10 @@ template Item{
     }
 
     [Compile.order=1000] private void build(){
-        lazy val namespacedName = _namespace + ":" + _name
-        createItem(_name, namespacedName, _category, _component)
-        createAnimationController(_name, _onClick, _whileClick, _onRelease)
+        if (Compiler.isBedrock()){
+            lazy val namespacedName = _namespace + ":" + _name
+            createItem(_name, namespacedName, _category, _component)
+            createAnimationController(_name, _onClick, _whileClick, _onRelease)
+        }
     }
 }

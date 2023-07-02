@@ -1,11 +1,12 @@
 package mc.java.display
 
 import cmd.java.data as data
+import mc.Entity
 
 """
 Class representing an generic display entity.
 """
-class DisplayEntity{
+class DisplayEntity extends Entity{
     """
     Set the entity's scale.
     """
@@ -163,9 +164,5 @@ class DisplayEntity{
     """
     def lazy interpolateTranslation(int duration, float x, float y, float z){
         data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"translation":[x, y, z]}})
-    }
-
-    def lazy run(void=>void fct){
-        fct()
     }
 }

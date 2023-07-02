@@ -379,13 +379,6 @@
                 "version": "1.0.0"
             }
         ],
-        "mc.item": [
-            {
-                "url": "mc/item/1_0_0.sl",
-                "filename": "mc/item.sl",
-                "version": "1.0.0"
-            }
-        ],
         "mc.inventory": [
             {
                 "url": "mc/inventory/1_0_0.sl",
@@ -636,6 +629,11 @@
                 "url": "utils/process_manager/1_0_0.sl",
                 "filename": "utils/process_manager.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "utils/process_manager/1_0_1.sl",
+                "filename": "utils/process_manager.sl",
+                "version": "1.0.1"
             }
         ],
         "utils.world": [
@@ -768,6 +766,90 @@
             {
                 "url": "mc/bedrock/entity/1_0_0.sl",
                 "filename": "mc/bedrock/entity.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.bedrock.item": [
+            {
+                "url": "mc/bedrock/item/1_0_0.sl",
+                "filename": "mc/bedrock/item.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "game.parkour.manager": [
+            {
+                "url": "game/parkour/manager/1_0_0.sl",
+                "filename": "game/parkour/manager.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.click": [
+            {
+                "url": "mc/click/1_0_0.sl",
+                "filename": "mc/click.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "utils.draw": [
+            {
+                "url": "utils/draw/1_0_0.sl",
+                "filename": "utils/draw.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "game.teammanager": [
+            {
+                "url": "game/teammanager/1_0_0.sl",
+                "filename": "game/teammanager.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.positionlock": [
+            {
+                "url": "mc/positionlock/1_0_0.sl",
+                "filename": "mc/positionlock.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.entity": [
+            {
+                "url": "mc/entity/1_0_0.sl",
+                "filename": "mc/entity.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "maps.theblueman003.screen": [
+            {
+                "url": "maps/theblueman003/screen/1_0_0.sl",
+                "filename": "maps/theblueman003/screen.sl",
+                "version": "1.0.0",
+                "resourcespack": [
+                    {
+                        "url": "resourcespack/theblueman_screen/bedrock/1_0_0.zip",
+                        "filename": "theblueman_screen",
+                        "version": "1.0.0",
+                        "game": "bedrock"
+                    },
+                    {
+                        "url": "resourcespack/theblueman_screen/java/1_0_0.zip",
+                        "filename": "theblueman_screen",
+                        "version": "1.0.0",
+                        "game": "java"
+                    }
+                ]
+            }
+        ],
+        "utils.pprocess": [
+            {
+                "url": "utils/pprocess/1_0_0.sl",
+                "filename": "utils/pprocess.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.hotbarmenu": [
+            {
+                "url": "mc/hotbarmenu/1_0_0.sl",
+                "filename": "mc/hotbarmenu.sl",
                 "version": "1.0.0"
             }
         ]

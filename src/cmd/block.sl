@@ -7,7 +7,7 @@ if (Compiler.isBedrock){
     private lazy void _fill(mcposition $start, mcposition $end, mcobject $block, int $id){
         /fill $start $end $block $id
     }
-    private lazy void _fill(mcposition $start, mcposition $end, mcobject $block, int $id, mcobject $fro, int $id2){
+    private lazy void _replace(mcposition $start, mcposition $end, mcobject $block, int $id, mcobject $fro, int $id2){
         /fill $start $end $block $id replace $fro $id2
     }
     private lazy void _fill(mcposition $start, mcposition $end, mcobject $block, int $id, string $mod){
@@ -24,20 +24,16 @@ if (Compiler.isJava){
     private lazy void _fill(mcposition $start, mcposition $end, mcobject $block){
         /fill $start $end $block
     }
-    private lazy void _fill(mcposition $start, mcposition $end, mcobject $block, mcobject $fro){
+    private lazy void _replace(mcposition $start, mcposition $end, mcobject $block, mcobject $fro){
         /fill $start $end $block replace $fro
     }
     private lazy void _fill(mcposition $start, mcposition $end, mcobject $block, string $mod){
         /fill $start $end $block $mod
     }
-    private lazy void _clone(mcposition $start, mcposition $end, mcposition $target, mcobject $block, string $mod2){
-        /clone $start $end $target filtered $mod2 $block $mod2
+    private lazy void _clone(mcposition $start, mcposition $end, mcposition $target, string $mod1, string $mod2){
+        /clone $start $end $target $mod1 $mod2
     }
 }
-private lazy void _clone(mcposition $start, mcposition $end, mcposition $target, string $mod1, string $mod2){
-    /clone $start $end $target $mod1 $mod2
-}
-
 
 """
 Set a `block` at `position`
@@ -82,10 +78,10 @@ def lazy replace(mcposition start, mcposition end, mcobject block, mcobject fro)
         lazy int bid = Compiler.getBedrockBlockID(block)
         lazy mcobject fbblock = Compiler.getBedrockBlockName(fro)
         lazy int fbid = Compiler.getBedrockBlockID(fro)
-        _fill(start, end, bblock, bid, fbblock, fbid)
+        _replace(start, end, bblock, bid, fbblock, fbid)
     }
     if (Compiler.isJava){
-        _fill(start, end, block, fro)
+        _replace(start, end, block, fro)
     }
 }
 

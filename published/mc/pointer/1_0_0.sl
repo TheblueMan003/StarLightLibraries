@@ -38,16 +38,16 @@ if (Compiler.isBedrock()){
 				}
 			},
 			"component_groups": {
-				"death": {
+				"despawn": {
 					"minecraft:despawn": {
 					}
 				}
 			},
 			"events": {
-				"to_death": {
+				"despawn": {
 					"add": {
 						"component_groups": [
-							"death"
+							"despawn"
 						]
 					}
 				}

@@ -1,18 +1,30 @@
 package mc.java.resourcespack.models
 
 lazy var overrides = {}
+
 """
-Add custom `model` to `item` with with CustomModelData = `index`
+Add custom `model` to `item` with CustomModelData = `index`
 """
-def lazy add(mcobject item, string model, int index){
+public lazy void add(mcobject item, string model, int index){
     lazy val name = Compiler.getNamespaceName(item)
     overrides[name] += [{"predicate": {"custom_model_data": index},"model": model}]
 }
+
 """
-Generate `item` model
+Add custom `model` to `item` with incremental CustomModelData
 """
-def lazy generate(mcobject item){
+public lazy int add(mcobject item, string model){
+    lazy int index = 1
     lazy val name = Compiler.getNamespaceName(item)
+    if (name in overrides){
+        index = Compiler.length(overrides[name]) 
+        index += 1
+    }
+    overrides[name] += [{"predicate": {"custom_model_data": index},"model": model}]
+    return index
+}
+
+private lazy void generate(string name){
     lazy val data = overrides[name]
     Compiler.insert($item, name){
         [java_rp=true] jsonfile models.item.$item{
@@ -25,11 +37,18 @@ def lazy generate(mcobject item){
     }
 }
 
+[compile.order=99999999]
+private void generate(){
+    foreach(item in overrides){
+        generate(item)
+    }
+}
+
 """
 Generate `item` model with custom models
 Take a list of pairs (model, index)
 """
-def lazy make(mcobject item, params models){
+public lazy void make(mcobject item, params models){
     foreach(values in models){
         lazy int model, index = values
         add(item, model, index)
@@ -40,7 +59,7 @@ def lazy make(mcobject item, params models){
 """
 Generate a flat item model with `sprite` as texture
 """
-def lazy string flat(string name, string sprite){
+public lazy string flat(string name, string sprite){
     Compiler.insert($name, name){
         [java_rp=true] jsonfile models.item.$name{
             "parent": "item/generated",

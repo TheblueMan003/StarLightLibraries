@@ -4,7 +4,7 @@ import mc.bedrock.resourcespack.textures as textures
 
 private lazy var _blocks = {"format_version": "1.19.50"}
 
-[Compiler.order=9999] private void make(){
+[compile.order=99999] private void make(){
     [bedrock_rp=true] jsonfile blocks _blocks
 }
 
@@ -312,63 +312,65 @@ template Block{
 
 
 
-    def [Compiler.order=9999] private make(){
-        lazy val fullName = _namespace + ":" + _name
-        _description += {"identifier": fullName}
-        _description += {"properties": _properties}
+    def [compile.order=9999] private make(){
+        if (Compiler.isBedrock()){
+            lazy val fullName = _namespace + ":" + _name
+            _description += {"identifier": fullName}
+            _description += {"properties": _properties}
 
-        lazy var textureName = ""
-        if (_texturesMod == 1){
-            textureName = _texturesSingle
-            textures.addBlock(_texturesSingle)
-            if (!_hasGeometry){
-                Compiler.insert($fullName, fullName){
-                    _blocks += {"$fullName": {"textures": _texturesSingle, "sounds": _sound}}
+            lazy var textureName = ""
+            if (_texturesMod == 1){
+                textureName = _texturesSingle
+                textures.addBlock(_texturesSingle)
+                if (!_hasGeometry){
+                    Compiler.insert($fullName, fullName){
+                        _blocks += {"$fullName": {"textures": _texturesSingle, "sounds": _sound}}
+                    }
                 }
-            }
-        } 
-        else if (_texturesMod == 2){
-            textureName = fullName
-            foreach(texture in _texturesJson){
-                textures.addBlock(texture)
-            }
-            lazy val up = _texturesJson[0]
-            lazy val side = _texturesJson[1]
-            lazy val down = _texturesJson[2]
-            if (!_hasGeometry){
-                Compiler.insert($fullName, fullName){
-                    _blocks += {"$fullName": {"textures": {"up": up, "side": side, "down": down}, "sounds": _sound}}
+            } 
+            else if (_texturesMod == 2){
+                textureName = fullName
+                foreach(texture in _texturesJson){
+                    textures.addBlock(texture)
                 }
-            }
-        }
-        else if (_texturesMod == 3){
-            textureName = "sl.block."+_name
-            textures.addBlockRandom(textureName, _texturesJson)
-            if (!_hasGeometry){
-                Compiler.insert($fullName, fullName){
-                    _blocks += {"$fullName": {"textures": textureName, "sounds": _sound}}
-                }
-            }
-        }
-        if (_hasGeometry){
-            _components += {
-                    "minecraft:material_instances": {
-                    "*": {
-                        "texture": textureName,
-                        "render_method": _renderMethod
+                lazy val up = _texturesJson[0]
+                lazy val side = _texturesJson[1]
+                lazy val down = _texturesJson[2]
+                if (!_hasGeometry){
+                    Compiler.insert($fullName, fullName){
+                        _blocks += {"$fullName": {"textures": {"up": up, "side": side, "down": down}, "sounds": _sound}}
                     }
                 }
             }
-        }
+            else if (_texturesMod == 3){
+                textureName = "sl.block."+_name
+                textures.addBlockRandom(textureName, _texturesJson)
+                if (!_hasGeometry){
+                    Compiler.insert($fullName, fullName){
+                        _blocks += {"$fullName": {"textures": textureName, "sounds": _sound}}
+                    }
+                }
+            }
+            if (_hasGeometry){
+                _components += {
+                        "minecraft:material_instances": {
+                        "*": {
+                            "texture": textureName,
+                            "render_method": _renderMethod
+                        }
+                    }
+                }
+            }
 
-        Compiler.insert($name, _name){
-            jsonfile blocks.$name{
-                "format_version": "1.20.0",
-                "minecraft:block": {
-                    "description": _description,
-                    "components": _components,
-                    "permutations": _permutations,
-                    "events": _events
+            Compiler.insert($name, _name){
+                jsonfile blocks.$name{
+                    "format_version": "1.20.0",
+                    "minecraft:block": {
+                        "description": _description,
+                        "components": _components,
+                        "permutations": _permutations,
+                        "events": _events
+                    }
                 }
             }
         }

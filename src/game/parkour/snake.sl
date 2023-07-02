@@ -71,10 +71,10 @@ def init(SnakeBlock b1, SnakeBlock b2, int speed, int length){
     Block2 = b2
 }
 def summon(SnakeBlock b1, SnakeBlock b2, int speed, int length){
-    snakeHead += entity.summon(marker){
+    snakeHead += pt.newPointer(){
         init(b1, b2, speed, length)
     }
-    snakeTail += entity.summon(marker){
+    snakeTail += pt.newPointer(){
         init(b1, b2, speed, length)
     }
 }

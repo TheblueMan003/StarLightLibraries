@@ -147,7 +147,7 @@ def lazy kill(entity selector = @s){
 def lazy despawn(entity e = @s){
 	if(Compiler.isBedrock()){
         def lazy inner(entity $a){
-            /event entity $a to_death
+            /event entity $a despawn
         }
 		inner(e)
 	}
@@ -181,23 +181,6 @@ def lazy swap(entity $a, entity $b){
 			/tp @s @e[type=marker,tag=trg,limit=1]
 		}
 		/kill @e[type=marker,tag=trg,limit=1]
-	}
-}
-
-"""
-Despawn the entity e without killing it
-"""
-def lazy despawn(entity e = @s){
-	if(Compiler.isBedrock()){
-        def lazy inner(entity $a){
-            /event entity $a to_death
-        }
-		inner(e)
-	}
-	if(Compiler.isJava()){
-		with(e, true){
-		/tp @s ~ -200 ~
-		}
 	}
 }
 

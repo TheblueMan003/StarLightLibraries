@@ -89,7 +89,7 @@ if (Compiler.isJava()){
     remove `func` from the schedule
     """
     def lazy remove(void=>void func){
-        clear(func)
+        Compiler.scheduleClear(func)
     }
 
     """

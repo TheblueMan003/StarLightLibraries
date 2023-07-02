@@ -5,14 +5,24 @@ package cmd.spawnpoint
 Set the spawnpoint of the player to the current position.
 """
 def lazy set(){
-    /spawnpoint
+    if (Compiler.isJava()){
+        /spawnpoint @s ~ ~ ~ ~
+    }
+    if (Compiler.isBedrock()){
+        /spawnpoint @s
+    }
 }
 
 """
 Set the spawnpoint of the player to the given position.
 """
 def lazy set(mcposition $pos){
-    /spawnpoint @s $pos
+    if (Compiler.isJava()){
+        /spawnpoint @s $pos ~
+    }
+    if (Compiler.isBedrock()){
+        /spawnpoint @s $pos
+    }
 }
 
 """
@@ -31,28 +41,23 @@ def lazy set(mcposition $pos, float $angle){
 """
 Set the spawnpoint of the player to the current position.
 """
-def lazy set(entity $player){
-    /spawnpoint $player
+def lazy set(entity player){
+    with(@a in player)set()
 }
 
 """
 Set the spawnpoint of the player to the given position.
 """
-def lazy set(entity $player, mcposition $pos){
-    /spawnpoint $player $pos
+def lazy set(entity player, mcposition pos){
+    with(@a in player)set(pos)
 }
 
 
 """
 Set the spawnpoint of the player to the given position and angle. (JAVA ONLY)
 """
-def lazy set(entity $player, mcposition $pos, float $angle){
-    if (Compiler.isJava()){
-        /spawnpoint $player $pos $angle
-    }
-    if (Compiler.isBedrock()){
-        /spawnpoint $player $pos
-    }
+def lazy set(entity player, mcposition pos, float angle){
+    with(@a in player)set(pos, angle)
 }
 
 

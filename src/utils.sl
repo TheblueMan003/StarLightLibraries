@@ -39,13 +39,6 @@ def lazy forArea(int sizeX, int sizeY, int sizeZ, void=>void fct){
 }
 
 """
-Lock Player in place
-"""
-def lazy lockPosition(mcposition pos=~~~){
-    at(pos)as(@s[distance=0.1..,gamemode=!creative])./tp @s ~ ~ ~
-}
-
-"""
 Call fct if the value of value has changed since the last call
 """
 def lazy observe(int value, void=>void fct){

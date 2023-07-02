@@ -123,8 +123,8 @@ template Process{
         stop()
     }
 
-    def onStop(){
+    def virtual onStop(){
     }
-    def onStart(){
+    def virtual onStart(){
     }
 }

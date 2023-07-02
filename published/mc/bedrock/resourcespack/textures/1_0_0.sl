@@ -2,7 +2,7 @@ package mc.bedrock.resourcespack.textures
 
 lazy json items = {}
 lazy json blocks = {}
-def [Compiler.order=999999] make(){
+def [compile.order=999999] make(){
     [bedrock_rp=true] jsonfile textures.item_texture{
         "resource_pack_name": "sl",
         "texture_name": "atlas.items",
