@@ -10,12 +10,30 @@ forgenerate($name, (absorption, unluck, bad_omen, blindness, conduit_power, dolp
     Give effect `$name` to `ent` for `duration` and `power`.
     Show particles if `particle`
     """
-    def lazy $name(entity $ent, int $duration = 999999, int $power = 0, bool $particle = true){
+    def lazy $name(entity ent, int duration = -1, int power = 0, bool particle = true){
         if (Compiler.isJava()){
-            /effect give $ent $name $duration $power $particle
+            if (duration <= -1){
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (ent, name, duration, power, particle)){
+                    /effect give $ent $name infinite $power $particle
+                }
+            }
+            else{
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (ent, name, duration, power, particle)){
+                    /effect give $ent $name $duration $power $particle
+                }
+            }
         }
         if (Compiler.isBedrock()){
-            /effect $ent $name $duration $power $particle
+            if (duration <= -1){
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (ent, name, duration, power, particle)){
+                    /effect $ent $name 999999 $power $particle
+                }
+            }
+            else{
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (ent, name, duration, power, particle)){
+                    /effect $ent $name $duration $power $particle
+                }
+            }
         }
     }
 
@@ -23,12 +41,30 @@ forgenerate($name, (absorption, unluck, bad_omen, blindness, conduit_power, dolp
     Give effect `$name` to self for `duration` and `power`.
     Show particles if `particle`
     """
-    def lazy $name(int $duration = 999999, int $power = 0, bool $particle = true){
+    def lazy $name(int duration = 999999, int power = 0, bool particle = true){
         if (Compiler.isJava()){
-            /effect give @s $name $duration $power $particle
+            if (duration <= -1){
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (@s, name, duration, power, particle)){
+                    /effect give $ent $name infinite $power $particle
+                }
+            }
+            else{
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (@s, name, duration, power, particle)){
+                    /effect give $ent $name $duration $power $particle
+                }
+            }
         }
         if (Compiler.isBedrock()){
-            /effect @s $name $duration $power $particle
+            if (duration <= -1){
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (@s, name, duration, power, particle)){
+                    /effect $ent $name 999999 $power $particle
+                }
+            }
+            else{
+                Compiler.insert(($ent, $name, $duration, $power, $particle), (@s, name, duration, power, particle)){
+                    /effect $ent $name $duration $power $particle
+                }
+            }
         }
     }
 }

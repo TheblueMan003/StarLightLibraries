@@ -129,6 +129,11 @@
                 "url": "cmd/effect/1_0_0.sl",
                 "filename": "cmd/effect.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/effect/1_1_0.sl",
+                "filename": "cmd/effect.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.entity": [
