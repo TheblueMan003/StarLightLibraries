@@ -659,7 +659,7 @@ public lazy void addMap(int index, string name, void=>void fct){
         }
     }
 }
-private lazy void summonButton(int index, void=>void onCreated = null, void=>void fct = null){
+private lazy void summonButton(int index, void=>void onCreated, void=>void fct){
     ButtonEntity button = new ButtonEntity()
     button.unselect(index)
     button.run(){

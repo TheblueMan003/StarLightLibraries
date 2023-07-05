@@ -852,6 +852,20 @@
                 "filename": "mc/hotbarmenu.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.java.item": [
+            {
+                "url": "mc/java/item/1_0_0.sl",
+                "filename": "mc/java/item.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "cmd.spectate": [
+            {
+                "url": "cmd/spectate/1_0_0.sl",
+                "filename": "cmd/spectate.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
