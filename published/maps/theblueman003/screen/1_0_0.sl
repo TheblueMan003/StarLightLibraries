@@ -411,7 +411,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 2})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 2})
         }
     }
     def lazy unselect(int index){
@@ -420,7 +420,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 1})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 1})
         }
     }
     def lazy click(int index){
@@ -429,7 +429,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 3})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 3})
         }
     }
     def lazy disable(int index){
@@ -438,7 +438,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 4})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 4})
         }
     }
     def __destroy__(){
