@@ -101,12 +101,12 @@ def lazy Texture addTextureVertical(string name){
                     "from": [0, 0, 8],
                     "to": [16, 16, 8],
                     "faces": {
-                        "north": {"uv": [16, 16, 0, 0], "texture": "#0"},
-                        "east": {"uv": [16, 16, 0, 0], "texture": "#0"},
-                        "south": {"uv": [16, 16, 0, 0], "texture": "#0"},
-                        "west": {"uv": [16, 16, 0, 0], "texture": "#0"},
-                        "up": {"uv": [16, 16, 0, 0], "texture": "#0"},
-                        "down": {"uv": [16, 16, 0, 0], "texture": "#0"}
+                        "north": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                        "east": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                        "south": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                        "west": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                        "up": {"uv": [0, 0, 16, 16], "texture": "#0"},
+                        "down": {"uv": [0, 0, 16, 16], "texture": "#0"}
                     }
                 }
             ]
