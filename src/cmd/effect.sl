@@ -85,16 +85,16 @@ forgenerate($name, (absorption, unluck, bad_omen, blindness, conduit_power, dolp
             /effect $ent $name 0 0
         }
     }
+}
 
-    """
-    Clear all effects for `ent`
-    """
-    def lazy clear(entity $ent = @s){
-        if (Compiler.isJava()){
-            /effect clear $ent
-        }
-        if (Compiler.isBedrock()){
-            /effect $ent clear
-        }
+"""
+Clear all effects for `ent`
+"""
+def lazy clear(entity $ent = @s){
+    if (Compiler.isJava()){
+        /effect clear $ent
+    }
+    if (Compiler.isBedrock()){
+        /effect $ent clear
     }
 }
