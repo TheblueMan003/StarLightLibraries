@@ -86,7 +86,7 @@ template Click{
                     __onRelease__()
                 }
             }
-            void aferAll(){
+            void afterAll(){
                 item.kill(minecraft:shield)
             }
         }
