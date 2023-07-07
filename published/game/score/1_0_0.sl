@@ -147,7 +147,7 @@ def lazy forEachOrdered(entity selector, int score, bool ascending, void=>void a
 Execute `action` on the entity that has the new highest `score` within `selector`
 """
 def lazy onNewHighScore(entity selector, int score, int previous, void=>void action){
-	withBestScore(selector, score){
+	withWinner(selector, score){
 		if (score > previous){
 			action()
 		}
@@ -158,7 +158,7 @@ def lazy onNewHighScore(entity selector, int score, int previous, void=>void act
 Execute `action` on the entity that has the new lowest `score` within `selector`
 """
 def lazy onNewLowScore(entity selector, int score, int previous, void=>void action){
-	withBestScore(selector, score){
+	withLoser(selector, score){
 		if (score < previous){
 			action()
 		}
