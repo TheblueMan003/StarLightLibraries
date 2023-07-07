@@ -48,28 +48,28 @@ class DisplayEntity extends Entity{
     """
     Set the entity's Billboard to none.
     """
-    def lazy setFixedBillboard(bool fixed){
+    def lazy setFixedBillboard(){
         data.set({"billboard":"fixed"})
     }
 
     """
     Set the entity's Billboard to Vertical.
     """
-    def lazy setVerticalBillboard(bool vertical){
+    def lazy setVerticalBillboard(){
         data.set({"billboard":"vertical"})
     }
 
     """
     Set the entity's Billboard to Horizontal.
     """
-    def lazy setHorizontalBillboard(bool horizontal){
+    def lazy setHorizontalBillboard(){
         data.set({"billboard":"horizontal"})
     }
 
     """
     Set the entity's Billboard to Center.
     """
-    def lazy setCenterBillboard(bool center){
+    def lazy setCenterBillboard(){
         data.set({"billboard":"center"})
     }
 
