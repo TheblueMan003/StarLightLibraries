@@ -15,6 +15,8 @@ import math.raycast as raycast
 
 import utils.CProcess
 
+import standard
+
 lazy var buttonCount = 1
 lazy var screenCount = 1
 def lazy addButtonModels(string $name){
@@ -118,7 +120,6 @@ def lazy addButtonModels(string $name){
     buttonCount++
 }
 def lazy addCharacterButtonModels(string $name){
-
     if (Compiler.isJava()){
         [java_rp=true] jsonfile models.item.screen_button_credit_$name{
             "credit": "Made with Blockbench",
@@ -582,6 +583,7 @@ def @screen.times(){
 }
 def @screen.info(){
     background.run(){
+        printVersion()
         background.setScreen(3)
     }
 }
