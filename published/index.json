@@ -871,6 +871,13 @@
                 "filename": "cmd/spectate.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.sprite": [
+            {
+                "url": "mc/sprite/1_0_0.sl",
+                "filename": "mc/sprite.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
