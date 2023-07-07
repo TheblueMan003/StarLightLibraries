@@ -85,6 +85,9 @@ template Click{
                     __onRelease__()
                 }
             }
+            void aferAll(){
+                item.kill(minecraft:shield)
+            }
         }
     }
 }
