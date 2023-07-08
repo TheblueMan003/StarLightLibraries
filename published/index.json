@@ -878,6 +878,13 @@
                 "filename": "mc/sprite.sl",
                 "version": "1.0.0"
             }
+        ],
+        "standard.color": [
+            {
+                "url": "standard/color/1_0_0.sl",
+                "filename": "standard/color.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
