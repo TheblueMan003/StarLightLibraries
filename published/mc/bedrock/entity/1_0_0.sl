@@ -480,10 +480,10 @@ template Entity{
             }
         }
     }
-    def lazy setFamily(params family){
+    def lazy setFamily(json family){
         components += {
             "minecraft:type_family": {
-                "family": [ family ]
+                "family": family 
             }
         }
     }
