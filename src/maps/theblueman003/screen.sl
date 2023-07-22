@@ -15,6 +15,8 @@ import math.raycast as raycast
 
 import utils.CProcess
 
+import standard
+
 lazy var buttonCount = 1
 lazy var screenCount = 1
 def lazy addButtonModels(string $name){
@@ -118,7 +120,6 @@ def lazy addButtonModels(string $name){
     buttonCount++
 }
 def lazy addCharacterButtonModels(string $name){
-
     if (Compiler.isJava()){
         [java_rp=true] jsonfile models.item.screen_button_credit_$name{
             "credit": "Made with Blockbench",
@@ -411,7 +412,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 2})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 2})
         }
     }
     def lazy unselect(int index){
@@ -420,7 +421,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 1})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 1})
         }
     }
     def lazy click(int index){
@@ -429,7 +430,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 3})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 3})
         }
     }
     def lazy disable(int index){
@@ -438,7 +439,7 @@ class ButtonEntity extends ButtonParent with sl:screen_button for mcbedrock{
         }
         if (Compiler.isJava()){
             lazy val model = index * 10
-            button.setItem("minecraft:birch_boat", {CustomModelData: model + 4})
+            setItem("minecraft:birch_boat", {CustomModelData: model + 4})
         }
     }
     def __destroy__(){
@@ -582,6 +583,7 @@ def @screen.times(){
 }
 def @screen.info(){
     background.run(){
+        printVersion()
         background.setScreen(3)
     }
 }
@@ -659,7 +661,7 @@ public lazy void addMap(int index, string name, void=>void fct){
         }
     }
 }
-private lazy void summonButton(int index, void=>void onCreated = null, void=>void fct = null){
+private lazy void summonButton(int index, void=>void onCreated, void=>void fct){
     ButtonEntity button = new ButtonEntity()
     button.unselect(index)
     button.run(){

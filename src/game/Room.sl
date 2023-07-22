@@ -131,32 +131,32 @@ template Room<_sx, _sy, _sz, _ex, _ey, _ez>{
     """
     Call back when a player enter the room.
     """
-    def onEnter(){
+    def virtual onEnter(){
     }
     """
     Call back when a player stays in the room.
     """
-    def onStay(){
+    def virtual onStay(){
     }
     """
     Call back when the room get activated. A player enter the room while nobody is in it.
     """
-    def onActivate(){
+    def virtual onActivate(){
     }
     """
     Call back when the room get desactivated. All the players left the room.
     """
-    def onDesactivate(){
+    def virtual onDesactivate(){
     }
     """
     Call back when the room contains at least one player.
     """
-    def main(){
+    def virtual main(){
     }
     """
     Call back when a player exit the room.
     """
-    def onExit(){
+    def virtual onExit(){
     }
     def private ticking __main__(){
         if (nbPlayer > 0){
@@ -179,7 +179,7 @@ template Room<_sx, _sy, _sz, _ex, _ey, _ez>{
         }
     }
     
-    def @game.room.show __show__(){
+    def @game.room.show __show__(){/*
         if (Compiler.isJava && Compiler.isDebug()){
             /summon marker ~ 0 ~ {Invisible:1,Tags:["trg_show"]}
             with(@e[tag=trg_show]){
@@ -248,7 +248,7 @@ template Room<_sx, _sy, _sz, _ex, _ey, _ez>{
                 }
                 /kill @s
             }
-        }
+        }*/
     }
     
     def @game.room.init main_init(){

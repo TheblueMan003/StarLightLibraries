@@ -3,7 +3,7 @@ package standard.debug
 if (Compiler.isJava()){
     import cmd.Bossbar
 
-    lazy string name = Compiler.getProjectName()
+    lazy string name = Compiler.getProjectFullName()
     lazy string type = Compiler.getProjectVersionType()
     lazy int major = Compiler.getProjectVersionMajor()
     lazy int minor = Compiler.getProjectVersionMinor()
@@ -26,7 +26,7 @@ if (Compiler.isJava()){
 if (Compiler.isBedrock()){
     import cmd.actionbar as a
 
-    lazy string name = Compiler.getProjectName()
+    lazy string name = Compiler.getProjectFullName()
     lazy string type = Compiler.getProjectVersionType()
     lazy int major = Compiler.getProjectVersionMajor()
     lazy int minor = Compiler.getProjectVersionMinor()

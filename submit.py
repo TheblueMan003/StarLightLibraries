@@ -27,8 +27,9 @@ def addOne(name2, version):
                 else:
                     latest = data["libraries"][name.replace("/", ".").lower()][i]
             else:
-                d = {"url": name.lower()+"/"+pv+".sl", "filename": name.lower()+".sl", "version": version}
+                d = {}
                 d.update(latest)
+                d.update({"url": name.lower()+"/"+pv+".sl", "filename": name.lower()+".sl", "version": version})
                 data["libraries"][name.replace("/", ".").lower()].append(d)
         
         json.dump(data, f, indent=4)

@@ -58,22 +58,10 @@ def lazy showSubtitle(rawjson $text){
 """
 Show text in the title with priority `priority` and time `time`
 """
-def lazy show(int priority, int time, rawjson text){
-    if (currentPriority <= priority){
-        force(text)
-        time(0, time, 0)
-        currentTime = time
-        currentPriority = priority
-    }
-}
-
-"""
-Show text in the title with priority `priority` and time `time`
-"""
 def lazy show(int priority, int start, int time, int end, rawjson text){
     if (currentPriority <= priority){
         force(text)
-        time(start, time, end)
+        times(start, time, end)
         currentTime = time
         currentPriority = priority
     }
@@ -91,6 +79,6 @@ def lazy use(int priority, int time){
     }
 }
 
-def lazy time(int $start, int $middle, int $end){
+def lazy times(int $start, int $middle, int $end){
     /title @s times $start $middle $end
 }

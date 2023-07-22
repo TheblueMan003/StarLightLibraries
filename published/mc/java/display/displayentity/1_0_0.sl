@@ -11,14 +11,14 @@ class DisplayEntity extends Entity{
     Set the entity's scale.
     """
     def lazy setScale(float scale){
-        data.set({"transformation":{"scale":[scale, scale, scale]}})
+        data.set({"transformation":{"scale":[scale f, scale f, scale f]}})
     }
     
     """
     Set the entity's scale.
     """
     def lazy setScale(float x, float y, float z){
-        data.set({"transformation":{"scale":[x, y, z]}})
+        data.set({"transformation":{"scale":[x f, y f, z f]}})
     }
 
     """
@@ -26,7 +26,7 @@ class DisplayEntity extends Entity{
     """
     def lazy setLeftRotation(float x, float y, float z, float w){
         lazy val a = Compiler.toRadians(w)
-        data.set({"transformation":{"left_rotation":{"axis":[x, y, z], "angle":a}}})
+        data.set({"transformation":{"left_rotation":{"axis":[x f, y f, z f], "angle":a f}}})
     }
 
     """
@@ -34,42 +34,42 @@ class DisplayEntity extends Entity{
     """
     def lazy setRightRotation(float x, float y, float z, float w){
         lazy val a = Compiler.toRadians(w)
-        data.set({"transformation":{"right_rotation":{"axis":[x, y, z], "angle":a}}})
+        data.set({"transformation":{"right_rotation":{"axis":[x f, y f, z f], "angle":a f}}})
     }
 
     """
     Set the entity's translation.
     """
     def lazy setTranslation(float x, float y, float z){
-        data.set({"transformation":{"translation":[x, y, z]}})
+        data.set({"transformation":{"translation":[x f, y f, z f]}})
     }
 
 
     """
     Set the entity's Billboard to none.
     """
-    def lazy setFixedBillboard(bool fixed){
+    def lazy setFixedBillboard(){
         data.set({"billboard":"fixed"})
     }
 
     """
     Set the entity's Billboard to Vertical.
     """
-    def lazy setVerticalBillboard(bool vertical){
+    def lazy setVerticalBillboard(){
         data.set({"billboard":"vertical"})
     }
 
     """
     Set the entity's Billboard to Horizontal.
     """
-    def lazy setHorizontalBillboard(bool horizontal){
+    def lazy setHorizontalBillboard(){
         data.set({"billboard":"horizontal"})
     }
 
     """
     Set the entity's Billboard to Center.
     """
-    def lazy setCenterBillboard(bool center){
+    def lazy setCenterBillboard(){
         data.set({"billboard":"center"})
     }
 
@@ -98,21 +98,21 @@ class DisplayEntity extends Entity{
     Set Shadow Radius
     """
     def lazy setShadowRadius(float value){
-        data.set({"shadow_radius":value})
+        data.set({"shadow_radius":value f})
     }
 
     """
     Set Shadow Strength
     """
     def lazy setShadowStrength(float value){
-        data.set({"shadow_strength":value})
+        data.set({"shadow_strength":value f})
     }
 
     """
     Set Bounding Box
     """
     def lazy setBoundingBox(float width, float height){
-        data.set({"width":width, "height":height})
+        data.set({"width":width f, "height":height f})
     }
 
     """
@@ -133,14 +133,14 @@ class DisplayEntity extends Entity{
     Interpolate the entity's scale.
     """
     def lazy interpolateScale(int duration, float scale){
-        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"scale":[scale, scale, scale]}})
+        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"scale":[scale f, scale f, scale f]}})
     }
     
     """
     Interpolate the entity's scale.
     """
     def lazy interpolateScale(int duration, float x, float y, float z){
-        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"scale":[x, y, z]}})
+        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"scale":[x f, y f, z f]}})
     }
 
     """
@@ -148,7 +148,7 @@ class DisplayEntity extends Entity{
     """
     def lazy interpolateLeftRotation(int duration, float x, float y, float z, float w){
         lazy val a = Compiler.toRadians(w)
-        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"left_rotation":{"axis":[x, y, z], "angle":a}}})
+        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"left_rotation":{"axis":[x f, y f, z f], "angle":a f}}})
     }
 
     """
@@ -156,13 +156,13 @@ class DisplayEntity extends Entity{
     """
     def lazy interpolateRightRotation(int duration, float x, float y, float z, float w){
         lazy val a = Compiler.toRadians(w)
-        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"right_rotation":{"axis":[x, y, z], "angle":a}}})
+        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"right_rotation":{"axis":[x f, y f, z f], "angle":a f}}})
     }
 
     """
     Interpolate the entity's translation.
     """
     def lazy interpolateTranslation(int duration, float x, float y, float z){
-        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"translation":[x, y, z]}})
+        data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"translation":[x f, y f, z f]}})
     }
 }

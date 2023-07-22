@@ -38,15 +38,19 @@ def lazy setValue(mcobject $name, int $value){
 """
 Set the value of bossbar `name` to the variable `value`
 """
-def lazy setValueVar(mcobject $name, int $value){
-    /execute store result bossbar $name value run scoreboard players get $value.scoreboard
+def lazy setValueVar(mcobject $name, int value){
+    Compiler.insert(($value, $score), (Compiler.getSelector(value), Compiler.getObjective(value))){
+        /execute store result bossbar $name value run scoreboard players get $value $score
+    }
 }
 
 """
 Set the max of bossbar `name` to variable `value`
 """
-def lazy setMaxVar(mcobject $name, int $value){
-    /execute store result bossbar $name max run scoreboard players get $value.scoreboard
+def lazy setMaxVar(mcobject $name, int value){
+    Compiler.insert(($value, $score), (Compiler.getSelector(value), Compiler.getObjective(value))){
+        /execute store result bossbar $name max run scoreboard players get $value $score
+    }
 }
 
 """
@@ -177,7 +181,7 @@ struct Bossbar{
     """
     Set the value of bossbar to `value`
     """
-    def lazy setValue(int $value){
+    def lazy setValue(int value){
         if (Compiler.isVariable(value)){
             setValueVar(id, value)
         }

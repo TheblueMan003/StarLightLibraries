@@ -129,6 +129,11 @@
                 "url": "cmd/effect/1_0_0.sl",
                 "filename": "cmd/effect.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/effect/1_1_0.sl",
+                "filename": "cmd/effect.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.entity": [
@@ -850,6 +855,34 @@
             {
                 "url": "mc/hotbarmenu/1_0_0.sl",
                 "filename": "mc/hotbarmenu.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.java.item": [
+            {
+                "url": "mc/java/item/1_0_0.sl",
+                "filename": "mc/java/item.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "cmd.spectate": [
+            {
+                "url": "cmd/spectate/1_0_0.sl",
+                "filename": "cmd/spectate.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.sprite": [
+            {
+                "url": "mc/sprite/1_0_0.sl",
+                "filename": "mc/sprite.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.color": [
+            {
+                "url": "standard/color/1_0_0.sl",
+                "filename": "standard/color.sl",
                 "version": "1.0.0"
             }
         ]

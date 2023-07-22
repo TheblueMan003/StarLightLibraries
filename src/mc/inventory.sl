@@ -25,7 +25,7 @@ if (Compiler.isBedrock){
     """
     def lazy setMainHand(mcobject item, int count = 1, json nbt = {}){
         lazy mcobject itemb = Compiler.getBedrockBlockName(item)
-        lazy int itemd = Compiler.getBedrockBlockID(item)
+        lazy int itemd = Compiler.getBedrockItemID(item)
         setSlot("slot.weapon.mainhand", 0, itemb, count, itemd, nbt)
     }
 }
@@ -44,7 +44,7 @@ if (Compiler.isBedrock){
     """
     def lazy setOffHand(mcobject item, int count = 1, json nbt = {}){
         lazy mcobject itemb = Compiler.getBedrockBlockName(item)
-        lazy int itemd = Compiler.getBedrockBlockID(item)
+        lazy int itemd = Compiler.getBedrockItemID(item)
         setSlot("slot.weapon.offhand", 0, itemb, count, itemd, nbt)
     }
 }
@@ -56,7 +56,7 @@ def private lazy universalJavaSet(string slot, int slotID, mcobject item, int co
 
 def private lazy universalBedrockSet(string slot, int slotID, mcobject item, int count = 1, json nbt = {}){
     lazy mcobject itemb = Compiler.getBedrockBlockName(item)
-    lazy int itemd = Compiler.getBedrockBlockID(item)
+    lazy int itemd = Compiler.getBedrockItemID(item)
     setSlot(slot, slotID, itemb, count, itemd, nbt)
 }
 

@@ -2,6 +2,7 @@ package mc.Click
 
 import mc.java.event as event
 import mc.java.resourcespack.models as models
+import mc.java.item as item
 import utils.PProcess
 import mc.inventory.Setup
 import mc.bedrock.Item
@@ -84,6 +85,9 @@ template Click{
                 if (wasClicked == 0){
                     __onRelease__()
                 }
+            }
+            void afterAll(){
+                item.kill(minecraft:shield)
             }
         }
     }

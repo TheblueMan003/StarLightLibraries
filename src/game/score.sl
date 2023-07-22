@@ -142,3 +142,25 @@ def lazy forEachOrdered(entity selector, int score, bool ascending, void=>void a
 		game.score.forEachOrderedDescending(selector, score, action)
 	}
 }
+
+"""
+Execute `action` on the entity that has the new highest `score` within `selector`
+"""
+def lazy onNewHighScore(entity selector, int score, int previous, void=>void action){
+	withWinner(selector, score){
+		if (score > previous){
+			action()
+		}
+	}
+}
+
+"""
+Execute `action` on the entity that has the new lowest `score` within `selector`
+"""
+def lazy onNewLowScore(entity selector, int score, int previous, void=>void action){
+	withLoser(selector, score){
+		if (score < previous){
+			action()
+		}
+	}
+}
