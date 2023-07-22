@@ -78,6 +78,10 @@ template Item{
     """
     def lazy setName(string name){
         _name = name
+        _component += {"minecraft:display_name": { "value": name }}
+    }
+    def lazy setDisplayName(string name){
+        _component += {"minecraft:display_name": { "value": name }}
     }
 
     """
@@ -169,7 +173,7 @@ template Item{
         setFood(0)
     }
 
-    [Compile.order=1000] private void build(){
+    [compile.order=1000] private void build(){
         if (Compiler.isBedrock()){
             lazy val namespacedName = _namespace + ":" + _name
             createItem(_name, namespacedName, _category, _component)
