@@ -31,3 +31,12 @@ struct Color{
         value = (red << 16) + (green << 8) + blue
     }
 }
+
+Color lerp(Color a, Color b, float value){
+    float t = (1 - value)
+    return new Color(
+        (int)(a.getRed() * t + b.getRed() * value),
+        (int)(a.getGreen() * t + b.getGreen() * value),
+        (int)(a.getBlue() * t + b.getBlue() * value)
+    )
+}
