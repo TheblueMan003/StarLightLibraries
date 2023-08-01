@@ -173,6 +173,7 @@ typedef EntityObject Parent for mcbedrock, DisplayItem Parent for mcjava
 class Sprite extends Parent with sl:sprite for mcbedrock{
     int animationTick
     Animation animation
+    Texture texture
 
     [compile.order=999999]
     public @sprite.tick void main(){
@@ -190,6 +191,7 @@ class Sprite extends Parent with sl:sprite for mcbedrock{
         }
     }
     public lazy void setTexture(int index){
+        texture = index
         if (Compiler.isBedrock()){
             entity.event("set_sprite_"+index)
         }
