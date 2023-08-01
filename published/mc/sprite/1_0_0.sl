@@ -199,6 +199,9 @@ class Sprite extends Parent with sl:sprite for mcbedrock{
             setItem("minecraft:acacia_boat", {CustomModelData: index})
         }
     }
+    public int getTexture(){
+        return texture
+    }
     public lazy void setSize(float scale){
         if (Compiler.isJava()){
             setScale(scale, 1, scale)
