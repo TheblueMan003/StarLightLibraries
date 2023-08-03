@@ -10,6 +10,9 @@ public class DisplayBlock extends DisplayEntity with minecraft:block_display for
     def lazy __init__(mcobject block){
         setBlock(block)
     }
+    def lazy __init__(mcobject block, json properties){
+        setBlockProperties(block, properties)
+    }
 
     """
     Sets the block to be displayed
