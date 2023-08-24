@@ -16,8 +16,8 @@ public class DisplayText extends DisplayEntity with minecraft:text_display for m
     """
     Set the text to be displayed
     """
-    def lazy setText(string text){
-        data.set({"text":text})
+    def lazy setText(rawjson $text){
+        /data merge entity @s {"text":'$text'}
     }
 
     """
@@ -44,15 +44,15 @@ public class DisplayText extends DisplayEntity with minecraft:text_display for m
     """
     Set default background
     """
-    def lazy setDefaultBackground(){
-        data.set({"background":true})
+    def lazy setDefaultBackground(bool value){
+        data.set({"default_background":value})
     }
 
     """
     Set shadow
     """
-    def lazy setShadow(){
-        data.set({"shadow":true})
+    def lazy setShadow(bool value){
+        data.set({"shadow":value})
     }
 
     """

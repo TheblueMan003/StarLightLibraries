@@ -7,10 +7,10 @@ lazy json languagesName = []
 def setLanguage(int lang) {
     language = lang
 }
-def setLanguage(string name) {
+def lazy setLanguage(string name) {
     language = languagesIndex[name]
 }
-def addLanguage(string name) {
+def lazy addLanguage(string name) {
     languagesIndex[name] = Compiler.length(languagesIndex)
     languagesName += name
 }
