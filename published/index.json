@@ -885,6 +885,13 @@
                 "filename": "standard/color.sl",
                 "version": "1.0.0"
             }
+        ],
+        "game.language": [
+            {
+                "url": "game/language/1_0_0.sl",
+                "filename": "game/language.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
