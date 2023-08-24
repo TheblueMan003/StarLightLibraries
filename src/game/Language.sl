@@ -29,7 +29,7 @@ def lazy json selectByLanguage(json data, string key) {
 }
 def lazy forEach(json data, json=>void func) {
     lazy int count = Compiler.length(languagesName)-1
-    foreach(var lang in 0..count) {
+    foreach(lang in 0..count) {
         if (language == lang) {
             func(data[languagesName[lang]])
         }
