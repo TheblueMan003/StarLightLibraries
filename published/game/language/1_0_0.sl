@@ -1,4 +1,4 @@
-package game.Language
+package game.language
 
 int language
 lazy json languagesIndex = {}
