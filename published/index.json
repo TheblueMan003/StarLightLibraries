@@ -914,6 +914,13 @@
                 "filename": "utils/nbt.sl",
                 "version": "1.0.0"
             }
+        ],
+        "utils.blocktags": [
+            {
+                "url": "utils/blocktags/1_0_0.sl",
+                "filename": "utils/blocktags.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
