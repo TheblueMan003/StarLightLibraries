@@ -907,6 +907,13 @@
                     }
                 ]
             }
+        ],
+        "utils.nbt": [
+            {
+                "url": "utils/nbt/1_0_0.sl",
+                "filename": "utils/nbt.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
