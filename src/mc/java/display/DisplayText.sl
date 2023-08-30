@@ -9,9 +9,6 @@ Class representing an text display entity.
 public class DisplayText extends DisplayEntity with minecraft:text_display for mcjava {
     def lazy __init__(){
     }
-    def lazy __init__(mcobject block){
-        setBlock(block)
-    }
 
     """
     Set the text to be displayed
