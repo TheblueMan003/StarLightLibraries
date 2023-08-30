@@ -5,6 +5,7 @@ import mc.java.display.DisplayItem
 import mc.Click
 from mc.bedrock.Entity import Entity as BedrockEntity
 from mc.Entity import Entity as EntityObject
+import mc.java.display.DisplayText
 
 import cmd.sound as sound
 import cmd.entity as entity
@@ -585,6 +586,7 @@ def @screen.info(){
     background.run(){
         printVersion()
         background.setScreen(3)
+        @screen.info.button()
     }
 }
 def @screen.clear(){
@@ -593,6 +595,23 @@ def @screen.clear(){
     }
     with(@e[tag=screen.page.button]){
         entity.despawn()
+    }
+}
+class InfoDisplay extends DisplayText{
+    def lazy __init__(rawjson text){
+        setText(text)
+        setBackgroundColor(0)
+        setLeft()
+        setScale(2,2,2)
+        setLineWidth(150)
+    }
+}
+def lazy setInfo(rawjson text){
+    def @screen.clear(){
+        with(InfoDisplay)./kill
+    }
+    def @screen.info.button(){
+        at(@s)at(~ ~ ~)new InfoDisplay(text)
     }
 }
 """
@@ -805,7 +824,7 @@ public @screen.start void stop(){
 }
 
 def lazy onStart(void=>void fct){
-    def [tag.order=1] @screen.start(){
+    def @screen.start(){
         with(user, true)fct()
     }
 }
