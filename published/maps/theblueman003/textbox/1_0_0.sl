@@ -64,6 +64,7 @@ class Textbox extends DisplayText{
         onTick = lambda
     }
     def lazy display(string key){
+        reset()
         index = indexes[key]
     }
 
