@@ -41,7 +41,9 @@ def lazy print(json data, string key){
     lazy int count = Compiler.length(languagesName)-1
     switch(language){
         foreach(lang in 0..count){
-            lang -> print(data[languagesName[lang]])
+            lang -> {
+                print(data[languagesName[lang]][key])
+            }
         }
     }
 }
@@ -50,7 +52,7 @@ def lazy showTitle(json data, int priority, int timein, int time, int timeout, s
     lazy int count = Compiler.length(languagesName)-1
     switch(language){
         foreach(lang in 0..count){
-            lang -> title.show(priority, timein, time, timeout, data[languagesName[lang]])
+            lang -> title.show(priority, timein, time, timeout, data[languagesName[lang]][key])
         }
     }
 }
@@ -59,7 +61,7 @@ def lazy showTitle(json data, string key){
     lazy int count = Compiler.length(languagesName)-1
     switch(language){
         foreach(lang in 0..count){
-            lang -> title.force(data[languagesName[lang]])
+            lang -> title.force(data[languagesName[lang]][key])
         }
     }
 }
@@ -68,7 +70,7 @@ def lazy showSubtitle(json data, int priority, int timein, int time, int timeout
     lazy int count = Compiler.length(languagesName)-1
     switch(language){
         foreach(lang in 0..count){
-            lang -> title.showSubtitle(data[languagesName[lang]])
+            lang -> title.showSubtitle(data[languagesName[lang]][key])
         }
     }
 }
@@ -77,7 +79,7 @@ def lazy showActionbar(json data, int priority, int time, string key){
     lazy int count = Compiler.length(languagesName)-1
     switch(language){
         foreach(lang in 0..count){
-            lang -> actionbar.show(priority, time, data[languagesName[lang]])
+            lang -> actionbar.show(priority, time, data[languagesName[lang]][key])
         }
     }
 }
