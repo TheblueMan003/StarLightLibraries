@@ -214,11 +214,11 @@ class Sprite extends Parent with sl:sprite for mcbedrock{
     }
 }
 class Particle extends Sprite{
-    Vector3 motion
-    Vector3 acceleration
+    (float,float,float) motion
+    (float,float,float) acceleration
     int age
 
-    def lazy __init__(Animation animation, Vector3 motion, Vector3 acceleration){
+    def lazy __init__(Animation animation, (float,float,float) motion, (float,float,float) acceleration){
         setAnimation(animation)
         setCenterBillboard()
         this.motion = motion
@@ -227,15 +227,15 @@ class Particle extends Sprite{
     def lazy __init__(Animation animation, float mx, float my, float mz, float ax, float ay, float az){
         setAnimation(animation)
         setCenterBillboard()
-        this.motion = new Vector3(mx, my, mz)
-        this.acceleration = new Vector3(ax, ay, az)
+        this.motion = (mx, my, mz)
+        this.acceleration = (ax, ay, az)
     }
 
     public virtual int getMaxAge(){
         return 60
     }
     public @sprite.tick void main2(){
-        float dx = motion.x
+        float dx = motion._0
         while(dx > 0.1)at(@s){
             dx -= 0.1
             /tp @s ~0.1 ~ ~
@@ -245,7 +245,7 @@ class Particle extends Sprite{
             /tp @s ~-0.1 ~ ~
         }
 
-        float dy = motion.y
+        float dy = motion._1
         while(dy > 0.1)at(@s){
             dy -= 0.1
             /tp @s ~ ~0.1 ~
@@ -255,7 +255,7 @@ class Particle extends Sprite{
             /tp @s ~ ~-0.1 ~
         }
 
-        float dz = motion.z
+        float dz = motion._2
         while(dz > 0.1)at(@s){
             dz -= 0.1
             /tp @s ~ ~ ~0.1

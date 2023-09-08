@@ -31,20 +31,20 @@ if (Compiler.isJava()){
     """
     Set the nbt from a scoreboard
     """
-    def lazy setNBT(mcobject value, mcobject field, mcobject type, float scale){
+    def lazy setNBT(mcobject value, mcobject field, mcobject type){
         lazy mcobject o = Compiler.getObjective(value)
         lazy mcobject s = Compiler.getSelector(value)
         if (value is float){
-            setNBT(s, o, field, type, 0.001)
+            setNBTInner(s, o, field, type, 0.001)
         }
         else{
-            setNBT(s, o, field, type, 1)
+            setNBTInner(s, o, field, type, 1)
         }
     }
     """
     Set the nbt from a scoreboard
     """
-    def lazy setNBT(mcobject value, mcobject field, mcobject type, float scale = 1){
+    def lazy setNBT(mcobject value, mcobject field, mcobject type, float scale){
         lazy mcobject o = Compiler.getObjective(value)
         lazy mcobject s = Compiler.getSelector(value)
         setNBTInner(s, o, field, type, scale)
