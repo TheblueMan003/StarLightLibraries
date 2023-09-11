@@ -4,20 +4,22 @@ if (Compiler.isBedrock){
     """
     Return a random number between `x` (included) and `y` (excluded)
     """
-    [noReturnCheck=true] lazy int range(int x, int y){
+    int range(int x, int y){
+        int ret
         if (Compiler.isVariable(x)){
-            Compiler.random(_ret, -2147483648, 2147483647)
-            _ret %= (y - x)
-            _ret += x
+            Compiler.random(ret, -2147483648, 2147483647)
+            ret %= (y - x)
+            ret += x
         }
         else if (Compiler.isVariable(y)){
-            Compiler.random(_ret, -2147483648, 2147483647)
-            _ret %= (y - x)
-            _ret += x
+            Compiler.random(ret, -2147483648, 2147483647)
+            ret %= (y - x)
+            ret += x
         }
         else{
-            Compiler.random(_ret, x, y-1)
+            Compiler.random(ret, x, y-1)
         }
+        return ret
     }
 }
 if (Compiler.isJava){
@@ -26,14 +28,16 @@ if (Compiler.isJava){
     """
     Return a random number between `x` (included) and `y` (excluded)
     """
-    [noReturnCheck=true,requiresVariable=true] lazy int range(int x, int y){
+    int range(int x, int y){
+        int ret
         /summon marker ~ ~ ~ {Tags:["random.trg"]}
         with(@e[tag=random.trg,limit=1]){
-            nbt.getNBT(_ret, "UUID[0]", 1)
+            nbt.getNBT(ret, "UUID[0]", 1)
             /kill
         }
-        _ret %= y-x
-        _ret += x
+        ret %= y-x
+        ret += x
+        return ret
     }
 }
 
