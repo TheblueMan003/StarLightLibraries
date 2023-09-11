@@ -921,6 +921,13 @@
                 "filename": "utils/blocktags.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.animatedentity": [
+            {
+                "url": "mc/animatedentity/1_0_0.sl",
+                "filename": "mc/animatedentity.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
