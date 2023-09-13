@@ -19,4 +19,10 @@ class AnimatedEntity extends Entity{
     def lazy stopAnimation(){
         animationClear()
     }
+    def lazy remove(){
+        lazy var name = Compiler.getBlockbenchEntityName()
+        Compiler.insert(($name), (name)){
+            /function animated_java:$name/remove/this
+        }
+    }
 }
