@@ -546,6 +546,21 @@ def lazy int makeMapsButton(string name){
         return button
     }
 }
+[compile.order=-1]
+private void makeDefault(){
+    addScreenModels("background")
+    addScreenModels("title")
+    addScreenModels("info")
+    addScreenModels("times")
+
+    addButtonModels("home")
+    addButtonModels("credit")
+    addButtonModels("settings")
+    addButtonModels("times")
+    addButtonModels("maps")
+    addButtonModels("info")
+    addButtonModels("start")
+}
 
 def @screen.home(){
     def lazy tag(){
