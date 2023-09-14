@@ -309,25 +309,28 @@ def lazy angerAngaist(entity e1, entity e2){
 """
 Count the number of entity in e
 """
-[noReturnCheck=true] lazy int count(entity e){
-    _ret = 0
-    with(e)_ret++
+lazy int count(entity e){
+    int ret = 0
+    with(e)ret++
+    return ret
 }
 
 """
 Count the number of entity in e that match the predicate
 """
-[noReturnCheck=true] lazy int count(entity e, bool p){
-    _ret = 0
-    with(e,true,p)_ret++
+lazy int count(entity e, bool p){
+    int ret = 0
+    with(e, true, p)ret++
+    return ret
 }
 
 """
 Count the number of entity in e that match the predicate
 """
-[noReturnCheck=true] lazy int count(entity e, void=>bool p){
-    _ret = 0
-    with(e,true,p())_ret++
+lazy int count(entity e, void=>bool p){
+    int ret = 0
+    with(e,true,p())ret++
+    return ret
 }
 
 """
