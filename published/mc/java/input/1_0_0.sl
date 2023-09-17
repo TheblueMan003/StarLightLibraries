@@ -259,3 +259,37 @@ forgenerate($plate,PressurePlates){
         }
     }
 }
+
+def lazy onScroll(int=>void f){
+    import mc.java.nbt
+    scoreboard int slot
+    int x
+    int scrollDelta = 0
+    nbt.getNBT(x, "SelectedItem")
+    
+    if (x == slot){
+        scrollDelta = 0
+        slot = x
+    }
+    if (x < slot){
+        if(x < 3 && slot >= 7){
+            scrollDelta = 1
+        }
+        else{
+            scrollDelta = -1
+        }
+        
+        slot = x
+    }
+    if (x > slot){
+        if(x >= 7 && slot < 3){
+            scrollDelta = -1
+        }
+        else{
+            scrollDelta = 1
+        }
+        
+        slot = x
+    }
+    if (scrollDelta != 0)f(scrollDelta)
+}
