@@ -200,3 +200,38 @@ forgenerate($e,continuousEventList){
         }
     }
 }
+
+private enum Buttons(string button, string name){
+    StoneButton("minecraft:stone_button", "StoneButton"),
+    OakButton("minecraft:oak_button", "OakButton"),
+    BirchButton("minecraft:birch_button", "BirchButton"),
+    SpruceButton("minecraft:spruce_button", "SpruceButton"),
+    DarkOakButton("minecraft:dark_oak_button", "DarkOakButton"),
+    AcaciaButton("minecraft:acacia_button", "AcaciaButton"),
+    JungleButton("minecraft:jungle_button", "JungleButton"),
+    MangroveButton("minecraft:mangrove_button", "MangroveButton"),
+    CherryButton("minecraft:cherry_button", "CherryButton"),
+    PolishedBlackstoneButton("minecraft:polished_blackstone_button", "PolishedBlackstoneButton"),
+    WarpedButton("minecraft:warped_button", "WarpedButton"),
+    CrimsonButton("minecraft:crimson_button", "CrimsonButton")
+}
+
+private enum button_facing{north, east, west, south}
+private enum button_face{floor,wall,ceiling}
+
+forgenerate($button,Buttons){
+    def lazy on$button(mcposition pos, void=>void func){
+        at(pos){
+            if (block(~ ~ ~, "$button.button[powered=true]")){
+                func()
+                forgenerate($face,button_facing){
+                    forgenerate($face,button_face){
+                        if (block(~ ~ ~, "$button.button[face=$face,facing=$face,powered=true]")){
+                            /setblock ~ ~ ~ $button.button[face=$face,facing=$face,powered=false]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
