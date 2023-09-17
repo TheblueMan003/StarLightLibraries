@@ -224,13 +224,37 @@ forgenerate($button,Buttons){
         at(pos){
             if (block(~ ~ ~, "$button.button[powered=true]")){
                 func()
-                forgenerate($face,button_facing){
+                forgenerate($facin,button_facing){
                     forgenerate($face,button_face){
-                        if (block(~ ~ ~, "$button.button[face=$face,facing=$face,powered=true]")){
-                            /setblock ~ ~ ~ $button.button[face=$face,facing=$face,powered=false]
+                        if (block(~ ~ ~, "$button.button[face=$face,facing=$facin,powered=true]")){
+                            /setblock ~ ~ ~ $button.button[face=$face,facing=$facin,powered=false]
                         }
                     }
                 }
+            }
+        }
+    }
+}private enum PressurePlates(string plate, string name){
+    StonePressurePlate("minecraft:stone_pressure_plate", "StonePressurePlate"),
+    OakPressurePlate("minecraft:oak_pressure_plate", "OakPressurePlate"),
+    BirchPressurePlate("minecraft:birch_pressure_plate", "BirchPressurePlate"),
+    SprucePressurePlate("minecraft:spruce_pressure_plate", "SprucePressurePlate"),
+    DarkOakPressurePlate("minecraft:dark_oak_pressure_plate", "DarkOakPressurePlate"),
+    AcaciaPressurePlate("minecraft:acacia_pressure_plate", "AcaciaPressurePlate"),
+    JunglePressurePlate("minecraft:jungle_pressure_plate", "JunglePressurePlate"),
+    MangrovePressurePlate("minecraft:mangrove_pressure_plate", "MangrovePressurePlate"),
+    CherryPressurePlate("minecraft:cherry_pressure_plate", "CherryPressurePlate"),
+    PolishedBlackstonePressurePlate("minecraft:polished_blackstone_pressure_plate", "PolishedBlackstonePressurePlate"),
+    WarpedPressurePlate("minecraft:warped_pressure_plate", "WarpedPressurePlate"),
+    CrimsonPressurePlate("minecraft:crimson_pressure_plate", "CrimsonPressurePlate")
+}
+
+forgenerate($plate,PressurePlates){
+    def lazy on$plate(mcposition pos, void=>void func){
+        at(pos){
+            if (block(~ ~ ~, "$plate.pressure_plate[powered=true]")){
+                func()                
+                /setblock ~ ~ ~ $plate.pressure_plate[powered=false]
             }
         }
     }
