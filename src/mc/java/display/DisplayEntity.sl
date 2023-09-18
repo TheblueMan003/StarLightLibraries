@@ -123,6 +123,13 @@ class DisplayEntity extends Entity{
     }
 
     """
+    Set the background color
+    """
+    def lazy setGlowColor(int r, int g, int b, int a = 127){
+        setGlowColor((a << 24) + (r << 16) + (g << 8) + b)
+    }
+
+    """
     Interpolate Interpolation
     """
     def lazy interpolate(int duration){

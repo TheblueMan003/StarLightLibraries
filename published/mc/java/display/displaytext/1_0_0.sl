@@ -39,6 +39,13 @@ public class DisplayText extends DisplayEntity with minecraft:text_display for m
     }
 
     """
+    Set the background color
+    """
+    def lazy setBackgroundColor(int r, int g, int b, int a = 127){
+        setBackgroundColor((a << 24) + (r << 16) + (g << 8) + b)
+    }
+
+    """
     Set default background
     """
     def lazy setDefaultBackground(bool value){
