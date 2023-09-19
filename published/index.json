@@ -928,6 +928,13 @@
                 "filename": "mc/animatedentity.sl",
                 "version": "1.0.0"
             }
+        ],
+        "cmd": [
+            {
+                "url": "cmd/1_0_0.sl",
+                "filename": "cmd.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
