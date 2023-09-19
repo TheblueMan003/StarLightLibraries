@@ -22,7 +22,7 @@ class Entity{
     """
     Teleport entity to position
     """
-    def lazy teleport(mcposition position){
+    def lazy teleport(mcposition position = ~~~){
         at(position){
             /tp @s ~ ~ ~
         }
