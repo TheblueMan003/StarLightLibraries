@@ -172,4 +172,13 @@ class DisplayEntity extends Entity{
     def lazy interpolateTranslation(int duration, float x, float y, float z){
         data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"translation":[x f, y f, z f]}})
     }
+
+    """
+    Set Teleport Duration
+    """
+    def lazy setTeleportDuration(int duration){
+        data.set({"teleport_duration":duration})
+    }
+
+    """
 }
