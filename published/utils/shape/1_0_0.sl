@@ -24,12 +24,12 @@ Execute an action at each point of a line from start to end.
 def lazy line(mcposition start, mcposition end, float step, int=>void action){
     int count = -1
     def inner(){
-        bool end = false
+        bool hasEnd = false
         /tp @s ~ ~ ~ ~ ~
         at(end)if (@s[distance=..1]){
-            end = true
+            hasEnd = true
         }
-        if(end){
+        if(hasEnd){
             action(count++)
             at({^,^,^step})inner()
         }
