@@ -179,6 +179,4 @@ class DisplayEntity extends Entity{
     def lazy setTeleportDuration(int duration){
         data.set({"teleport_duration":duration})
     }
-
-    """
 }
