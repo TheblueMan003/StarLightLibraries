@@ -31,7 +31,7 @@ if (Compiler.isJava){
     lazy int range(int x, int y){
         int ret
         Compiler.cmdstore(ret){
-            /random value 0..2147483647
+            /random value 0..2147483646
         }
         ret %= (y - x)
         ret += x
@@ -43,7 +43,7 @@ if (Compiler.isJava){
     lazy float range(float x, float y){
         float ret
         Compiler.cmdstore(ret){
-            /random value 0..2147483647
+            /random value 0..2147483646
         }
         ret %= (y - x)
         ret += x
