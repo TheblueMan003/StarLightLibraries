@@ -10,7 +10,7 @@ struct List<V>{
     }
 
     def macro V get(int key){
-        return this.data["$(key)"]
+        return this.data["[$(key)]"]
     }
 
     def set(int key, V value){
@@ -24,20 +24,21 @@ struct List<V>{
         this.data >:= value
         this.length += 1
     }
-
-    def remove(V value){
-        json tmp = []
-        int l2 = 0
-        for(int i = 0; i < this.length; i++){
-            V v = get(i) 
-            if(v != value){
-                tmp >:= v
-                l2 += 1
+    if (Compiler.isEqualitySupported<V>()){
+        def remove(V value){
+            json tmp = []
+            int l2 = 0
+            for(int i = 0; i < this.length; i++){
+                V v = get(i) 
+                if(v != value){
+                    tmp >:= v
+                    l2 += 1
+                }
             }
-        }
 
-        this.data = tmp
-        this.length = l2
+            this.data = tmp
+            this.length = l2
+        }
     }
 
     def removeAt(int index){
@@ -55,43 +56,49 @@ struct List<V>{
         this.length = l2
     }
 
-    def removeAll(V=>bool pred){
-        json tmp = []
-        int l2 = 0
-        for(int i = 0; i < this.length; i++){
-            V v = get(i) 
-            if(!pred(v)){
-                tmp >:= v
-                l2 += 1
+    if (Compiler.isEqualitySupported<V>()){
+        def removeAll(V=>bool pred){
+            json tmp = []
+            int l2 = 0
+            for(int i = 0; i < this.length; i++){
+                V v = get(i) 
+                if(!pred(v)){
+                    tmp >:= v
+                    l2 += 1
+                }
             }
-        }
 
-        this.data = tmp
-        this.length = l2
+            this.data = tmp
+            this.length = l2
+        }
     }
 
-    def contains(V value){
-        bool ret = false
-        for(int i = 0; i < this.length && !ret; i++){
-            if(get(i) == value){
-                ret = true
+    if (Compiler.isEqualitySupported<V>()){
+        def contains(V value){
+            bool ret = false
+            for(int i = 0; i < this.length && !ret; i++){
+                if(get(i) == value){
+                    ret = true
+                }
             }
+            return ret
         }
-        return ret
     }
 
     int size(){
         return this.length
     }
 
-    int indexOf(V value){
-        int ret = -1
-        for(int i = 0; i < this.length && ret == -1; i++){
-            if(get(i) == value){
-                ret = i
+    if (Compiler.isEqualitySupported<V>()){
+        int indexOf(V value){
+            int ret = -1
+            for(int i = 0; i < this.length && ret == -1; i++){
+                if(get(i) == value){
+                    ret = i
+                }
             }
+            return ret
         }
-        return ret
     }
 
     def clear(){
