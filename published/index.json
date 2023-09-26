@@ -964,6 +964,20 @@
                 "filename": "game/wallraycast.sl",
                 "version": "1.0.0"
             }
+        ],
+        "standard.collections.list": [
+            {
+                "url": "standard/collections/list/1_0_0.sl",
+                "filename": "standard/collections/list.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.collections.dictionnary": [
+            {
+                "url": "standard/collections/dictionnary/1_0_0.sl",
+                "filename": "standard/collections/dictionnary.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }

@@ -7,6 +7,14 @@ struct Color{
         this.value = value
     }
 
+    def lazy __init__(int red, int green, int blue){
+        this.value = (red << 16) + (green << 8) + blue + (1 << 24)
+    }
+
+    def lazy __init__(int red, int green, int blue, int alpha){
+        this.value = (red << 16) + (green << 8) + blue + (alpha << 24)
+    }
+
     lazy int getRed(){
         return (value >> 16) % 256
     }
@@ -15,6 +23,9 @@ struct Color{
     }
     lazy int getBlue(){
         return value % 256
+    }
+    lazy int getAlpha(){
+        return (value >> 24) % 256
     }
 
     lazy void setRed(int red){
@@ -26,9 +37,24 @@ struct Color{
     lazy void setBlue(int blue){
         value = value - getBlue() + blue
     }
+    lazy void setAlpha(int alpha){
+        value = value - getAlpha() + (alpha << 24)
+    }
 
     lazy void setRGB(int red, int green, int blue){
-        value = (red << 16) + (green << 8) + blue
+        value = (red << 16) + (green << 8) + blue + (1 << 24)
+    }
+
+    lazy void setARGB(int alpha, int red, int green, int blue){
+        value = (red << 16) + (green << 8) + blue + (alpha << 24)
+    }
+
+    lazy int getRGB(){
+        return value % 16777216
+    }
+
+    lazy int getARGB(){
+        return value
     }
 }
 
@@ -37,6 +63,7 @@ Color lerp(Color a, Color b, float value){
     return new Color(
         (int)(a.getRed() * t + b.getRed() * value),
         (int)(a.getGreen() * t + b.getGreen() * value),
-        (int)(a.getBlue() * t + b.getBlue() * value)
+        (int)(a.getBlue() * t + b.getBlue() * value),
+        (int)(a.getAlpha() * t + b.getAlpha() * value)
     )
 }

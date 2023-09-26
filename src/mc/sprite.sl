@@ -44,6 +44,10 @@ BedrockEntity SpriteEntity{
         }
     }
 }
+
+"""
+Add a texture to the sprite list and return the texture id
+"""
 def lazy Texture addTexture(string name){
     Compiler.insert($name,name){
         [java_rp=true] jsonfile models.item.spr_$name{

@@ -44,6 +44,10 @@ BedrockEntity SpriteEntity{
         }
     }
 }
+
+"""
+Add a texture to the sprite list and return the texture id
+"""
 def lazy Texture addTexture(string name){
     Compiler.insert($name,name){
         [java_rp=true] jsonfile models.item.spr_$name{
@@ -214,15 +218,20 @@ class Sprite extends Parent with sl:sprite for mcbedrock{
     }
 }
 class Particle extends Sprite{
-    (float,float,float) motion
-    (float,float,float) acceleration
+    Vector3 motion
+    Vector3 acceleration
     int age
-
-    def lazy __init__(Animation animation, (float,float,float) motion, (float,float,float) acceleration){
+    def lazy __init__(Animation animation, Vector3 motion, Vector3 acceleration){
         setAnimation(animation)
         setCenterBillboard()
         this.motion = motion
         this.acceleration = acceleration
+    } 
+    def lazy __init__(Animation animation, (float,float,float) motion, (float,float,float) acceleration){
+        setAnimation(animation)
+        setCenterBillboard()
+        this.motion = new Vector3(motion[0], motion[1], motion[2])
+        this.acceleration = new Vector3(acceleration[0], acceleration[1], acceleration[2])
     }
     def lazy __init__(Animation animation, float mx, float my, float mz, float ax, float ay, float az){
         setAnimation(animation)

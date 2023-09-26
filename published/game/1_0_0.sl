@@ -1,6 +1,8 @@
 package game
 
-
+"""
+Initialze the player, by running the function only once.
+"""
 def lazy initPlayer(void=>void function){
     def ticking init(){
         if (Compiler.isJava()){
