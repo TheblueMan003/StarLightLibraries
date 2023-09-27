@@ -118,6 +118,11 @@
                 "url": "cmd/block/1_1_0.sl",
                 "filename": "cmd/block.sl",
                 "version": "1.1.0"
+            },
+            {
+                "url": "cmd/block/1_2_0.sl",
+                "filename": "cmd/block.sl",
+                "version": "1.2.0"
             }
         ],
         "cmd.bossbar": [
@@ -144,6 +149,11 @@
                 "url": "cmd/effect/1_1_0.sl",
                 "filename": "cmd/effect.sl",
                 "version": "1.1.0"
+            },
+            {
+                "url": "cmd/effect/1_2_0.sl",
+                "filename": "cmd/effect.sl",
+                "version": "1.2.0"
             }
         ],
         "cmd.entity": [
@@ -158,6 +168,11 @@
                 "url": "cmd/gamemode/1_0_0.sl",
                 "filename": "cmd/gamemode.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/gamemode/1_1_0.sl",
+                "filename": "cmd/gamemode.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.gamerule": [
@@ -172,6 +187,11 @@
                 "url": "cmd/particles/1_0_0.sl",
                 "filename": "cmd/particles.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/particles/1_1_0.sl",
+                "filename": "cmd/particles.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.schedule": [
