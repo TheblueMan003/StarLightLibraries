@@ -1,13 +1,45 @@
-## ` lazy void getNBT(mcobject ret, mcobject field)`
+## lazy function getNBT
+### Arguments:
+- ret (`mcobject`)
+- field (`mcobject`)
+### Return:
+- void
+
+
 Get the nbt and store it in ret
 
-## ` lazy void getNBT(mcobject ret, mcobject field, float scale)`
+## lazy function getNBT
+### Arguments:
+- ret (`mcobject`)
+- field (`mcobject`)
+- scale (`float`)
+### Return:
+- void
+
+
 Get the nbt and store it in ret
 
-## ` lazy void setNBT(mcobject value, mcobject field, mcobject type)`
+## lazy function setNBT
+### Arguments:
+- value (`mcobject`)
+- field (`mcobject`)
+- type (`mcobject`)
+### Return:
+- void
+
+
 Set the nbt from a scoreboard
 
-## ` lazy void setNBT(mcobject value, mcobject field, mcobject type, float scale)`
+## lazy function setNBT
+### Arguments:
+- value (`mcobject`)
+- field (`mcobject`)
+- type (`mcobject`)
+- scale (`float`)
+### Return:
+- void
+
+
 Set the nbt from a scoreboard
 
 

@@ -1,13 +1,48 @@
-## ` lazy void $name(float $time, mcposition $pos)`
+## lazy function $name
+### Arguments:
+- $time (`float`)
+- $pos (`mcposition`)
+### Return:
+- void
 
 
-## ` lazy void $name(float $time, mcposition $pos, int $rx, int $ry)`
 
 
-## ` lazy void $name(float $time, mcposition $pos, mcposition $target)`
+## lazy function $name
+### Arguments:
+- $time (`float`)
+- $pos (`mcposition`)
+- $rx (`int`)
+- $ry (`int`)
+### Return:
+- void
 
 
-## ` lazy void fade(float $fadein, float $hold, float $fadeout, int red, int green, int blue)`
+
+
+## lazy function $name
+### Arguments:
+- $time (`float`)
+- $pos (`mcposition`)
+- $target (`mcposition`)
+### Return:
+- void
+
+
+
+
+## lazy function fade
+### Arguments:
+- $fadein (`float`)
+- $hold (`float`)
+- $fadeout (`float`)
+- red (`int`)
+- green (`int`)
+- blue (`int`)
+### Return:
+- void
+
+
 
 
 

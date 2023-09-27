@@ -1,25 +1,67 @@
 # template WallRaycast<>
 
 
-## ` lazy void setStopBlock(mcobject block)`
+## lazy function setStopBlock
+### Arguments:
+- block (`mcobject`)
+### Return:
+- void
 
 
-## ` void start()`
 
 
-## ` void stop()`
+## function start
+### Arguments:
+
+### Return:
+- void
 
 
-## ` virtual void onClick()`
 
 
-## ` virtual void onHold()`
+## function stop
+### Arguments:
+
+### Return:
+- void
 
 
-## ` virtual void onRelease()`
 
 
-## ` virtual void main()`
+## virtual function onClick
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## virtual function onHold
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## virtual function onRelease
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## virtual function main
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

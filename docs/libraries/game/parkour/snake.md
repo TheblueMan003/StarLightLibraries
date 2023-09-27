@@ -1,40 +1,119 @@
-## ` void init(SnakeBlock? b1, SnakeBlock? b2, int speed, int length)`
+## function init
+### Arguments:
+- b1 (`SnakeBlock?`)
+- b2 (`SnakeBlock?`)
+- speed (`int`)
+- length (`int`)
+### Return:
+- void
 
 
-## ` void summon(SnakeBlock? b1, SnakeBlock? b2, int speed, int length)`
 
 
-## ` [__returnCheck__=true] void summon(int speed, int length)`
+## function summon
+### Arguments:
+- b1 (`SnakeBlock?`)
+- b2 (`SnakeBlock?`)
+- speed (`int`)
+- length (`int`)
+### Return:
+- void
 
 
-## ` [__returnCheck__=true] void setblock()`
 
 
-## ` void copy()`
+## [__returnCheck__=true] function summon
+### Arguments:
+- speed (`int`)
+- length (`int`)
+### Return:
+- void
 
 
-## ` void headMain()`
 
 
-## ` void rmblock()`
+## [__returnCheck__=true] function setblock
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void copyTail()`
 
 
-## ` void tailMain()`
+## function copy
+### Arguments:
+
+### Return:
+- void
 
 
-## `public void enable()`
 
 
-## `public void disable()`
+## function headMain
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function rmblock
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function copyTail
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function tailMain
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## public function enable
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## public function disable
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 # template SnakeSpawner<block,speed,length>
 
 
-## ` @playertick void ~()`
+## @playertick function ~
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

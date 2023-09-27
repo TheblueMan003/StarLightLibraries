@@ -1,64 +1,228 @@
-## ` lazy void setMainHand(mcobject item, int count)`
+## lazy function setMainHand
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's mainhand to `item` with `count`
 
-## ` lazy void setMainHand(mcobject item, int count, json nbt)`
+## lazy function setMainHand
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's mainhand to `item` with `count`
 
-## ` lazy void setOffHand(mcobject item, int count)`
+## lazy function setOffHand
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's offhand to `item` with `count`
 
-## ` lazy void setOffHand(mcobject item, int count, json nbt)`
+## lazy function setOffHand
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's offhand to `item` with `count`
 
-## ` lazy void setHotbar(int slotID, mcobject item, int count)`
+## lazy function setHotbar
+### Arguments:
+- slotID (`int`)
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's hotbar slot `slotID` to `item` with `count`
 
-## ` lazy void setHotbar(int slotID, mcobject item, int count, json nbt)`
+## lazy function setHotbar
+### Arguments:
+- slotID (`int`)
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's hotbar slot `slotID` to `item` with `count`
 
-## ` lazy void setHotbar(mcobject item, int count)`
+## lazy function setHotbar
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's whole hotbar to `item` with `count`
 
-## ` lazy void setHotbar(mcobject item, int count, json nbt)`
+## lazy function setHotbar
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's whole hotbar to `item` with `count`
 
-## ` lazy void setHotbarRange(int min, int max, mcobject item, int count)`
+## lazy function setHotbarRange
+### Arguments:
+- min (`int`)
+- max (`int`)
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the multiple slot int current entity's hotbar to `item` with `count`.    Slot goes from `min` to `max` both included.
 
-## ` lazy void setHotbarRange(int min, int max, mcobject item, int count, json nbt)`
+## lazy function setHotbarRange
+### Arguments:
+- min (`int`)
+- max (`int`)
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the multiple slot int current entity's hotbar to `item` with `count`.    Slot goes from `min` to `max` both included.
 
-## ` lazy void clearHotbar()`
+## lazy function clearHotbar
+### Arguments:
+
+### Return:
+- void
+
+
 Clear the hotbar of the current entity
 
-## ` lazy void setInventorySlot(int index, mcobject item, int count)`
+## lazy function setInventorySlot
+### Arguments:
+- index (`int`)
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the inventory slot `index` of the current entity to `item` with `count`
 
-## ` lazy void setInventorySlot(int index, mcobject item, int count, json nbt)`
+## lazy function setInventorySlot
+### Arguments:
+- index (`int`)
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the inventory slot `index` of the current entity to `item` with `count`
 
-## ` lazy void setHelmet(mcobject item, int count)`
+## lazy function setHelmet
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's helmet to `item` with `count`
 
-## ` lazy void setHelmet(mcobject item, int count, json nbt)`
+## lazy function setHelmet
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's helmet to `item` with `count`
 
-## ` lazy void setChestplate(mcobject item, int count)`
+## lazy function setChestplate
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's chestplate to `item` with `count`
 
-## ` lazy void setChestplate(mcobject item, int count, json nbt)`
+## lazy function setChestplate
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's chestplate to `item` with `count`
 
-## ` lazy void setLeggings(mcobject item, int count)`
+## lazy function setLeggings
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's leggings to `item` with `count`
 
-## ` lazy void setLeggings(mcobject item, int count, json nbt)`
+## lazy function setLeggings
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's leggings to `item` with `count`
 
-## ` lazy void setBoots(mcobject item, int count)`
+## lazy function setBoots
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's boots to `item` with `count`
 
-## ` lazy void setBoots(mcobject item, int count, json nbt)`
+## lazy function setBoots
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+- nbt (`json`)
+### Return:
+- void
+
+
 Set the current entity's boots to `item` with `count`
 
 ## predicate isHoldingItem
@@ -100,40 +264,120 @@ Set the current entity's boots to `item` with `count`
 ## predicate isHoldingItemOffhand
 
 
-## ` lazy bool isHoldingItem(mcobject item, int count)`
+## lazy function isHoldingItem
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- bool
 
 
-## ` lazy bool isHoldingItemOffhand(mcobject item, int count)`
 
 
-## ` lazy bool isHoldingItemHead(mcobject item, int count)`
+## lazy function isHoldingItemOffhand
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- bool
 
 
-## ` lazy bool isHoldingItemChest(mcobject item, int count)`
 
 
-## ` lazy bool isHoldingItemLegs(mcobject item, int count)`
+## lazy function isHoldingItemHead
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- bool
 
 
-## ` lazy bool isHoldingItemFeet(mcobject item, int count)`
 
 
-## ` lazy void clear()`
+## lazy function isHoldingItemChest
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function isHoldingItemLegs
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function isHoldingItemFeet
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function clear
+### Arguments:
+
+### Return:
+- void
+
+
 Clear the current entity's inventory
 
-## ` lazy void clear(mcobject $item)`
+## lazy function clear
+### Arguments:
+- $item (`mcobject`)
+### Return:
+- void
+
+
 Clear the current entity's inventory of `item`
 
-## ` lazy void clear(mcobject $item, int $count)`
+## lazy function clear
+### Arguments:
+- $item (`mcobject`)
+- $count (`int`)
+### Return:
+- void
+
+
 Clear the current entity's inventory of `item` with `count`
 
-## ` lazy [noReturnCheck=true,__returnCheck__=true] int clearCount()`
+## lazy [noReturnCheck=true,__returnCheck__=true] function clearCount
+### Arguments:
+
+### Return:
+- int
+
+
 Clear the current entity's inventory and return the number of items cleared
 
-## ` lazy [noReturnCheck=true,__returnCheck__=true] int clearCount(mcobject item)`
+## lazy [noReturnCheck=true,__returnCheck__=true] function clearCount
+### Arguments:
+- item (`mcobject`)
+### Return:
+- int
+
+
 Clear the current entity's inventory of `item` and return the number of items cleared
 
-## ` lazy [noReturnCheck=true,__returnCheck__=true] int clearCount(mcobject item, int count)`
+## lazy [noReturnCheck=true,__returnCheck__=true] function clearCount
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- int
+
+
 Clear the current entity's inventory of `item` with a max of `count` and return the number of items cleared
 
 

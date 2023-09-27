@@ -1,13 +1,40 @@
-## ` void reset()`
+## function reset
+### Arguments:
+
+### Return:
+- void
+
+
 Reset the priorities for the actionbar
 
-## ` lazy void force(rawjson $text)`
+## lazy function force
+### Arguments:
+- $text (`rawjson`)
+### Return:
+- void
+
+
 Show text in the actionbar
 
-## ` lazy void show(int priority, int time, rawjson text)`
+## lazy function show
+### Arguments:
+- priority (`int`)
+- time (`int`)
+- text (`rawjson`)
+### Return:
+- void
+
+
 Show text in the actionbar with priority `priority` and time `time`
 
-## ` lazy void use(int priority, int time)`
+## lazy function use
+### Arguments:
+- priority (`int`)
+- time (`int`)
+### Return:
+- void
+
+
 Set the priority for the actionbar to `priority` and time to `time`
 
 

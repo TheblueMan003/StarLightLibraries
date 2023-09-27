@@ -1,25 +1,73 @@
-## ` lazy void onEquip(void=>void fct)`
+## lazy function onEquip
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
 
 
-## ` @reset void ~()`
 
 
-## `public void removeElytra()`
+## @reset function ~
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## public function removeElytra
+### Arguments:
+
+### Return:
+- void
+
+
 Remove Elytra from player
 
-## ` void giveElytra()`
+## function giveElytra
+### Arguments:
+
+### Return:
+- void
+
+
 Give Elytra to player
 
-## ` @playertick void ~()`
+## @playertick function ~
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void summonElytra()`
 
 
-## ` @itemtick void ~()`
+## function summonElytra
+### Arguments:
+
+### Return:
+- void
 
 
-## ` @itemtick void ~()`
+
+
+## @itemtick function ~
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## @itemtick function ~
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

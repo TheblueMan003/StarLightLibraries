@@ -1,13 +1,31 @@
 # class AnimatedEntity
 
 
-## ` lazy void playAnimation(string animation)`
+## lazy function playAnimation
+### Arguments:
+- animation (`string`)
+### Return:
+- void
 
 
-## ` lazy void stopAnimation()`
 
 
-## ` lazy void remove()`
+## lazy function stopAnimation
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function remove
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

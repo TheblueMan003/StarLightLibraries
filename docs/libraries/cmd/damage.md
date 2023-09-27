@@ -1,19 +1,66 @@
-## ` lazy void deal(int $number)`
+## lazy function deal
+### Arguments:
+- $number (`int`)
+### Return:
+- void
+
+
 Deals damage to an entity
 
-## ` lazy void deal(entity sel, int $number)`
+## lazy function deal
+### Arguments:
+- sel (`entity`)
+- $number (`int`)
+### Return:
+- void
+
+
 Deals damage to an entity
 
-## ` lazy void deal(entity sel, int $number, mcobject $type)`
+## lazy function deal
+### Arguments:
+- sel (`entity`)
+- $number (`int`)
+- $type (`mcobject`)
+### Return:
+- void
+
+
 Deals damage to an entity with a specific type
 
-## ` lazy void deal(entity sel, int $number, mcobject $type, mcposition $source)`
+## lazy function deal
+### Arguments:
+- sel (`entity`)
+- $number (`int`)
+- $type (`mcobject`)
+- $source (`mcposition`)
+### Return:
+- void
+
+
 Deals damage to an entity with a specific position source
 
-## ` lazy void deal(entity sel, int $number, mcobject $type, entity source)`
+## lazy function deal
+### Arguments:
+- sel (`entity`)
+- $number (`int`)
+- $type (`mcobject`)
+- source (`entity`)
+### Return:
+- void
+
+
 Deals damage to an entity with a specific entity source
 
-## ` lazy void deal(entity sel, int $number, entity source)`
+## lazy function deal
+### Arguments:
+- sel (`entity`)
+- $number (`int`)
+- source (`entity`)
+### Return:
+- void
+
+
 Deals damage to an entity with a specific entity source
 
 

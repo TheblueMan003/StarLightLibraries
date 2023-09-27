@@ -1,19 +1,49 @@
 # template Click<>
 
 
-## ` virtual void onClick()`
+## virtual function onClick
+### Arguments:
+
+### Return:
+- void
 
 
-## ` virtual void onHold()`
 
 
-## ` virtual void onRelease()`
+## virtual function onHold
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void start()`
 
 
-## ` void stop()`
+## virtual function onRelease
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function start
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function stop
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

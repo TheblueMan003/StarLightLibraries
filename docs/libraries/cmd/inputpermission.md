@@ -1,7 +1,21 @@
-## ` lazy void camera(bool cam, entity selector)`
+## lazy function camera
+### Arguments:
+- cam (`bool`)
+- selector (`entity`)
+### Return:
+- void
 
 
-## ` lazy void movement(bool cam, entity selector)`
+
+
+## lazy function movement
+### Arguments:
+- cam (`bool`)
+- selector (`entity`)
+### Return:
+- void
+
+
 
 
 

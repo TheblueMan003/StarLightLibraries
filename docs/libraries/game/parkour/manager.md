@@ -1,28 +1,76 @@
 # template Manager<level,death_block>
 
 
-## ` void onStart()`
+## function onStart
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void onStop()`
 
 
-## ` void start()`
+## function onStop
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void stop()`
 
 
-## ` void restart()`
+## function start
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void death()`
 
 
-## ` lazy bool isRunning()`
+## function stop
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void debugReset()`
+
+
+## function restart
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function death
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function isRunning
+### Arguments:
+
+### Return:
+- bool
+
+
+
+
+## function debugReset
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

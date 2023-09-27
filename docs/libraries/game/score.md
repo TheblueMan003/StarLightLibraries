@@ -1,40 +1,141 @@
-## ` lazy int sum(entity selector, string score)`
+## lazy function sum
+### Arguments:
+- selector (`entity`)
+- score (`string`)
+### Return:
+- int
+
+
 Sum up the value of the scoreboard of the entity in e
 
-## ` lazy int min(entity selector, string score)`
+## lazy function min
+### Arguments:
+- selector (`entity`)
+- score (`string`)
+### Return:
+- int
+
+
 Get the min value of the scoreboard of the entity in e
 
-## ` lazy int max(entity selector, string score)`
+## lazy function max
+### Arguments:
+- selector (`entity`)
+- score (`string`)
+### Return:
+- int
+
+
 Get the max value of the scoreboard of the entity in e
 
-## ` lazy int avg(entity selector, string score)`
+## lazy function avg
+### Arguments:
+- selector (`entity`)
+- score (`string`)
+### Return:
+- int
+
+
 Get the average value of the scoreboard of the entity in e
 
-## ` lazy entity winner(entity selector, int score)`
+## lazy function winner
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+### Return:
+- entity
+
+
 Return the entities within `selector` that has the biggest `score`
 
-## ` lazy void withWinner(entity selector, int score, void=>void action)`
+## lazy function withWinner
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Execute `action` on the entity within `selector` that has the biggest `score`
 
-## ` lazy void loser(entity selector, int score)`
+## lazy function loser
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+### Return:
+- void
+
+
 Return the entities within `selector` that has the smallest `score`
 
-## ` lazy void withLoser(entity selector, int score, void=>void action)`
+## lazy function withLoser
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Execute `action` on the entity within `selector` that has the smallest `score`
 
-## ` lazy void forEachOrderedAscending(entity selector, int score, void=>void action)`
+## lazy function forEachOrderedAscending
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Execute `action` on all entities within `selector` ordered by ascending `score`
 
-## ` lazy void forEachOrderedDescending(entity selector, int score, void=>void action)`
+## lazy function forEachOrderedDescending
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Execute `action` on all entities within `selector` ordered by descending `score`
 
-## ` lazy void forEachOrdered(entity selector, int score, bool ascending, void=>void action)`
+## lazy function forEachOrdered
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+- ascending (`bool`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Execute `action` on all entities within `selector` ordered `score`
 
-## ` lazy void onNewHighScore(entity selector, int score, int previous, void=>void action)`
+## lazy function onNewHighScore
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+- previous (`int`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Execute `action` on the entity that has the new highest `score` within `selector`
 
-## ` lazy void onNewLowScore(entity selector, int score, int previous, void=>void action)`
+## lazy function onNewLowScore
+### Arguments:
+- selector (`entity`)
+- score (`int`)
+- previous (`int`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Execute `action` on the entity that has the new lowest `score` within `selector`
 
 

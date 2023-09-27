@@ -1,28 +1,87 @@
-## ` lazy void set(int $size, int $time)`
+## lazy function set
+### Arguments:
+- $size (`int`)
+- $time (`int`)
+### Return:
+- void
+
+
 Set World Border `size` in Block with `time`
 
-## ` lazy void add(int $size, int $time)`
+## lazy function add
+### Arguments:
+- $size (`int`)
+- $time (`int`)
+### Return:
+- void
+
+
 Add World Border `size` in Block with `time`
 
-## ` lazy void center(int $x, int $y, int $z)`
+## lazy function center
+### Arguments:
+- $x (`int`)
+- $y (`int`)
+- $z (`int`)
+### Return:
+- void
+
+
 Set World Border Center `x` `z`
 
-## ` lazy void center(int $x, int $z)`
+## lazy function center
+### Arguments:
+- $x (`int`)
+- $z (`int`)
+### Return:
+- void
+
+
 Set World Border Center to `x` `z`
 
-## ` lazy void center()`
+## lazy function center
+### Arguments:
+
+### Return:
+- void
+
+
 Set World Border Center
 
-## ` lazy void buffer(int $size)`
+## lazy function buffer
+### Arguments:
+- $size (`int`)
+### Return:
+- void
+
+
 Set World Border Buffer Zone to `size`
 
-## ` lazy void damage(int $dmg)`
+## lazy function damage
+### Arguments:
+- $dmg (`int`)
+### Return:
+- void
+
+
 Set World Border Damage Amount per block to `dmg`
 
-## ` lazy void warningtime(int $time)`
+## lazy function warningtime
+### Arguments:
+- $time (`int`)
+### Return:
+- void
+
+
 Set World Border Warning `time`
 
-## ` lazy void warningdistance(int $dist)`
+## lazy function warningdistance
+### Arguments:
+- $dist (`int`)
+### Return:
+- void
+
+
 Set World Border Warning Distance to `dist`
 
 

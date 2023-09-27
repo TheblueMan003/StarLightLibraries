@@ -1,19 +1,51 @@
 # public class DisplayBlock
 Class representing an block display entity.
 
-## ` lazy void __init__(mcobject block)`
+## lazy function __init__
+### Arguments:
+- block (`mcobject`)
+### Return:
+- void
 
 
-## ` lazy void __init__(mcobject block, json properties)`
 
 
-## ` lazy void setBlock(mcobject block)`
+## lazy function __init__
+### Arguments:
+- block (`mcobject`)
+- properties (`json`)
+### Return:
+- void
+
+
+
+
+## lazy function setBlock
+### Arguments:
+- block (`mcobject`)
+### Return:
+- void
+
+
 Sets the block to be displayed
 
-## ` lazy void setBlockProperties(mcobject block, json properties)`
+## lazy function setBlockProperties
+### Arguments:
+- block (`mcobject`)
+- properties (`json`)
+### Return:
+- void
+
+
 Sets the block to be displayed
 
-## ` lazy void setProperties(json properties)`
+## lazy function setProperties
+### Arguments:
+- properties (`json`)
+### Return:
+- void
+
+
 Sets the block to be displayed
 
 

@@ -1,31 +1,100 @@
-## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, json data, void=>void fct)`
+## lazy [noReturnCheck=true,requiresVariable=true] function summon
+### Arguments:
+- name (`mcobject`)
+- data (`json`)
+- fct (`void=>void`)
+### Return:
+- entity
 
 
-## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, json data)`
 
 
-## ` lazy [noReturnCheck=true] entity summon(mcobject name, void=>void fct)`
+## lazy [noReturnCheck=true,requiresVariable=true] function summon
+### Arguments:
+- name (`mcobject`)
+- data (`json`)
+### Return:
+- entity
 
 
-## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, string skin, void=>void fct)`
 
 
-## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, void=>void fct)`
+## lazy [noReturnCheck=true] function summon
+### Arguments:
+- name (`mcobject`)
+- fct (`void=>void`)
+### Return:
+- entity
 
 
-## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, string skin)`
 
 
-## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name)`
+## lazy [noReturnCheck=true,requiresVariable=true] function summon
+### Arguments:
+- name (`mcobject`)
+- skin (`string`)
+- fct (`void=>void`)
+### Return:
+- entity
 
 
-## ` lazy void kill(entity selector)`
 
 
-## ` lazy void despawn(entity e)`
+## lazy [noReturnCheck=true,requiresVariable=true] function summon
+### Arguments:
+- name (`mcobject`)
+- fct (`void=>void`)
+### Return:
+- entity
 
 
-## ` lazy void swap(entity $a, entity $b)`
+
+
+## lazy [noReturnCheck=true,requiresVariable=true] function summon
+### Arguments:
+- name (`mcobject`)
+- skin (`string`)
+### Return:
+- entity
+
+
+
+
+## lazy [noReturnCheck=true,requiresVariable=true] function summon
+### Arguments:
+- name (`mcobject`)
+### Return:
+- entity
+
+
+
+
+## lazy function kill
+### Arguments:
+- selector (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function despawn
+### Arguments:
+- e (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function swap
+### Arguments:
+- $a (`entity`)
+- $b (`entity`)
+### Return:
+- void
+
+
 Swap the position of the entity $a and $b
 
 ## predicate onFire
@@ -43,10 +112,22 @@ Swap the position of the entity $a and $b
 ## predicate isBaby
 
 
-## ` lazy bool onGround()`
+## lazy function onGround
+### Arguments:
+
+### Return:
+- bool
+
+
 Return true if the entity is on the ground
 
-## ` bool onGround()`
+## function onGround
+### Arguments:
+
+### Return:
+- bool
+
+
 Return true if the entity is on the ground
 
 ## predicate overworld
@@ -61,49 +142,147 @@ Return true if the entity is on the ground
 ## predicate dimension
 
 
-## ` lazy void angerAngaist(entity $e)`
+## lazy function angerAngaist
+### Arguments:
+- $e (`entity`)
+### Return:
+- void
+
+
 Anger the entity @s against e
 
-## ` lazy void angerAngaist(entity e1, entity e2)`
+## lazy function angerAngaist
+### Arguments:
+- e1 (`entity`)
+- e2 (`entity`)
+### Return:
+- void
+
+
 Anger the entity e1 against e2
 
-## ` lazy int count(entity e)`
+## lazy function count
+### Arguments:
+- e (`entity`)
+### Return:
+- int
+
+
 Count the number of entity in e
 
-## ` lazy int count(entity e, bool p)`
+## lazy function count
+### Arguments:
+- e (`entity`)
+- p (`bool`)
+### Return:
+- int
+
+
 Count the number of entity in e that match the predicate
 
-## ` lazy int count(entity e, void=>bool p)`
+## lazy function count
+### Arguments:
+- e (`entity`)
+- p (`void=>bool`)
+### Return:
+- int
+
+
 Count the number of entity in e that match the predicate
 
-## ` lazy void ride(entity e)`
+## lazy function ride
+### Arguments:
+- e (`entity`)
+### Return:
+- void
+
+
 Mount the current entity on the entity e
 
-## ` lazy void ride(entity e1, entity e2)`
+## lazy function ride
+### Arguments:
+- e1 (`entity`)
+- e2 (`entity`)
+### Return:
+- void
+
+
 Mount the entity e1 on the entity e2
 
-## ` lazy void dismount()`
+## lazy function dismount
+### Arguments:
+
+### Return:
+- void
+
+
 Dismount the current entity
 
-## ` lazy void dismount(entity e)`
+## lazy function dismount
+### Arguments:
+- e (`entity`)
+### Return:
+- void
+
+
 Dismount the entity e
 
-## ` lazy void spectate(entity e)`
+## lazy function spectate
+### Arguments:
+- e (`entity`)
+### Return:
+- void
+
+
 Spectate the current entity on the entity e
 
-## ` lazy void spectate(entity e1, entity e2)`
+## lazy function spectate
+### Arguments:
+- e1 (`entity`)
+- e2 (`entity`)
+### Return:
+- void
+
+
 Spectate the entity e1 on the entity e2
 
-## ` lazy bool exists(entity e, bool test)`
+## lazy function exists
+### Arguments:
+- e (`entity`)
+- test (`bool`)
+### Return:
+- bool
+
+
 Return true if at least one entity in e has the scoreboard in score
 
-## ` lazy bool forall(entity e, bool test)`
+## lazy function forall
+### Arguments:
+- e (`entity`)
+- test (`bool`)
+### Return:
+- bool
+
+
 Return true if all entity in e has the scoreboard in score
 
-## ` lazy void event(string $event)`
+## lazy function event
+### Arguments:
+- $event (`string`)
+### Return:
+- void
 
 
-## ` lazy void event(entity selector, string $event)`
+
+
+## lazy function event
+### Arguments:
+- selector (`entity`)
+- $event (`string`)
+### Return:
+- void
+
+
 
 
 

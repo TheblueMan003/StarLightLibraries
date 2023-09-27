@@ -1,79 +1,230 @@
 # struct bint
 
 
-## ` void __init__(int bound)`
+## function __init__
+### Arguments:
+- bound (`int`)
+### Return:
+- void
 
 
-## ` void __init__(int value, int bound)`
 
 
-## ` lazy void __add__(bint? other)`
+## function __init__
+### Arguments:
+- value (`int`)
+- bound (`int`)
+### Return:
+- void
 
 
-## ` lazy void __sub__(bint? other)`
 
 
-## ` lazy void __mul__(bint? other)`
+## lazy function __add__
+### Arguments:
+- other (`bint?`)
+### Return:
+- void
 
 
-## ` lazy void __div__(bint? other)`
 
 
-## ` lazy void __mod__(bint? other)`
+## lazy function __sub__
+### Arguments:
+- other (`bint?`)
+### Return:
+- void
 
 
-## ` lazy bool __lt__(bint? other)`
 
 
-## ` lazy bool __gt__(bint? other)`
+## lazy function __mul__
+### Arguments:
+- other (`bint?`)
+### Return:
+- void
 
 
-## ` lazy bool __le__(bint? other)`
 
 
-## ` lazy bool __ge__(bint? other)`
+## lazy function __div__
+### Arguments:
+- other (`bint?`)
+### Return:
+- void
 
 
-## ` lazy bool __eq__(bint? other)`
 
 
-## ` lazy bool __ne__(bint? other)`
+## lazy function __mod__
+### Arguments:
+- other (`bint?`)
+### Return:
+- void
 
 
-## ` lazy void __add__(int other)`
 
 
-## ` lazy void __sub__(int other)`
+## lazy function __lt__
+### Arguments:
+- other (`bint?`)
+### Return:
+- bool
 
 
-## ` lazy void __mul__(int other)`
 
 
-## ` lazy void __div__(int other)`
+## lazy function __gt__
+### Arguments:
+- other (`bint?`)
+### Return:
+- bool
 
 
-## ` lazy void __mod__(int other)`
 
 
-## ` lazy bool __lt__(int other)`
+## lazy function __le__
+### Arguments:
+- other (`bint?`)
+### Return:
+- bool
 
 
-## ` lazy bool __gt__(int other)`
 
 
-## ` lazy bool __le__(int other)`
+## lazy function __ge__
+### Arguments:
+- other (`bint?`)
+### Return:
+- bool
 
 
-## ` lazy bool __ge__(int other)`
 
 
-## ` lazy bool __eq__(int other)`
+## lazy function __eq__
+### Arguments:
+- other (`bint?`)
+### Return:
+- bool
 
 
-## ` lazy bool __ne__(int other)`
 
 
-## ` lazy void __set__(int other)`
+## lazy function __ne__
+### Arguments:
+- other (`bint?`)
+### Return:
+- bool
+
+
+
+
+## lazy function __add__
+### Arguments:
+- other (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function __sub__
+### Arguments:
+- other (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function __mul__
+### Arguments:
+- other (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function __div__
+### Arguments:
+- other (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function __mod__
+### Arguments:
+- other (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function __lt__
+### Arguments:
+- other (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __gt__
+### Arguments:
+- other (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __le__
+### Arguments:
+- other (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __ge__
+### Arguments:
+- other (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __eq__
+### Arguments:
+- other (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __ne__
+### Arguments:
+- other (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __set__
+### Arguments:
+- other (`int`)
+### Return:
+- void
+
+
 
 
 

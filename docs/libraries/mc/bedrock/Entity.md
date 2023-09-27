@@ -1,193 +1,629 @@
 # template Entity<>
 
 
-## ` [compile.order=999999] void make()`
+## [compile.order=999999] function make
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void setNamespace(string value)`
+
+
+## lazy function setNamespace
+### Arguments:
+- value (`string`)
+### Return:
+- void
+
+
 Set the namespace of the entity
 
-## ` lazy void setMaterial(string value)`
+## lazy function setMaterial
+### Arguments:
+- value (`string`)
+### Return:
+- void
+
+
 Set the material of the entity
 
-## ` lazy void setGeometry(string value)`
+## lazy function setGeometry
+### Arguments:
+- value (`string`)
+### Return:
+- void
+
+
 Set the geometry of the entity
 
-## ` lazy void setName(string value)`
+## lazy function setName
+### Arguments:
+- value (`string`)
+### Return:
+- void
+
+
 Set the name of the entity
 
-## ` lazy void setEggBaseColor(string value)`
+## lazy function setEggBaseColor
+### Arguments:
+- value (`string`)
+### Return:
+- void
+
+
 Set the egg base color of the entity
 
-## ` lazy void setEggBaseColor(int r, int g, int b)`
+## lazy function setEggBaseColor
+### Arguments:
+- r (`int`)
+- g (`int`)
+- b (`int`)
+### Return:
+- void
+
+
 Set the egg base color of the entity
 
-## ` lazy void setEggOverlayColor(string value)`
+## lazy function setEggOverlayColor
+### Arguments:
+- value (`string`)
+### Return:
+- void
+
+
 Set the egg overlay color of the entity
 
-## ` lazy void setEggOverlayColor(int r, int g, int b)`
+## lazy function setEggOverlayColor
+### Arguments:
+- r (`int`)
+- g (`int`)
+- b (`int`)
+### Return:
+- void
+
+
 Set the egg overlay color of the entity
 
-## ` lazy void addTexture(string $name, string value)`
+## lazy function addTexture
+### Arguments:
+- $name (`string`)
+- value (`string`)
+### Return:
+- void
+
+
 Add Texture to the entity
 
-## ` lazy void setIsSpawnable(bool value)`
+## lazy function setIsSpawnable
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Set if the entity is spawnable or not
 
-## ` lazy void setHealth(int health)`
+## lazy function setHealth
+### Arguments:
+- health (`int`)
+### Return:
+- void
+
+
 Set the max health and the health of the entity to `health`
 
-## ` lazy void setCollision(float width, float height)`
+## lazy function setCollision
+### Arguments:
+- width (`float`)
+- height (`float`)
+### Return:
+- void
+
+
 Set the collision box width and height of the entity
 
-## ` lazy void setBossBar(string name, int range, bool darksky)`
+## lazy function setBossBar
+### Arguments:
+- name (`string`)
+- range (`int`)
+- darksky (`bool`)
+### Return:
+- void
 
 
-## ` lazy void breakBlocks(json blocks)`
 
 
-## ` lazy void breakBlocks(params blocks)`
+## lazy function breakBlocks
+### Arguments:
+- blocks (`json`)
+### Return:
+- void
 
 
-## ` lazy void canBreathAir(bool value)`
 
 
-## ` lazy void canBreathWater(bool value)`
+## lazy function breakBlocks
+### Arguments:
+- blocks (`params`)
+### Return:
+- void
 
 
-## ` lazy void canBreathLava(bool value)`
 
 
-## ` lazy void canBreathSolids(bool value)`
+## lazy function canBreathAir
+### Arguments:
+- value (`bool`)
+### Return:
+- void
 
 
-## ` lazy void breathTime(float inhale, int suffocate, int supply)`
 
 
-## ` lazy void generateBubbles(bool value)`
+## lazy function canBreathWater
+### Arguments:
+- value (`bool`)
+### Return:
+- void
 
 
-## ` lazy void burnsInDaylight()`
 
 
-## ` lazy void setInvinsible()`
+## lazy function canBreathLava
+### Arguments:
+- value (`bool`)
+### Return:
+- void
 
 
-## ` lazy void setTimer(float time, string event, bool looping)`
 
 
-## ` lazy void setTimerRandom(float start, float end, string event, bool looping)`
+## lazy function canBreathSolids
+### Arguments:
+- value (`bool`)
+### Return:
+- void
 
 
-## ` lazy void canEquipItem()`
 
 
-## ` lazy void setExplode(bool breakblock, bool causesfire, float power, bool destroygrief, bool firegrief)`
+## lazy function breathTime
+### Arguments:
+- inhale (`float`)
+- suffocate (`int`)
+- supply (`int`)
+### Return:
+- void
 
 
-## ` lazy void setExplodeTime(bool breakblock, bool causesfire, float power, float time, bool destroygrief, bool firegrief)`
 
 
-## ` lazy void setInteraction(string event, string text)`
+## lazy function generateBubbles
+### Arguments:
+- value (`bool`)
+### Return:
+- void
 
 
-## ` lazy void setInventory(string size, bool isprivate)`
 
 
-## ` lazy void isNameable(bool alwaysshow, bool allowrenaming)`
+## lazy function burnsInDaylight
+### Arguments:
 
+### Return:
+- void
 
-## ` lazy void onNamed(string name, string event)`
 
 
-## ` lazy void setPhysics(bool collision, bool gravity)`
 
+## lazy function setInvinsible
+### Arguments:
 
-## ` lazy void projectile(float power, float gravity, float angle)`
+### Return:
+- void
 
 
-## ` lazy void isPushable(bool pushable, bool piston)`
 
 
-## ` lazy void setScale(float scale)`
+## lazy function setTimer
+### Arguments:
+- time (`float`)
+- event (`string`)
+- looping (`bool`)
+### Return:
+- void
 
 
-## ` lazy void shooter(string shoot)`
 
 
-## ` lazy void spawnEntity(string entity, int time, int quantity, bool singleuse)`
+## lazy function setTimerRandom
+### Arguments:
+- start (`float`)
+- end (`float`)
+- event (`string`)
+- looping (`bool`)
+### Return:
+- void
 
 
-## ` lazy void spawnItem(string item, int time, int quantity, bool singleuse)`
 
 
-## ` lazy void scale(float scale)`
+## lazy function canEquipItem
+### Arguments:
 
+### Return:
+- void
 
-## ` lazy void transformation(string mob, float time, bool keeplevel, bool dropinventory, bool equipement)`
 
 
-## ` lazy void canTeleport(int maxtime, int x, int y, int z, int distance, float chance)`
 
+## lazy function setExplode
+### Arguments:
+- breakblock (`bool`)
+- causesfire (`bool`)
+- power (`float`)
+- destroygrief (`bool`)
+- firegrief (`bool`)
+### Return:
+- void
 
-## ` lazy void setAttack(int attack)`
 
 
-## ` lazy void entitySensor(string mob, string event, float range, int quantity)`
 
+## lazy function setExplodeTime
+### Arguments:
+- breakblock (`bool`)
+- causesfire (`bool`)
+- power (`float`)
+- time (`float`)
+- destroygrief (`bool`)
+- firegrief (`bool`)
+### Return:
+- void
 
-## ` lazy void setFamily(json family)`
 
 
-## ` lazy void setMovement(float movement)`
 
+## lazy function setInteraction
+### Arguments:
+- event (`string`)
+- text (`string`)
+### Return:
+- void
 
-## ` lazy void knockbackResistance(float value)`
 
 
-## ` lazy void lookAtPlayer(int priority, float distance, float probability)`
 
+## lazy function setInventory
+### Arguments:
+- size (`string`)
+- isprivate (`bool`)
+### Return:
+- void
 
-## ` lazy void randomLookAround(float priority)`
 
 
-## ` lazy void setVariant(int value)`
 
+## lazy function isNameable
+### Arguments:
+- alwaysshow (`bool`)
+- allowrenaming (`bool`)
+### Return:
+- void
 
-## ` lazy void onFatalDamage(string event)`
 
 
-## ` lazy void onDamage(string event)`
 
+## lazy function onNamed
+### Arguments:
+- name (`string`)
+- event (`string`)
+### Return:
+- void
 
-## ` lazy void onDamage(void=>void fct)`
 
 
-## ` lazy void onFatalDamage(void=>void fct)`
 
+## lazy function setPhysics
+### Arguments:
+- collision (`bool`)
+- gravity (`bool`)
+### Return:
+- void
 
-## ` lazy void mobEffect(string effect, float range, int time, string mob)`
 
 
-## ` lazy void randomStroll(int priority, float speed)`
 
+## lazy function projectile
+### Arguments:
+- power (`float`)
+- gravity (`float`)
+- angle (`float`)
+### Return:
+- void
 
-## ` lazy void componentGroup(string name, void=>void fct)`
 
 
-## ` lazy void addComponentGroup(string name)`
 
+## lazy function isPushable
+### Arguments:
+- pushable (`bool`)
+- piston (`bool`)
+### Return:
+- void
 
-## ` lazy void removeComponentGroup(string name)`
 
 
-## ` lazy void removeEvent(string name)`
 
+## lazy function setScale
+### Arguments:
+- scale (`float`)
+### Return:
+- void
 
-## ` lazy void event(string name, void=>void fct)`
 
 
-## ` lazy void runCommand(void=>void fct)`
+
+## lazy function shooter
+### Arguments:
+- shoot (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function spawnEntity
+### Arguments:
+- entity (`string`)
+- time (`int`)
+- quantity (`int`)
+- singleuse (`bool`)
+### Return:
+- void
+
+
+
+
+## lazy function spawnItem
+### Arguments:
+- item (`string`)
+- time (`int`)
+- quantity (`int`)
+- singleuse (`bool`)
+### Return:
+- void
+
+
+
+
+## lazy function scale
+### Arguments:
+- scale (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function transformation
+### Arguments:
+- mob (`string`)
+- time (`float`)
+- keeplevel (`bool`)
+- dropinventory (`bool`)
+- equipement (`bool`)
+### Return:
+- void
+
+
+
+
+## lazy function canTeleport
+### Arguments:
+- maxtime (`int`)
+- x (`int`)
+- y (`int`)
+- z (`int`)
+- distance (`int`)
+- chance (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function setAttack
+### Arguments:
+- attack (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function entitySensor
+### Arguments:
+- mob (`string`)
+- event (`string`)
+- range (`float`)
+- quantity (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function setFamily
+### Arguments:
+- family (`json`)
+### Return:
+- void
+
+
+
+
+## lazy function setMovement
+### Arguments:
+- movement (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function knockbackResistance
+### Arguments:
+- value (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function lookAtPlayer
+### Arguments:
+- priority (`int`)
+- distance (`float`)
+- probability (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function randomLookAround
+### Arguments:
+- priority (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function setVariant
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function onFatalDamage
+### Arguments:
+- event (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function onDamage
+### Arguments:
+- event (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function onDamage
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onFatalDamage
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function mobEffect
+### Arguments:
+- effect (`string`)
+- range (`float`)
+- time (`int`)
+- mob (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function randomStroll
+### Arguments:
+- priority (`int`)
+- speed (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function componentGroup
+### Arguments:
+- name (`string`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function addComponentGroup
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function removeComponentGroup
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function removeEvent
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function event
+### Arguments:
+- name (`string`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function runCommand
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 
 
 

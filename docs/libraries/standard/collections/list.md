@@ -1,43 +1,123 @@
 # struct List<V>
 
 
-## ` void __init__()`
+## function __init__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` V? get(int key)`
 
 
-## ` lazy V? __get__(int key)`
+## function get
+### Arguments:
+- key (`int`)
+### Return:
+- V?
 
 
-## ` void set(int key, V? value)`
 
 
-## ` lazy void __set__(int key, V? value)`
+## lazy function __get__
+### Arguments:
+- key (`int`)
+### Return:
+- V?
 
 
-## ` void add(V? value)`
 
 
-## ` void remove(V? value)`
+## function set
+### Arguments:
+- key (`int`)
+- value (`V?`)
+### Return:
+- void
 
 
-## ` void removeAt(int index)`
 
 
-## ` void removeAll(V?=>bool pred)`
+## lazy function __set__
+### Arguments:
+- key (`int`)
+- value (`V?`)
+### Return:
+- void
 
 
-## ` void contains(V? value)`
 
 
-## ` int size()`
+## function add
+### Arguments:
+- value (`V?`)
+### Return:
+- void
 
 
-## ` int indexOf(V? value)`
 
 
-## ` void clear()`
+## function remove
+### Arguments:
+- value (`V?`)
+### Return:
+- void
+
+
+
+
+## function removeAt
+### Arguments:
+- index (`int`)
+### Return:
+- void
+
+
+
+
+## function removeAll
+### Arguments:
+- pred (`V?=>bool`)
+### Return:
+- void
+
+
+
+
+## function contains
+### Arguments:
+- value (`V?`)
+### Return:
+- void
+
+
+
+
+## function size
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## function indexOf
+### Arguments:
+- value (`V?`)
+### Return:
+- int
+
+
+
+
+## function clear
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

@@ -1,13 +1,38 @@
-## ` void reset()`
+## function reset
+### Arguments:
+
+### Return:
+- void
+
+
 Reset the spawnpoint
 
-## ` void respawn()`
+## function respawn
+### Arguments:
+
+### Return:
+- void
+
+
 Teleport the player to last checkpoint
 
-## ` bool setSpawn(bool silent)`
+## function setSpawn
+### Arguments:
+- silent (`bool`)
+### Return:
+- bool
+
+
 Set the spawnpoint
 
-## ` lazy void checkpoint(mcobject block, void=>void action)`
+## lazy function checkpoint
+### Arguments:
+- block (`mcobject`)
+- action (`void=>void`)
+### Return:
+- void
+
+
 Checkpoint for a block
 
 

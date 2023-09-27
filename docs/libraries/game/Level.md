@@ -1,43 +1,129 @@
 # template Level<>
 
 
-## `public lazy void summonJson(json value)`
+## public lazy function summonJson
+### Arguments:
+- value (`json`)
+### Return:
+- void
 
 
-## `public lazy void summonAllJson(json value)`
 
 
-## ` lazy entity summon(mcobject name, json data, void=>void fct)`
+## public lazy function summonAllJson
+### Arguments:
+- value (`json`)
+### Return:
+- void
 
 
-## ` lazy entity summon(mcobject name, json data)`
 
 
-## ` lazy entity summon(mcobject name, void=>void fct)`
+## lazy function summon
+### Arguments:
+- name (`mcobject`)
+- data (`json`)
+- fct (`void=>void`)
+### Return:
+- entity
 
 
-## ` lazy entity summon(mcobject name, string skin, void=>void fct)`
 
 
-## ` lazy entity summon(mcobject name, void=>void fct)`
+## lazy function summon
+### Arguments:
+- name (`mcobject`)
+- data (`json`)
+### Return:
+- entity
 
 
-## ` lazy entity summon(mcobject name, string skin)`
 
 
-## ` lazy entity summon(mcobject name)`
+## lazy function summon
+### Arguments:
+- name (`mcobject`)
+- fct (`void=>void`)
+### Return:
+- entity
 
 
-## `public void onStart()`
 
 
-## `public void onStop()`
+## lazy function summon
+### Arguments:
+- name (`mcobject`)
+- skin (`string`)
+- fct (`void=>void`)
+### Return:
+- entity
 
 
-## `public void start()`
 
 
-## `public void stop()`
+## lazy function summon
+### Arguments:
+- name (`mcobject`)
+- fct (`void=>void`)
+### Return:
+- entity
+
+
+
+
+## lazy function summon
+### Arguments:
+- name (`mcobject`)
+- skin (`string`)
+### Return:
+- entity
+
+
+
+
+## lazy function summon
+### Arguments:
+- name (`mcobject`)
+### Return:
+- entity
+
+
+
+
+## public function onStart
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## public function onStop
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## public function start
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## public function stop
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

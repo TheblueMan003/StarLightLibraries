@@ -1,25 +1,77 @@
-## ` lazy void add(string $tag)`
+## lazy function add
+### Arguments:
+- $tag (`string`)
+### Return:
+- void
 
 
-## ` lazy void add(entity selector, string $tag)`
 
 
-## ` lazy void remove(string $tag)`
+## lazy function add
+### Arguments:
+- selector (`entity`)
+- $tag (`string`)
+### Return:
+- void
 
 
-## ` lazy void remove(entity selector, string $tag)`
 
 
-## ` lazy void unique(string $tag)`
+## lazy function remove
+### Arguments:
+- $tag (`string`)
+### Return:
+- void
 
 
-## ` lazy void unique(entity selector, string $tag)`
 
 
-## ` lazy bool has(string tag)`
+## lazy function remove
+### Arguments:
+- selector (`entity`)
+- $tag (`string`)
+### Return:
+- void
 
 
-## ` lazy bool has(entity selector, string $tag)`
+
+
+## lazy function unique
+### Arguments:
+- $tag (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function unique
+### Arguments:
+- selector (`entity`)
+- $tag (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function has
+### Arguments:
+- tag (`string`)
+### Return:
+- bool
+
+
+
+
+## lazy function has
+### Arguments:
+- selector (`entity`)
+- $tag (`string`)
+### Return:
+- bool
+
+
 
 
 

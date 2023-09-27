@@ -1,54 +1,162 @@
 # struct Color
 
 
-## ` lazy void __init__(int value)`
-
-
-## ` lazy void __init__(int red, int green, int blue)`
-
-
-## ` lazy void __init__(int red, int green, int blue, int alpha)`
-
-
-## ` lazy int getRed()`
-
-
-## ` lazy int getGreen()`
-
-
-## ` lazy int getBlue()`
-
-
-## ` lazy int getAlpha()`
-
-
-## ` lazy void setRed(int red)`
-
-
-## ` lazy void setGreen(int green)`
-
-
-## ` lazy void setBlue(int blue)`
-
-
-## ` lazy void setAlpha(int alpha)`
-
-
-## ` lazy void setRGB(int red, int green, int blue)`
-
-
-## ` lazy void setARGB(int alpha, int red, int green, int blue)`
-
-
-## ` lazy int getRGB()`
-
-
-## ` lazy int getARGB()`
+## lazy function __init__
+### Arguments:
+- value (`int`)
+### Return:
+- void
 
 
 
 
-## ` Color? lerp(Color? a, Color? b, float value)`
+## lazy function __init__
+### Arguments:
+- red (`int`)
+- green (`int`)
+- blue (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function __init__
+### Arguments:
+- red (`int`)
+- green (`int`)
+- blue (`int`)
+- alpha (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function getRed
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## lazy function getGreen
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## lazy function getBlue
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## lazy function getAlpha
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## lazy function setRed
+### Arguments:
+- red (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function setGreen
+### Arguments:
+- green (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function setBlue
+### Arguments:
+- blue (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function setAlpha
+### Arguments:
+- alpha (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function setRGB
+### Arguments:
+- red (`int`)
+- green (`int`)
+- blue (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function setARGB
+### Arguments:
+- alpha (`int`)
+- red (`int`)
+- green (`int`)
+- blue (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function getRGB
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## lazy function getARGB
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+
+
+## function lerp
+### Arguments:
+- a (`Color?`)
+- b (`Color?`)
+- value (`float`)
+### Return:
+- Color?
+
+
 
 
 

@@ -1,40 +1,114 @@
 # public class DisplayItem
 Class representing an item display entity.
 
-## ` lazy void __init__()`
+## lazy function __init__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void __init__(mcobject item, json data)`
 
 
-## ` lazy void setItem(mcobject item, json data)`
+## lazy function __init__
+### Arguments:
+- item (`mcobject`)
+- data (`json`)
+### Return:
+- void
+
+
+
+
+## lazy function setItem
+### Arguments:
+- item (`mcobject`)
+- data (`json`)
+### Return:
+- void
+
+
 Set the item to be displayed
 
-## ` lazy void setDisplayModeNone()`
+## lazy function setDisplayModeNone
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to none
 
-## ` lazy void setDisplayModeThirdPersonLeftHand()`
+## lazy function setDisplayModeThirdPersonLeftHand
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to third person left hand
 
-## ` lazy void setDisplayModeThirdPersonRightHand()`
+## lazy function setDisplayModeThirdPersonRightHand
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to third person right hand
 
-## ` lazy void setDisplayModeFirstPersonLeftHand()`
+## lazy function setDisplayModeFirstPersonLeftHand
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to first person left hand
 
-## ` lazy void setDisplayModeFirstPersonRightHand()`
+## lazy function setDisplayModeFirstPersonRightHand
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to first person right hand
 
-## ` lazy void setDisplayModeHead()`
+## lazy function setDisplayModeHead
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to head
 
-## ` lazy void setDisplayModeGui()`
+## lazy function setDisplayModeGui
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to gui
 
-## ` lazy void setDisplayModeGround()`
+## lazy function setDisplayModeGround
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to ground
 
-## ` lazy void setDisplayModeFixed()`
+## lazy function setDisplayModeFixed
+### Arguments:
+
+### Return:
+- void
+
+
 Set the display mode to fixed
 
 

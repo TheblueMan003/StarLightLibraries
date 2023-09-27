@@ -1,73 +1,216 @@
 # class Entity
 
 
-## ` lazy void run(void=>void fct)`
+## lazy function run
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Execute a function with the entity
 
-## ` lazy void run(bool _at, void=>void fct)`
+## lazy function run
+### Arguments:
+- _at (`bool`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Execute a function with the entity
 
-## ` lazy void teleport(mcposition position)`
+## lazy function teleport
+### Arguments:
+- position (`mcposition`)
+### Return:
+- void
+
+
 Teleport entity to position
 
-## ` lazy void lookAt(mcposition position)`
+## lazy function lookAt
+### Arguments:
+- position (`mcposition`)
+### Return:
+- void
+
+
 Make the entity look at position
 
-## ` lazy void lookAtPlayer()`
+## lazy function lookAtPlayer
+### Arguments:
+
+### Return:
+- void
+
+
 Make the entity look the nearest player
 
-## ` lazy void tag(string tag)`
+## lazy function tag
+### Arguments:
+- tag (`string`)
+### Return:
+- void
+
+
 add tag to entity
 
-## ` lazy void untag(string tag)`
+## lazy function untag
+### Arguments:
+- tag (`string`)
+### Return:
+- void
+
+
 remove tag from entity
 
-## ` lazy void kill()`
+## lazy function kill
+### Arguments:
+
+### Return:
+- void
+
+
 kill entity
 
-## ` lazy void setdata(json data)`
+## lazy function setdata
+### Arguments:
+- data (`json`)
+### Return:
+- void
 
 
-## ` lazy void copyDataFrom(entity e2, string path)`
 
 
-## ` lazy void copyDataFromTo(string path1, entity e2, string path2)`
+## lazy function copyDataFrom
+### Arguments:
+- e2 (`entity`)
+- path (`string`)
+### Return:
+- void
 
 
-## ` lazy void setName(string name)`
 
 
-## ` lazy void noGravity(int value)`
+## lazy function copyDataFromTo
+### Arguments:
+- path1 (`string`)
+- e2 (`entity`)
+- path2 (`string`)
+### Return:
+- void
 
 
-## ` lazy void noGravity()`
 
 
-## ` lazy void invulnerable(int value)`
+## lazy function setName
+### Arguments:
+- name (`string`)
+### Return:
+- void
 
 
-## ` lazy void invulnerable()`
 
 
-## ` lazy void invincible(int value)`
+## lazy function noGravity
+### Arguments:
+- value (`int`)
+### Return:
+- void
 
 
-## ` lazy void Invincible()`
 
 
-## ` lazy void Silent(int value)`
+## lazy function noGravity
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void Silent()`
 
 
-## ` lazy void Glowing(int value)`
+## lazy function invulnerable
+### Arguments:
+- value (`int`)
+### Return:
+- void
 
 
-## ` lazy void Glowing()`
 
 
-## ` lazy void setModel(mcobject $block, int $id)`
+## lazy function invulnerable
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function invincible
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function Invincible
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function Silent
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function Silent
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function Glowing
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function Glowing
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function setModel
+### Arguments:
+- $block (`mcobject`)
+- $id (`int`)
+### Return:
+- void
+
+
 
 
 

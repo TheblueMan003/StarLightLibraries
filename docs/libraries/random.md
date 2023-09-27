@@ -1,28 +1,86 @@
-## ` int range(int x, int y)`
+## function range
+### Arguments:
+- x (`int`)
+- y (`int`)
+### Return:
+- int
+
+
 Return a random number between `x` (included) and `y` (excluded)
 
-## ` lazy float range(float x, float y)`
+## lazy function range
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- float
+
+
 Return a random number between `x` (included) and `y` (excluded)
 
-## ` lazy int range(int x, int y)`
+## lazy function range
+### Arguments:
+- x (`int`)
+- y (`int`)
+### Return:
+- int
+
+
 Return a random number between `x` (included) and `y` (excluded)
 
-## ` lazy float range(float x, float y)`
+## lazy function range
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- float
+
+
 Return a random number between `x` (included) and `y` (excluded)
 
-## ` lazy int range(int x)`
+## lazy function range
+### Arguments:
+- x (`int`)
+### Return:
+- int
+
+
 Return a random number between 0 and `x` (excluded)
 
-## ` lazy float range(float x)`
+## lazy function range
+### Arguments:
+- x (`float`)
+### Return:
+- float
+
+
 Return a random number between 0 and `x` (excluded)
 
-## ` lazy int next()`
+## lazy function next
+### Arguments:
+
+### Return:
+- int
+
+
 Return a random number between `x` (included) and `y` (excluded)
 
-## ` lazy float nextFloat()`
+## lazy function nextFloat
+### Arguments:
+
+### Return:
+- float
+
+
 Return a random number between `x` (included) and `y` (excluded)
 
-## ` lazy bool chance(float percent)`
+## lazy function chance
+### Arguments:
+- percent (`float`)
+### Return:
+- bool
+
+
 Return a random number between `x` (included) and `y` (excluded)
 
 

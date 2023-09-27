@@ -1,100 +1,296 @@
 # struct Timer
 Structure of Timer
 
-## ` lazy void __init__()`
+## lazy function __init__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void __init__(int d1, int d2)`
 
 
-## ` lazy void __init__(int c1, int c2, int c3, int c4)`
+## lazy function __init__
+### Arguments:
+- d1 (`int`)
+- d2 (`int`)
+### Return:
+- void
 
 
-## ` void resetTime()`
+
+
+## lazy function __init__
+### Arguments:
+- c1 (`int`)
+- c2 (`int`)
+- c3 (`int`)
+- c4 (`int`)
+### Return:
+- void
+
+
+
+
+## function resetTime
+### Arguments:
+
+### Return:
+- void
+
+
 Reset the time of timer
 
-## ` void start()`
+## function start
+### Arguments:
+
+### Return:
+- void
+
+
 Start the timer
 
-## ` void pause()`
+## function pause
+### Arguments:
+
+### Return:
+- void
+
+
 Pause the timer
 
-## ` void continue()`
+## function continue
+### Arguments:
+
+### Return:
+- void
+
+
 Unpause the timer
 
-## ` void stop()`
+## function stop
+### Arguments:
+
+### Return:
+- void
+
+
 Stop the timer
 
-## ` bool isRunning()`
+## function isRunning
+### Arguments:
+
+### Return:
+- bool
+
+
 Return true if the timer is running
 
-## ` bool isPaused()`
+## function isPaused
+### Arguments:
+
+### Return:
+- bool
+
+
 Return true if the timer is paused
 
-## ` bool isEnded()`
+## function isEnded
+### Arguments:
+
+### Return:
+- bool
+
+
 Return true if the timer is ended
 
-## ` int getTime()`
+## function getTime
+### Arguments:
+
+### Return:
+- int
+
+
 Return the time in ticks
 
-## ` int getMilisec()`
+## function getMilisec
+### Arguments:
+
+### Return:
+- int
+
+
 Return the millisecond of the timer
 
-## ` void addLevel()`
+## function addLevel
+### Arguments:
+
+### Return:
+- void
+
+
 Add level to the timer
 
-## ` void setLevel(int l)`
+## function setLevel
+### Arguments:
+- l (`int`)
+### Return:
+- void
+
+
 Set the level of the timer
 
-## ` int getLevel()`
+## function getLevel
+### Arguments:
+
+### Return:
+- int
+
+
 Get the level of the timer
 
-## ` void setMaxLevel(int l)`
+## function setMaxLevel
+### Arguments:
+- l (`int`)
+### Return:
+- void
+
+
 Set the max level of the timer
 
-## ` void addDeath()`
+## function addDeath
+### Arguments:
+
+### Return:
+- void
+
+
 Add a death to the timer
 
-## ` int getDeath()`
+## function getDeath
+### Arguments:
+
+### Return:
+- int
+
+
 Get the death count of the timer
 
-## ` void setDeath(int d)`
+## function setDeath
+### Arguments:
+- d (`int`)
+### Return:
+- void
+
+
 Set the death count of the timer
 
-## ` void addKill()`
+## function addKill
+### Arguments:
+
+### Return:
+- void
+
+
 Add a kill to the timer
 
-## ` int getKill()`
+## function getKill
+### Arguments:
+
+### Return:
+- int
+
+
 Get the kill of the timer
 
-## ` void setKill(int k)`
+## function setKill
+### Arguments:
+- k (`int`)
+### Return:
+- void
+
+
 Set the kill of the timer
 
-## ` void reset()`
+## function reset
+### Arguments:
+
+### Return:
+- void
+
+
 Reset the timer
 
-## ` void showDeath(bool d)`
+## function showDeath
+### Arguments:
+- d (`bool`)
+### Return:
+- void
+
+
 Set if the death should be shown
 
-## ` void showKill(bool d)`
+## function showKill
+### Arguments:
+- d (`bool`)
+### Return:
+- void
+
+
 Set if the kill should be shown
 
-## ` void showCheat(bool d)`
+## function showCheat
+### Arguments:
+- d (`bool`)
+### Return:
+- void
+
+
 Set if the cheat state should be shown
 
-## ` void showLevel(bool d)`
+## function showLevel
+### Arguments:
+- d (`bool`)
+### Return:
+- void
+
+
 Set if the levels should be shown
 
-## ` void setGlobal(bool g)`
+## function setGlobal
+### Arguments:
+- g (`bool`)
+### Return:
+- void
+
+
 Set if the timer is global
 
-## ` void setDisplay(bool d)`
+## function setDisplay
+### Arguments:
+- d (`bool`)
+### Return:
+- void
+
+
 Set if the timer should be displayed
 
-## ` int getTotalTick()`
+## function getTotalTick
+### Arguments:
+
+### Return:
+- int
+
+
 Return the current time in ticks
 
-## ` void tick()`
+## function tick
+### Arguments:
+
+### Return:
+- void
+
+
 Tick the timer
 
 

@@ -1,13 +1,31 @@
 # struct Event
 
 
-## `public lazy void __add__(void=>void func)`
+## public lazy function __add__
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## `public lazy void __set__(void=>void func)`
 
 
-## `public lazy void __apply__()`
+## public lazy function __set__
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## public lazy function __apply__
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

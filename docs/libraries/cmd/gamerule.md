@@ -1,157 +1,469 @@
-## ` lazy void announceAdvancements(bool value)`
+## lazy function announceAdvancements
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Show Advancements in chat (Java Edition only)
 
-## ` lazy void blockExplosionDropDecay(bool value)`
+## lazy function blockExplosionDropDecay
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Block drops instantly when broken (Java Edition only)
 
-## ` lazy void commandBlocksEnabled(bool value)`
+## lazy function commandBlocksEnabled
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether command block should be enabled (Bedrock Edition only)
 
-## ` lazy void commandBlockOutput(bool value)`
+## lazy function commandBlockOutput
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether command block output should be enabled
 
-## ` lazy void commandModificationBlockLimit(int $value)`
+## lazy function commandModificationBlockLimit
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 fill, clone max size (Java Edition only)
 
-## ` lazy void disableElytraMovementCheck(bool value)`
+## lazy function disableElytraMovementCheck
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Disable Elytra Movement Check (Java Edition only)
 
-## ` lazy void disableRaids(bool value)`
+## lazy function disableRaids
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Disable Raids (Java Edition only)
 
-## ` lazy void doDaylightCycle(bool value)`
+## lazy function doDaylightCycle
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Daylight cycle
 
-## ` lazy void doEntityDrops(bool value)`
+## lazy function doEntityDrops
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether entity drops should be enabled
 
-## ` lazy void doFireTick(bool value)`
+## lazy function doFireTick
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether fire should spread and naturally extinguish
 
-## ` lazy void doInsomnia(bool value)`
+## lazy function doInsomnia
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if phantoms can spawn in the night
 
-## ` lazy void doImmediateRespawn(bool value)`
+## lazy function doImmediateRespawn
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if player should respawn immediately without showing the death screen
 
-## ` lazy void doLimitedCrafting(bool value)`
+## lazy function doLimitedCrafting
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if players can craft items in Crafting Table without the need of a recipe
 
-## ` lazy void doMobLoot(bool value)`
+## lazy function doMobLoot
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if mob loot should be dropped
 
-## ` lazy void doMobSpawning(bool value)`
+## lazy function doMobSpawning
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if mobs can spawn naturally
 
-## ` lazy void doPatrolSpawning(bool value)`
+## lazy function doPatrolSpawning
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if patrolling monsters can spawn
 
-## ` lazy void doTraderSpawning(bool value)`
+## lazy function doTraderSpawning
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if traders can spawn
 
-## ` lazy void doTileDrops(bool value)`
+## lazy function doTileDrops
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if block drops should be enabled
 
-## ` lazy void doVinesSpread(bool value)`
+## lazy function doVinesSpread
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if vine growth should be enabled
 
-## ` lazy void doWeatherCycle(bool value)`
+## lazy function doWeatherCycle
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if weather should change
 
-## ` lazy void doWardenSpawning(bool value)`
+## lazy function doWardenSpawning
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if Warden can spawn
 
-## ` lazy void drowningDamage(bool value)`
+## lazy function drowningDamage
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if Drowning Damage should be enabled
 
-## ` lazy void fallDamage(bool value)`
+## lazy function fallDamage
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if Fall Damage should be enabled
 
-## ` lazy void fireDamage(bool value)`
+## lazy function fireDamage
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if Fire Damage should be enabled
 
-## ` lazy void forgiveDeadPlayers(bool value)`
+## lazy function forgiveDeadPlayers
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if monster should forgive dead players
 
-## ` lazy void freezeDamage(bool value)`
+## lazy function freezeDamage
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if freezing damage should be enabled
 
-## ` lazy void globalSoundEvents(bool value)`
+## lazy function globalSoundEvents
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if Global Sound Events should be enabled
 
-## ` lazy void keepInventory(bool value)`
+## lazy function keepInventory
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if player should drop items on death
 
-## ` lazy void functionCommandLimit(int $value)`
+## lazy function functionCommandLimit
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Number of command in function that can be executed per tick
 
-## ` lazy void lavaSourceConversion(bool value)`
+## lazy function lavaSourceConversion
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if lava should convert to source
 
-## ` lazy void logAdminCommands(bool value)`
+## lazy function logAdminCommands
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if admin command should be logged
 
-## ` lazy void maxCommandChainLength(int $value)`
+## lazy function maxCommandChainLength
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Max number of command blocks that can be chained
 
-## ` lazy void maxEntityCramming(int $value)`
+## lazy function maxEntityCramming
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Max number of entity that can be crammed in a block
 
-## ` lazy void mobExplosionDropDecay(bool value)`
+## lazy function mobExplosionDropDecay
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether mob explosion should drop loot
 
-## ` lazy void mobGriefing(bool value)`
+## lazy function mobGriefing
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if mob should be able to grief
 
-## ` lazy void naturalRegeneration(bool value)`
+## lazy function naturalRegeneration
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if player should be able to heal naturally
 
-## ` lazy void playerSleepingPercentage(int $value)`
+## lazy function playerSleepingPercentage
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Percentage of players that need to sleep to skip the night
 
-## ` lazy void pvp(bool value)`
+## lazy function pvp
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if players should be able to pvp
 
-## ` lazy void randomTickSpeed(int $value)`
+## lazy function randomTickSpeed
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Number of random ticks per tick
 
-## ` lazy void reducedDebugInfo(bool value)`
+## lazy function reducedDebugInfo
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if F3 Debug Info should be reduced
 
-## ` lazy void sendCommandFeedback(bool value)`
+## lazy function sendCommandFeedback
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if command feedback should be sent to player
 
-## ` lazy void showBorderEffect(bool value)`
+## lazy function showBorderEffect
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if world border effect should be shown
 
-## ` lazy void showCoordinates(bool value)`
+## lazy function showCoordinates
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if coordinates should be shown
 
-## ` lazy void showDeathMessages(bool value)`
+## lazy function showDeathMessages
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if death messages should be shown
 
-## ` lazy void showTags(bool value)`
+## lazy function showTags
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if item tag should be shown
 
-## ` lazy void snowAccumulationHeight(int $value)`
+## lazy function snowAccumulationHeight
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Max Number of snow layer that can be stacked
 
-## ` lazy void spawnRadius(int $value)`
+## lazy function spawnRadius
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Radius of spawn
 
-## ` lazy void spectatorsGenerateChunks(bool value)`
+## lazy function spectatorsGenerateChunks
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if spectator should be able to generate chunks
 
-## ` lazy void tntExplodes(bool value)`
+## lazy function tntExplodes
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if tnt should explode
 
-## ` lazy void tntExplosionDropDecay(bool value)`
+## lazy function tntExplosionDropDecay
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if tnt should drop loot
 
-## ` lazy void universalAnger(bool value)`
+## lazy function universalAnger
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if universal anger should be enabled
 
-## ` lazy void waterSourceConversion(bool value)`
+## lazy function waterSourceConversion
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Whether if water should convert to water source
 
 

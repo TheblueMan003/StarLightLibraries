@@ -1,25 +1,78 @@
-## ` lazy void showList(int score, rawjson display)`
+## lazy function showList
+### Arguments:
+- score (`int`)
+- display (`rawjson`)
+### Return:
+- void
+
+
 Show the scoreboard on the list
 
-## ` lazy void showSidebar(int score, rawjson display)`
+## lazy function showSidebar
+### Arguments:
+- score (`int`)
+- display (`rawjson`)
+### Return:
+- void
+
+
 Show the scoreboard on the sidebar
 
-## ` lazy void showBelowname(int score, rawjson display)`
+## lazy function showBelowname
+### Arguments:
+- score (`int`)
+- display (`rawjson`)
+### Return:
+- void
+
+
 Show the scoreboard on the belowname
 
-## ` lazy void showTeamSidebar(int score, string color, rawjson display)`
+## lazy function showTeamSidebar
+### Arguments:
+- score (`int`)
+- color (`string`)
+- display (`rawjson`)
+### Return:
+- void
+
+
 Show the scoreboard on the sidebar of team of color `color`
 
-## ` lazy void hideList()`
+## lazy function hideList
+### Arguments:
+
+### Return:
+- void
+
+
 Hide the scoreboard on the list
 
-## ` lazy void hideSidebar()`
+## lazy function hideSidebar
+### Arguments:
+
+### Return:
+- void
+
+
 Hide the scoreboard on the sidebar
 
-## ` lazy void hideBelowname()`
+## lazy function hideBelowname
+### Arguments:
+
+### Return:
+- void
+
+
 Hide the scoreboard on the belowname
 
-## ` lazy void hideTeamSidebar(string $color)`
+## lazy function hideTeamSidebar
+### Arguments:
+- $color (`string`)
+### Return:
+- void
+
+
 Hide the scoreboard on the sidebar of team of color `color`
 
 

@@ -1,19 +1,66 @@
-## ` void point(mcobject part)`
+## function point
+### Arguments:
+- part (`mcobject`)
+### Return:
+- void
+
+
 Spawn a single particle of type `part`
 
-## ` void dust(float r, float g, float b, float a)`
+## function dust
+### Arguments:
+- r (`float`)
+- g (`float`)
+- b (`float`)
+- a (`float`)
+### Return:
+- void
+
+
 Spawn a single dust particle with color (`r`, `g`, `b`) and size `a`
 
-## ` void dust(float r, float g, float b)`
+## function dust
+### Arguments:
+- r (`float`)
+- g (`float`)
+- b (`float`)
+### Return:
+- void
+
+
 Spawn a single dust particle with color (`r`, `g`, `b`) and size 1
 
-## ` void sphere(mcobject part, float radius, float speed, float amount)`
+## function sphere
+### Arguments:
+- part (`mcobject`)
+- radius (`float`)
+- speed (`float`)
+- amount (`float`)
+### Return:
+- void
+
+
 Spawn a sphere of `radius` of particle of type `part` with `speed` containing `amount` of particles
 
-## ` void disk(mcobject part, float radius, float speed, float amount)`
+## function disk
+### Arguments:
+- part (`mcobject`)
+- radius (`float`)
+- speed (`float`)
+- amount (`float`)
+### Return:
+- void
+
+
 Spawn a disk of `radius` of particle of type `part` with `speed` containing `amount` of particles
 
-## ` void explosion()`
+## function explosion
+### Arguments:
+
+### Return:
+- void
+
+
 Spawn an explosion particle
 
 

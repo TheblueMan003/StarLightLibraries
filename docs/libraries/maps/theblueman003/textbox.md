@@ -1,28 +1,80 @@
 # class Textbox
 
 
-## ` lazy void __init__(float scale)`
+## lazy function __init__
+### Arguments:
+- scale (`float`)
+### Return:
+- void
 
 
-## ` bool isFinished()`
 
 
-## ` void reset()`
+## function isFinished
+### Arguments:
+
+### Return:
+- bool
 
 
-## ` lazy static void withLanguages(json text, float width)`
 
 
-## ` lazy void display(string key)`
+## function reset
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void setFloor()`
 
 
-## ` lazy [__returnCheck__=true] void animate(string text, float width, float pitch, int speed)`
+## lazy static function withLanguages
+### Arguments:
+- text (`json`)
+- width (`float`)
+### Return:
+- void
 
 
-## ` @tick void ~()`
+
+
+## lazy function display
+### Arguments:
+- key (`string`)
+### Return:
+- void
+
+
+
+
+## function setFloor
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy [__returnCheck__=true] function animate
+### Arguments:
+- text (`string`)
+- width (`float`)
+- pitch (`float`)
+- speed (`int`)
+### Return:
+- void
+
+
+
+
+## @tick function ~
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

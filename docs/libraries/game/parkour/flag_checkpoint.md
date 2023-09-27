@@ -1,55 +1,163 @@
-## ` void setUseTeam(bool v)`
+## function setUseTeam
+### Arguments:
+- v (`bool`)
+### Return:
+- void
 
 
-## ` void setForceAdventure(bool v)`
 
 
-## ` void take()`
+## function setForceAdventure
+### Arguments:
+- v (`bool`)
+### Return:
+- void
 
 
-## ` [__returnCheck__=true] void mark()`
 
 
-## ` void unmark()`
+## function take
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void respawn()`
 
 
-## ` lazy void onCheckpoint(void=>void fct)`
+## [__returnCheck__=true] function mark
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void onLeave(void=>void fct)`
 
 
-## ` lazy void onMark(void=>void fct)`
+## function unmark
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void getColor()`
 
 
-## ` void start()`
+## function respawn
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void stop()`
 
 
-## ` @reset void resetAll()`
+## lazy function onCheckpoint
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
 
 
-## ` void createLeft()`
 
 
-## ` void createRight()`
+## lazy function onLeave
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
 
 
-## ` void summonLeft()`
 
 
-## ` void summonRight()`
+## lazy function onMark
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
 
 
-## ` void summonCheckpointStructure()`
+
+
+## function getColor
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function start
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function stop
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## @reset function resetAll
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function createLeft
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function createRight
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function summonLeft
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function summonRight
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function summonCheckpointStructure
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

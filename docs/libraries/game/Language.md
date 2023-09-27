@@ -1,40 +1,135 @@
-## ` void setLanguage(int lang)`
+## function setLanguage
+### Arguments:
+- lang (`int`)
+### Return:
+- void
 
 
-## ` lazy void setLanguage(string name)`
 
 
-## ` lazy void addLanguage(string name)`
+## lazy function setLanguage
+### Arguments:
+- name (`string`)
+### Return:
+- void
 
 
-## ` lazy int getLanguageIndex(string name)`
 
 
-## ` lazy string getLanguageName(int index)`
+## lazy function addLanguage
+### Arguments:
+- name (`string`)
+### Return:
+- void
 
 
-## ` lazy json selectByLanguage(json data)`
 
 
-## ` lazy json selectByLanguage(json data, string key)`
+## lazy function getLanguageIndex
+### Arguments:
+- name (`string`)
+### Return:
+- int
 
 
-## ` lazy void forEach(json data, json=>void func)`
 
 
-## ` lazy [__returnCheck__=true] void print(json data, string key)`
+## lazy function getLanguageName
+### Arguments:
+- index (`int`)
+### Return:
+- string
 
 
-## ` lazy [__returnCheck__=true] void showTitle(json data, int priority, int timein, int time, int timeout, string key)`
 
 
-## ` lazy [__returnCheck__=true] void showTitle(json data, string key)`
+## lazy function selectByLanguage
+### Arguments:
+- data (`json`)
+### Return:
+- json
 
 
-## ` lazy [__returnCheck__=true] void showSubtitle(json data, int priority, int timein, int time, int timeout, string key)`
 
 
-## ` lazy [__returnCheck__=true] void showActionbar(json data, int priority, int time, string key)`
+## lazy function selectByLanguage
+### Arguments:
+- data (`json`)
+- key (`string`)
+### Return:
+- json
+
+
+
+
+## lazy function forEach
+### Arguments:
+- data (`json`)
+- func (`json=>void`)
+### Return:
+- void
+
+
+
+
+## lazy [__returnCheck__=true] function print
+### Arguments:
+- data (`json`)
+- key (`string`)
+### Return:
+- void
+
+
+
+
+## lazy [__returnCheck__=true] function showTitle
+### Arguments:
+- data (`json`)
+- priority (`int`)
+- timein (`int`)
+- time (`int`)
+- timeout (`int`)
+- key (`string`)
+### Return:
+- void
+
+
+
+
+## lazy [__returnCheck__=true] function showTitle
+### Arguments:
+- data (`json`)
+- key (`string`)
+### Return:
+- void
+
+
+
+
+## lazy [__returnCheck__=true] function showSubtitle
+### Arguments:
+- data (`json`)
+- priority (`int`)
+- timein (`int`)
+- time (`int`)
+- timeout (`int`)
+- key (`string`)
+### Return:
+- void
+
+
+
+
+## lazy [__returnCheck__=true] function showActionbar
+### Arguments:
+- data (`json`)
+- priority (`int`)
+- time (`int`)
+- key (`string`)
+### Return:
+- void
+
+
 
 
 

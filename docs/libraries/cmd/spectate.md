@@ -1,4 +1,10 @@
-## ` lazy void spectate(entity other)`
+## lazy function spectate
+### Arguments:
+- other (`entity`)
+### Return:
+- void
+
+
 
 
 

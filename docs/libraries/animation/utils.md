@@ -1,10 +1,28 @@
-## ` lazy void lookAt(entity other)`
+## lazy function lookAt
+### Arguments:
+- other (`entity`)
+### Return:
+- void
+
+
 Make the current entity look at `other`
 
-## ` void lookAtPlayer()`
+## function lookAtPlayer
+### Arguments:
+
+### Return:
+- void
+
+
 Make the current entity look at nearest player
 
-## ` lazy void spin(float $speed)`
+## lazy function spin
+### Arguments:
+- $speed (`float`)
+### Return:
+- void
+
+
 Make the current entity spin at `speed` degrees per tick
 
 

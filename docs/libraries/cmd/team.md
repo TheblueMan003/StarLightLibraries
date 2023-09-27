@@ -1,115 +1,344 @@
-## ` lazy void create(mcobject $name, rawjson $text)`
+## lazy function create
+### Arguments:
+- $name (`mcobject`)
+- $text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void setPrefix(mcobject $name, rawjson $text)`
 
 
-## ` lazy void setColor(mcobject $name, mcobject $color)`
+## lazy function setPrefix
+### Arguments:
+- $name (`mcobject`)
+- $text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void seeFriendlyInvisibles(mcobject $name, bool value)`
 
 
-## ` lazy void hideFriendlyInvisibles(mcobject $name)`
+## lazy function setColor
+### Arguments:
+- $name (`mcobject`)
+- $color (`mcobject`)
+### Return:
+- void
 
 
-## ` lazy void disableCollision(mcobject $name)`
 
 
-## ` lazy void collisionOther(mcobject $name)`
+## lazy function seeFriendlyInvisibles
+### Arguments:
+- $name (`mcobject`)
+- value (`bool`)
+### Return:
+- void
 
 
-## ` lazy void collisionOwn(mcobject $name)`
 
 
-## ` lazy void enableCollision(mcobject $name)`
+## lazy function hideFriendlyInvisibles
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
 
 
-## ` lazy void setName(mcobject $name, rawjson $text)`
 
 
-## ` lazy void friendlyFire(mcobject $name, bool value)`
+## lazy function disableCollision
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
 
 
-## ` lazy void join(mcobject $name, entity $sel)`
 
 
-## ` lazy void join(mcobject $name)`
+## lazy function collisionOther
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
 
 
-## ` lazy void leave(entity $sel)`
 
 
-## ` lazy void empty(mcobject $name)`
+## lazy function collisionOwn
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
 
 
-## ` lazy void delete(mcobject $name)`
+
+
+## lazy function enableCollision
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
+
+
+## lazy function setName
+### Arguments:
+- $name (`mcobject`)
+- $text (`rawjson`)
+### Return:
+- void
+
+
+
+
+## lazy function friendlyFire
+### Arguments:
+- $name (`mcobject`)
+- value (`bool`)
+### Return:
+- void
+
+
+
+
+## lazy function join
+### Arguments:
+- $name (`mcobject`)
+- $sel (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function join
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
+
+
+## lazy function leave
+### Arguments:
+- $sel (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function empty
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
+
+
+## lazy function delete
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 
 
 # struct Team
 
 
-## ` lazy void __init__(rawjson text)`
+## lazy function __init__
+### Arguments:
+- text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void setPrefix(rawjson text)`
 
 
-## ` lazy void setSuffix(rawjson text)`
+## lazy function setPrefix
+### Arguments:
+- text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void setColor(mcobject color)`
 
 
-## ` lazy void seeFriendlyInvisibles(bool value)`
+## lazy function setSuffix
+### Arguments:
+- text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void hideFriendlyInvisibles()`
 
 
-## ` lazy void disableCollision()`
+## lazy function setColor
+### Arguments:
+- color (`mcobject`)
+### Return:
+- void
 
 
-## ` lazy void collisionOther()`
 
 
-## ` lazy void collisionOwn()`
+## lazy function seeFriendlyInvisibles
+### Arguments:
+- value (`bool`)
+### Return:
+- void
 
 
-## ` lazy void enableCollision()`
 
 
-## ` lazy void setName(json text)`
+## lazy function hideFriendlyInvisibles
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void friendlyFire(bool value)`
 
 
-## ` lazy void join(entity sel)`
+## lazy function disableCollision
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void join()`
 
 
-## ` lazy void forcejoin()`
+## lazy function collisionOther
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void __add__(entity sel)`
 
 
-## ` lazy void leave(entity sel)`
+## lazy function collisionOwn
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void leave()`
 
 
-## ` lazy void __sub__(entity sel)`
+## lazy function enableCollision
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void empty()`
 
 
-## ` lazy void delete()`
+## lazy function setName
+### Arguments:
+- text (`json`)
+### Return:
+- void
+
+
+
+
+## lazy function friendlyFire
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
+
+
+## lazy function join
+### Arguments:
+- sel (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function join
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function forcejoin
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function __add__
+### Arguments:
+- sel (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function leave
+### Arguments:
+- sel (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function leave
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function __sub__
+### Arguments:
+- sel (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function empty
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function delete
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

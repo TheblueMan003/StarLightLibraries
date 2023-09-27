@@ -1,10 +1,30 @@
-## `public lazy int index(mcobject tag)`
+## public lazy function index
+### Arguments:
+- tag (`mcobject`)
+### Return:
+- int
+
+
 Get the index of the current block in the tag
 
-## `public lazy void set(mcobject tag, int index)`
+## public lazy function set
+### Arguments:
+- tag (`mcobject`)
+- index (`int`)
+### Return:
+- void
+
+
 Set the current block to the index in the tag
 
-## `public lazy void convert(mcobject tag1, mcobject tag2)`
+## public lazy function convert
+### Arguments:
+- tag1 (`mcobject`)
+- tag2 (`mcobject`)
+### Return:
+- void
+
+
 Map the blocks in tag1 to the blocks in tag2
 
 

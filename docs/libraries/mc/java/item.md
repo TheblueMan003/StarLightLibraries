@@ -1,28 +1,94 @@
-## ` lazy void summon(mcobject $item, int $count, json tag)`
+## lazy function summon
+### Arguments:
+- $item (`mcobject`)
+- $count (`int`)
+- tag (`json`)
+### Return:
+- void
+
+
 Summon an item entity at the current location with the specified item, count, and tag.
 
-## ` lazy void summon(mcobject $item, int $count)`
+## lazy function summon
+### Arguments:
+- $item (`mcobject`)
+- $count (`int`)
+### Return:
+- void
+
+
 Summon an item entity at the current location with the specified item and count.
 
-## ` lazy void summon(mcobject $item)`
+## lazy function summon
+### Arguments:
+- $item (`mcobject`)
+### Return:
+- void
+
+
 Summon an item entity at the current location with the specified item.
 
-## ` lazy void summonDelay(mcobject $item, int $count, json tag, int $delay)`
+## lazy function summonDelay
+### Arguments:
+- $item (`mcobject`)
+- $count (`int`)
+- tag (`json`)
+- $delay (`int`)
+### Return:
+- void
+
+
 Summon an item entity at the current location with the specified item, count, tag, and pickup delay.
 
-## ` lazy void summonDelay(mcobject $item, int $count, int $delay)`
+## lazy function summonDelay
+### Arguments:
+- $item (`mcobject`)
+- $count (`int`)
+- $delay (`int`)
+### Return:
+- void
+
+
 Summon an item entity at the current location with the specified item, count, and pickup delay.
 
-## ` lazy void summonDelay(mcobject $item, int $delay)`
+## lazy function summonDelay
+### Arguments:
+- $item (`mcobject`)
+- $delay (`int`)
+### Return:
+- void
+
+
 Summon an item entity at the current location with the specified item and pickup delay.
 
-## ` lazy void kill(mcobject $item, int $count, json tag)`
+## lazy function kill
+### Arguments:
+- $item (`mcobject`)
+- $count (`int`)
+- tag (`json`)
+### Return:
+- void
+
+
 Kill all item entities with the specified item, count, and tag.
 
-## ` lazy void kill(mcobject $item, int $count)`
+## lazy function kill
+### Arguments:
+- $item (`mcobject`)
+- $count (`int`)
+### Return:
+- void
+
+
 Kill all item entities with the specified item and count.
 
-## ` lazy void kill(mcobject $item)`
+## lazy function kill
+### Arguments:
+- $item (`mcobject`)
+### Return:
+- void
+
+
 Kill all item entities with the specified item.
 
 

@@ -1,34 +1,94 @@
-## ` lazy void addButtonModels(string $name)`
+## lazy function addButtonModels
+### Arguments:
+- $name (`string`)
+### Return:
+- void
 
 
-## ` lazy void addCharacterButtonModels(string $name)`
 
 
-## ` lazy void addMapsButtonModels(string $name)`
+## lazy function addCharacterButtonModels
+### Arguments:
+- $name (`string`)
+### Return:
+- void
 
 
-## ` lazy void addScreenModels(string $name)`
+
+
+## lazy function addMapsButtonModels
+### Arguments:
+- $name (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function addScreenModels
+### Arguments:
+- $name (`string`)
+### Return:
+- void
+
+
 
 
 # class ButtonEntity
 
 
-## ` void __init__()`
+## function __init__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void select(int index)`
 
 
-## ` lazy void unselect(int index)`
+## lazy function select
+### Arguments:
+- index (`int`)
+### Return:
+- void
 
 
-## ` lazy void click(int index)`
 
 
-## ` lazy void disable(int index)`
+## lazy function unselect
+### Arguments:
+- index (`int`)
+### Return:
+- void
 
 
-## ` void __destroy__()`
+
+
+## lazy function click
+### Arguments:
+- index (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function disable
+### Arguments:
+- index (`int`)
+### Return:
+- void
+
+
+
+
+## function __destroy__
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 
@@ -36,79 +96,217 @@
 # class ScreenEntity
 
 
-## ` void __init__()`
+## function __init__
+### Arguments:
 
-
-## ` lazy void setScreen(int count)`
-
-
-## ` void __destroy__()`
+### Return:
+- void
 
 
 
 
-## ` lazy [__returnCheck__=true] int makeCharacterDoll(string name)`
+## lazy function setScreen
+### Arguments:
+- count (`int`)
+### Return:
+- void
 
 
-## ` lazy [__returnCheck__=true] int makeMapsButton(string name)`
 
 
-## ` @screen.home void ~()`
+## function __destroy__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` @screen.times void ~()`
 
 
-## ` @screen.info void ~()`
 
 
-## ` @screen.clear void ~()`
+## lazy [__returnCheck__=true] function makeCharacterDoll
+### Arguments:
+- name (`string`)
+### Return:
+- int
+
+
+
+
+## lazy [__returnCheck__=true] function makeMapsButton
+### Arguments:
+- name (`string`)
+### Return:
+- int
+
+
+
+
+## @screen.home function ~
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## @screen.times function ~
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## @screen.info function ~
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## @screen.clear function ~
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 # class InfoDisplay
 
 
-## ` lazy void __init__(rawjson text)`
+## lazy function __init__
+### Arguments:
+- text (`rawjson`)
+### Return:
+- void
 
 
 
 
-## ` lazy void setInfo(rawjson text)`
 
 
-## `public lazy void addCredit(int credit_count, string name, void=>void fct)`
+## lazy function setInfo
+### Arguments:
+- text (`rawjson`)
+### Return:
+- void
+
+
+
+
+## public lazy function addCredit
+### Arguments:
+- credit_count (`int`)
+- name (`string`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Add a character button to the screen
 
-## `public lazy void addMap(int index, string name, void=>void fct)`
+## public lazy function addMap
+### Arguments:
+- index (`int`)
+- name (`string`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Add a map button to the screen
 
-## `public lazy void summon(int button1, int button2, int button3, int button4)`
+## public lazy function summon
+### Arguments:
+- button1 (`int`)
+- button2 (`int`)
+- button3 (`int`)
+- button4 (`int`)
+### Return:
+- void
 
 
-## ` void start()`
 
 
-## `public @screen.start [tag.order=-1] void stop()`
+## function start
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void onStart(void=>void fct)`
+
+
+## public @screen.start [tag.order=-1] function stop
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function onStart
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 
 
 # class EnumButton
 
 
-## ` lazy void __init__(rawjson text)`
+## lazy function __init__
+### Arguments:
+- text (`rawjson`)
+### Return:
+- void
 
 
 
 
-## ` lazy void addSettingEnum(json choise, int=>void callBack)`
 
 
-## ` lazy void addSettingInt(string text, int min, int max, int=>void callBack)`
+## lazy function addSettingEnum
+### Arguments:
+- choise (`json`)
+- callBack (`int=>void`)
+### Return:
+- void
 
 
-## ` lazy void addSettingBoolean(string text, bool=>void callBack)`
+
+
+## lazy function addSettingInt
+### Arguments:
+- text (`string`)
+- min (`int`)
+- max (`int`)
+- callBack (`int=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function addSettingBoolean
+### Arguments:
+- text (`string`)
+- callBack (`bool=>void`)
+### Return:
+- void
+
+
 
 
 

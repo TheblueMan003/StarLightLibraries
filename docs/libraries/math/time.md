@@ -1,124 +1,369 @@
 # struct Time
 Struct to represent time
 
-## ` lazy void __init__()`
+## lazy function __init__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void __init__(int t)`
 
 
-## ` lazy void __init__(int h, int m, int s)`
+## lazy function __init__
+### Arguments:
+- t (`int`)
+### Return:
+- void
 
 
-## ` lazy void __init__(int h, int m, int s, int t)`
 
 
-## ` lazy void __add__(int i)`
+## lazy function __init__
+### Arguments:
+- h (`int`)
+- m (`int`)
+- s (`int`)
+### Return:
+- void
 
 
-## ` lazy void __add__(Time? other)`
 
 
-## ` lazy void __sub__(int i)`
+## lazy function __init__
+### Arguments:
+- h (`int`)
+- m (`int`)
+- s (`int`)
+- t (`int`)
+### Return:
+- void
 
 
-## ` lazy void __sub__(Time? other)`
 
 
-## ` lazy void __set__(int i)`
+## lazy function __add__
+### Arguments:
+- i (`int`)
+### Return:
+- void
 
 
-## ` lazy void __set__(Time? other)`
 
 
-## ` lazy void __mul__(int i)`
+## lazy function __add__
+### Arguments:
+- other (`Time?`)
+### Return:
+- void
 
 
-## ` lazy void __mul__(Time? other)`
 
 
-## ` lazy void __div__(int i)`
+## lazy function __sub__
+### Arguments:
+- i (`int`)
+### Return:
+- void
 
 
-## ` lazy void __div__(Time? other)`
 
 
-## ` lazy void __mod__(int i)`
+## lazy function __sub__
+### Arguments:
+- other (`Time?`)
+### Return:
+- void
 
 
-## ` lazy void __mod__(Time? other)`
 
 
-## ` lazy bool __lt__(int i)`
+## lazy function __set__
+### Arguments:
+- i (`int`)
+### Return:
+- void
 
 
-## ` lazy bool __lt__(Time? other)`
 
 
-## ` lazy bool __le__(int i)`
+## lazy function __set__
+### Arguments:
+- other (`Time?`)
+### Return:
+- void
 
 
-## ` lazy bool __le__(Time? other)`
 
 
-## ` lazy bool __gt__(int i)`
+## lazy function __mul__
+### Arguments:
+- i (`int`)
+### Return:
+- void
 
 
-## ` lazy bool __gt__(Time? other)`
 
 
-## ` lazy bool __ge__(int i)`
+## lazy function __mul__
+### Arguments:
+- other (`Time?`)
+### Return:
+- void
 
 
-## ` lazy bool __ge__(Time? other)`
 
 
-## ` lazy bool __eq__(int i)`
+## lazy function __div__
+### Arguments:
+- i (`int`)
+### Return:
+- void
 
 
-## ` lazy bool __eq__(Time? other)`
 
 
-## ` lazy bool __ne__(int i)`
+## lazy function __div__
+### Arguments:
+- other (`Time?`)
+### Return:
+- void
 
 
-## ` lazy bool __ne__(Time? other)`
 
 
-## ` lazy int inMilliseconds()`
+## lazy function __mod__
+### Arguments:
+- i (`int`)
+### Return:
+- void
+
+
+
+
+## lazy function __mod__
+### Arguments:
+- other (`Time?`)
+### Return:
+- void
+
+
+
+
+## lazy function __lt__
+### Arguments:
+- i (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __lt__
+### Arguments:
+- other (`Time?`)
+### Return:
+- bool
+
+
+
+
+## lazy function __le__
+### Arguments:
+- i (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __le__
+### Arguments:
+- other (`Time?`)
+### Return:
+- bool
+
+
+
+
+## lazy function __gt__
+### Arguments:
+- i (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __gt__
+### Arguments:
+- other (`Time?`)
+### Return:
+- bool
+
+
+
+
+## lazy function __ge__
+### Arguments:
+- i (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __ge__
+### Arguments:
+- other (`Time?`)
+### Return:
+- bool
+
+
+
+
+## lazy function __eq__
+### Arguments:
+- i (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __eq__
+### Arguments:
+- other (`Time?`)
+### Return:
+- bool
+
+
+
+
+## lazy function __ne__
+### Arguments:
+- i (`int`)
+### Return:
+- bool
+
+
+
+
+## lazy function __ne__
+### Arguments:
+- other (`Time?`)
+### Return:
+- bool
+
+
+
+
+## lazy function inMilliseconds
+### Arguments:
+
+### Return:
+- int
+
+
 Return the total amount of milliseconds
 
-## ` lazy int getMilliseconds()`
+## lazy function getMilliseconds
+### Arguments:
+
+### Return:
+- int
+
+
 Return the milliseconds part of the time
 
-## ` lazy int inSeconds()`
+## lazy function inSeconds
+### Arguments:
+
+### Return:
+- int
+
+
 Return the total amount of seconds
 
-## ` lazy int getTick()`
+## lazy function getTick
+### Arguments:
+
+### Return:
+- int
+
+
 Return the ticks part of the time
 
-## ` lazy int getSeconds()`
+## lazy function getSeconds
+### Arguments:
+
+### Return:
+- int
+
+
 Return the seconds part of the time
 
-## ` lazy int inMinutes()`
+## lazy function inMinutes
+### Arguments:
+
+### Return:
+- int
+
+
 Return the total amount of minutes
 
-## ` lazy int getMinutes()`
+## lazy function getMinutes
+### Arguments:
+
+### Return:
+- int
+
+
 Return the minutes part of the time
 
-## ` lazy int inHours()`
+## lazy function inHours
+### Arguments:
+
+### Return:
+- int
+
+
 Return the total amount of hours
 
-## ` lazy int getHours()`
+## lazy function getHours
+### Arguments:
+
+### Return:
+- int
+
+
 Return the hours part of the time
 
-## ` lazy int inDay()`
+## lazy function inDay
+### Arguments:
+
+### Return:
+- int
+
+
 Return the total amount of days
 
-## ` lazy int getDay()`
+## lazy function getDay
+### Arguments:
+
+### Return:
+- int
+
+
 Return the days part of the time
 
-## ` lazy rawjson __toJson__()`
+## lazy function __toJson__
+### Arguments:
+
+### Return:
+- rawjson
+
+
 
 
 

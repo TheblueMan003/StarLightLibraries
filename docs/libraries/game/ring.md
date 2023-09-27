@@ -1,21 +1,52 @@
 # class Ring
 
 
-## ` void __init__(int nb, int fw)`
+## function __init__
+### Arguments:
+- nb (`int`)
+- fw (`int`)
+### Return:
+- void
 
 
-## ` @tick void main()`
+
+
+## @tick function main
+### Arguments:
+
+### Return:
+- void
 
 
 
 
-## ` lazy void onRing(void=>void fct)`
 
 
-## ` lazy void onFirework(void=>void fct)`
+## lazy function onRing
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
 
 
-## ` @section.start void ~()`
+
+
+## lazy function onFirework
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
+
+
+## @section.start function ~
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

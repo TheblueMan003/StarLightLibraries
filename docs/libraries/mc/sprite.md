@@ -1,31 +1,92 @@
-## ` lazy Texture? addTexture(string name)`
+## lazy function addTexture
+### Arguments:
+- name (`string`)
+### Return:
+- Texture?
+
+
 Add a texture to the sprite list and return the texture id
 
-## ` lazy Texture? addTextureVertical(string name)`
+## lazy function addTextureVertical
+### Arguments:
+- name (`string`)
+### Return:
+- Texture?
 
 
-## ` lazy Animation? addAnimation(json sprites, int frame_time, bool loop, void=>void callback)`
 
 
-## ` lazy Animation? addAnimationFromStrip(string sprite, int count, int frame_time, bool loop, void=>void callback)`
+## lazy function addAnimation
+### Arguments:
+- sprites (`json`)
+- frame_time (`int`)
+- loop (`bool`)
+- callback (`void=>void`)
+### Return:
+- Animation?
+
+
+
+
+## lazy function addAnimationFromStrip
+### Arguments:
+- sprite (`string`)
+- count (`int`)
+- frame_time (`int`)
+- loop (`bool`)
+- callback (`void=>void`)
+### Return:
+- Animation?
+
+
 
 
 # class Sprite
 
 
-## `public @sprite.tick [compile.order=999999,__returnCheck__=true] void main()`
+## public @sprite.tick [compile.order=999999,__returnCheck__=true] function main
+### Arguments:
+
+### Return:
+- void
 
 
-## `public void setAnimation(Animation? anim)`
 
 
-## `public lazy void setTexture(int index)`
+## public function setAnimation
+### Arguments:
+- anim (`Animation?`)
+### Return:
+- void
 
 
-## `public int getTexture()`
 
 
-## `public lazy void setSize(float scale)`
+## public lazy function setTexture
+### Arguments:
+- index (`int`)
+### Return:
+- void
+
+
+
+
+## public function getTexture
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## public lazy function setSize
+### Arguments:
+- scale (`float`)
+### Return:
+- void
+
+
 
 
 
@@ -33,27 +94,79 @@ Add a texture to the sprite list and return the texture id
 # class Particle
 
 
-## ` lazy void __init__(Animation? animation, Vector3? motion, Vector3? acceleration)`
-
-
-## ` lazy void __init__(Animation? animation, (float,float,float) motion, (float,float,float) acceleration)`
-
-
-## ` lazy void __init__(Animation? animation, float mx, float my, float mz, float ax, float ay, float az)`
-
-
-## `public virtual int getMaxAge()`
-
-
-## `public @sprite.tick void main2()`
+## lazy function __init__
+### Arguments:
+- animation (`Animation?`)
+- motion (`Vector3?`)
+- acceleration (`Vector3?`)
+### Return:
+- void
 
 
 
 
-## ` void start()`
+## lazy function __init__
+### Arguments:
+- animation (`Animation?`)
+- motion (`(float,float,float)`)
+- acceleration (`(float,float,float)`)
+### Return:
+- void
 
 
-## ` void stop()`
+
+
+## lazy function __init__
+### Arguments:
+- animation (`Animation?`)
+- mx (`float`)
+- my (`float`)
+- mz (`float`)
+- ax (`float`)
+- ay (`float`)
+- az (`float`)
+### Return:
+- void
+
+
+
+
+## public virtual function getMaxAge
+### Arguments:
+
+### Return:
+- int
+
+
+
+
+## public @sprite.tick function main2
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+
+
+## function start
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function stop
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

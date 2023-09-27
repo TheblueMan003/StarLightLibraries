@@ -1,46 +1,131 @@
 # template Item<>
 
 
-## ` lazy void setName(string name)`
+## lazy function setName
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
 Set the name of the item
 
-## ` lazy void setDisplayName(string name)`
+## lazy function setDisplayName
+### Arguments:
+- name (`string`)
+### Return:
+- void
 
 
-## ` lazy void setNamespace(string name)`
+
+
+## lazy function setNamespace
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
 Set the namespace of the item
 
-## ` lazy void setCategory(string name)`
+## lazy function setCategory
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
 Set the category of the item
 
-## ` lazy void setMaxItemStack(int size)`
+## lazy function setMaxItemStack
+### Arguments:
+- size (`int`)
+### Return:
+- void
+
+
 Set the max stack of the item
 
-## ` lazy void setBlock(string block)`
+## lazy function setBlock
+### Arguments:
+- block (`string`)
+### Return:
+- void
+
+
 Set the item as a block
 
-## ` lazy void setGlow(bool value)`
+## lazy function setGlow
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Set if the item glows
 
-## ` lazy void setFood(int value, string saturation_modifier)`
+## lazy function setFood
+### Arguments:
+- value (`int`)
+- saturation_modifier (`string`)
+### Return:
+- void
+
+
 Set the food value of the item
 
-## ` lazy void setUseDuration(int value)`
+## lazy function setUseDuration
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
 Set the use duration of the item
 
-## ` lazy void setIcon(string icon)`
+## lazy function setIcon
+### Arguments:
+- icon (`string`)
+### Return:
+- void
+
+
 Set the icon of the item
 
-## ` lazy void addComponent(json component)`
+## lazy function addComponent
+### Arguments:
+- component (`json`)
+### Return:
+- void
+
+
 Add a component to the item
 
-## ` lazy void onClick(void=>void fct)`
+## lazy function onClick
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Set the on click function
 
-## ` lazy void onHold(void=>void fct)`
+## lazy function onHold
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Set the on while click function
 
-## ` lazy void onRelease(void=>void fct)`
+## lazy function onRelease
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Set the on release function
 
 

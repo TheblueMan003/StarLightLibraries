@@ -1,7 +1,19 @@
-## ` lazy void addAnimation(string name)`
+## lazy function addAnimation
+### Arguments:
+- name (`string`)
+### Return:
+- void
 
 
-## ` [Compile.order=99999] void build()`
+
+
+## [Compile.order=99999] function build
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

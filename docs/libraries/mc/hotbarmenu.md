@@ -1,16 +1,43 @@
 # template HotbarMenu<>
 
 
-## ` lazy void addButton(int slot, string name, string texture, void=>void action)`
+## lazy function addButton
+### Arguments:
+- slot (`int`)
+- name (`string`)
+- texture (`string`)
+- action (`void=>void`)
+### Return:
+- void
 
 
-## ` void __pass__()`
 
 
-## ` void start()`
+## function __pass__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void stop()`
+
+
+## function start
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function stop
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

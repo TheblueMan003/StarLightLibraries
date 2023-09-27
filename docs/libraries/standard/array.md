@@ -1,16 +1,41 @@
 # class Array<T>
 
 
-## `public void __init__(int size)`
+## public function __init__
+### Arguments:
+- size (`int`)
+### Return:
+- void
 
 
-## `public [__returnCheck__=true] void set(int index, T? value)`
 
 
-## `public override void __destroy__()`
+## public [__returnCheck__=true] function set
+### Arguments:
+- index (`int`)
+- value (`T?`)
+### Return:
+- void
 
 
-## `public T? __get__(int index)`
+
+
+## public override function __destroy__
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## public function __get__
+### Arguments:
+- index (`int`)
+### Return:
+- T?
+
+
 
 
 

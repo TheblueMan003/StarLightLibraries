@@ -1,13 +1,32 @@
 # struct Dictionnary<K,V>
 
 
-## ` void __init__()`
+## function __init__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` V? get(K? key)`
 
 
-## ` void set(K? key, V? value)`
+## function get
+### Arguments:
+- key (`K?`)
+### Return:
+- V?
+
+
+
+
+## function set
+### Arguments:
+- key (`K?`)
+- value (`V?`)
+### Return:
+- void
+
+
 
 
 

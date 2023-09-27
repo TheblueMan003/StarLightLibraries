@@ -1,13 +1,31 @@
 # template PositionLock<>
 
 
-## ` lazy void set(mcposition pos)`
+## lazy function set
+### Arguments:
+- pos (`mcposition`)
+### Return:
+- void
 
 
-## ` void start()`
 
 
-## ` void stop()`
+## function start
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function stop
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 
