@@ -62,16 +62,14 @@ return x^n
 """
 int pow(int x, int n, int m = 1){
     if (n == 0){
-        return(1)
+        return(m)
     }
     else if (n == 1){
         int ret = x * m
         return(ret)
     }
     else{
-        int parity = x % 2
-        
-        if (parity == 1){
+        if (n % 2 == 1){
             m *= x
             n -= 1
         }
