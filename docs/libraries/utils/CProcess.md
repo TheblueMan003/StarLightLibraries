@@ -1,4 +1,4 @@
-# template CProcess
+# template CProcess<>
 Represent a task that run along side the main tick function.This process will only stop if `stop` is called as many time as `start` was called.Function to Override:- main: Main function that is repeated as long as the process is running- onStart: callback when the process is star. Cannot be called if the process was is running- onStop: callback when the process is stop. Cannot be called if the process was not running
 
 ## ` @load void reload()`
@@ -28,10 +28,10 @@ Count the number of active process
 ## ` @process.stop void stopall()`
 Stop the process
 
-## ` void onStop()`
+## ` virtual void onStop()`
 
 
-## ` void onStart()`
+## ` virtual void onStart()`
 
 
 

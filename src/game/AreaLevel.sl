@@ -4,23 +4,19 @@ import cmd.entity as entity
 import game.Room
 import game.Level
 
-
+"""
+Level + Room
+"""
 template AreaLevel<sx, sy, sz, ex, ey, ez> extends Level{
-    def lazy parentStart(){
-        start()
-    }
-    def lazy parentStop(){
-        stop()
-    }
     def @templates.parent.room.tick __room_tick__(){
         @templates.room.tick()
     }
-    Room room<sx, sy, sz, ex, ey, ez>{
+    Room<sx, sy, sz, ex, ey, ez> room{
         def onStart(){
-            parentStart()
+            super.start()
         }
         def onStop(){
-            parentStop()
+            super.stop()
         }
     }
 }

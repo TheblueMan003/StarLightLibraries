@@ -1,7 +1,4 @@
-## ` void setLevelNumber(int nb)`
-Set the number of levels in the game
-
-# template TimeSplit
+# template TimeSplit<level_number>
 A template to manage time split in a game
 
 ## ` void start()`

@@ -7,7 +7,7 @@
 ## ` lazy void setColor(mcobject $name, mcobject $color)`
 
 
-## ` lazy void seeFriendlyInvisibles(mcobject $name, bool $value)`
+## ` lazy void seeFriendlyInvisibles(mcobject $name, bool value)`
 
 
 ## ` lazy void hideFriendlyInvisibles(mcobject $name)`
@@ -28,7 +28,7 @@
 ## ` lazy void setName(mcobject $name, rawjson $text)`
 
 
-## ` lazy void friendlyFire(mcobject $name, bool $value)`
+## ` lazy void friendlyFire(mcobject $name, bool value)`
 
 
 ## ` lazy void join(mcobject $name, entity $sel)`

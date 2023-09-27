@@ -13,10 +13,10 @@ Set the max of bossbar `name` to `value`
 ## ` lazy void setValue(mcobject $name, int $value)`
 Set the value of bossbar `name` to `value`
 
-## ` lazy void setValueVar(mcobject $name, int $value)`
+## ` lazy void setValueVar(mcobject $name, int value)`
 Set the value of bossbar `name` to the variable `value`
 
-## ` lazy void setMaxVar(mcobject $name, int $value)`
+## ` lazy void setMaxVar(mcobject $name, int value)`
 Set the max of bossbar `name` to variable `value`
 
 ## ` lazy void setName(mcobject $name, rawjson $value)`
@@ -70,7 +70,7 @@ Set the color of bossbar `color`
 ## ` lazy void setMax(int value)`
 Set the max of bossbar to `value`
 
-## ` lazy void setValue(int $value)`
+## ` lazy void setValue(int value)`
 Set the value of bossbar to `value`
 
 ## ` lazy void setValue(int value, int max)`

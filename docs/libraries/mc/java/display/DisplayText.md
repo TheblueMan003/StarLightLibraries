@@ -1,13 +1,10 @@
 # public class DisplayText
 Class representing an text display entity.
 
-## ` void __init__()`
+## ` lazy void __init__()`
 
 
-## ` void __init__(mcobject block)`
-
-
-## ` lazy void setText(string text)`
+## ` lazy void setText(rawjson $text)`
 Set the text to be displayed
 
 ## ` lazy void setLineWidth(int width)`
@@ -19,10 +16,13 @@ Set the text opcacity
 ## ` lazy void setBackgroundColor(int color)`
 Set the background color
 
-## ` lazy void setDefaultBackground()`
+## ` lazy void setBackgroundColor(int r, int g, int b, int a)`
+Set the background color
+
+## ` lazy void setDefaultBackground(bool value)`
 Set default background
 
-## ` lazy void setShadow()`
+## ` lazy void setShadow(bool value)`
 Set shadow
 
 ## ` lazy void setSeeThrough()`

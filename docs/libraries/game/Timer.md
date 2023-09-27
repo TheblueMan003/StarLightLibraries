@@ -25,14 +25,29 @@ Unpause the timer
 ## ` void stop()`
 Stop the timer
 
+## ` bool isRunning()`
+Return true if the timer is running
+
+## ` bool isPaused()`
+Return true if the timer is paused
+
+## ` bool isEnded()`
+Return true if the timer is ended
+
 ## ` int getTime()`
 Return the time in ticks
 
 ## ` int getMilisec()`
 Return the millisecond of the timer
 
+## ` void addLevel()`
+Add level to the timer
+
 ## ` void setLevel(int l)`
 Set the level of the timer
+
+## ` int getLevel()`
+Get the level of the timer
 
 ## ` void setMaxLevel(int l)`
 Set the max level of the timer
@@ -40,8 +55,20 @@ Set the max level of the timer
 ## ` void addDeath()`
 Add a death to the timer
 
+## ` int getDeath()`
+Get the death count of the timer
+
+## ` void setDeath(int d)`
+Set the death count of the timer
+
 ## ` void addKill()`
 Add a kill to the timer
+
+## ` int getKill()`
+Get the kill of the timer
+
+## ` void setKill(int k)`
+Set the kill of the timer
 
 ## ` void reset()`
 Reset the timer

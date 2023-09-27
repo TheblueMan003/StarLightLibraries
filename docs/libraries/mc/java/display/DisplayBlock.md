@@ -4,6 +4,9 @@ Class representing an block display entity.
 ## ` lazy void __init__(mcobject block)`
 
 
+## ` lazy void __init__(mcobject block, json properties)`
+
+
 ## ` lazy void setBlock(mcobject block)`
 Sets the block to be displayed
 

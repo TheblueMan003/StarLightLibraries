@@ -1,16 +1,16 @@
 # struct Time
 Struct to represent time
 
-## ` void __init__()`
+## ` lazy void __init__()`
 
 
-## ` void __init__(int t)`
+## ` lazy void __init__(int t)`
 
 
-## ` void __init__(int h, int m, int s)`
+## ` lazy void __init__(int h, int m, int s)`
 
 
-## ` void __init__(int h, int m, int s, int t)`
+## ` lazy void __init__(int h, int m, int s, int t)`
 
 
 ## ` lazy void __add__(int i)`
@@ -31,10 +31,10 @@ Struct to represent time
 ## ` lazy void __set__(Time? other)`
 
 
-## ` lazy void __mult__(int i)`
+## ` lazy void __mul__(int i)`
 
 
-## ` lazy void __mult__(Time? other)`
+## ` lazy void __mul__(Time? other)`
 
 
 ## ` lazy void __div__(int i)`

@@ -70,7 +70,52 @@ Set the current entity's boots to `item` with `count`
 ## predicate isHoldingItem
 
 
+## predicate isHoldingItemHead
+
+
+## predicate isHoldingItemHead
+
+
+## predicate isHoldingItemChest
+
+
+## predicate isHoldingItemChest
+
+
+## predicate isHoldingItemLegs
+
+
+## predicate isHoldingItemLegs
+
+
+## predicate isHoldingItemFeet
+
+
+## predicate isHoldingItemFeet
+
+
+## predicate isHoldingItemOffhand
+
+
+## predicate isHoldingItemOffhand
+
+
 ## ` lazy bool isHoldingItem(mcobject item, int count)`
+
+
+## ` lazy bool isHoldingItemOffhand(mcobject item, int count)`
+
+
+## ` lazy bool isHoldingItemHead(mcobject item, int count)`
+
+
+## ` lazy bool isHoldingItemChest(mcobject item, int count)`
+
+
+## ` lazy bool isHoldingItemLegs(mcobject item, int count)`
+
+
+## ` lazy bool isHoldingItemFeet(mcobject item, int count)`
 
 
 ## ` lazy void clear()`

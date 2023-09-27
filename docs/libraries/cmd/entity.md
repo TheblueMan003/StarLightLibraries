@@ -1,22 +1,22 @@
-## ` lazy [noReturnCheck=true] entity summon(mcobject name, json data, void=>void fct)`
+## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, json data, void=>void fct)`
 
 
-## ` lazy [noReturnCheck=true] entity summon(mcobject name, json data)`
-
-
-## ` lazy [noReturnCheck=true] entity summon(mcobject name, void=>void fct)`
-
-
-## ` lazy [noReturnCheck=true] entity summon(mcobject name, string skin, void=>void fct)`
+## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, json data)`
 
 
 ## ` lazy [noReturnCheck=true] entity summon(mcobject name, void=>void fct)`
 
 
-## ` lazy [noReturnCheck=true] entity summon(mcobject name, string skin)`
+## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, string skin, void=>void fct)`
 
 
-## ` lazy [noReturnCheck=true] entity summon(mcobject name)`
+## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, void=>void fct)`
+
+
+## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name, string skin)`
+
+
+## ` lazy [noReturnCheck=true,requiresVariable=true] entity summon(mcobject name)`
 
 
 ## ` lazy void kill(entity selector)`
@@ -27,9 +27,6 @@
 
 ## ` lazy void swap(entity $a, entity $b)`
 Swap the position of the entity $a and $b
-
-## ` lazy void despawn(entity e)`
-Despawn the entity e without killing it
 
 ## predicate onFire
 
@@ -70,13 +67,13 @@ Anger the entity @s against e
 ## ` lazy void angerAngaist(entity e1, entity e2)`
 Anger the entity e1 against e2
 
-## ` lazy [noReturnCheck=true] int count(entity e)`
+## ` lazy int count(entity e)`
 Count the number of entity in e
 
-## ` lazy [noReturnCheck=true] int count(entity e, bool p)`
+## ` lazy int count(entity e, bool p)`
 Count the number of entity in e that match the predicate
 
-## ` lazy [noReturnCheck=true] int count(entity e, void=>bool p)`
+## ` lazy int count(entity e, void=>bool p)`
 Count the number of entity in e that match the predicate
 
 ## ` lazy void ride(entity e)`
@@ -102,5 +99,11 @@ Return true if at least one entity in e has the scoreboard in score
 
 ## ` lazy bool forall(entity e, bool test)`
 Return true if all entity in e has the scoreboard in score
+
+## ` lazy void event(string $event)`
+
+
+## ` lazy void event(entity selector, string $event)`
+
 
 

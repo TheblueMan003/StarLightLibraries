@@ -1,4 +1,4 @@
-# template Setup
+# template Setup<>
 
 
 ## ` lazy void forceMainHand(mcobject item, int count)`
@@ -34,7 +34,10 @@ Set the current entity's leggings to `item` with `count`
 ## ` lazy void forceBoots(mcobject item, int count)`
 Set the current entity's boots to `item` with `count`
 
-## ` [Compile.order=9999] void handler()`
+## ` [compile.order=9999] void handler()`
+
+
+## ` @inventory_setup.reload [compile.order=9999] void reload()`
 
 
 ## ` void add()`

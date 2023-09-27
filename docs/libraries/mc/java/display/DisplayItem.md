@@ -1,13 +1,13 @@
 # public class DisplayItem
 Class representing an item display entity.
 
-## ` void __init__()`
+## ` lazy void __init__()`
 
 
-## ` void __init__(mcobject block)`
+## ` lazy void __init__(mcobject item, json data)`
 
 
-## ` lazy void setItem(mcobject block)`
+## ` lazy void setItem(mcobject item, json data)`
 Set the item to be displayed
 
 ## ` lazy void setDisplayModeNone()`

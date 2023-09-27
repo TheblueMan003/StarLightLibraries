@@ -13,7 +13,7 @@ Room detection end
 ## `public @test.after void show()`
 Show the list of active room
 
-# template Room
+# template Room<_sx,_sy,_sz,_ex,_ey,_ez>
 Template for a room that need to execute a function when a player enter it, stay in it, exit it, or when the room is activated or desactivated.Nested template are supported. The nested room only check if a player is in the parent room.
 
 ## ` lazy void init(int sx, int sy, int sz, int ex, int ey, int ez)`
@@ -22,22 +22,22 @@ Template for a room that need to execute a function when a player enter it, stay
 ## ` void setColor(Color? c)`
 Set the color to display in creative
 
-## ` void onEnter()`
+## ` virtual void onEnter()`
 Call back when a player enter the room.
 
-## ` void onStay()`
+## ` virtual void onStay()`
 Call back when a player stays in the room.
 
-## ` void onActivate()`
+## ` virtual void onActivate()`
 Call back when the room get activated. A player enter the room while nobody is in it.
 
-## ` void onDesactivate()`
+## ` virtual void onDesactivate()`
 Call back when the room get desactivated. All the players left the room.
 
-## ` void main()`
+## ` virtual void main()`
 Call back when the room contains at least one player.
 
-## ` void onExit()`
+## ` virtual void onExit()`
 Call back when a player exit the room.
 
 ## ` @game.room.show void __show__()`

@@ -1,13 +1,25 @@
-## ` lazy int sum(entity e, string score)`
-Sum up the value of the scoreboard of the entity in e
+## ` lazy void showList(int score, rawjson display)`
+Show the scoreboard on the list
 
-## ` lazy int min(entity e, string score)`
-Get the min value of the scoreboard of the entity in e
+## ` lazy void showSidebar(int score, rawjson display)`
+Show the scoreboard on the sidebar
 
-## ` lazy int max(entity e, string score)`
-Get the max value of the scoreboard of the entity in e
+## ` lazy void showBelowname(int score, rawjson display)`
+Show the scoreboard on the belowname
 
-## ` lazy int avg(entity e, string score)`
-Get the average value of the scoreboard of the entity in e
+## ` lazy void showTeamSidebar(int score, string color, rawjson display)`
+Show the scoreboard on the sidebar of team of color `color`
+
+## ` lazy void hideList()`
+Hide the scoreboard on the list
+
+## ` lazy void hideSidebar()`
+Hide the scoreboard on the sidebar
+
+## ` lazy void hideBelowname()`
+Hide the scoreboard on the belowname
+
+## ` lazy void hideTeamSidebar(string $color)`
+Hide the scoreboard on the sidebar of team of color `color`
 
 

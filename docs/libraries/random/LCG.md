@@ -19,6 +19,9 @@ Return a new random float number
 ## ` int seed()`
 Return the current seed
 
+## ` float nextGaussian(float mean, float std)`
+Return a new random number from a Gaussian distribution with mean and standard deviation
+
 
 
 

@@ -1,4 +1,4 @@
-# template Font
+# template Font<>
 Add a new font to the game
 
 ## ` lazy void setName(string name)`

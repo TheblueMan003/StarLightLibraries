@@ -319,4 +319,7 @@
 ## ` lazy void onVillage(void=>void func)`
 
 
+## ` lazy void onUsingItem(mcobject item, void=>void func)`
+
+
 

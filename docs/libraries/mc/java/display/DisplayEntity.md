@@ -16,16 +16,16 @@ Set the entity's rotation.
 ## ` lazy void setTranslation(float x, float y, float z)`
 Set the entity's translation.
 
-## ` lazy void setFixedBillboard(bool fixed)`
+## ` lazy void setFixedBillboard()`
 Set the entity's Billboard to none.
 
-## ` lazy void setVerticalBillboard(bool vertical)`
+## ` lazy void setVerticalBillboard()`
 Set the entity's Billboard to Vertical.
 
-## ` lazy void setHorizontalBillboard(bool horizontal)`
+## ` lazy void setHorizontalBillboard()`
 Set the entity's Billboard to Horizontal.
 
-## ` lazy void setCenterBillboard(bool center)`
+## ` lazy void setCenterBillboard()`
 Set the entity's Billboard to Center.
 
 ## ` lazy void setSkyLight(int value)`
@@ -49,6 +49,9 @@ Set Bounding Box
 ## ` lazy void setGlowColor(int c)`
 Set glow color override
 
+## ` lazy void setGlowColor(int r, int g, int b, int a)`
+Set the background color
+
 ## ` lazy void interpolate(int duration)`
 Interpolate Interpolation
 
@@ -67,8 +70,8 @@ Interpolate the entity's rotation.
 ## ` lazy void interpolateTranslation(int duration, float x, float y, float z)`
 Interpolate the entity's translation.
 
-## ` lazy void run(void=>void fct)`
-
+## ` lazy void setTeleportDuration(int duration)`
+Set Teleport Duration
 
 
 

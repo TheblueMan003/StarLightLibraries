@@ -7,7 +7,7 @@ Set a `block` here
 ## ` lazy void fill(mcposition start, mcposition end, mcobject block)`
 Fill from `start` to `end` with `block`
 
-## ` lazy void fill(mcposition start, mcposition end, mcobject block, mcobject fro)`
+## ` lazy void replace(mcposition start, mcposition end, mcobject block, mcobject fro)`
 Replace `fro` to `block` from `start` to `end`
 
 ## ` lazy void replaceNear(int $radius, mcobject from_, mcobject to_)`

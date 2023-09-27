@@ -1,4 +1,4 @@
-# template AsyncCutscene
+# template AsyncCutscene<>
 Template for cutscene
 
 ## ` lazy void start(entity e)`

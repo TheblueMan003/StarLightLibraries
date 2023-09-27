@@ -7,13 +7,13 @@ Set the spawnpoint of the player to the given position.
 ## ` lazy void set(mcposition $pos, float $angle)`
 Set the spawnpoint of the player to the given position and angle. (JAVA ONLY)
 
-## ` lazy void set(entity $player)`
+## ` lazy void set(entity player)`
 Set the spawnpoint of the player to the current position.
 
-## ` lazy void set(entity $player, mcposition $pos)`
+## ` lazy void set(entity player, mcposition pos)`
 Set the spawnpoint of the player to the given position.
 
-## ` lazy void set(entity $player, mcposition $pos, float $angle)`
+## ` lazy void set(entity player, mcposition pos, float angle)`
 Set the spawnpoint of the player to the given position and angle. (JAVA ONLY)
 
 ## ` lazy void setWorld()`

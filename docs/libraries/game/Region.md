@@ -1,4 +1,4 @@
-# template Region
+# template Region<>
 Template for an area of chunk that need to be loaded
 
 ## ` lazy void init(int sx, int sy, int sz, int ex, int ey, int ez)`

@@ -1,4 +1,4 @@
-# template Block
+# template Block<>
 
 
 ## ` lazy void setName(string name)`
@@ -52,6 +52,15 @@ Set the block pick collision
 ## ` lazy void setGeometry(string geometry)`
 Set the block geometry
 
+## ` lazy void setTransparent()`
+Set the render Method to alpha
+
+## ` lazy void setBlend()`
+Set the render Method to alpha
+
+## ` lazy void setOpaque()`
+Set the render Method to be opaque
+
 ## ` lazy void setBlastResistance(int resistance)`
 Set blast resistance
 
@@ -70,8 +79,17 @@ Set texture
 ## ` lazy void setTexture(string up, string side, string down)`
 Set texture
 
+## ` lazy void setTexture(string name, json data)`
+Set texture
+
+## ` lazy void addRandomTexture(string texture, int weight)`
+Set texture
+
 ## ` lazy void setSound(string sound)`
 Set sound
+
+## ` lazy void setRotatable()`
+
 
 
 
