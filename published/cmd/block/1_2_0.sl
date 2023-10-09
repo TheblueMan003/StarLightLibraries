@@ -45,12 +45,7 @@ def lazy set(mcposition position, mcobject block){
         _set(position, bblock, bid)
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(position) && !Compiler.isVariable(block)){
-            _set(position, block)
-        }
-        else{
-            _set_macro(position, block)
-        }
+        _set(position, block)
     }
 }
 """
@@ -70,12 +65,7 @@ def lazy fill(mcposition start, mcposition end, mcobject block){
         _fill(start, end, bblock, bid)
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(block)){
-            _fill(start, end, block)
-        }
-        else{
-            _fill_macro(start, end, block)
-        }
+        _fill(start, end, block)
     }
 }
 
@@ -91,12 +81,7 @@ def lazy replace(mcposition start, mcposition end, mcobject block, mcobject fro)
         _replace(start, end, bblock, bid, fbblock, fbid)
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(block) && !Compiler.isVariable(fro)){
-            _replace(start, end, block, fro)
-        }
-        else{
-            _replace_macro(start, end, block, fro)
-        }
+        _replace(start, end, block, fro)
     }
 }
 
@@ -117,12 +102,7 @@ def lazy fillDestroy(mcposition start, mcposition end, mcobject block){
         _fill(start, end, bblock, bid, "destroy")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(block)){
-            _fill(start, end, block, "destroy")
-        }
-        else{
-            _fill_macro(start, end, block, "destroy")
-        }
+        _fill(start, end, block, "destroy")
     }
 }
 
@@ -136,12 +116,7 @@ def lazy fillHollow(mcposition start, mcposition end, mcobject block){
         _fill(start, end, bblock, bid, "hollow")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(block)){
-            _fill(start, end, block, "hollow")
-        }
-        else{
-            _fill_macro(start, end, block, "hollow")
-        }
+        _fill(start, end, block, "hollow")
     }
 }
 
@@ -155,12 +130,7 @@ def lazy fillKeep(mcposition start, mcposition end, mcobject block){
         _fill(start, end, bblock, bid, "keep")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(block)){
-            _fill(start, end, block, "keep")
-        }
-        else{
-            _fill_macro(start, end, block, "keep")
-        }
+        _fill(start, end, block, "keep")
     }
 }
 
@@ -174,12 +144,7 @@ def lazy fillOutline(mcposition start, mcposition end, mcobject block){
         _fill(start, end, bblock, bid, "outline")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(block)){
-            _fill(start, end, block, "outline")
-        }
-        else{
-            _fill_macro(start, end, block, "outline")
-        }
+        _fill(start, end, block, "outline")
     }
 }
 
@@ -191,12 +156,7 @@ def lazy clone(mcposition start, mcposition end, mcposition target){
         _clone(start, end, target, "replace", "normal")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(target)){
-            _clone(start, end, target, "normal", "normal")
-        }
-        else{
-            _clone_macro(start, end, target, "normal", "normal")
-        }
+        _clone(start, end, target, "normal", "normal")
     }
 }
 """
@@ -207,12 +167,7 @@ def lazy cloneMask(mcposition start, mcposition end, mcposition target){
         _clone(start, end, target, "masked", "normal")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(target)){
-            _clone(start, end, target, "masked", "normal")
-        }
-        else{
-            _clone_macro(start, end, target, "masked", "normal")
-        }
+        _clone(start, end, target, "masked", "normal")
     }
 }
 """
@@ -225,12 +180,7 @@ def lazy clone(mcposition start, mcposition end, mcposition target, mcobject blo
         _clone(start, end, target, bblock, bid, "normal")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(target) && !Compiler.isVariable(block)){
-            _clone(start, end, target, block, "normal")
-        }
-        else{
-            _clone_macro(start, end, target, block, "normal")
-        }
+        _clone(start, end, target, block, "normal")
     }
 }
 
@@ -243,12 +193,7 @@ def lazy move(mcposition start, mcposition end, mcposition target){
         _clone(start, end, target, "replace", "move")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(target)){
-            _clone(start, end, target, "move", "move")
-        }
-        else{
-            _clone_macro(start, end, target, "move", "move")
-        }
+        _clone(start, end, target, "move", "move")
     }
 }
 """
@@ -259,12 +204,7 @@ def lazy moveMask(mcposition start, mcposition end, mcposition target){
         _clone(start, end, target, "masked", "move")
     }
     if (Compiler.isJava()){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(target)){
-            _clone(start, end, target, "masked", "move")
-        }
-        else{
-            _clone_macro(start, end, target, "masked", "move")
-        }
+        _clone(start, end, target, "masked", "move")
     }
 }
 """
@@ -277,11 +217,6 @@ def lazy move(mcposition start, mcposition end, mcposition target, mcobject bloc
         _clone(start, end, target, bblock, bid, "move")
     }
     if (Compiler.isJava){
-        if (!Compiler.isVariable(start) && !Compiler.isVariable(end) && !Compiler.isVariable(target) && !Compiler.isVariable(block)){
-            _clone(start, end, target, block, "move")
-        }
-        else{
-            _clone_macro(start, end, target, block, "move")
-        }
+        _clone(start, end, target, block, "move")
     }
 }

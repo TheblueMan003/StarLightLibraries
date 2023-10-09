@@ -10,21 +10,29 @@ forgenerate($name, (absorption, unluck, bad_omen, blindness, conduit_power, dolp
     Give effect `$name` to `ent` for `duration` and `power`.
     Show particles if `particle`
     """
-    def macro $name(entity ent, int duration = -1, int power = 0, bool particle = true){
+    def lazy $name(entity ent, int duration = -1, int power = 0, bool particle = true){
         if (Compiler.isJava()){
             if (duration <= -1){
-                /effect give $(ent) $name infinite $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (ent, duration, power, particle)){
+                    /effect give $ent $name infinite $power $particle
+                }
             }
             else{
-                /effect give $(ent) $name $(duration) $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (ent, duration, power, particle)){
+                    /effect give $ent $name $duration $power $particle
+                }
             }
         }
         if (Compiler.isBedrock()){
             if (duration <= -1){
-                /effect $(ent) $name 999999 $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (ent, duration, power, particle)){
+                    /effect $ent $name 999999 $power $particle
+                }
             }
             else{
-                /effect $(ent) $name $(duration) $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (ent, duration, power, particle)){
+                    /effect $ent $name $duration $power $particle
+                }
             }
         }
     }
@@ -36,18 +44,26 @@ forgenerate($name, (absorption, unluck, bad_omen, blindness, conduit_power, dolp
     def lazy $name(int duration = -1, int power = 0, bool particle = true){
         if (Compiler.isJava()){
             if (duration <= -1){
-                /effect give $(ent) $name infinite $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (@s, duration, power, particle)){
+                    /effect give $ent $name infinite $power $particle
+                }
             }
             else{
-                /effect give $(ent) $name $(duration) $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (@s, duration, power, particle)){
+                    /effect give $ent $name $duration $power $particle
+                }
             }
         }
         if (Compiler.isBedrock()){
             if (duration <= -1){
-                /effect $(ent) $name 999999 $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (@s, duration, power, particle)){
+                    /effect $ent $name 999999 $power $particle
+                }
             }
             else{
-                /effect $(ent) $name $(duration) $(power) $(particle)
+                Compiler.insert(($ent, $duration, $power, $particle), (@s, duration, power, particle)){
+                    /effect $ent $name $duration $power $particle
+                }
             }
         }
     }
@@ -61,12 +77,12 @@ forgenerate($name, (absorption, unluck, bad_omen, blindness, conduit_power, dolp
     """
     Clear effect `$name` for `ent`
     """
-    def lazy clear$name(entity ent = @s){
+    def lazy clear$name(entity $ent = @s){
         if (Compiler.isJava()){
-            with(ent)./effect clear @s $name
+            /effect clear $ent $name
         }
         if (Compiler.isBedrock()){
-            with(ent)./effect @s $name 0 0
+            /effect $ent $name 0 0
         }
     }
 }
@@ -74,11 +90,11 @@ forgenerate($name, (absorption, unluck, bad_omen, blindness, conduit_power, dolp
 """
 Clear all effects for `ent`
 """
-def lazy clear(entity ent = @s){
+def lazy clear(entity $ent = @s){
     if (Compiler.isJava()){
-        with(ent)./effect clear @s
+        /effect clear $ent
     }
     if (Compiler.isBedrock()){
-        with(ent)./effect @s clear
+        /effect $ent clear
     }
 }

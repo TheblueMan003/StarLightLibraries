@@ -149,11 +149,6 @@
                 "url": "cmd/effect/1_1_0.sl",
                 "filename": "cmd/effect.sl",
                 "version": "1.1.0"
-            },
-            {
-                "url": "cmd/effect/1_2_0.sl",
-                "filename": "cmd/effect.sl",
-                "version": "1.2.0"
             }
         ],
         "cmd.entity": [
@@ -996,6 +991,27 @@
             {
                 "url": "standard/collections/dictionnary/1_0_0.sl",
                 "filename": "standard/collections/dictionnary.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "cmd.ride": [
+            {
+                "url": "cmd/ride/1_0_0.sl",
+                "filename": "cmd/ride.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.wasd": [
+            {
+                "url": "mc/wasd/1_0_0.sl",
+                "filename": "mc/wasd.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mathd": [
+            {
+                "url": "mathd/1_0_0.sl",
+                "filename": "mathd.sl",
                 "version": "1.0.0"
             }
         ]
