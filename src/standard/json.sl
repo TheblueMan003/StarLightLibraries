@@ -1,6 +1,9 @@
 package standard.json
 
-def bool contains(json source, json value){
+"""
+Check if a json contains a value
+"""
+bool contains(json source, json value){
     macro bool test(json value){
         if ("$(value)" in source){
             return true
@@ -11,7 +14,11 @@ def bool contains(json source, json value){
     }
     return test(value)
 }
-def bool equals(json a, json b){
+
+"""
+Check if two jsons are equal
+"""
+bool equals(json a, json b){
     if (contains(a,b) && contains(b,a)){
         return true
     }

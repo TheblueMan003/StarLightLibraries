@@ -1,19 +1,34 @@
 package standard.string
 
-def macro string concat(string a, string b){
+"""
+Concatenates two strings.
+"""
+macro string concat(string a, string b){
     return "$(a)$(b)"
 }
-def macro string cast(mcobject a){
+
+"""
+Cast a value to a string.
+"""
+macro string cast(mcobject a){
     return "$(a)"
 }
-def string repeat(string value, int count){
+
+"""
+Repeat a string a number of times.
+"""
+string multiply(string value, int count){
     string result = ""
     for (int i = 0; i < count; i++){
         result += value
     }
     return result
 }
-def string equals(string source, string value){
+
+"""
+Check if two strings are equal.
+"""
+bool equals(string source, string value){
     macro bool test(json value){
         if (source == "$(value)"){
             return true
@@ -23,4 +38,58 @@ def string equals(string source, string value){
         }
     }
     return test(value)
+}
+
+"""
+Return the length of a string.
+"""
+int length(string value){
+    int c = 0
+    while(value != ""){
+        value = value[1..]
+        c++
+    }
+    return c
+}
+
+"""
+Check if a string starts with another string.
+"""
+bool startsWith(string source, string value){
+    bool ret = true
+    while (value != "" && ret){
+        if (source[0] != value[0]){
+            ret = false
+        }
+        source = source[1..]
+        value = value[1..]
+    }
+    return ret
+}
+
+"""
+Check if a string contains another string.
+"""
+bool contains(string source, string value){
+    bool ret = false
+    while (source != "" && !ret){
+        if (startsWith(source, value)){
+            ret = true
+        }
+        source = source[1..]
+    }
+    return ret
+}
+
+
+"""
+Reverse a string.
+"""
+string reverse(string source){
+    string ret = ""
+    while (source != ""){
+        ret = source[0] + ret
+        source = source[1..]
+    }
+    return ret
 }
