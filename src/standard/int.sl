@@ -94,3 +94,23 @@ int shiftRight(int a, int b){
     int c = pow(2, b)
     return a / c
 }
+
+"""
+Convert string to int, ignore any non-digit characters.
+"""
+int parse(string s){
+    int i = 0
+    int sign = 1
+    if(s[0] == "-"){
+        sign = -1
+        s = s[1..]
+    }
+    while(s != ""){
+        i *= 10
+        switch(s[0] for k in 0..9){
+            ""+k -> i += k
+        }
+        s = s[1..]
+    }
+    return i * sign
+}

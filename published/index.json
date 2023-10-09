@@ -1014,6 +1014,27 @@
                 "filename": "mathd.sl",
                 "version": "1.0.0"
             }
+        ],
+        "mc.java.interaction": [
+            {
+                "url": "mc/java/interaction/1_0_0.sl",
+                "filename": "mc/java/interaction.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.string": [
+            {
+                "url": "standard/string/1_0_0.sl",
+                "filename": "standard/string.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.json": [
+            {
+                "url": "standard/json/1_0_0.sl",
+                "filename": "standard/json.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
