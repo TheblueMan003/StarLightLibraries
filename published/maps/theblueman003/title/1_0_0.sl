@@ -13,7 +13,7 @@ class Title extends Sprite{}
 class Background extends Title{
     def this(){
         setTexture(addTextureVertical("theblueman003_title/black"))
-        setScale(20,20,20)
+        setScale(50,50,50)
     }
 }
 class TextBack extends Title{
@@ -90,13 +90,15 @@ def phase1(void=>void callback){
     DisplayText starLightSubTitle
 
     with(Title)./kill
-    at(~~2~-7.01)new Background()
-    at(~~2~-7)new TextBack()
-    at(~-20~2~-6.99)new Light()
-    at(~~2~-6.98)new Hidder()
-    at(~~2~-6.98)new StarLightIcon()
-    at(~2~3~-6.98)starLightTitle = new DisplayText()
-    at(~1.5~1~-6.98)starLightSubTitle = new DisplayText()
+    at(~~2~-9.01)new Background()
+    at(~~2~-9)new TextBack()
+    at(~-20~2~-8.99)new Light()
+    at(~~2~-8.98)new Hidder()
+    at(~~2~-8.98)new StarLightIcon()
+    at(~2~3~-8.98)starLightTitle = new DisplayText()
+    at(~1.5~1~-8.98)starLightSubTitle = new DisplayText()
+    at(~34.6~2~-8.98)new Background()
+    at(~-34.6~2~-8.98)new Background()
     sleep 20
     with(TextBack)step1()
     with(Hidder)step1()
