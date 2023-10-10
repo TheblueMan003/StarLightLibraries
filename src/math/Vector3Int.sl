@@ -122,6 +122,9 @@ struct Vector3Int{
         tmp1 = math.sqrt(tmp1)
         return(tmp1)
     }
+    lazy (int, int, int) __cast__(){
+        return(this.x, this.y, this.z)
+    }
 }
 Vector3Int getPosition(){
     import cmd.tp as tp

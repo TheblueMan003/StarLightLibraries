@@ -81,6 +81,12 @@ bool contains(string source, string value){
     return ret
 }
 
+"""
+Check if a string ends with another string.
+"""
+bool endsWith(string source, string value){
+    return startsWith(reverse(source), reverse(value))
+}
 
 """
 Reverse a string.
@@ -92,4 +98,62 @@ string reverse(string source){
         source = source[1..]
     }
     return ret
+}
+
+"""
+Replace `value` with `replacement` in `source`.
+"""
+string replace(string source, string value, string replacement){
+    string ret = ""
+    while (source != ""){
+        if (startsWith(source, value)){
+            ret += replacement
+            for (int i = 0; i < length(value); i++){
+                source = source[1..]
+            }
+        }
+        else{
+            ret += source[0]
+            source = source[1..]
+        }
+    }
+    return ret
+}
+
+"""
+Return a substring of `source` from `start` to `end`.
+"""
+string substring(string source, int start, int end){
+    string ret = ""
+    for (int i = 0; i < start; i++){
+        source = source[1..]
+    }
+    for (int i = start; i < end; i++){
+        ret += source[0]
+        source = source[1..]
+    }
+    return ret
+}
+
+"""
+Return the index of `value` in `source`.
+"""
+int indexOf(string source, string value){
+    int ret = -1
+    int i = 0
+    while (source != "" && ret == -1){
+        if (startsWith(source, value)){
+            ret = i
+        }
+        source = source[1..]
+        i++
+    }
+    return ret
+}
+
+"""
+Return the index of `value` in `source` starting from the end.
+"""
+int lastIndexOf(string source, string value){
+    return length(source) - length(value) - indexOf(reverse(source), reverse(value))
 }

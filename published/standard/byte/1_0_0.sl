@@ -1,53 +1,48 @@
-package standard.bint
+package standard.byte
 
-struct bint{
+struct byte{
     int value
-    int bound
 
-    def __init__(int bound){
-        this.bound = bound
-    }
-    def __init__(int value, int bound){
+    def lazy __init__(int value){
         this.value = value
-        this.bound = bound
     }
 
-    def lazy __add__(bint other){
+    def lazy __add__(byte other){
         value += other.value
-        value %= bound
+        value %= 256
     }
-    def lazy __sub__(bint other){
+    def lazy __sub__(byte other){
         value -= other.value
-        value %= bound
+        value %= 256
     }
-    def lazy __mul__(bint other){
+    def lazy __mul__(byte other){
         value *= other.value
-        value %= bound
+        value %= 256
     }
-    def lazy __div__(bint other){
+    def lazy __div__(byte other){
         value /= other.value
-        value %= bound
+        value %= 256
     }
-    def lazy __mod__(bint other){
+    def lazy __mod__(byte other){
         value /= other.value
-        value %= bound
+        value %= 256
     }
-    lazy bool __lt__(bint other){
+    lazy bool __lt__(byte other){
         return value < other.value
     }
-    lazy bool __gt__(bint other){
+    lazy bool __gt__(byte other){
         return value > other.value
     }
-    lazy bool __le__(bint other){
+    lazy bool __le__(byte other){
         return value <= other.value
     }
-    lazy bool __ge__(bint other){
+    lazy bool __ge__(byte other){
         return value >= other.value
     }
-    lazy bool __eq__(bint other){
+    lazy bool __eq__(byte other){
         return value == other.value
     }
-    lazy bool __ne__(bint other){
+    lazy bool __ne__(byte other){
         return value != other.value
     }
 
@@ -55,23 +50,23 @@ struct bint{
 
     def lazy __add__(int other){
         value += other
-        value %= bound
+        value %= 256
     }
     def lazy __sub__(int other){
         value -= other
-        value %= bound
+        value %= 256
     }
     def lazy __mul__(int other){
         value *= other
-        value %= bound
+        value %= 256
     }
     def lazy __div__(int other){
         value /= other
-        value %= bound
+        value %= 256
     }
     def lazy __mod__(int other){
         value /= other
-        value %= bound
+        value %= 256
     }
     lazy bool __lt__(int other){
         return value < other
@@ -93,10 +88,9 @@ struct bint{
     }
     lazy void __set__(int other){
         value = other
-        value %= bound
+        value %= 256
     }
-    lazy void __set__(json other){
-        value = other
-        value %= bound
+    lazy int __cast__(){
+        return value
     }
 }

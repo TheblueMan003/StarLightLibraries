@@ -56,6 +56,10 @@ struct Color{
     lazy int getARGB(){
         return value
     }
+
+    lazy int __cast__(){
+        return value
+    }
 }
 
 Color lerp(Color a, Color b, float value){

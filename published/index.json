@@ -1035,6 +1035,20 @@
                 "filename": "standard/json.sl",
                 "version": "1.0.0"
             }
+        ],
+        "standard.char": [
+            {
+                "url": "standard/char/1_0_0.sl",
+                "filename": "standard/char.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.byte": [
+            {
+                "url": "standard/byte/1_0_0.sl",
+                "filename": "standard/byte.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
