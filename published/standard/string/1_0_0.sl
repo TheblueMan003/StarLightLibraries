@@ -1,5 +1,7 @@
 package standard.string
 
+import standard.char as char
+
 """
 Concatenates two strings.
 """
@@ -38,6 +40,13 @@ bool equals(string source, string value){
         }
     }
     return test(value)
+}
+
+"""
+Check if two strings are equal. Case insensitive.
+"""
+bool equalsIgnoreCase(string source, string value){
+    return equals(toLower(source), toLower(value))
 }
 
 """
@@ -156,4 +165,28 @@ Return the index of `value` in `source` starting from the end.
 """
 int lastIndexOf(string source, string value){
     return length(source) - length(value) - indexOf(reverse(source), reverse(value))
+}
+
+"""
+Make the string uppercase.
+"""
+string toUpper(string source){
+    string ret = ""
+    while (source != ""){
+        ret += char.toUpper(source[0])
+        source = source[1..]
+    }
+    return ret
+}
+
+"""
+Make the string lowercase.
+"""
+string toLower(string source){
+    string ret = ""
+    while (source != ""){
+        ret += char.toLower(source[0])
+        source = source[1..]
+    }
+    return ret
 }

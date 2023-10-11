@@ -43,6 +43,13 @@ bool equals(string source, string value){
 }
 
 """
+Check if two strings are equal. Case insensitive.
+"""
+bool equalsIgnoreCase(string source, string value){
+    return equals(toLower(source), toLower(value))
+}
+
+"""
 Return the length of a string.
 """
 int length(string value){
