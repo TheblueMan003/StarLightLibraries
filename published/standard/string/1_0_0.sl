@@ -1,5 +1,7 @@
 package standard.string
 
+import standard.char as char
+
 """
 Concatenates two strings.
 """
@@ -121,14 +123,14 @@ string replace(string source, string value, string replacement){
 }
 
 """
-Return a substring of `source` from `start` to `end`.
+Return a substring of `source` from `start` with `length`.
 """
-string substring(string source, int start, int end){
+string substring(string source, int start, int length){
     string ret = ""
     for (int i = 0; i < start; i++){
         source = source[1..]
     }
-    for (int i = start; i < end; i++){
+    for (int i = 0; i < length; i++){
         ret += source[0]
         source = source[1..]
     }
@@ -156,4 +158,28 @@ Return the index of `value` in `source` starting from the end.
 """
 int lastIndexOf(string source, string value){
     return length(source) - length(value) - indexOf(reverse(source), reverse(value))
+}
+
+"""
+Make the string uppercase.
+"""
+string toUpper(string source){
+    string ret = ""
+    while (source != ""){
+        ret += char.toUpper(source[0])
+        source = source[1..]
+    }
+    return ret
+}
+
+"""
+Make the string lowercase.
+"""
+string toLower(string source){
+    string ret = ""
+    while (source != ""){
+        ret += char.toLower(source[0])
+        source = source[1..]
+    }
+    return ret
 }

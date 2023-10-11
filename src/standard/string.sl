@@ -123,14 +123,14 @@ string replace(string source, string value, string replacement){
 }
 
 """
-Return a substring of `source` from `start` to `end`.
+Return a substring of `source` from `start` with `length`.
 """
-string substring(string source, int start, int end){
+string substring(string source, int start, int length){
     string ret = ""
     for (int i = 0; i < start; i++){
         source = source[1..]
     }
-    for (int i = start; i < end; i++){
+    for (int i = 0; i < length; i++){
         ret += source[0]
         source = source[1..]
     }
