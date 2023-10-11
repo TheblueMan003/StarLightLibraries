@@ -1,16 +1,16 @@
 package cmd.structure
 
-def lazy load(string $name){
+def macro load(string name){
     if (Compiler.isJava()){
-        /place template $name
+        /place template $(name)
     }
     if (Compiler.isBedrock()){
-        /structure load $name ~ ~ ~
+        /structure load $(name) ~ ~ ~
     }
 }
 
-def lazy save(string $name, mcposition $pos1, mcposition $pos2){
+def macro save(string name, mcposition pos1, mcposition pos2){
     if (Compiler.isBedrock()){
-        /structure save $name $pos1 $pos2
+        /structure save $(name) $(pos1) $(pos2)
     }
 }

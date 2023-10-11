@@ -2,6 +2,9 @@ package standard.char
 
 typedef string char
 
+"""
+Return true if the character is a lowercase letter
+"""
 char toLower(char c) {
     char ret = c
     switch(c){
@@ -35,6 +38,9 @@ char toLower(char c) {
     return ret
 }
 
+"""
+Return true if the character is a uppercase letter
+"""
 char toUpper(char c) {
     char ret = c
     switch(c){
@@ -68,6 +74,9 @@ char toUpper(char c) {
     return ret
 }
 
+"""
+Return the ascii value of the character
+"""
 int getAscii(char c){
     int ret = 0
     switch(c){
@@ -173,6 +182,34 @@ int getAscii(char c){
         "|" -> ret = 124
         "}" -> ret = 125
         "~" -> ret = 126
+    }
+    return ret
+}
+
+"""
+Return true if the character is a letter
+"""
+bool isLetter(char c){
+    bool ret = false
+    switch(c for l in ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", 
+                      "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", 
+                      "u", "v", "w", "x", "y", "z", "A", "B", "C", "D",
+                      "E", "F", "G", "H", "I", "J", "K", "L", "M", "N",
+                      "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X",
+                      "Y", "Z"]){
+        l -> ret = true
+    }
+    return ret
+}
+
+
+"""
+Return true if the character is a digit
+"""
+bool isDigit(char c){
+    bool ret = false
+    switch(c for d in ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]){
+        d -> ret = true
     }
     return ret
 }

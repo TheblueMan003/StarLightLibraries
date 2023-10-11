@@ -225,6 +225,11 @@
                 "url": "cmd/spawnpoint/1_0_0.sl",
                 "filename": "cmd/spawnpoint.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/spawnpoint/1_1_0.sl",
+                "filename": "cmd/spawnpoint.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.structure": [
