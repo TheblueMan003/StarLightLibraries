@@ -1,10 +1,28 @@
-## `public @test.after void show()`
+## public @test.after function show
+### Arguments:
+
+### Return:
+- void
+
+
 Show the list of processes
 
-## `public void stopAll()`
+## public function stopAll
+### Arguments:
+
+### Return:
+- void
+
+
 Stop all the active processes
 
-## `public int count()`
+## public function count
+### Arguments:
+
+### Return:
+- int
+
+
 Return the number of currently active processes
 
 

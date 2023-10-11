@@ -4,6 +4,9 @@ package game
 Initialze the player, by running the function only once.
 """
 def lazy initPlayer(void=>void function){
+    if (Compiler.isBedrock()){
+        entity inited
+    }
     def ticking init(){
         if (Compiler.isJava()){
             scoreboard bool inited
@@ -14,7 +17,6 @@ def lazy initPlayer(void=>void function){
             }
         }
         if (Compiler.isBedrock()){
-            entity inited
             with(@a not in inited,true){
                 function()
                 inited += @s

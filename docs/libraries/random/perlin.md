@@ -1,13 +1,33 @@
 # struct Perlin2D
 
 
-## ` void __init__(int seed)`
+## function __init__
+### Arguments:
+- seed (`int`)
+### Return:
+- void
 
 
-## ` float dotGridGradient(int ix, int iy)`
 
 
-## ` float getPoint(float x, float y)`
+## function dotGridGradient
+### Arguments:
+- ix (`int`)
+- iy (`int`)
+### Return:
+- float
+
+
+
+
+## function getPoint
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- float
+
+
 
 
 
@@ -15,13 +35,35 @@
 # struct Perlin3D
 
 
-## ` void __init__(int seed)`
+## function __init__
+### Arguments:
+- seed (`int`)
+### Return:
+- void
 
 
-## ` float dotGridGradient(int ix, int iy, int iz)`
 
 
-## ` float getPoint(float x, float y, float z)`
+## function dotGridGradient
+### Arguments:
+- ix (`int`)
+- iy (`int`)
+- iz (`int`)
+### Return:
+- float
+
+
+
+
+## function getPoint
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- float
+
+
 
 
 

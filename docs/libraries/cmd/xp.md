@@ -1,13 +1,37 @@
-## ` lazy void add(int $value)`
+## lazy function add
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Add the given amount of xp to the player.
 
-## ` lazy void addLevel(int $value)`
+## lazy function addLevel
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Adds the given amount of levels to the player.
 
-## ` lazy void set(int $value)`
+## lazy function set
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Sets the xp of the player to the given value.
 
-## ` lazy void setLevel(int $value)`
+## lazy function setLevel
+### Arguments:
+- $value (`int`)
+### Return:
+- void
+
+
 Sets the level of the player to the given value.
 
 

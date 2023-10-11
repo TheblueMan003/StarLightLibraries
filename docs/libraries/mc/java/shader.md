@@ -1,13 +1,37 @@
-## ` void creeper()`
+## function creeper
+### Arguments:
+
+### Return:
+- void
+
+
 Add the creeper shader to the player
 
-## ` void clear()`
+## function clear
+### Arguments:
+
+### Return:
+- void
+
+
 Clear the shader
 
-## ` void spider()`
+## function spider
+### Arguments:
+
+### Return:
+- void
+
+
 Add the spider shader to the player
 
-## ` void enderman()`
+## function enderman
+### Arguments:
+
+### Return:
+- void
+
+
 Add the enderman shader to the player
 
 

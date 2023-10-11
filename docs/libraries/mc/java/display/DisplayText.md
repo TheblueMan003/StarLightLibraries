@@ -1,40 +1,115 @@
 # public class DisplayText
 Class representing an text display entity.
 
-## ` void __init__()`
+## lazy function __init__
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void __init__(mcobject block)`
 
 
-## ` lazy void setText(string text)`
+## lazy function setText
+### Arguments:
+- $text (`rawjson`)
+### Return:
+- void
+
+
 Set the text to be displayed
 
-## ` lazy void setLineWidth(int width)`
+## lazy function setLineWidth
+### Arguments:
+- width (`int`)
+### Return:
+- void
+
+
 Set Line Width
 
-## ` lazy void setOpacity(int opacity)`
+## lazy function setOpacity
+### Arguments:
+- opacity (`int`)
+### Return:
+- void
+
+
 Set the text opcacity
 
-## ` lazy void setBackgroundColor(int color)`
+## lazy function setBackgroundColor
+### Arguments:
+- color (`int`)
+### Return:
+- void
+
+
 Set the background color
 
-## ` lazy void setDefaultBackground()`
+## lazy function setBackgroundColor
+### Arguments:
+- r (`int`)
+- g (`int`)
+- b (`int`)
+- a (`int`)
+### Return:
+- void
+
+
+Set the background color
+
+## lazy function setDefaultBackground
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Set default background
 
-## ` lazy void setShadow()`
+## lazy function setShadow
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Set shadow
 
-## ` lazy void setSeeThrough()`
+## lazy function setSeeThrough
+### Arguments:
+
+### Return:
+- void
+
+
 Set See Through
 
-## ` lazy void setCenter()`
+## lazy function setCenter
+### Arguments:
+
+### Return:
+- void
+
+
 Set alignment to center
 
-## ` lazy void setLeft()`
+## lazy function setLeft
+### Arguments:
+
+### Return:
+- void
+
+
 Set alignment to left
 
-## ` lazy void setRight()`
+## lazy function setRight
+### Arguments:
+
+### Return:
+- void
+
+
 Set alignment to right
 
 

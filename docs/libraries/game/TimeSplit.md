@@ -1,22 +1,52 @@
-## ` void setLevelNumber(int nb)`
-Set the number of levels in the game
-
-# template TimeSplit
+# template TimeSplit<level_number>
 A template to manage time split in a game
 
-## ` void start()`
+## function start
+### Arguments:
+
+### Return:
+- void
+
+
 Init the current player
 
-## ` @reset void reset()`
+## @reset function reset
+### Arguments:
+
+### Return:
+- void
+
+
 Reset everything
 
-## ` void show_time(int time, int ptime)`
+## function show_time
+### Arguments:
+- time (`int`)
+- ptime (`int`)
+### Return:
+- void
+
+
 Show the time difference between the best time and the current time
 
-## ` void step(int level, int time)`
+## function step
+### Arguments:
+- level (`int`)
+- time (`int`)
+### Return:
+- void
+
+
 Start a new level
 
-## ` void stop(int level, int time)`
+## function stop
+### Arguments:
+- level (`int`)
+- time (`int`)
+### Return:
+- void
+
+
 Stop the current run and save the current time as the best time if it is better
 
 

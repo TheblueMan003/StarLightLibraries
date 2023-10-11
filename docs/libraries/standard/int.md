@@ -1,19 +1,62 @@
-## ` int bitwiseAnd(int a, int b)`
+## function bitwiseAnd
+### Arguments:
+- a (`int`)
+- b (`int`)
+### Return:
+- int
+
+
 Returns a bitwise and with b. Computation is done using modulo 2 arithmetic.
 
-## ` int bitwiseOr(int a, int b)`
+## function bitwiseOr
+### Arguments:
+- a (`int`)
+- b (`int`)
+### Return:
+- int
+
+
 Returns a bitwise or with b. Computation is done using modulo 2 arithmetic.
 
-## ` int bitwiseXor(int a, int b)`
+## function bitwiseXor
+### Arguments:
+- a (`int`)
+- b (`int`)
+### Return:
+- int
+
+
 Returns a bitwise xor with b. Computation is done using modulo 2 arithmetic.
 
-## ` int pow(int x, int n, int m)`
+## function pow
+### Arguments:
+- x (`int`)
+- n (`int`)
+- m (`int`)
+### Return:
+- int
+
+
 return x^n
 
-## ` int shiftLeft(int a, int b)`
+## function shiftLeft
+### Arguments:
+- a (`int`)
+- b (`int`)
+### Return:
+- int
+
+
 Returns a shifted to the left by b bits.
 
-## ` int shiftRight(int a, int b)`
+## function shiftRight
+### Arguments:
+- a (`int`)
+- b (`int`)
+### Return:
+- int
+
+
 Returns a shifted to the right by b bits.
 
 

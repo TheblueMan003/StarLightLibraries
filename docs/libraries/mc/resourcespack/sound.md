@@ -1,13 +1,38 @@
-## ` lazy void add(string file)`
+## lazy function add
+### Arguments:
+- file (`string`)
+### Return:
+- void
 
 
-## ` lazy void music(string file)`
 
 
-## ` lazy void music(string file, float volume)`
+## lazy function music
+### Arguments:
+- file (`string`)
+### Return:
+- void
 
 
-## ` [Compile.order=999999] void generate()`
+
+
+## lazy function music
+### Arguments:
+- file (`string`)
+- volume (`float`)
+### Return:
+- void
+
+
+
+
+## [Compile.order=999999] function generate
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

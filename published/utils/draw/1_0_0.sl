@@ -6,7 +6,7 @@ import cmd.block as b
 """
 Place a blocks from start to end in a line
 """
-public lazy int line(mcposition start, mcposition end, mcobject block){
+public lazy void line(mcposition start, mcposition end, mcobject block){
     line(start, end){
         b.place(block)
     }
@@ -15,7 +15,7 @@ public lazy int line(mcposition start, mcposition end, mcobject block){
 """
 Run the action from start to end in a line
 """
-public lazy int line(mcposition start, mcposition end, void=>void action){
+public lazy void line(mcposition start, mcposition end, void=>void action){
     void rec(){
         bool isEnd = false
         at(end){

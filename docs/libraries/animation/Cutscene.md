@@ -1,73 +1,262 @@
-# template Cutscene
+# template Cutscene<>
 Template for cutscene
 
-## ` lazy void start(entity e)`
+## lazy function start
+### Arguments:
+- e (`entity`)
+### Return:
+- void
+
+
 Start the cutscene for the entities `e`
 
-## ` void init()`
+## function init
+### Arguments:
+
+### Return:
+- void
+
+
 Init the cutscene
 
-## ` void nextSegment()`
+## function nextSegment
+### Arguments:
+
+### Return:
+- void
+
+
 Start the next segment of the cutscene
 
-## ` lazy void event(void=>void fct)`
+## lazy function event
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Call the function `fct` when this segment is reach and goes directly to the next
 
-## ` lazy void waitFor(int=>bool fct)`
+## lazy function waitFor
+### Arguments:
+- fct (`int=>bool`)
+### Return:
+- void
+
+
 Wait for the function `fct` to return true then goes to the next
 
-## ` lazy void waitFor(mcposition target, int=>bool fct)`
+## lazy function waitFor
+### Arguments:
+- target (`mcposition`)
+- fct (`int=>bool`)
+### Return:
+- void
+
+
 Wait for the function `fct` to return true then goes to the next
 
-## ` lazy void waitFor(mcposition position, mcposition target, int=>bool fct)`
+## lazy function waitFor
+### Arguments:
+- position (`mcposition`)
+- target (`mcposition`)
+- fct (`int=>bool`)
+### Return:
+- void
+
+
 Wait for the function `fct` to return true then goes to the next
 
-## ` lazy void waitTime(int time, int=>void fct)`
+## lazy function waitTime
+### Arguments:
+- time (`int`)
+- fct (`int=>void`)
+### Return:
+- void
+
+
 Wait for `time` ticks
 
-## ` lazy void waitTime(int time, mcposition target, int=>void fct)`
+## lazy function waitTime
+### Arguments:
+- time (`int`)
+- target (`mcposition`)
+- fct (`int=>void`)
+### Return:
+- void
+
+
 Wait for `time` ticks
 
-## ` lazy void waitTime(int time, mcposition position, mcposition target, int=>void fct)`
+## lazy function waitTime
+### Arguments:
+- time (`int`)
+- position (`mcposition`)
+- target (`mcposition`)
+- fct (`int=>void`)
+### Return:
+- void
+
+
 Wait for `time` ticks
 
-## ` lazy void pan(float speed, mcposition pos1, mcposition pos2, mcposition target, int=>void whileActive)`
+## lazy function pan
+### Arguments:
+- speed (`float`)
+- pos1 (`mcposition`)
+- pos2 (`mcposition`)
+- target (`mcposition`)
+- whileActive (`int=>void`)
+### Return:
+- void
+
+
 Move a fictive entity from `pos1` to `pos2`. The camera is located at `target` and look at the entity.
 
-## ` lazy void pan(float speed, mcposition pos2, mcposition target, int=>void whileActive)`
+## lazy function pan
+### Arguments:
+- speed (`float`)
+- pos2 (`mcposition`)
+- target (`mcposition`)
+- whileActive (`int=>void`)
+### Return:
+- void
+
+
 Move a fictive entity from current camera pos to `pos2`. The camera is located at `target` and look at the entity.
 
-## ` lazy void track(float speed, mcposition pos1, mcposition pos2, mcposition delta, int=>void whileActive)`
+## lazy function track
+### Arguments:
+- speed (`float`)
+- pos1 (`mcposition`)
+- pos2 (`mcposition`)
+- delta (`mcposition`)
+- whileActive (`int=>void`)
+### Return:
+- void
+
+
 Follow a fictive entity from `pos1` to `pos2` shifted by `delta`
 
-## ` lazy void track(float speed, mcposition pos2, mcposition delta, int=>void whileActive)`
+## lazy function track
+### Arguments:
+- speed (`float`)
+- pos2 (`mcposition`)
+- delta (`mcposition`)
+- whileActive (`int=>void`)
+### Return:
+- void
+
+
 Follow a fictive entity from current camera pos to `pos2` shifted by `delta`
 
-## ` lazy void linear(float speed, mcposition pos1, mcposition pos2, mcposition target, int=>void whileActive)`
+## lazy function linear
+### Arguments:
+- speed (`float`)
+- pos1 (`mcposition`)
+- pos2 (`mcposition`)
+- target (`mcposition`)
+- whileActive (`int=>void`)
+### Return:
+- void
+
+
 Move the camera from `pos1` to `pos2` while facing `target`
 
-## ` lazy void linear(float speed, mcposition pos2, mcposition target, int=>void whileActive)`
+## lazy function linear
+### Arguments:
+- speed (`float`)
+- pos2 (`mcposition`)
+- target (`mcposition`)
+- whileActive (`int=>void`)
+### Return:
+- void
+
+
 Move the camera from current camera pos to `pos2` while facing `target`
 
-## ` lazy void group(void=>void fct)`
+## lazy function group
+### Arguments:
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Group multiple instruction into one segment.
 
-## ` lazy void delta(mcposition $pos, int time, void=>void whileActive)`
+## lazy function delta
+### Arguments:
+- $pos (`mcposition`)
+- time (`int`)
+- whileActive (`void=>void`)
+### Return:
+- void
+
+
 Constant delta movement
 
-## ` lazy void delta(mcposition $start, mcposition $pos, int time, void=>void whileActive)`
+## lazy function delta
+### Arguments:
+- $start (`mcposition`)
+- $pos (`mcposition`)
+- time (`int`)
+- whileActive (`void=>void`)
+### Return:
+- void
+
+
 Constant delta movement
 
-## ` lazy void deltaLooking(mcposition $pos, mcposition target, int time, void=>void whileActive)`
+## lazy function deltaLooking
+### Arguments:
+- $pos (`mcposition`)
+- target (`mcposition`)
+- time (`int`)
+- whileActive (`void=>void`)
+### Return:
+- void
+
+
 Constant delta movement Looking at `target`
 
-## ` lazy void deltaLooking(mcposition $start, mcposition $pos, mcposition target, int time, void=>void whileActive)`
+## lazy function deltaLooking
+### Arguments:
+- $start (`mcposition`)
+- $pos (`mcposition`)
+- target (`mcposition`)
+- time (`int`)
+- whileActive (`void=>void`)
+### Return:
+- void
+
+
 Constant delta movement Looking at `target`
 
-## ` lazy void deltaAngle(mcposition $pos, float $u, float $v, int time, void=>void whileActive)`
+## lazy function deltaAngle
+### Arguments:
+- $pos (`mcposition`)
+- $u (`float`)
+- $v (`float`)
+- time (`int`)
+- whileActive (`void=>void`)
+### Return:
+- void
+
+
 Constant delta movement With angle `u` and `v`
 
-## ` lazy void deltaAngle(mcposition $start, mcposition $pos, float $u, float $v, int time, void=>void whileActive)`
+## lazy function deltaAngle
+### Arguments:
+- $start (`mcposition`)
+- $pos (`mcposition`)
+- $u (`float`)
+- $v (`float`)
+- time (`int`)
+- whileActive (`void=>void`)
+### Return:
+- void
+
+
 Constant delta movement With angle `u` and `v`
 
 

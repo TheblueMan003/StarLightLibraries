@@ -1,64 +1,190 @@
 # struct Vector2
 
 
-## ` lazy void __init__(float x, float y)`
+## lazy function __init__
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- void
 
 
-## ` lazy void __set__(float x, float y)`
 
 
-## ` void __set__(Vector2? other)`
+## lazy function __set__
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- void
 
 
-## ` lazy void __set__(float other)`
 
 
-## ` lazy void __add__(Vector2? other)`
+## function __set__
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- void
 
 
-## ` lazy void __add__(float x, float y)`
 
 
-## ` lazy void __sub__(Vector2? other)`
+## lazy function __set__
+### Arguments:
+- other (`float`)
+### Return:
+- void
 
 
-## ` lazy void __sub__(float x, float y)`
 
 
-## ` lazy bool __eq__(Vector2? other)`
+## lazy function __add__
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- void
 
 
-## ` lazy bool __ne__(Vector2? other)`
 
 
-## ` float scalarProd(Vector2? other)`
+## lazy function __add__
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- void
 
 
-## ` lazy void __mult__(float a)`
 
 
-## ` lazy void __mult__(Vector2? other)`
+## lazy function __sub__
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- void
 
 
-## ` lazy void __mult__(float x, float y)`
 
 
-## ` lazy void __div__(float a)`
+## lazy function __sub__
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- void
 
 
-## ` lazy void __div__(Vector2? other)`
 
 
-## ` lazy void __div__(float x, float y)`
+## lazy function __eq__
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- bool
 
 
-## ` float magnitude()`
+
+
+## lazy function __ne__
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- bool
+
+
+
+
+## function scalarProd
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- float
+
+
+
+
+## lazy function __mult__
+### Arguments:
+- a (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function __mult__
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- void
+
+
+
+
+## lazy function __mult__
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function __div__
+### Arguments:
+- a (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function __div__
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- void
+
+
+
+
+## lazy function __div__
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- void
+
+
+
+
+## function magnitude
+### Arguments:
+
+### Return:
+- float
+
+
 Return the magnitude of the vector
 
-## ` void normalize()`
+## function normalize
+### Arguments:
+
+### Return:
+- void
+
+
 Normalize the vector
 
-## ` float scalarProd(Vector2? other)`
+## function scalarProd
+### Arguments:
+- other (`Vector2?`)
+### Return:
+- float
+
+
 Compute the scalar product with other
 
 

@@ -1,13 +1,49 @@
-## ` lazy void add(int $x1, int $y1, int $z1, int $x2, int $y2, int $z2, string $name, bool $preload)`
+## lazy function add
+### Arguments:
+- $x1 (`int`)
+- $y1 (`int`)
+- $z1 (`int`)
+- $x2 (`int`)
+- $y2 (`int`)
+- $z2 (`int`)
+- $name (`string`)
+- $preload (`bool`)
+### Return:
+- void
+
+
 Add a ticking area from x1 y1 z1 to x2 y2 z2 with the name name and preload it if preload is true
 
-## ` lazy void remove(string $name)`
+## lazy function remove
+### Arguments:
+- $name (`string`)
+### Return:
+- void
+
+
 Remove a ticking area
 
-## ` lazy void addCircle(int $x, int $y, int $z, int $radius, string $name, bool $preload)`
+## lazy function addCircle
+### Arguments:
+- $x (`int`)
+- $y (`int`)
+- $z (`int`)
+- $radius (`int`)
+- $name (`string`)
+- $preload (`bool`)
+### Return:
+- void
+
+
 Add Circle Ticking Area
 
-## ` lazy void removeAll()`
+## lazy function removeAll
+### Arguments:
+
+### Return:
+- void
+
+
 Remove all ticking areas
 
 

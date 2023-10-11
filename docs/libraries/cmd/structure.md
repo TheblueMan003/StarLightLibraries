@@ -1,7 +1,21 @@
-## ` lazy void load(string $name)`
+## lazy function load
+### Arguments:
+- $name (`string`)
+### Return:
+- void
 
 
-## ` lazy void save(string $name, mcposition $pos1, mcposition $pos2)`
+
+
+## lazy function save
+### Arguments:
+- $name (`string`)
+- $pos1 (`mcposition`)
+- $pos2 (`mcposition`)
+### Return:
+- void
+
+
 
 
 

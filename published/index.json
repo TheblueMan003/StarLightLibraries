@@ -149,11 +149,6 @@
                 "url": "cmd/effect/1_1_0.sl",
                 "filename": "cmd/effect.sl",
                 "version": "1.1.0"
-            },
-            {
-                "url": "cmd/effect/1_2_0.sl",
-                "filename": "cmd/effect.sl",
-                "version": "1.2.0"
             }
         ],
         "cmd.entity": [
@@ -1002,6 +997,77 @@
                 "url": "standard/collections/dictionnary/1_0_0.sl",
                 "filename": "standard/collections/dictionnary.sl",
                 "version": "1.0.0"
+            }
+        ],
+        "cmd.ride": [
+            {
+                "url": "cmd/ride/1_0_0.sl",
+                "filename": "cmd/ride.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.wasd": [
+            {
+                "url": "mc/wasd/1_0_0.sl",
+                "filename": "mc/wasd.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mathd": [
+            {
+                "url": "mathd/1_0_0.sl",
+                "filename": "mathd.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.java.interaction": [
+            {
+                "url": "mc/java/interaction/1_0_0.sl",
+                "filename": "mc/java/interaction.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.string": [
+            {
+                "url": "standard/string/1_0_0.sl",
+                "filename": "standard/string.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.json": [
+            {
+                "url": "standard/json/1_0_0.sl",
+                "filename": "standard/json.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.char": [
+            {
+                "url": "standard/char/1_0_0.sl",
+                "filename": "standard/char.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.byte": [
+            {
+                "url": "standard/byte/1_0_0.sl",
+                "filename": "standard/byte.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "maps.theblueman003.title": [
+            {
+                "url": "maps/theblueman003/title/1_0_0.sl",
+                "filename": "maps/theblueman003/title.sl",
+                "version": "1.0.0",
+                "resourcespack": [
+                    {
+                        "url": "resourcespack/theblueman_title/java/1_0_0.zip",
+                        "filename": "theblueman_title",
+                        "version": "1.0.0",
+                        "game": "java"
+                    }
+                ]
             }
         ]
     }

@@ -1,74 +1,250 @@
 # class DisplayEntity
 Class representing an generic display entity.
 
-## ` lazy void setScale(float scale)`
+## lazy function setScale
+### Arguments:
+- scale (`float`)
+### Return:
+- void
+
+
 Set the entity's scale.
 
-## ` lazy void setScale(float x, float y, float z)`
+## lazy function setScale
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Set the entity's scale.
 
-## ` lazy void setLeftRotation(float x, float y, float z, float w)`
+## lazy function setLeftRotation
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+- w (`float`)
+### Return:
+- void
+
+
 Set the entity's rotation.
 
-## ` lazy void setRightRotation(float x, float y, float z, float w)`
+## lazy function setRightRotation
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+- w (`float`)
+### Return:
+- void
+
+
 Set the entity's rotation.
 
-## ` lazy void setTranslation(float x, float y, float z)`
+## lazy function setTranslation
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Set the entity's translation.
 
-## ` lazy void setFixedBillboard(bool fixed)`
+## lazy function setFixedBillboard
+### Arguments:
+
+### Return:
+- void
+
+
 Set the entity's Billboard to none.
 
-## ` lazy void setVerticalBillboard(bool vertical)`
+## lazy function setVerticalBillboard
+### Arguments:
+
+### Return:
+- void
+
+
 Set the entity's Billboard to Vertical.
 
-## ` lazy void setHorizontalBillboard(bool horizontal)`
+## lazy function setHorizontalBillboard
+### Arguments:
+
+### Return:
+- void
+
+
 Set the entity's Billboard to Horizontal.
 
-## ` lazy void setCenterBillboard(bool center)`
+## lazy function setCenterBillboard
+### Arguments:
+
+### Return:
+- void
+
+
 Set the entity's Billboard to Center.
 
-## ` lazy void setSkyLight(int value)`
+## lazy function setSkyLight
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
 Set entity Sky Light.
 
-## ` lazy void setBlockLight(int value)`
+## lazy function setBlockLight
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
 Set entity Block Light.
 
-## ` lazy void setViewRange(float value)`
+## lazy function setViewRange
+### Arguments:
+- value (`float`)
+### Return:
+- void
+
+
 Set View Range
 
-## ` lazy void setShadowRadius(float value)`
+## lazy function setShadowRadius
+### Arguments:
+- value (`float`)
+### Return:
+- void
+
+
 Set Shadow Radius
 
-## ` lazy void setShadowStrength(float value)`
+## lazy function setShadowStrength
+### Arguments:
+- value (`float`)
+### Return:
+- void
+
+
 Set Shadow Strength
 
-## ` lazy void setBoundingBox(float width, float height)`
+## lazy function setBoundingBox
+### Arguments:
+- width (`float`)
+- height (`float`)
+### Return:
+- void
+
+
 Set Bounding Box
 
-## ` lazy void setGlowColor(int c)`
+## lazy function setGlowColor
+### Arguments:
+- c (`int`)
+### Return:
+- void
+
+
 Set glow color override
 
-## ` lazy void interpolate(int duration)`
+## lazy function setGlowColor
+### Arguments:
+- r (`int`)
+- g (`int`)
+- b (`int`)
+- a (`int`)
+### Return:
+- void
+
+
+Set the background color
+
+## lazy function interpolate
+### Arguments:
+- duration (`int`)
+### Return:
+- void
+
+
 Interpolate Interpolation
 
-## ` lazy void interpolateScale(int duration, float scale)`
+## lazy function interpolateScale
+### Arguments:
+- duration (`int`)
+- scale (`float`)
+### Return:
+- void
+
+
 Interpolate the entity's scale.
 
-## ` lazy void interpolateScale(int duration, float x, float y, float z)`
+## lazy function interpolateScale
+### Arguments:
+- duration (`int`)
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Interpolate the entity's scale.
 
-## ` lazy void interpolateLeftRotation(int duration, float x, float y, float z, float w)`
+## lazy function interpolateLeftRotation
+### Arguments:
+- duration (`int`)
+- x (`float`)
+- y (`float`)
+- z (`float`)
+- w (`float`)
+### Return:
+- void
+
+
 Interpolate the entity's rotation.
 
-## ` lazy void interpolateRightRotation(int duration, float x, float y, float z, float w)`
+## lazy function interpolateRightRotation
+### Arguments:
+- duration (`int`)
+- x (`float`)
+- y (`float`)
+- z (`float`)
+- w (`float`)
+### Return:
+- void
+
+
 Interpolate the entity's rotation.
 
-## ` lazy void interpolateTranslation(int duration, float x, float y, float z)`
+## lazy function interpolateTranslation
+### Arguments:
+- duration (`int`)
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Interpolate the entity's translation.
 
-## ` lazy void run(void=>void fct)`
+## lazy function setTeleportDuration
+### Arguments:
+- duration (`int`)
+### Return:
+- void
 
+
+Set Teleport Duration
 
 
 

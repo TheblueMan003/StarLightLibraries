@@ -13,11 +13,19 @@ struct List<V>{
         return this.data["[$(key)]"]
     }
 
+    def lazy V __get__(int key){
+        return get(key)
+    }
+
     def set(int key, V value){
         def macro inner(int a){
             this.data["[$(a)]"] = value
         }
         inner(key)
+    }
+
+    def lazy __set__(int key, V value){
+        set(key, value)
     }
 
     def add(V value){

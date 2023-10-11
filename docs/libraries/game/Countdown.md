@@ -1,59 +1,224 @@
 # struct Countdown
+Represents a countdown timerCall .tick() to make the timer tick
+
+## function this
+### Arguments:
+- h (`int`)
+- m (`int`)
+- s (`int`)
+- t (`int`)
+### Return:
+- void
 
 
-## ` void __init__(int h, int m, int s, int t)`
 
 
-## ` void onEnd(void=>void event)`
+## function onEnd
+### Arguments:
+- event (`void=>void`)
+### Return:
+- void
 
 
-## ` void start()`
+Set the event when the timer ends
+
+## function start
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void pause()`
+Start the timer
+
+## function pause
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void continue()`
+Pause the timer
+
+## function continue
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void stop()`
+Continue the timer
+
+## function stop
+### Arguments:
+
+### Return:
+- void
 
 
-## ` int getMilisec()`
+Stop the timer
+
+## function getMilisec
+### Arguments:
+
+### Return:
+- int
 
 
-## ` void setLevel(int l)`
+Get the time in miliseconds
+
+## function addLevel
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void setMaxLevel(int l)`
+Add level to the timer
+
+## function setLevel
+### Arguments:
+- l (`int`)
+### Return:
+- void
 
 
-## ` void addDeath()`
+Set the level of the timer
+
+## function getLevel
+### Arguments:
+
+### Return:
+- int
 
 
-## ` void addKill()`
+Get the level of the timer
+
+## function setMaxLevel
+### Arguments:
+- l (`int`)
+### Return:
+- void
 
 
-## ` void reset()`
+Set the Max Level of the timer
+
+## function addDeath
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void showDeath()`
+Add a death to the timer
+
+## function getDeath
+### Arguments:
+
+### Return:
+- int
 
 
-## ` void showKill()`
+Get the death count of the timer
+
+## function setDeath
+### Arguments:
+- d (`int`)
+### Return:
+- void
 
 
-## ` void showLevel()`
+Set the death count of the timer
+
+## function addKill
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void setGlobal(bool g)`
+Add a kill to the timer
+
+## function getKill
+### Arguments:
+
+### Return:
+- int
 
 
-## ` void setDisplay(bool d)`
+Get the kill of the timer
+
+## function setKill
+### Arguments:
+- k (`int`)
+### Return:
+- void
 
 
-## ` void tick()`
+Set the kill of the timer
 
+## function reset
+### Arguments:
+
+### Return:
+- void
+
+
+Reset the timer
+
+## function showDeath
+### Arguments:
+
+### Return:
+- void
+
+
+Show the death in the timer
+
+## function showKill
+### Arguments:
+
+### Return:
+- void
+
+
+Show the kill in the timer
+
+## function showLevel
+### Arguments:
+
+### Return:
+- void
+
+
+Show the level in the timer
+
+## function setGlobal
+### Arguments:
+- g (`bool`)
+### Return:
+- void
+
+
+Set the timer to global
+
+## function setDisplay
+### Arguments:
+- d (`bool`)
+### Return:
+- void
+
+
+Set the display of the timer
+
+## function tick
+### Arguments:
+
+### Return:
+- void
+
+
+Make the timer tick
 
 
 

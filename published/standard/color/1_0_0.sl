@@ -56,14 +56,18 @@ struct Color{
     lazy int getARGB(){
         return value
     }
+
+    lazy int __cast__(){
+        return value
+    }
 }
 
 Color lerp(Color a, Color b, float value){
     float t = (1 - value)
     return new Color(
-        (int)(a.getRed() * t + b.getRed() * value),
-        (int)(a.getGreen() * t + b.getGreen() * value),
-        (int)(a.getBlue() * t + b.getBlue() * value),
-        (int)(a.getAlpha() * t + b.getAlpha() * value)
+        (a.getRed() * t + b.getRed() * value),
+        (a.getGreen() * t + b.getGreen() * value),
+        (a.getBlue() * t + b.getBlue() * value),
+        (a.getAlpha() * t + b.getAlpha() * value)
     )
 }

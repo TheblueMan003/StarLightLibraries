@@ -1,52 +1,171 @@
-# template Setup
+# template Setup<>
 
 
-## ` lazy void forceMainHand(mcobject item, int count)`
+## lazy function forceMainHand
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's mainhand to `item` with `count`
 
-## ` lazy void forceOffHand(mcobject item, int count)`
+## lazy function forceOffHand
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's offhand to `item` with `count`
 
-## ` lazy void forceHotbar(int slotID, mcobject item, int count)`
+## lazy function forceHotbar
+### Arguments:
+- slotID (`int`)
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's hotbar slot `slotID` to `item` with `count`
 
-## ` lazy void forceHotbar(mcobject item, int count)`
+## lazy function forceHotbar
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's whole hotbar to `item` with `count`
 
-## ` lazy void forceHotbarRange(int min, int max, mcobject item, int count)`
+## lazy function forceHotbarRange
+### Arguments:
+- min (`int`)
+- max (`int`)
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the multiple slot int current entity's hotbar to `item` with `count`.    Slot goes from `min` to `max` both included.
 
-## ` lazy void clearHotbar()`
+## lazy function clearHotbar
+### Arguments:
+
+### Return:
+- void
+
+
 Clear the hotbar of the current entity
 
-## ` lazy void forceInventorySlot(int index, mcobject item, int count)`
+## lazy function forceInventorySlot
+### Arguments:
+- index (`int`)
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the inventory slot `index` of the current entity to `item` with `count`
 
-## ` lazy void forceHelmet(mcobject item, int count)`
+## lazy function forceHelmet
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's helmet to `item` with `count`
 
-## ` lazy void forceChestplate(mcobject item, int count)`
+## lazy function forceChestplate
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's chestplate to `item` with `count`
 
-## ` lazy void forceLeggings(mcobject item, int count)`
+## lazy function forceLeggings
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's leggings to `item` with `count`
 
-## ` lazy void forceBoots(mcobject item, int count)`
+## lazy function forceBoots
+### Arguments:
+- item (`mcobject`)
+- count (`int`)
+### Return:
+- void
+
+
 Set the current entity's boots to `item` with `count`
 
-## ` [Compile.order=9999] void handler()`
+## [compile.order=9999] function handler
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void add()`
 
 
-## ` lazy void add(entity e)`
+## @inventory_setup.reload [compile.order=9999] function reload
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void remove()`
 
 
-## ` lazy void remove(entity e)`
+## function add
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function add
+### Arguments:
+- e (`entity`)
+### Return:
+- void
+
+
+
+
+## lazy function remove
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## lazy function remove
+### Arguments:
+- e (`entity`)
+### Return:
+- void
+
+
 
 
 

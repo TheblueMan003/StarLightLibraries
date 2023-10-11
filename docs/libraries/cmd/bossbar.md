@@ -1,121 +1,366 @@
-## ` lazy void create(mcobject $name, rawjson $display)`
+## lazy function create
+### Arguments:
+- $name (`mcobject`)
+- $display (`rawjson`)
+### Return:
+- void
+
+
 Create a bossbar with `name` and text `display`
 
-## ` lazy void delete(mcobject $name)`
+## lazy function delete
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Delete the bossbar with `name`
 
-## ` lazy void setColor(mcobject $name, mcobject $color)`
+## lazy function setColor
+### Arguments:
+- $name (`mcobject`)
+- $color (`mcobject`)
+### Return:
+- void
+
+
 Set the color of bossbar `name` to `color`
 
-## ` lazy void setMax(mcobject $name, int $value)`
+## lazy function setMax
+### Arguments:
+- $name (`mcobject`)
+- $value (`int`)
+### Return:
+- void
+
+
 Set the max of bossbar `name` to `value`
 
-## ` lazy void setValue(mcobject $name, int $value)`
+## lazy function setValue
+### Arguments:
+- $name (`mcobject`)
+- $value (`int`)
+### Return:
+- void
+
+
 Set the value of bossbar `name` to `value`
 
-## ` lazy void setValueVar(mcobject $name, int $value)`
+## lazy function setValueVar
+### Arguments:
+- $name (`mcobject`)
+- value (`int`)
+### Return:
+- void
+
+
 Set the value of bossbar `name` to the variable `value`
 
-## ` lazy void setMaxVar(mcobject $name, int $value)`
+## lazy function setMaxVar
+### Arguments:
+- $name (`mcobject`)
+- value (`int`)
+### Return:
+- void
+
+
 Set the max of bossbar `name` to variable `value`
 
-## ` lazy void setName(mcobject $name, rawjson $value)`
+## lazy function setName
+### Arguments:
+- $name (`mcobject`)
+- $value (`rawjson`)
+### Return:
+- void
+
+
 Set the text of bossbar `name` to `value`
 
-## ` lazy void setVisible(mcobject $name, int $value)`
+## lazy function setVisible
+### Arguments:
+- $name (`mcobject`)
+- $value (`int`)
+### Return:
+- void
+
+
 Set the visibility of bossbar `name` to `value`
 
-## ` lazy void show(mcobject $name)`
+## lazy function show
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Set the visibility of bossbar `name` to true
 
-## ` lazy void showEveryone(mcobject $name)`
+## lazy function showEveryone
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Show the bossbar `name` to every player
 
-## ` lazy void showPlayer(mcobject $name, entity $player)`
+## lazy function showPlayer
+### Arguments:
+- $name (`mcobject`)
+- $player (`entity`)
+### Return:
+- void
+
+
 Show the bossbar `name` to `player`
 
-## ` lazy void hide(mcobject $name)`
+## lazy function hide
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Hide the bossbar `name`
 
-## ` lazy void setPlayer(mcobject $name, entity $player)`
+## lazy function setPlayer
+### Arguments:
+- $name (`mcobject`)
+- $player (`entity`)
+### Return:
+- void
+
+
 Set the bossbar `name` player to `player`
 
-## ` lazy void setNotched10(mcobject $name)`
+## lazy function setNotched10
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Set the bossbar `name` style to be notched_10
 
-## ` lazy void setNotched12(mcobject $name)`
+## lazy function setNotched12
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Set the bossbar `name` style to be notched_12
 
-## ` lazy void setNotched20(mcobject $name)`
+## lazy function setNotched20
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Set the bossbar `name` style to be notched_20
 
-## ` lazy void setNotched6(mcobject $name)`
+## lazy function setNotched6
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Set the bossbar `name` style to be notched_6
 
-## ` lazy void setNotched0(mcobject $name)`
+## lazy function setNotched0
+### Arguments:
+- $name (`mcobject`)
+### Return:
+- void
+
+
 Set the bossbar `name` style to be notched_0
 
 # struct Bossbar
 
 
-## ` lazy void __init__(rawjson value)`
+## lazy function __init__
+### Arguments:
+- value (`rawjson`)
+### Return:
+- void
+
+
 Create a bossbar with text `display`
 
-## ` lazy void delete()`
+## lazy function delete
+### Arguments:
+
+### Return:
+- void
+
+
 Delete the bossbar
 
-## ` lazy void setColor(int value)`
+## lazy function setColor
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
 Set the color of bossbar `color`
 
-## ` lazy void setMax(int value)`
+## lazy function setMax
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
 Set the max of bossbar to `value`
 
-## ` lazy void setValue(int $value)`
+## lazy function setValue
+### Arguments:
+- value (`int`)
+### Return:
+- void
+
+
 Set the value of bossbar to `value`
 
-## ` lazy void setValue(int value, int max)`
+## lazy function setValue
+### Arguments:
+- value (`int`)
+- max (`int`)
+### Return:
+- void
+
+
 Set the value & max of bossbar to `value` & `max`
 
-## ` lazy void setName(rawjson value)`
+## lazy function setName
+### Arguments:
+- value (`rawjson`)
+### Return:
+- void
+
+
 Set the text of bossbar `name` to `value`
 
-## ` lazy void setVisible(bool value)`
+## lazy function setVisible
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Set the visibility of bossbar to `value`
 
-## ` lazy void show()`
+## lazy function show
+### Arguments:
+
+### Return:
+- void
+
+
 Set the visibility of bossbar to true
 
-## ` lazy void showEveryone()`
+## lazy function showEveryone
+### Arguments:
+
+### Return:
+- void
+
+
 Show the bossbar to every player
 
-## ` lazy void showPlayer(entity player)`
+## lazy function showPlayer
+### Arguments:
+- player (`entity`)
+### Return:
+- void
+
+
 Show the bossbar `player`
 
-## ` lazy void hide()`
+## lazy function hide
+### Arguments:
+
+### Return:
+- void
+
+
 Hide the bossbar
 
-## ` lazy void setPlayer(entity player)`
+## lazy function setPlayer
+### Arguments:
+- player (`entity`)
+### Return:
+- void
+
+
 Set the bossbar player to `player`
 
-## ` lazy void setNotched10()`
+## lazy function setNotched10
+### Arguments:
+
+### Return:
+- void
+
+
 Set the bossbar style to be notched_10
 
-## ` lazy void setNotched12()`
+## lazy function setNotched12
+### Arguments:
+
+### Return:
+- void
+
+
 Set the bossbar style to be notched_12
 
-## ` lazy void setNotched20()`
+## lazy function setNotched20
+### Arguments:
+
+### Return:
+- void
+
+
 Set the bossbar style to be notched_20
 
-## ` lazy void setNotched6()`
+## lazy function setNotched6
+### Arguments:
+
+### Return:
+- void
+
+
 Set the bossbar style to be notched_6
 
-## ` lazy void setNotched0()`
+## lazy function setNotched0
+### Arguments:
+
+### Return:
+- void
+
+
 Set the bossbar style to be notched_0
 
-## ` @bossbar.shadow void shadow()`
+## @bossbar.shadow function shadow
+### Arguments:
+
+### Return:
+- void
+
+
 Hide all the bossbar
 
-## ` @bossbar.unshadow void unshadow()`
+## @bossbar.unshadow function unshadow
+### Arguments:
+
+### Return:
+- void
+
+
 Unhide all the bossbar
 
 

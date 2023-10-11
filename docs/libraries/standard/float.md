@@ -1,4 +1,11 @@
-## ` lazy float pow(float x, float y)`
+## lazy function pow
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- float
+
+
 
 
 

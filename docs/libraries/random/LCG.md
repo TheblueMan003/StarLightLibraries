@@ -1,23 +1,70 @@
 # struct LCG
 Struct for Linear Congruent GeneratorUse the value from glibc (https://en.wikipedia.org/wiki/Glibc)
 
-## ` lazy void __init__(int init_seed)`
+## lazy function __init__
+### Arguments:
+- init_seed (`int`)
+### Return:
+- void
+
+
 Constructor
 
-## ` int next()`
+## function next
+### Arguments:
+
+### Return:
+- int
+
+
 Return a new random number
 
-## ` int nextInt()`
+## function nextInt
+### Arguments:
+
+### Return:
+- int
+
+
 Return a new random number
 
-## ` int range(int min, int max)`
+## function range
+### Arguments:
+- min (`int`)
+- max (`int`)
+### Return:
+- int
+
+
 Return a new random number between min and max
 
-## ` float nextFloat()`
+## function nextFloat
+### Arguments:
+
+### Return:
+- float
+
+
 Return a new random float number
 
-## ` int seed()`
+## function seed
+### Arguments:
+
+### Return:
+- int
+
+
 Return the current seed
+
+## function nextGaussian
+### Arguments:
+- mean (`float`)
+- std (`float`)
+### Return:
+- float
+
+
+Return a new random number from a Gaussian distribution with mean and standard deviation
 
 
 

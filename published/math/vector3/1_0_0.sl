@@ -129,6 +129,12 @@ struct Vector3{
         this.y /= y
         this.z /= z
     }
+    lazy (float, float, float) __cast__(){
+        return(this.x, this.y, this.z)
+    }
+    lazy (int, int, int) __cast__(){
+        return(this.x, this.y, this.z)
+    }
 }
 Vector3 getPosition(){
     import cmd.tp as tp
