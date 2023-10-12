@@ -7,9 +7,9 @@ import cmd.java.data as data
 Class representing an item display entity.
 """
 public class DisplayItem extends DisplayEntity with minecraft:item_display for mcjava {
-    def lazy __init__(){
+    def lazy this(){
     }
-    def lazy __init__(mcobject item, json data = {}){
+    def lazy this(mcobject item, json data = {}){
         setItem(item, data)
     }
     

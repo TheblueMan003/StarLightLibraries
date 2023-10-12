@@ -7,7 +7,10 @@ import cmd.java.data as data
 Class representing an text display entity.
 """
 public class DisplayText extends DisplayEntity with minecraft:text_display for mcjava {
-    def lazy __init__(){
+    def lazy this(){
+    }
+    def lazy this(rawjson text){
+        setText(text)
     }
 
     """
@@ -36,13 +39,6 @@ public class DisplayText extends DisplayEntity with minecraft:text_display for m
     """
     def lazy setBackgroundColor(int color){
         data.set({"background":color})
-    }
-
-    """
-    Set the background color
-    """
-    def lazy setBackgroundColor(int r, int g, int b, int a = 127){
-        setBackgroundColor((a << 24) + (r << 16) + (g << 8) + b)
     }
 
     """
@@ -85,5 +81,12 @@ public class DisplayText extends DisplayEntity with minecraft:text_display for m
     """
     def lazy setRight(){
         data.set({"alignment":"right"})
+    }
+
+     """
+    Set alignment to right
+    """
+    def lazy setWidth(float value){
+        data.set({"width":value})
     }
 }

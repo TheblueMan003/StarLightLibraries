@@ -2,6 +2,9 @@ package standard.string
 
 import standard.char as char
 
+
+lazy int maxIterations = 1000
+
 """
 Concatenates two strings.
 """
@@ -54,7 +57,7 @@ Return the length of a string.
 """
 int length(string value){
     int c = 0
-    while(value != ""){
+    while(value != "" && c < maxIterations){
         value = value[1..]
         c++
     }
@@ -66,12 +69,14 @@ Check if a string starts with another string.
 """
 bool startsWith(string source, string value){
     bool ret = true
-    while (value != "" && ret){
+    int c = 0
+    while (value != "" && ret && c < maxIterations){
         if (source[0] != value[0]){
             ret = false
         }
         source = source[1..]
         value = value[1..]
+        c++
     }
     return ret
 }
@@ -81,11 +86,13 @@ Check if a string contains another string.
 """
 bool contains(string source, string value){
     bool ret = false
-    while (source != "" && !ret){
+    int c = 0
+    while (source != "" && !ret && c < maxIterations){
         if (startsWith(source, value)){
             ret = true
         }
         source = source[1..]
+        c++
     }
     return ret
 }
@@ -102,9 +109,11 @@ Reverse a string.
 """
 string reverse(string source){
     string ret = ""
-    while (source != ""){
+    int c = 0
+    while (source != "" && c < maxIterations){
         ret = source[0] + ret
         source = source[1..]
+        c++
     }
     return ret
 }
@@ -114,7 +123,8 @@ Replace `value` with `replacement` in `source`.
 """
 string replace(string source, string value, string replacement){
     string ret = ""
-    while (source != ""){
+    int c = 0
+    while (source != "" && c < maxIterations){
         if (startsWith(source, value)){
             ret += replacement
             for (int i = 0; i < length(value); i++){
@@ -125,6 +135,7 @@ string replace(string source, string value, string replacement){
             ret += source[0]
             source = source[1..]
         }
+        c++
     }
     return ret
 }
@@ -150,7 +161,7 @@ Return the index of `value` in `source`.
 int indexOf(string source, string value){
     int ret = -1
     int i = 0
-    while (source != "" && ret == -1){
+    while (source != "" && ret == -1 && i < maxIterations){
         if (startsWith(source, value)){
             ret = i
         }
@@ -172,9 +183,11 @@ Make the string uppercase.
 """
 string toUpper(string source){
     string ret = ""
-    while (source != ""){
+    int c = 0
+    while (source != "" && c < maxIterations){
         ret += char.toUpper(source[0])
         source = source[1..]
+        c++
     }
     return ret
 }
@@ -184,9 +197,45 @@ Make the string lowercase.
 """
 string toLower(string source){
     string ret = ""
-    while (source != ""){
+    int c = 0
+    while (source != "" && c < maxIterations){
         ret += char.toLower(source[0])
         source = source[1..]
+        c++
     }
     return ret
+}
+
+"""
+Trim whitespace from the left side of the string.
+"""
+string trimLeft(string source){
+    string ret = ""
+    bool trim = true
+    int c = 0
+    while (source != "" && c < maxIterations){
+        if (trim && source[0] != " "){
+            trim = false
+        }
+        if (!trim){
+            ret += source[0]
+        }
+        source = source[1..]
+        c++
+    }
+    return ret
+}
+
+"""
+Trim whitespace from the right side of the string.
+"""
+string trimRight(string source){
+    return reverse(trimLeft(reverse(source)))
+}
+
+"""
+Trim whitespace from both sides of the string.
+"""
+string trim(string source){
+    return trimLeft(trimRight(source))
 }
