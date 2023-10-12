@@ -18,11 +18,10 @@ float atan2(float x, float y){
     float ret
     x *= 100000
     y *= 100000
-    at(0 0 0){
-        pt.run(){
-            at(@s)rotate(x, y)
-            ret = RotationY
-        }
+    
+    pt.run(){
+        at(0 0 0)rotate(x, y)
+        ret = RotationY
     }
     return ret
 }
