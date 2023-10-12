@@ -123,10 +123,10 @@ template WASD extends PProcess{
         int x = dir[0]
         int y = dir[1]
 
-        bool a = x < 0
-        bool d = x > 0
-        bool w = y < 0
-        bool s = y > 0
+        bool a = x > 0
+        bool d = x < 0
+        bool w = y > 0
+        bool s = y < 0
 
         if (a){
             if (state_a == KeyState.RELEASED){
