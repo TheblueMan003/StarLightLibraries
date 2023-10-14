@@ -1069,6 +1069,20 @@
                     }
                 ]
             }
+        ],
+        "mc.spectatelock": [
+            {
+                "url": "mc/spectatelock/1_0_0.sl",
+                "filename": "mc/spectatelock.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "maps.theblueman003.leaderboard": [
+            {
+                "url": "maps/theblueman003/leaderboard/1_0_0.sl",
+                "filename": "maps/theblueman003/leaderboard.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
