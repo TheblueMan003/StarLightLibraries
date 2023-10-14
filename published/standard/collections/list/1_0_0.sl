@@ -82,7 +82,7 @@ struct List<V>{
     }
 
     if (Compiler.isEqualitySupported<V>()){
-        def contains(V value){
+        bool contains(V value){
             bool ret = false
             for(int i = 0; i < this.length && !ret; i++){
                 if(get(i) == value){
