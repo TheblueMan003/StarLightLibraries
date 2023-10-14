@@ -80,14 +80,6 @@ Return the ascii value of the character
 int getAscii(char c){
     int ret = 0
     switch(c){
-        "\0" -> ret = 0
-        "\a" -> ret = 7
-        "\b" -> ret = 8
-        "\t" -> ret = 9
-        "\n" -> ret = 10
-        "\v" -> ret = 11
-        "\f" -> ret = 12
-        "\r" -> ret = 13
         " " -> ret = 32
         "!" -> ret = 33
         "\"" -> ret = 34
