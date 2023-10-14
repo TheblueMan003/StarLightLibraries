@@ -3,56 +3,52 @@ package cmd.damage
 """
 Deals damage to an entity
 """
-def lazy deal(int $number){
+def macro deal(int number){
     if (Compiler.isJava()){
-        /damage @s $number
+        /damage @s $(number)
     }
     if (Compiler.isBedrock()){
-        /damage @s $number
+        /damage @s $(number)
     }
 }
 
 """
 Deals damage to an entity
 """
-def lazy deal(entity sel, int $number){
-    lazy var sel2 = Compiler.getEntitySelector(sel)
-    Compiler.insert($sel, sel2){
-        if (Compiler.isJava()){
-            /damage $sel $number
-        }
-        if (Compiler.isBedrock()){
-            /damage $sel $number
-        }
+def macro deal(int number, mcobject type){
+    if (Compiler.isJava()){
+        /damage @s $(number) $type
     }
+    if (Compiler.isBedrock()){
+        /damage @s $(number) $type
+    }
+}
+
+"""
+Deals damage to an entity
+"""
+def lazy deal(entity sel, int number){
+    with(sel)deal(number)
 }
 
 """
 Deals damage to an entity with a specific type
 """
-def lazy deal(entity sel, int $number, mcobject $type){
-    lazy var sel2 = Compiler.getEntitySelector(sel)
-    Compiler.insert($sel, sel2){
-        if (Compiler.isJava()){
-            /damage $sel $number $type
-        }
-        if (Compiler.isBedrock()){
-            /damage $sel $number $type
-        }
-    }
+def lazy deal(entity sel, int number, mcobject type){
+    with(sel)deal(number, type)
 }
 
 """
 Deals damage to an entity with a specific position source
 """
-def lazy deal(entity sel, int $number, mcobject $type, mcposition $source){
+def macro deal(entity sel, int number, mcobject type, mcposition source){
     lazy var sel2 = Compiler.getEntitySelector(sel)
     Compiler.insert($sel, sel2){
         if (Compiler.isJava()){
-            /damage $sel $number $type $source
+            /damage $sel $(number) $(type) $(source)
         }
         if (Compiler.isBedrock()){
-            /damage $sel $number $type
+            /damage $sel $(number) $(type)
         }
     }
 }
@@ -60,15 +56,15 @@ def lazy deal(entity sel, int $number, mcobject $type, mcposition $source){
 """
 Deals damage to an entity with a specific entity source
 """
-def lazy deal(entity sel, int $number, mcobject $type, entity source){
+def macro deal(entity sel, int number, mcobject type, entity source){
     lazy var sel2 = Compiler.getEntitySelector(sel)
     lazy var source2 = Compiler.getEntitySelector(source)
     Compiler.insert(($sel, $source), (sel2, source2)){
         if (Compiler.isJava()){
-            /damage $sel $number $type $source $bypass
+            /damage $sel $(number) $(type) $source $(bypass)
         }
         if (Compiler.isBedrock()){
-            /damage $sel $number $type entity $bypass
+            /damage $sel $(number) $(type) entity $(bypass)
         }
     }
 }
@@ -76,15 +72,15 @@ def lazy deal(entity sel, int $number, mcobject $type, entity source){
 """
 Deals damage to an entity with a specific entity source
 """
-def lazy deal(entity sel, int $number, entity source){
+def macro deal(entity sel, int number, entity source){
     lazy var sel2 = Compiler.getEntitySelector(sel)
     lazy var source2 = Compiler.getEntitySelector(source)
     Compiler.insert(($sel, $source), (sel2, source2)){
         if (Compiler.isJava()){
-            /damage $sel $number minecraft:mob_attack $source
+            /damage $sel $(number) minecraft:mob_attack $source
         }
         if (Compiler.isBedrock()){
-            /damage $sel $number entity-attack entity $source
+            /damage $sel $(number) entity-attack entity $source
         }
     }
 }
