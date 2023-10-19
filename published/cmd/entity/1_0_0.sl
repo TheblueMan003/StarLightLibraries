@@ -436,3 +436,24 @@ if (Compiler.isBedrock()){
         }
     }
 }
+
+"""
+Teleport the entity self to the entity other
+"""
+def lazy teleport(entity self, entity other){
+    as(self)at(other)./tp @s ~ ~ ~ ~ ~
+}
+
+"""
+Teleport the entity self to the position pos
+"""
+def lazy teleport(entity self, mcposition pos){
+    as(self)at(pos)./tp @s ~ ~ ~ ~ ~
+}
+
+"""
+Teleport the entity self to the position pos with pitch and yaw
+"""
+def macro teleport(entity self, mcposition pos, float yaw, float pitch){
+    as(self)at(pos)./tp @s ~ ~ ~ $(yaw) $(pitch)
+}

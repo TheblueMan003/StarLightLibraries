@@ -74,6 +74,24 @@ extension entity{
     def cmd.entity.despawn(entity sel) from cmd.entity as despawn
     def cmd.entity.swap(entity sel, entity other) from cmd.entity as swap
     def cmd.entity.count(entity sel) from cmd.entity as count
+    def game.score.sum(entity sel, int field) from game.score as sum
+    def game.score.max(entity sel, int field) from game.score as max
+    def game.score.min(entity sel, int field) from game.score as min
+    def game.score.avg(entity sel, int field) from game.score as avg
+    def entity game.score.winner(entity sel, int field) from game.score as winner
+    def entity game.score.loser(entity sel, int field) from game.score as loser
+    def game.score.withWinner(entity sel, int field, void=>void action) from game.score as withWinner
+    def game.score.withLoser(entity sel, int field, void=>void action) from game.score as withLoser
+    def game.score.forEachOrderedAscending(entity sel, int field, void=>void action) from game.score as forEachOrderedAscending
+    def game.score.forEachOrderedDescending(entity sel, int field, void=>void action) from game.score as forEachOrderedDescending
+    def game.score.forEachOrdered(entity sel, int field, bool ascending, void=>void action) from game.score as forEachOrdered
+    def game.score.onNewHighScore(entity sel, int field, int previous, void=>void action) from game.score as onNewHighScore
+    def game.score.onNewLowScore(entity sel, int field, int previous, void=>void action) from game.score as onNewLowScore
+    def cmd.entity.teleport(entity sel, entity loc) from cmd.entity as teleport
+
+    def cmd.tag.add(entity sel, string tag) from cmd.tag as tag.add
+    def cmd.tag.remove(entity sel, string tag) from cmd.tag as tag.remove
+    def cmd.tag.unique(entity sel, string tag) from cmd.tag as tag.unique
 
     def cmd.entity.ride(entity sel, entity other) from cmd.entity as ride
     def cmd.entity.exists(entity sel, bool test) from cmd.entity as exists

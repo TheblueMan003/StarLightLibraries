@@ -5,7 +5,7 @@ import standard.int as int
 """
 Sum up the value of the scoreboard of the entity in e
 """
-lazy int sum(entity selector, string score){
+lazy int sum(entity selector, int score){
     int c = 0
     with(selector){
         c += score
@@ -16,7 +16,7 @@ lazy int sum(entity selector, string score){
 """
 Get the min value of the scoreboard of the entity in e
 """
-lazy int min(entity selector, string score){
+lazy int min(entity selector, int score){
     int c = int.maxValue
     with(selector){
         if(score < c){
@@ -29,7 +29,7 @@ lazy int min(entity selector, string score){
 """
 Get the max value of the scoreboard of the entity in e
 """
-lazy int max(entity selector, string score){
+lazy int max(entity selector, int score){
     int c = int.minValue
     with(selector){
         if(score > c){
@@ -42,7 +42,7 @@ lazy int max(entity selector, string score){
 """
 Get the average value of the scoreboard of the entity in e
 """
-lazy int avg(entity selector, string score){
+lazy int avg(entity selector, int score){
     int c = 0
     int c2 = 0
     with(selector){
