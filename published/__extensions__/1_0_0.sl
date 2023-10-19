@@ -94,4 +94,5 @@ extension string{
     def standard.string.trimLeft(string s) from standard.string as trimLeft
     def standard.string.trimRight(string s) from standard.string as trimRight
     def standard.string.trim(string s) from standard.string as trim
+    def standard.string.reverse(string s) from standard.string as reverse
 }
