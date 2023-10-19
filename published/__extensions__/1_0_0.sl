@@ -36,7 +36,6 @@ extension entity{
     def cmd.effect.darkness(entity sel) from cmd.effect as effect.darkness
 
     def cmd.effect.clearabsorption(entity sel) from cmd.effect as effect.clearabsorption
-    def cmd.effect.clear(entity sel) from cmd.effect as effect.clear
     def cmd.effect.clearunluck(entity sel) from cmd.effect as effect.clearunluck
     def cmd.effect.clearbad_omen(entity sel) from cmd.effect as effect.clearbad_omen
     def cmd.effect.clearblindness(entity sel) from cmd.effect as effect.clearblindness
@@ -75,8 +74,6 @@ extension entity{
     def cmd.entity.despawn(entity sel) from cmd.entity as despawn
     def cmd.entity.swap(entity sel, entity other) from cmd.entity as swap
     def cmd.entity.count(entity sel) from cmd.entity as count
-    def cmd.entity.count(entity sel, bool p) from cmd.entity as count
-    def cmd.entity.count(entity sel, void=>bool p) from cmd.entity as count
 
     def cmd.entity.ride(entity sel, entity other) from cmd.entity as ride
     def cmd.entity.exists(entity sel, bool test) from cmd.entity as exists
