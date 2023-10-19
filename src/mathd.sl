@@ -60,3 +60,17 @@ Compute tan of x, in degree.
 float tan(float x){
     return sin(x)/cos(x)
 }
+
+"""
+Compute the length of a vector. 
+"""
+float distance(float x, float y, float z = 0){
+    [nbt="transformation.scale[0]"] scoreboard json scale
+    float ret
+    /summon item_display 0 0 0 {Tags:["mathd.distance"], transformation:[$(x),0f,0f,0f,$(y),0f,0f,0f,$(z),0f,0f,0f,0f,0f,0f,1f]}
+    with(@e[tag=mathd.distance]){
+        ret = scale
+        /kill @s
+    }
+    return ret
+}

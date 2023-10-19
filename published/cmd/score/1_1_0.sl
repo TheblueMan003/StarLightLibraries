@@ -85,6 +85,6 @@ lazy void hideBelowname(){
 """
 Hide the scoreboard on the sidebar of team of color `color`
 """
-lazy void hideTeamSidebar(string $color){
-    /scoreboard objectives setdisplay sidebar.team.$color
+macro void hideTeamSidebar(string color){
+    /scoreboard objectives setdisplay sidebar.team.$(color)
 }

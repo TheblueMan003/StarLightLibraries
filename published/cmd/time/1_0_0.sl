@@ -3,39 +3,39 @@ package cmd.time
 """
 Sets the time to the given amount of ticks.
 """
-def lazy set(int $time){
-    /time set $time
+def macro set(int time){
+    /time set $(time)
 }
 """
 Sets the time to the given amount of seconds.
 """
-def lazy setSeconds(float $time){
-    /time set $times
+def macro setSeconds(float time){
+    /time set $(time)s
 }
 """
 Sets the time to the given amount of day.
 """
-def lazy setDays(float $time){
-    /time set $timed
+def macro setDays(float time){
+    /time set $(time)d
 }
 
 """
 Adds the given amount of ticks to the current time.
 """
-def lazy add(int $time){
-    /time add $time
+def macro add(int time){
+    /time add $(time)
 }
 """
 Adds the given amount of seconds to the current time.
 """
-def lazy addSeconds(float $time){
-    /time add $times
+def macro addSeconds(float time){
+    /time add $(time)s
 }
 """
 Adds the given amount of days to the current time.
 """
-def lazy addDays(float $time){
-    /time add $timed
+def macro addDays(float time){
+    /time add $(time)d
 }
 
 if (Compiler.isJava()){

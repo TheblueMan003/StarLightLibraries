@@ -424,6 +424,11 @@
                 "url": "mc/inventory/1_0_0.sl",
                 "filename": "mc/inventory.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "mc/inventory/1_0_1.sl",
+                "filename": "mc/inventory.sl",
+                "version": "1.0.1"
             }
         ],
         "mc.player": [
@@ -1081,6 +1086,13 @@
             {
                 "url": "maps/theblueman003/leaderboard/1_0_0.sl",
                 "filename": "maps/theblueman003/leaderboard.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "__extensions__": [
+            {
+                "url": "__extensions__/1_0_0.sl",
+                "filename": "__extensions__.sl",
                 "version": "1.0.0"
             }
         ]

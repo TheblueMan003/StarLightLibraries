@@ -8,7 +8,7 @@ import utils.PProcess
 [nbt="Rotation[0]"] scoreboard json RotationY
 
 def macro rotate(float x, float y){
-    /execute facing $(x) 0 $(y) run tp @s ~ ~ ~ ~ 0
+    /execute facing $(x) 0.0 $(y) run tp @s ~ ~ ~ ~ 0
 }
 
 """
@@ -20,7 +20,7 @@ float atan2(float x, float y){
     y *= 100000
     
     pt.run(){
-        at(0 0 0)rotate(x, y)
+        at(0.0 0.0 0.0)rotate(x, y)
         ret = RotationY
     }
     return ret
