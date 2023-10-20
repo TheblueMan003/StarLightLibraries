@@ -99,18 +99,18 @@ extension entity{
 }
 
 extension string{
-    def standard.string.length(string s) from standard.string as length
-    def standard.string.substring(string s, int start, int end) from standard.string as substring
-    def standard.string.contains(string s, string other) from standard.string as contains
-    def standard.string.startsWith(string s, string other) from standard.string as startsWith
-    def standard.string.endsWith(string s, string other) from standard.string as endsWith
-    def standard.string.indexOf(string s, string other) from standard.string as indexOf
-    def standard.string.lastIndexOf(string s, string other) from standard.string as lastIndexOf
-    def standard.string.replace(string s, string old, string newV) from standard.string as replace
-    def standard.string.toLower(string s) from standard.string as toLower
-    def standard.string.toUpper(string s) from standard.string as toUpper
-    def standard.string.trimLeft(string s) from standard.string as trimLeft
-    def standard.string.trimRight(string s) from standard.string as trimRight
-    def standard.string.trim(string s) from standard.string as trim
-    def standard.string.reverse(string s) from standard.string as reverse
+    def int standard.string.length(string s) from standard.string as length
+    def string standard.string.substring(string s, int start, int end) from standard.string as substring
+    def bool standard.string.contains(string s, string other) from standard.string as contains
+    def bool standard.string.startsWith(string s, string other) from standard.string as startsWith
+    def bool standard.string.endsWith(string s, string other) from standard.string as endsWith
+    def int standard.string.indexOf(string s, string other) from standard.string as indexOf
+    def int standard.string.lastIndexOf(string s, string other) from standard.string as lastIndexOf
+    def string standard.string.replace(string s, string old, string newV) from standard.string as replace
+    def string standard.string.toLower(string s) from standard.string as toLower
+    def string standard.string.toUpper(string s) from standard.string as toUpper
+    def string standard.string.trimLeft(string s) from standard.string as trimLeft
+    def string standard.string.trimRight(string s) from standard.string as trimRight
+    def string standard.string.trim(string s) from standard.string as trim
+    def string standard.string.reverse(string s) from standard.string as reverse
 }
