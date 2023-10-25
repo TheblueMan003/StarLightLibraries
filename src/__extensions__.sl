@@ -1,5 +1,7 @@
 package _
 
+import standard.collections.List
+
 extension entity{
     def cmd.effect.absorption(entity sel) from cmd.effect as effect.absorption
     def cmd.effect.unluck(entity sel) from cmd.effect as effect.unluck
@@ -113,4 +115,5 @@ extension string{
     def string standard.string.trimRight(string s) from standard.string as trimRight
     def string standard.string.trim(string s) from standard.string as trim
     def string standard.string.reverse(string s) from standard.string as reverse
+    def List<string> standard.string.split(string s, string separator) from standard.string as split
 }

@@ -1,6 +1,7 @@
 package standard.string
 
 import standard.char as char
+import standard.collections.List
 
 
 lazy int maxIterations = 1000
@@ -34,8 +35,8 @@ string multiply(string value, int count){
 Check if two strings are equal.
 """
 bool equals(string source, string value){
-    macro bool test(json value){
-        if (source == "$(value)"){
+    macro bool test(json v){
+        if (source == "$(v)"){
             return true
         }
         else{
@@ -156,6 +157,21 @@ string substring(string source, int start, int length){
 }
 
 """
+Return a substring of `source` from `start`
+"""
+string substring(string source, int start){
+    string ret = ""
+    for (int i = 0; i < start; i++){
+        source = source[1..]
+    }
+    while(source != ""){
+        ret += source[0]
+        source = source[1..]
+    }
+    return ret
+}
+
+"""
 Return the index of `value` in `source`.
 """
 int indexOf(string source, string value){
@@ -238,4 +254,31 @@ Trim whitespace from both sides of the string.
 """
 string trim(string source){
     return trimLeft(trimRight(source))
+}
+
+
+"""
+Split a string into an array of strings.
+"""
+List<string> split(string source, string value){
+    List<string> ret = new List<string>()
+    string current = ""
+    int c = 0
+    int l = length(value)
+    while (source != "" && c < maxIterations){
+        if (startsWith(source, value)){
+            ret.add(current)
+            current = ""
+            for (int i = 0; i < l; i++){
+                source = source[1..]
+            }
+        }
+        else{
+            current += source[0]
+            source = source[1..]
+        }
+        c++
+    }
+    ret.add(current)
+    return ret
 }

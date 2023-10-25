@@ -4,7 +4,7 @@ struct List<V>{
     json data
     int length
 
-    def __init__(){
+    def this(){
         this.data = []
         this.length = 0
     }
@@ -32,6 +32,7 @@ struct List<V>{
         this.data >:= value
         this.length += 1
     }
+    
     if (Compiler.isEqualitySupported<V>()){
         def remove(V value){
             json tmp = []
