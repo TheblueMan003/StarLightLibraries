@@ -1,55 +1,174 @@
-## ` lazy void tp(entity $selector, mcposition $pos)`
+## lazy function tp
+### Arguments:
+- $selector (`entity`)
+- $pos (`mcposition`)
+### Return:
+- void
+
+
 Teleport `selector` to `pos`
 
-## ` lazy void tp(mcposition $pos)`
+## lazy function tp
+### Arguments:
+- $pos (`mcposition`)
+### Return:
+- void
+
+
 Teleport the current entity to `pos`
 
-## ` void tp(entity selector, float x, float y, float z)`
+## function tp
+### Arguments:
+- selector (`entity`)
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Teleport the `selector` to `x`, `y`, `z`
 
-## ` void relativeX(float x)`
+## function relativeX
+### Arguments:
+- x (`float`)
+### Return:
+- void
+
+
 Teleport the currently `x` blocks relativly to the current position on axis x
 
-## ` void absoluteX(float x)`
+## function absoluteX
+### Arguments:
+- x (`float`)
+### Return:
+- void
+
+
 Teleport the currently `x` blocks absolute position on axis x
 
-## ` void relativeY(float y)`
+## function relativeY
+### Arguments:
+- y (`float`)
+### Return:
+- void
+
+
 Teleport the currently `y` blocks relativly to the current position on axis y
 
-## ` void absoluteY(float y)`
+## function absoluteY
+### Arguments:
+- y (`float`)
+### Return:
+- void
+
+
 Teleport the currently `y` blocks absolute position on axis y
 
-## ` void relativeZ(float z)`
+## function relativeZ
+### Arguments:
+- z (`float`)
+### Return:
+- void
+
+
 Teleport the currently `z` blocks relativly to the current position on axis z
 
-## ` void absoluteZ(float z)`
+## function absoluteZ
+### Arguments:
+- z (`float`)
+### Return:
+- void
+
+
 Teleport the currently `z` blocks absolute position on axis z
 
-## ` void relative(float x, float y, float z)`
+## function relative
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Teleport the current entity relativly from `x`, `y`, `z`
 
-## ` void absolute(float x, float y, float z)`
+## function absolute
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Teleport the current entity at `x`, `y`, `z`
 
-## ` void rotateRelativeX(float x)`
+## function rotateRelativeX
+### Arguments:
+- x (`float`)
+### Return:
+- void
+
+
 Rotate the entity of `x` degree relativly to the current rotation on the x axis
 
-## ` void rotateRelativeY(float y)`
+## function rotateRelativeY
+### Arguments:
+- y (`float`)
+### Return:
+- void
+
+
 Rotate the entity of `y` degree relativly to the current rotation on the y axis
 
-## ` void rotateRelative(float x, float y, float z)`
+## function rotateRelative
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
 Rotate the current entity of `x`, `y` relativly to the current rotation
 
-## ` void rotateAbsolute(float x, float y)`
+## function rotateAbsolute
+### Arguments:
+- x (`float`)
+- y (`float`)
+### Return:
+- void
+
+
 Rotate the current entity of `x`, `y`
 
-## ` [noReturnCheck=true] float getX()`
+## [noReturnCheck=true] function getX
+### Arguments:
+
+### Return:
+- float
+
+
 Get the x position of the current entity
 
-## ` [noReturnCheck=true] float getY()`
+## [noReturnCheck=true] function getY
+### Arguments:
+
+### Return:
+- float
+
+
 Get the y position of the current entity
 
-## ` [noReturnCheck=true] float getZ()`
+## [noReturnCheck=true] function getZ
+### Arguments:
+
+### Return:
+- float
+
+
 Get the z position of the current entity
 
 

@@ -1,77 +1,297 @@
-# template Block
+# template Block<>
 
 
-## ` lazy void setName(string name)`
+## lazy function setName
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
 Set the name of the block
 
-## ` lazy void setNamespace(string namespace)`
+## lazy function setNamespace
+### Arguments:
+- namespace (`string`)
+### Return:
+- void
+
+
 Set the namespace of the block
 
-## ` lazy void setDisplayName(string name)`
+## lazy function setDisplayName
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
 Set Display Name of the block
 
-## ` lazy void setCategory(string value)`
+## lazy function setCategory
+### Arguments:
+- value (`string`)
+### Return:
+- void
+
+
 Set the register to creative menu
 
-## ` lazy void setCategory(string value, string group)`
+## lazy function setCategory
+### Arguments:
+- value (`string`)
+- group (`string`)
+### Return:
+- void
+
+
 Set the register to creative menu
 
-## ` lazy void addComponent(string component)`
+## lazy function addComponent
+### Arguments:
+- component (`string`)
+### Return:
+- void
+
+
 Add a component to the block
 
-## ` lazy void setUnwalkable(bool value)`
+## lazy function setUnwalkable
+### Arguments:
+- value (`bool`)
+### Return:
+- void
+
+
 Set the block to be unwalkable
 
-## ` lazy void setDestroyTime(float time)`
+## lazy function setDestroyTime
+### Arguments:
+- time (`float`)
+### Return:
+- void
+
+
 Set the block destroy time
 
-## ` lazy void setFriction(float friction)`
+## lazy function setFriction
+### Arguments:
+- friction (`float`)
+### Return:
+- void
+
+
 Set the block friction
 
-## ` lazy void setMapColor(string color)`
+## lazy function setMapColor
+### Arguments:
+- color (`string`)
+### Return:
+- void
+
+
 Set the block map color
 
-## ` lazy void setMapColor(int r, int g, int b)`
+## lazy function setMapColor
+### Arguments:
+- r (`int`)
+- g (`int`)
+- b (`int`)
+### Return:
+- void
+
+
 Set the block map color
 
-## ` lazy void setFlammable(int flame_odds, int burn_odds)`
+## lazy function setFlammable
+### Arguments:
+- flame_odds (`int`)
+- burn_odds (`int`)
+### Return:
+- void
+
+
 Set the block flammability
 
-## ` lazy void setBlockLightEmission(float light)`
+## lazy function setBlockLightEmission
+### Arguments:
+- light (`float`)
+### Return:
+- void
+
+
 Set the block light emission
 
-## ` lazy void setBlockLightAbsorption(int light)`
+## lazy function setBlockLightAbsorption
+### Arguments:
+- light (`int`)
+### Return:
+- void
+
+
 Set the block light absorption
 
-## ` lazy void setCollisionBox(float x, float y, float z, float size_x, float size_y, float size_z)`
+## lazy function setCollisionBox
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+- size_x (`float`)
+- size_y (`float`)
+- size_z (`float`)
+### Return:
+- void
+
+
 Set the block entity collision
 
-## ` lazy void setSelectionBox(float x, float y, float z, float size_x, float size_y, float size_z)`
+## lazy function setSelectionBox
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+- size_x (`float`)
+- size_y (`float`)
+- size_z (`float`)
+### Return:
+- void
+
+
 Set the block pick collision
 
-## ` lazy void setGeometry(string geometry)`
+## lazy function setGeometry
+### Arguments:
+- geometry (`string`)
+### Return:
+- void
+
+
 Set the block geometry
 
-## ` lazy void setBlastResistance(int resistance)`
+## lazy function setTransparent
+### Arguments:
+
+### Return:
+- void
+
+
+Set the render Method to alpha
+
+## lazy function setBlend
+### Arguments:
+
+### Return:
+- void
+
+
+Set the render Method to alpha
+
+## lazy function setOpaque
+### Arguments:
+
+### Return:
+- void
+
+
+Set the render Method to be opaque
+
+## lazy function setBlastResistance
+### Arguments:
+- resistance (`int`)
+### Return:
+- void
+
+
 Set blast resistance
 
-## ` lazy void addProperty(string name, json values)`
+## lazy function addProperty
+### Arguments:
+- name (`string`)
+- values (`json`)
+### Return:
+- void
+
+
 Add a property to the block
 
-## ` lazy void addPermutation(string condition, void=>void fct)`
+## lazy function addPermutation
+### Arguments:
+- condition (`string`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Add a permutation to the block
 
-## ` lazy void addPermutation(string property, string value, void=>void fct)`
+## lazy function addPermutation
+### Arguments:
+- property (`string`)
+- value (`string`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
 Add a permutation to the block for a specific property
 
-## ` lazy void setTexture(string texture)`
+## lazy function setTexture
+### Arguments:
+- texture (`string`)
+### Return:
+- void
+
+
 Set texture
 
-## ` lazy void setTexture(string up, string side, string down)`
+## lazy function setTexture
+### Arguments:
+- up (`string`)
+- side (`string`)
+- down (`string`)
+### Return:
+- void
+
+
 Set texture
 
-## ` lazy void setSound(string sound)`
+## lazy function setTexture
+### Arguments:
+- name (`string`)
+- data (`json`)
+### Return:
+- void
+
+
+Set texture
+
+## lazy function addRandomTexture
+### Arguments:
+- texture (`string`)
+- weight (`int`)
+### Return:
+- void
+
+
+Set texture
+
+## lazy function setSound
+### Arguments:
+- sound (`string`)
+### Return:
+- void
+
+
 Set sound
+
+## lazy function setRotatable
+### Arguments:
+
+### Return:
+- void
+
+
+
 
 
 

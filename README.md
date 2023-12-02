@@ -16,8 +16,8 @@ To update your libraries update the files in the src folder and run the submit.p
 - git pull
 
 - python submit.py
-- > name of library
-- > version of library
+- \>\> name of library
+- \>\> version of library
 
 - git add *
 - git commit -am "message"

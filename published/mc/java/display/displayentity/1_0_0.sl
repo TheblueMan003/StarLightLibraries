@@ -123,6 +123,13 @@ class DisplayEntity extends Entity{
     }
 
     """
+    Set the background color
+    """
+    def lazy setGlowColor(int r, int g, int b, int a = 127){
+        setGlowColor((a << 24) + (r << 16) + (g << 8) + b)
+    }
+
+    """
     Interpolate Interpolation
     """
     def lazy interpolate(int duration){
@@ -164,5 +171,12 @@ class DisplayEntity extends Entity{
     """
     def lazy interpolateTranslation(int duration, float x, float y, float z){
         data.set({"start_interpolation":0, "interpolation_duration":duration,"transformation":{"translation":[x f, y f, z f]}})
+    }
+
+    """
+    Set Teleport Duration
+    """
+    def lazy setTeleportDuration(int duration){
+        data.set({"teleport_duration":duration})
     }
 }

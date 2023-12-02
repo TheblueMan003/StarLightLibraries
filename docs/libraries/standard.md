@@ -1,19 +1,56 @@
-## ` lazy void print(rawjson $text)`
+## lazy function print
+### Arguments:
+- $text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void tell(rawjson $text)`
+Show text to all players
+
+## lazy function tell
+### Arguments:
+- $text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void tell(entity $selector, rawjson $text)`
+Show text to the executing player
+
+## lazy function tell
+### Arguments:
+- $selector (`entity`)
+- $text (`rawjson`)
+### Return:
+- void
 
 
-## ` lazy void debug(rawjson text)`
+Show text to specific player(s)
+
+## lazy function debug
+### Arguments:
+- text (`rawjson`)
+### Return:
+- void
 
 
-## ` (int,int,int) version()`
+Prints debug information if the compiler is in debug mode
+
+## function version
+### Arguments:
+
+### Return:
+- (int,int,int)
 
 
-## `public void printVersion()`
+Returns the version of the project as a tuple of three integers: major, minor, and patch
 
+## public function printVersion
+### Arguments:
+
+### Return:
+- void
+
+
+Prints the version information of the project
 
 

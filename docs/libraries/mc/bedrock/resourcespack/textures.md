@@ -1,10 +1,38 @@
-## ` [Compiler.order=999999] void make()`
+## [compile.order=999999] function make
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void addItem(string path)`
 
 
-## ` lazy void addBlock(string path)`
+## lazy function addItem
+### Arguments:
+- path (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function addBlock
+### Arguments:
+- path (`string`)
+### Return:
+- void
+
+
+
+
+## lazy function addBlockRandom
+### Arguments:
+- name (`string`)
+- textures (`json`)
+### Return:
+- void
+
+
 
 
 

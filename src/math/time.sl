@@ -173,4 +173,8 @@ struct Time{
         int ms = tick*5
         return(h,":",m,":",s,".",ms)
     }
+
+    lazy int __cast__(){
+        return tick
+    }
 }

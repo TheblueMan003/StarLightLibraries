@@ -309,25 +309,28 @@ def lazy angerAngaist(entity e1, entity e2){
 """
 Count the number of entity in e
 """
-[noReturnCheck=true] lazy int count(entity e){
-    _ret = 0
-    with(e)_ret++
+lazy int count(entity e){
+    int ret = 0
+    with(e)ret++
+    return ret
 }
 
 """
 Count the number of entity in e that match the predicate
 """
-[noReturnCheck=true] lazy int count(entity e, bool p){
-    _ret = 0
-    with(e,true,p)_ret++
+lazy int count(entity e, bool p){
+    int ret = 0
+    with(e, true, p)ret++
+    return ret
 }
 
 """
 Count the number of entity in e that match the predicate
 """
-[noReturnCheck=true] lazy int count(entity e, void=>bool p){
-    _ret = 0
-    with(e,true,p())_ret++
+lazy int count(entity e, void=>bool p){
+    int ret = 0
+    with(e,true,p())ret++
+    return ret
 }
 
 """
@@ -432,4 +435,25 @@ if (Compiler.isBedrock()){
             /event entity @s $event
         }
     }
+}
+
+"""
+Teleport the entity self to the entity other
+"""
+def lazy teleport(entity self, entity other){
+    as(self)at(other)./tp @s ~ ~ ~ ~ ~
+}
+
+"""
+Teleport the entity self to the position pos
+"""
+def lazy teleport(entity self, mcposition pos){
+    as(self)at(pos)./tp @s ~ ~ ~ ~ ~
+}
+
+"""
+Teleport the entity self to the position pos with pitch and yaw
+"""
+def macro teleport(entity self, mcposition pos, float yaw, float pitch){
+    as(self)at(pos)./tp @s ~ ~ ~ $(yaw) $(pitch)
 }

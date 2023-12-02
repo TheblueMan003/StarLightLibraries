@@ -5,6 +5,7 @@ import mc.java.display.DisplayItem
 import mc.Click
 from mc.bedrock.Entity import Entity as BedrockEntity
 from mc.Entity import Entity as EntityObject
+import mc.java.display.DisplayText
 
 import cmd.sound as sound
 import cmd.entity as entity
@@ -546,7 +547,7 @@ def lazy int makeMapsButton(string name){
     }
 }
 [compile.order=-1]
-private void default(){
+private void makeDefault(){
     addScreenModels("background")
     addScreenModels("title")
     addScreenModels("info")
@@ -585,6 +586,7 @@ def @screen.info(){
     background.run(){
         printVersion()
         background.setScreen(3)
+        @screen.info.button()
     }
 }
 def @screen.clear(){
@@ -593,6 +595,23 @@ def @screen.clear(){
     }
     with(@e[tag=screen.page.button]){
         entity.despawn()
+    }
+}
+class InfoDisplay extends DisplayText{
+    def lazy __init__(rawjson text){
+        setText(text)
+        setBackgroundColor(0)
+        setLeft()
+        setScale(2,2,2)
+        setLineWidth(150)
+    }
+}
+def lazy setInfo(rawjson text){
+    def @screen.clear(){
+        with(InfoDisplay)./kill
+    }
+    def @screen.info.button(){
+        at(@s)at(~ ~ ~)new InfoDisplay(text)
     }
 }
 """
@@ -807,5 +826,135 @@ public @screen.start void stop(){
 def lazy onStart(void=>void fct){
     def @screen.start(){
         with(user, true)fct()
+    }
+}
+
+class EnumButton extends DisplayText{
+    def lazy __init__(rawjson text){
+        setText(text)
+        setBackgroundColor(0)
+        setLeft()
+        setScale(2,2,2)
+        setLineWidth(150)
+        buttons += @s
+        /tag @s add screen.page.button
+    }
+}
+lazy int setting_x = -3
+lazy int setting_y = 2.5
+def lazy addSettingEnum(json choise, int=>void callBack){
+    EnumButton button
+    lazy int length = Compiler.length(choise)
+    int index = 0
+    def @screen.settings(){
+        with(background,true)at({~setting_x,~setting_y,~0.1}){
+            button = new EnumButton(choise[0])
+            with(button){
+                onSelect = ()=>{
+                    switch(index for text in choise){
+                        text.index -> button.setText((text, "gold", "bold"))
+                    }
+                }
+                onUnselect = ()=>{
+                    switch(index for text in choise){
+                        text.index -> button.setText(text)
+                    }
+                }
+                onClickRelease = ()=>{
+                    index++
+                    if (index >= length){
+                        index = 0
+                    }
+                    callBack(index)
+                }
+                onClick = ()=>{
+                }
+            }
+        }
+        if (setting_x == 3){
+            setting_x = -3
+            setting_y -= 1
+        }
+        else{
+            setting_x += 3
+        }
+    }
+}
+def lazy addSettingInt(string text, int min, int max, int=>void callBack){
+    EnumButton button
+    int value = min
+    def @screen.settings(){
+        with(background,true)at({~setting_x,~setting_y,~0.1}){
+            button = new EnumButton((text, "gold", "bold"))
+            with(button){
+                onSelect = ()=>{
+                    button.setText((text, "gold", "bold"), ": ", (value, "green", "bold"))
+                }
+                onUnselect = ()=>{
+                    button.setText((text, "gold", "bold"), ": ", (value, "green"))
+                }
+                onClickRelease = ()=>{
+                    value++
+                    if (value > max){
+                        value = min
+                    }
+                    callBack(value)
+                }
+                onClick = ()=>{
+                }
+            }
+        }
+        if (setting_x == 3){
+            setting_x = -3
+            setting_y -= 1
+        }
+        else{
+            setting_x += 3
+        }
+    }
+}
+def lazy addSettingBoolean(string text, bool=>void callBack){
+    EnumButton button
+    bool value = false
+    def @screen.settings(){
+        with(background,true)at({~setting_x,~setting_y,~0.1}){
+            button = new EnumButton(choise[0])
+            with(button){
+                onSelect = ()=>{
+                    if (value){
+                        button.setText((text, "gold", "bold"), (" ✅", "green", "bold"))
+                    }
+                    else{
+                        button.setText((text, "gold", "bold"), (" ❎", "red", "bold"))
+                    }
+                }
+                onUnselect = ()=>{
+                    if (value){
+                        button.setText(text, (" ✅", "green"))
+                    }
+                    else{
+                        button.setText(text, (" ❎", "red"))
+                    }
+                }
+                onClickRelease = ()=>{
+                    if (value){
+                        value = false
+                    }
+                    else{
+                        value = true
+                    }
+                    callBack(value)
+                }
+                onClick = ()=>{
+                }
+            }
+        }
+        if (setting_x == 3){
+            setting_x = -3
+            setting_y -= 1
+        }
+        else{
+            setting_x += 3
+        }
     }
 }

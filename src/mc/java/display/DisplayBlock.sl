@@ -7,8 +7,11 @@ import cmd.java.data as data
 Class representing an block display entity.
 """
 public class DisplayBlock extends DisplayEntity with minecraft:block_display for mcjava {
-    def lazy __init__(mcobject block){
+    def lazy this(mcobject block){
         setBlock(block)
+    }
+    def lazy this(mcobject block, json properties){
+        setBlockProperties(block, properties)
     }
 
     """

@@ -119,4 +119,10 @@ struct Vector2{
         output += this.y * other.y
         return(output)
     }
+    lazy (float, float) __cast__(){
+        return(this.x, this.y)
+    }
+    lazy (int, int) __cast__(){
+        return(this.x, this.y)
+    }
 }

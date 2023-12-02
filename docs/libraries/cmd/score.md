@@ -1,13 +1,78 @@
-## ` lazy int sum(entity e, string score)`
-Sum up the value of the scoreboard of the entity in e
+## lazy function showList
+### Arguments:
+- score (`int`)
+- display (`rawjson`)
+### Return:
+- void
 
-## ` lazy int min(entity e, string score)`
-Get the min value of the scoreboard of the entity in e
 
-## ` lazy int max(entity e, string score)`
-Get the max value of the scoreboard of the entity in e
+Show the scoreboard on the list
 
-## ` lazy int avg(entity e, string score)`
-Get the average value of the scoreboard of the entity in e
+## lazy function showSidebar
+### Arguments:
+- score (`int`)
+- display (`rawjson`)
+### Return:
+- void
+
+
+Show the scoreboard on the sidebar
+
+## lazy function showBelowname
+### Arguments:
+- score (`int`)
+- display (`rawjson`)
+### Return:
+- void
+
+
+Show the scoreboard on the belowname
+
+## lazy function showTeamSidebar
+### Arguments:
+- score (`int`)
+- color (`string`)
+- display (`rawjson`)
+### Return:
+- void
+
+
+Show the scoreboard on the sidebar of team of color `color`
+
+## lazy function hideList
+### Arguments:
+
+### Return:
+- void
+
+
+Hide the scoreboard on the list
+
+## lazy function hideSidebar
+### Arguments:
+
+### Return:
+- void
+
+
+Hide the scoreboard on the sidebar
+
+## lazy function hideBelowname
+### Arguments:
+
+### Return:
+- void
+
+
+Hide the scoreboard on the belowname
+
+## lazy function hideTeamSidebar
+### Arguments:
+- $color (`string`)
+### Return:
+- void
+
+
+Hide the scoreboard on the sidebar of team of color `color`
 
 

@@ -6,6 +6,7 @@ from mc.Entity import Entity as EntityObject
 import mc.java.display.DisplayItem
 import cmd.entity as entity
 import utils.Process
+import math.Vector3
 
 typedef int Texture
 typedef int Animation
@@ -43,6 +44,10 @@ BedrockEntity SpriteEntity{
         }
     }
 }
+
+"""
+Add a texture to the sprite list and return the texture id
+"""
 def lazy Texture addTexture(string name){
     Compiler.insert($name,name){
         [java_rp=true] jsonfile models.item.spr_$name{
@@ -173,6 +178,7 @@ typedef EntityObject Parent for mcbedrock, DisplayItem Parent for mcjava
 class Sprite extends Parent with sl:sprite for mcbedrock{
     int animationTick
     Animation animation
+    Texture texture
 
     [compile.order=999999]
     public @sprite.tick void main(){
@@ -188,14 +194,19 @@ class Sprite extends Parent with sl:sprite for mcbedrock{
             animation = anim
             animationTick = 0
         }
+        animator.start()
     }
     public lazy void setTexture(int index){
+        texture = index
         if (Compiler.isBedrock()){
             entity.event("set_sprite_"+index)
         }
         if (Compiler.isJava()){
             setItem("minecraft:acacia_boat", {CustomModelData: index})
         }
+    }
+    public int getTexture(){
+        return texture
     }
     public lazy void setSize(float scale){
         if (Compiler.isJava()){
@@ -205,6 +216,71 @@ class Sprite extends Parent with sl:sprite for mcbedrock{
             setScale(scale)
         }
     }
+}
+class Particle extends Sprite{
+    Vector3 motion
+    Vector3 acceleration
+    int age
+    def lazy __init__(Animation animation, Vector3 motion, Vector3 acceleration){
+        setAnimation(animation)
+        setCenterBillboard()
+        this.motion = motion
+        this.acceleration = acceleration
+    } 
+    def lazy __init__(Animation animation, (float,float,float) motion, (float,float,float) acceleration){
+        setAnimation(animation)
+        setCenterBillboard()
+        this.motion = new Vector3(motion[0], motion[1], motion[2])
+        this.acceleration = new Vector3(acceleration[0], acceleration[1], acceleration[2])
+    }
+    def lazy __init__(Animation animation, float mx, float my, float mz, float ax, float ay, float az){
+        setAnimation(animation)
+        setCenterBillboard()
+        this.motion = (mx, my, mz)
+        this.acceleration = (ax, ay, az)
+    }
+
+    public virtual int getMaxAge(){
+        return 60
+    }
+    public @sprite.tick void main2(){
+        float dx = motion.x
+        while(dx > 0.1)at(@s){
+            dx -= 0.1
+            /tp @s ~0.1 ~ ~
+        }
+        while(dx < -0.1)at(@s){
+            dx += 0.1
+            /tp @s ~-0.1 ~ ~
+        }
+
+        float dy = motion.y
+        while(dy > 0.1)at(@s){
+            dy -= 0.1
+            /tp @s ~ ~0.1 ~
+        }
+        while(dy < -0.1)at(@s){
+            dy += 0.1
+            /tp @s ~ ~-0.1 ~
+        }
+
+        float dz = motion.z
+        while(dz > 0.1)at(@s){
+            dz -= 0.1
+            /tp @s ~ ~ ~0.1
+        }
+        while(dz < -0.1)at(@s){
+            dz += 0.1
+            /tp @s ~ ~ ~-0.1
+        }
+
+        motion += acceleration
+        age += 1
+
+        if (age >= getMaxAge()){
+            /kill
+        }
+    } 
 }
 
 Process animator{

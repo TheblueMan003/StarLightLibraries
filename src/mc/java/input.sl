@@ -200,3 +200,96 @@ forgenerate($e,continuousEventList){
         }
     }
 }
+
+private enum Buttons(string button, string name){
+    StoneButton("minecraft:stone_button", "StoneButton"),
+    OakButton("minecraft:oak_button", "OakButton"),
+    BirchButton("minecraft:birch_button", "BirchButton"),
+    SpruceButton("minecraft:spruce_button", "SpruceButton"),
+    DarkOakButton("minecraft:dark_oak_button", "DarkOakButton"),
+    AcaciaButton("minecraft:acacia_button", "AcaciaButton"),
+    JungleButton("minecraft:jungle_button", "JungleButton"),
+    MangroveButton("minecraft:mangrove_button", "MangroveButton"),
+    CherryButton("minecraft:cherry_button", "CherryButton"),
+    PolishedBlackstoneButton("minecraft:polished_blackstone_button", "PolishedBlackstoneButton"),
+    WarpedButton("minecraft:warped_button", "WarpedButton"),
+    CrimsonButton("minecraft:crimson_button", "CrimsonButton")
+}
+
+private enum button_facing{north, east, west, south}
+private enum button_face{floor,wall,ceiling}
+
+forgenerate($button,Buttons){
+    def lazy on$button(mcposition pos, void=>void func){
+        at(pos){
+            if (block(~ ~ ~, "$button.button[powered=true]")){
+                func()
+                forgenerate($facin,button_facing){
+                    forgenerate($face,button_face){
+                        if (block(~ ~ ~, "$button.button[face=$face,facing=$facin,powered=true]")){
+                            /setblock ~ ~ ~ $button.button[face=$face,facing=$facin,powered=false]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}private enum PressurePlates(string plate, string name){
+    StonePressurePlate("minecraft:stone_pressure_plate", "StonePressurePlate"),
+    OakPressurePlate("minecraft:oak_pressure_plate", "OakPressurePlate"),
+    BirchPressurePlate("minecraft:birch_pressure_plate", "BirchPressurePlate"),
+    SprucePressurePlate("minecraft:spruce_pressure_plate", "SprucePressurePlate"),
+    DarkOakPressurePlate("minecraft:dark_oak_pressure_plate", "DarkOakPressurePlate"),
+    AcaciaPressurePlate("minecraft:acacia_pressure_plate", "AcaciaPressurePlate"),
+    JunglePressurePlate("minecraft:jungle_pressure_plate", "JunglePressurePlate"),
+    MangrovePressurePlate("minecraft:mangrove_pressure_plate", "MangrovePressurePlate"),
+    CherryPressurePlate("minecraft:cherry_pressure_plate", "CherryPressurePlate"),
+    PolishedBlackstonePressurePlate("minecraft:polished_blackstone_pressure_plate", "PolishedBlackstonePressurePlate"),
+    WarpedPressurePlate("minecraft:warped_pressure_plate", "WarpedPressurePlate"),
+    CrimsonPressurePlate("minecraft:crimson_pressure_plate", "CrimsonPressurePlate")
+}
+
+forgenerate($plate,PressurePlates){
+    def lazy on$plate(mcposition pos, void=>void func){
+        at(pos){
+            if (block(~ ~ ~, "$plate.pressure_plate[powered=true]")){
+                func()                
+                /setblock ~ ~ ~ $plate.pressure_plate[powered=false]
+            }
+        }
+    }
+}
+
+def lazy onScroll(int=>void f){
+    import mc.java.nbt
+    scoreboard int slot
+    int x
+    int scrollDelta = 0
+    nbt.getNBT(x, "SelectedItem")
+    
+    if (x == slot){
+        scrollDelta = 0
+        slot = x
+    }
+    if (x < slot){
+        if(x < 3 && slot >= 7){
+            scrollDelta = 1
+        }
+        else{
+            scrollDelta = -1
+        }
+        
+        slot = x
+    }
+    if (x > slot){
+        if(x >= 7 && slot < 3){
+            scrollDelta = -1
+        }
+        else{
+            scrollDelta = 1
+        }
+        
+        slot = x
+    }
+    if (scrollDelta != 0)f(scrollDelta)
+}

@@ -1,28 +1,87 @@
-## ` lazy void set()`
+## lazy function set
+### Arguments:
+
+### Return:
+- void
+
+
 Set the spawnpoint of the player to the current position.
 
-## ` lazy void set(mcposition $pos)`
+## lazy function set
+### Arguments:
+- $pos (`mcposition`)
+### Return:
+- void
+
+
 Set the spawnpoint of the player to the given position.
 
-## ` lazy void set(mcposition $pos, float $angle)`
+## lazy function set
+### Arguments:
+- $pos (`mcposition`)
+- $angle (`float`)
+### Return:
+- void
+
+
 Set the spawnpoint of the player to the given position and angle. (JAVA ONLY)
 
-## ` lazy void set(entity $player)`
+## lazy function set
+### Arguments:
+- player (`entity`)
+### Return:
+- void
+
+
 Set the spawnpoint of the player to the current position.
 
-## ` lazy void set(entity $player, mcposition $pos)`
+## lazy function set
+### Arguments:
+- player (`entity`)
+- pos (`mcposition`)
+### Return:
+- void
+
+
 Set the spawnpoint of the player to the given position.
 
-## ` lazy void set(entity $player, mcposition $pos, float $angle)`
+## lazy function set
+### Arguments:
+- player (`entity`)
+- pos (`mcposition`)
+- angle (`float`)
+### Return:
+- void
+
+
 Set the spawnpoint of the player to the given position and angle. (JAVA ONLY)
 
-## ` lazy void setWorld()`
+## lazy function setWorld
+### Arguments:
+
+### Return:
+- void
+
+
 Set the world spawnpoint to the current position.
 
-## ` lazy void setWorld(mcposition $pos)`
+## lazy function setWorld
+### Arguments:
+- $pos (`mcposition`)
+### Return:
+- void
+
+
 Set the world spawnpoint to the given position.
 
-## ` lazy void setWorld(mcposition $pos, float $angle)`
+## lazy function setWorld
+### Arguments:
+- $pos (`mcposition`)
+- $angle (`float`)
+### Return:
+- void
+
+
 Set the world spawnpoint to the given position and angle. (JAVA ONLY)
 
 

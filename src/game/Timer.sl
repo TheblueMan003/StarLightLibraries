@@ -133,6 +133,15 @@ struct Timer{
     }
     
     """
+    Add level to the timer
+    """
+    def addLevel(){
+        if (level < maxlevel){
+            level ++
+        }
+    }
+
+    """
     Set the level of the timer
     """
     def setLevel(int l){
@@ -142,6 +151,13 @@ struct Timer{
         else{
             level = maxlevel
         }
+    }
+
+    """
+    Get the level of the timer
+    """
+    int getLevel(){
+        return level
     }
 
     """
@@ -159,10 +175,38 @@ struct Timer{
     }
 
     """
+    Get the death count of the timer
+    """
+    int getDeath(){
+        return(death)
+    }
+
+    """
+    Set the death count of the timer
+    """
+    def setDeath(int d){
+        death = d
+    }
+
+    """
     Add a kill to the timer
     """
     def addKill(){
         kill++
+    }
+
+    """
+    Get the kill of the timer
+    """
+    int getKill(){
+        return(kill)
+    }
+
+    """
+    Set the kill of the timer
+    """
+    def setKill(int k){
+        kill = k
     }
 
     """

@@ -186,7 +186,15 @@ float ceil(float value){
 Clamp the value between a and b
 """
 T clamp<T>(T value, T a, T b){
-    return(math.max(math.min(value, a),b))
+    if (value < a){
+        return(a)
+    }
+    else if (value > b){
+        return(b)
+    }
+    else{
+        return(value)
+    }
 }
 
 """

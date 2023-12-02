@@ -26,6 +26,11 @@
                 "url": "random/1_0_0.sl",
                 "filename": "random.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "random/1_1_0.sl",
+                "filename": "random.sl",
+                "version": "1.1.0"
             }
         ],
         "standard": [
@@ -108,6 +113,16 @@
                 "url": "cmd/block/1_0_0.sl",
                 "filename": "cmd/block.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/block/1_1_0.sl",
+                "filename": "cmd/block.sl",
+                "version": "1.1.0"
+            },
+            {
+                "url": "cmd/block/1_2_0.sl",
+                "filename": "cmd/block.sl",
+                "version": "1.2.0"
             }
         ],
         "cmd.bossbar": [
@@ -148,6 +163,11 @@
                 "url": "cmd/gamemode/1_0_0.sl",
                 "filename": "cmd/gamemode.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/gamemode/1_1_0.sl",
+                "filename": "cmd/gamemode.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.gamerule": [
@@ -162,6 +182,11 @@
                 "url": "cmd/particles/1_0_0.sl",
                 "filename": "cmd/particles.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/particles/1_1_0.sl",
+                "filename": "cmd/particles.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.schedule": [
@@ -176,6 +201,11 @@
                 "url": "cmd/score/1_0_0.sl",
                 "filename": "cmd/score.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/score/1_1_0.sl",
+                "filename": "cmd/score.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.sound": [
@@ -195,6 +225,11 @@
                 "url": "cmd/spawnpoint/1_0_0.sl",
                 "filename": "cmd/spawnpoint.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/spawnpoint/1_1_0.sl",
+                "filename": "cmd/spawnpoint.sl",
+                "version": "1.1.0"
             }
         ],
         "cmd.structure": [
@@ -389,6 +424,11 @@
                 "url": "mc/inventory/1_0_0.sl",
                 "filename": "mc/inventory.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "mc/inventory/1_0_1.sl",
+                "filename": "mc/inventory.sl",
+                "version": "1.0.1"
             }
         ],
         "mc.player": [
@@ -883,6 +923,176 @@
             {
                 "url": "standard/color/1_0_0.sl",
                 "filename": "standard/color.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "game.language": [
+            {
+                "url": "game/language/1_0_0.sl",
+                "filename": "game/language.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "maps.theblueman003.textbox": [
+            {
+                "url": "maps/theblueman003/textbox/1_0_0.sl",
+                "filename": "maps/theblueman003/textbox.sl",
+                "version": "1.0.0",
+                "resourcespack": [
+                    {
+                        "url": "resourcespack/theblueman_textbox/java/1_0_0.zip",
+                        "filename": "theblueman_textbox",
+                        "version": "1.0.0",
+                        "game": "java"
+                    }
+                ]
+            }
+        ],
+        "utils.nbt": [
+            {
+                "url": "utils/nbt/1_0_0.sl",
+                "filename": "utils/nbt.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "utils.blocktags": [
+            {
+                "url": "utils/blocktags/1_0_0.sl",
+                "filename": "utils/blocktags.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.animatedentity": [
+            {
+                "url": "mc/animatedentity/1_0_0.sl",
+                "filename": "mc/animatedentity.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "cmd": [
+            {
+                "url": "cmd/1_0_0.sl",
+                "filename": "cmd.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "utils.shape": [
+            {
+                "url": "utils/shape/1_0_0.sl",
+                "filename": "utils/shape.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "game.wallraycast": [
+            {
+                "url": "game/wallraycast/1_0_0.sl",
+                "filename": "game/wallraycast.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.collections.list": [
+            {
+                "url": "standard/collections/list/1_0_0.sl",
+                "filename": "standard/collections/list.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.collections.dictionnary": [
+            {
+                "url": "standard/collections/dictionnary/1_0_0.sl",
+                "filename": "standard/collections/dictionnary.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "cmd.ride": [
+            {
+                "url": "cmd/ride/1_0_0.sl",
+                "filename": "cmd/ride.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.wasd": [
+            {
+                "url": "mc/wasd/1_0_0.sl",
+                "filename": "mc/wasd.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mathd": [
+            {
+                "url": "mathd/1_0_0.sl",
+                "filename": "mathd.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "mc.java.interaction": [
+            {
+                "url": "mc/java/interaction/1_0_0.sl",
+                "filename": "mc/java/interaction.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.string": [
+            {
+                "url": "standard/string/1_0_0.sl",
+                "filename": "standard/string.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.json": [
+            {
+                "url": "standard/json/1_0_0.sl",
+                "filename": "standard/json.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.char": [
+            {
+                "url": "standard/char/1_0_0.sl",
+                "filename": "standard/char.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.byte": [
+            {
+                "url": "standard/byte/1_0_0.sl",
+                "filename": "standard/byte.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "maps.theblueman003.title": [
+            {
+                "url": "maps/theblueman003/title/1_0_0.sl",
+                "filename": "maps/theblueman003/title.sl",
+                "version": "1.0.0",
+                "resourcespack": [
+                    {
+                        "url": "resourcespack/theblueman_title/java/1_0_0.zip",
+                        "filename": "theblueman_title",
+                        "version": "1.0.0",
+                        "game": "java"
+                    }
+                ]
+            }
+        ],
+        "mc.spectatelock": [
+            {
+                "url": "mc/spectatelock/1_0_0.sl",
+                "filename": "mc/spectatelock.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "maps.theblueman003.leaderboard": [
+            {
+                "url": "maps/theblueman003/leaderboard/1_0_0.sl",
+                "filename": "maps/theblueman003/leaderboard.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "__extensions__": [
+            {
+                "url": "__extensions__/1_0_0.sl",
+                "filename": "__extensions__.sl",
                 "version": "1.0.0"
             }
         ]

@@ -1,31 +1,114 @@
-## ` lazy void setJobSite(int x, int y, int z)`
+## lazy function setJobSite
+### Arguments:
+- x (`int`)
+- y (`int`)
+- z (`int`)
+### Return:
+- void
+
+
 Set the job site of the current villager to the given coordinates in the overworld.
 
-## ` lazy void setJobSite(int x, int y, int z, mcobject dim)`
+## lazy function setJobSite
+### Arguments:
+- x (`int`)
+- y (`int`)
+- z (`int`)
+- dim (`mcobject`)
+### Return:
+- void
+
+
 Set the job site of the current villager to the given coordinates and dimension.
 
-## ` lazy void clearTrade()`
+## lazy function clearTrade
+### Arguments:
+
+### Return:
+- void
+
+
 Clear the trade offers of the current villager.
 
-## ` lazy void addTrade(mcobject item1, int count1, mcobject res, int countr)`
+## lazy function addTrade
+### Arguments:
+- item1 (`mcobject`)
+- count1 (`int`)
+- res (`mcobject`)
+- countr (`int`)
+### Return:
+- void
+
+
 Add a trade offer to the current villager.
 
-## ` lazy void addTrade(int max, mcobject item1, int count1, mcobject res, int countr)`
+## lazy function addTrade
+### Arguments:
+- max (`int`)
+- item1 (`mcobject`)
+- count1 (`int`)
+- res (`mcobject`)
+- countr (`int`)
+### Return:
+- void
+
+
 Add a trade offer to the current villager.
 
-## ` lazy void addTrade(mcobject item1, int count1, mcobject item2, int count2, mcobject res, int countr)`
+## lazy function addTrade
+### Arguments:
+- item1 (`mcobject`)
+- count1 (`int`)
+- item2 (`mcobject`)
+- count2 (`int`)
+- res (`mcobject`)
+- countr (`int`)
+### Return:
+- void
+
+
 Add a trade offer to the current villager.
 
-## ` lazy void addTrade(int max, mcobject item1, int count1, mcobject item2, int count2, mcobject res, int countr)`
+## lazy function addTrade
+### Arguments:
+- max (`int`)
+- item1 (`mcobject`)
+- count1 (`int`)
+- item2 (`mcobject`)
+- count2 (`int`)
+- res (`mcobject`)
+- countr (`int`)
+### Return:
+- void
+
+
 Add a trade offer to the current villager.
 
-## ` lazy void setProfession(mcobject prof)`
+## lazy function setProfession
+### Arguments:
+- prof (`mcobject`)
+### Return:
+- void
+
+
 Set the profession of the current villager.
 
-## ` lazy void setLevel(int level)`
+## lazy function setLevel
+### Arguments:
+- level (`int`)
+### Return:
+- void
+
+
 Set the level of the current villager.
 
-## ` lazy void setBiome(mcobject biome)`
+## lazy function setBiome
+### Arguments:
+- biome (`mcobject`)
+### Return:
+- void
+
+
 Set the biome of the current villager.
 
 

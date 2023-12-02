@@ -1,10 +1,32 @@
-## ` lazy void open(entity $npc, entity $player)`
+## lazy function open
+### Arguments:
+- $npc (`entity`)
+- $player (`entity`)
+### Return:
+- void
+
+
 Open a dialogue of an NPC to a player
 
-## ` lazy void open(entity $npc, entity $player, string $sceneName)`
+## lazy function open
+### Arguments:
+- $npc (`entity`)
+- $player (`entity`)
+- $sceneName (`string`)
+### Return:
+- void
+
+
 Open a dialogue of scene `sceneName` of an NPC to a player
 
-## ` lazy void change(entity $npc, string $sceneName)`
+## lazy function change
+### Arguments:
+- $npc (`entity`)
+- $sceneName (`string`)
+### Return:
+- void
+
+
 Change the dialogue of an NPC to a scene
 
 

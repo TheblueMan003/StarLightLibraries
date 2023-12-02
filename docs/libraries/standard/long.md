@@ -1,25 +1,73 @@
 # struct long
 Long implementation using 4 integers
 
-## ` void __init__(int n0, int n1, int n2, int n3)`
+## function __init__
+### Arguments:
+- n0 (`int`)
+- n1 (`int`)
+- n2 (`int`)
+- n3 (`int`)
+### Return:
+- void
 
 
-## ` void __init__(int n0, int n1, int n2)`
 
 
-## ` void __init__(int n0, int n1)`
+## function __init__
+### Arguments:
+- n0 (`int`)
+- n1 (`int`)
+- n2 (`int`)
+### Return:
+- void
 
 
-## ` void __init__(int n0)`
 
 
-## ` long? __add__(long? other)`
+## function __init__
+### Arguments:
+- n0 (`int`)
+- n1 (`int`)
+### Return:
+- void
 
 
-## ` long? __add__(int other)`
 
 
-## ` long? __mult__(int other)`
+## function __init__
+### Arguments:
+- n0 (`int`)
+### Return:
+- void
+
+
+
+
+## function __add__
+### Arguments:
+- other (`long?`)
+### Return:
+- long?
+
+
+
+
+## function __add__
+### Arguments:
+- other (`int`)
+### Return:
+- long?
+
+
+
+
+## function __mult__
+### Arguments:
+- other (`int`)
+### Return:
+- long?
+
+
 
 
 

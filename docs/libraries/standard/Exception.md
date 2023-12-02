@@ -1,7 +1,13 @@
 # public class Exception
 
 
-## ` lazy void __init__(string message)`
+## lazy function __init__
+### Arguments:
+- message (`string`)
+### Return:
+- void
+
+
 
 
 

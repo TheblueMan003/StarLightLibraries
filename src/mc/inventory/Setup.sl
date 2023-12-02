@@ -166,6 +166,16 @@ template Setup{
             }
         }
     }
+    if (Compiler.isBedrock()){
+        def [compile.order=9999] @inventory_setup.reload reload(){
+            at(@a){
+                if (@s in applyTo && @s[gamemode=!creative]){
+                    inventory.clear()
+                    @templates.reload()
+                }
+            }
+        }
+    }
 
     def add(){
         if (!(@s in applyTo)){
@@ -182,6 +192,7 @@ template Setup{
     def lazy remove(){
         applyTo -= @s
         inventory.clear()
+        @inventory_setup.reload()
     }
     def lazy remove(entity e){
         with(e){

@@ -161,23 +161,23 @@ def lazy despawn(entity e = @s){
 """
 Swap the position of the entity $a and $b
 """
-def lazy swap(entity $a, entity $b){
+def lazy swap(entity a, entity b){
 	if (Compiler.isBedrock()){
-		with($a, true){
+		with(a, true){
 			/summon sl:marker ~ ~ ~
-			/tp @s $b
+			at(b)./tp @s ~ ~ ~ ~ ~
 		}
-		as($b){
+		as(b){
 			/tp @s @e[type=sl:marker,c=1]
 		}
 		/kill @e[type=sl:marker,c=1]
 	}
 	if (Compiler.isJava()){
-		with($a, true){
+		with(a, true){
 			/summon marker ~ ~ ~ {Tags:["trg"]}
-			/tp @s $b
+            at(b)./tp @s ~ ~ ~ ~ ~
 		}
-		as($b){
+		as(b){
 			/tp @s @e[type=marker,tag=trg,limit=1]
 		}
 		/kill @e[type=marker,tag=trg,limit=1]
@@ -309,25 +309,28 @@ def lazy angerAngaist(entity e1, entity e2){
 """
 Count the number of entity in e
 """
-[noReturnCheck=true] lazy int count(entity e){
-    _ret = 0
-    with(e)_ret++
+lazy int count(entity e){
+    int ret = 0
+    with(e)ret++
+    return ret
 }
 
 """
 Count the number of entity in e that match the predicate
 """
-[noReturnCheck=true] lazy int count(entity e, bool p){
-    _ret = 0
-    with(e,true,p)_ret++
+lazy int count(entity e, bool p){
+    int ret = 0
+    with(e, true, p)ret++
+    return ret
 }
 
 """
 Count the number of entity in e that match the predicate
 """
-[noReturnCheck=true] lazy int count(entity e, void=>bool p){
-    _ret = 0
-    with(e,true,p())_ret++
+lazy int count(entity e, void=>bool p){
+    int ret = 0
+    with(e,true,p())ret++
+    return ret
 }
 
 """
@@ -432,4 +435,25 @@ if (Compiler.isBedrock()){
             /event entity @s $event
         }
     }
+}
+
+"""
+Teleport the entity self to the entity other
+"""
+def lazy teleport(entity self, entity other){
+    as(self)at(other)./tp @s ~ ~ ~ ~ ~
+}
+
+"""
+Teleport the entity self to the position pos
+"""
+def lazy teleport(entity self, mcposition pos){
+    as(self)at(pos)./tp @s ~ ~ ~ ~ ~
+}
+
+"""
+Teleport the entity self to the position pos with pitch and yaw
+"""
+def lazy teleport(entity self, mcposition pos, float $yaw, float $pitch){
+    as(self)at(pos)./tp @s ~ ~ ~ $yaw $pitch
 }

@@ -1,69 +1,208 @@
 # struct Vector3
 
 
-## ` lazy void __init__(float x, float y, float z)`
+## lazy function __init__
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
 
 
-## ` lazy void __set__(float x, float y, float z)`
 
 
-## ` lazy void __set__(float other)`
+## lazy function __set__
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
 
 
-## ` lazy void __set__(Vector3? other)`
 
 
-## ` lazy void __add__(Vector3? other)`
+## lazy function __set__
+### Arguments:
+- other (`float`)
+### Return:
+- void
 
 
-## ` lazy void __add__(float x, float y, float z)`
 
 
-## ` lazy void __sub__(Vector3? other)`
+## lazy function __set__
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- void
 
 
-## ` lazy void __sub__(float x, float y, float z)`
 
 
-## ` lazy bool __eq__(Vector3? other)`
+## lazy function __add__
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- void
 
 
-## ` lazy bool __ne__(Vector3? other)`
 
 
-## ` float magnitude()`
+## lazy function __add__
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function __sub__
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- void
+
+
+
+
+## lazy function __sub__
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function __eq__
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- bool
+
+
+
+
+## lazy function __ne__
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- bool
+
+
+
+
+## function magnitude
+### Arguments:
+
+### Return:
+- float
+
+
 Return the magnitude of the vector
 
-## ` void normalize()`
+## function normalize
+### Arguments:
+
+### Return:
+- void
+
+
 Normalize the vector
 
-## ` float scalarProd(Vector3? other)`
+## function scalarProd
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- float
+
+
 Compute the scalar product with other
 
-## ` lazy void __mult__(float a)`
-
-
-## ` lazy void __mult__(Vector3? other)`
-
-
-## ` lazy void __mult__(float x, float y, float z)`
-
-
-## ` lazy void __div__(float a)`
-
-
-## ` lazy void __div__(Vector3? other)`
-
-
-## ` lazy void __div__(float x, float y, float z)`
+## lazy function __mult__
+### Arguments:
+- a (`float`)
+### Return:
+- void
 
 
 
 
-## ` Vector3? getPosition()`
+## lazy function __mult__
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- void
 
 
-## ` lazy void __at__(math.Vector3.Vector3? v, void=>void fct)`
+
+
+## lazy function __mult__
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function __div__
+### Arguments:
+- a (`float`)
+### Return:
+- void
+
+
+
+
+## lazy function __div__
+### Arguments:
+- other (`Vector3?`)
+### Return:
+- void
+
+
+
+
+## lazy function __div__
+### Arguments:
+- x (`float`)
+- y (`float`)
+- z (`float`)
+### Return:
+- void
+
+
+
+
+
+
+## function getPosition
+### Arguments:
+
+### Return:
+- Vector3?
+
+
+
+
+## lazy function __at__
+### Arguments:
+- v (`math.Vector3.Vector3?`)
+- fct (`void=>void`)
+### Return:
+- void
+
+
 
 
 

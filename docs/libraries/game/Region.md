@@ -1,16 +1,45 @@
-# template Region
+# template Region<>
 Template for an area of chunk that need to be loaded
 
-## ` lazy void init(int sx, int sy, int sz, int ex, int ey, int ez)`
+## lazy function init
+### Arguments:
+- sx (`int`)
+- sy (`int`)
+- sz (`int`)
+- ex (`int`)
+- ey (`int`)
+- ez (`int`)
+### Return:
+- void
 
 
-## ` void load()`
+
+
+## function load
+### Arguments:
+
+### Return:
+- void
+
+
 Load the region
 
-## ` void unload()`
+## function unload
+### Arguments:
+
+### Return:
+- void
+
+
 Unload the region
 
-## ` [noReturnCheck=true,__returnCheck__=true] bool isLoaded()`
+## [noReturnCheck=true,__returnCheck__=true] function isLoaded
+### Arguments:
+
+### Return:
+- bool
+
+
 Return if Loaded
 
 

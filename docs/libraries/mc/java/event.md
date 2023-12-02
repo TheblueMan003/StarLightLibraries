@@ -1,322 +1,1073 @@
-## ` lazy void=>void eventCall(string $advancement, void=>void func3)`
+## lazy function eventCall
+### Arguments:
+- $advancement (`string`)
+- func3 (`void=>void`)
+### Return:
+- void=>void
 
 
-## ` lazy void eventCreateAdvancment(string $name, json criteria, void=>void func)`
 
 
-## ` lazy void eventCreate(json criteria, void=>void func1)`
+## lazy function eventCreateAdvancment
+### Arguments:
+- $name (`string`)
+- criteria (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onBeeNestDestroy(void=>void func)`
 
 
-## ` lazy void onBeeNestDestroy(int nb, void=>void func)`
+## lazy function eventCreate
+### Arguments:
+- criteria (`json`)
+- func1 (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onBredAnimals(void=>void func)`
 
 
-## ` lazy void onBredAnimals(mcobject type, void=>void func)`
+## lazy function onBeeNestDestroy
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onBredAnimals(mcobject type, json nbt1, json nbt2, void=>void func)`
 
 
-## ` lazy void onDimensionChanged(void=>void func)`
+## lazy function onBeeNestDestroy
+### Arguments:
+- nb (`int`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onDimensionChanged(mcobject dest, void=>void func)`
 
 
-## ` lazy void onDimensionChanged(mcobject fro, mcobject dest, void=>void func)`
+## lazy function onBredAnimals
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onBrewPotion(void=>void func)`
 
 
-## ` lazy void onBrewPotion(mcobject effect, void=>void func)`
+## lazy function onBredAnimals
+### Arguments:
+- type (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onTick(void=>void func)`
 
 
-## ` lazy void onChanneledLightning(void=>void func)`
+## lazy function onBredAnimals
+### Arguments:
+- type (`mcobject`)
+- nbt1 (`json`)
+- nbt2 (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onChanneledLightning(mcobject entity, void=>void func)`
 
 
-## ` lazy void onChanneledLightning(mcobject entity, json nbt, void=>void func)`
+## lazy function onDimensionChanged
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onConstructBeacon(void=>void func)`
 
 
-## ` lazy void onConstructBeacon(int lvl, void=>void func)`
+## lazy function onDimensionChanged
+### Arguments:
+- dest (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onConsumeItem(void=>void func)`
 
 
-## ` lazy void onConsumeItem(mcobject $item, void=>void func)`
+## lazy function onDimensionChanged
+### Arguments:
+- fro (`mcobject`)
+- dest (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onConsumeItem(mcobject item, json nbt, void=>void func)`
 
 
-## ` lazy void onUsingItem(void=>void func)`
+## lazy function onBrewPotion
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onUsingItem(mcobject item, void=>void func)`
 
 
-## ` lazy void onUsingItem(mcobject item, json nbt, void=>void func)`
+## lazy function onBrewPotion
+### Arguments:
+- effect (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onUsedTotem(void=>void func)`
 
 
-## ` lazy void onUsedTotem(mcobject item, void=>void func)`
+## lazy function onTick
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onUsedTotem(mcobject item, mcobject nbt, void=>void func)`
 
 
-## ` lazy void onVillagerTrade(void=>void func)`
+## lazy function onChanneledLightning
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onVillagerTrade(mcobject item, void=>void func)`
 
 
-## ` lazy void onVillagerTrade(mcobject item, json nbt, void=>void func)`
+## lazy function onChanneledLightning
+### Arguments:
+- entity (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onCuredZombieVillager(void=>void func)`
 
 
-## ` lazy void onCuredZombieVillager(json nbt, void=>void func)`
+## lazy function onChanneledLightning
+### Arguments:
+- entity (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onEffect(mcobject $effect, void=>void func)`
 
 
-## ` lazy void onEffect(mcobject $effect, int amplifier, void=>void func)`
+## lazy function onConstructBeacon
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onEffect(mcobject $effect, int amplifier, int duration, void=>void func)`
 
 
-## ` lazy void onEnchant(void=>void func)`
+## lazy function onConstructBeacon
+### Arguments:
+- lvl (`int`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onEnchant(mcobject item, void=>void func)`
 
 
-## ` lazy void onEnchant(mcobject item, json nbt, void=>void func)`
+## lazy function onConsumeItem
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onEnterBlock(void=>void func)`
 
 
-## ` lazy void onEnterBlock(mcobject block, void=>void func)`
+## lazy function onConsumeItem
+### Arguments:
+- $item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onEntityHurtPlayer(void=>void func)`
 
 
-## ` lazy void onEntityHurtPlayer(mcobject ent, void=>void func)`
+## lazy function onConsumeItem
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onEntityHurtPlayer(mcobject ent, json nbt, void=>void func)`
 
 
-## ` lazy void onEntityKillPlayer(void=>void func)`
+## lazy function onUsingItem
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onEntityKillPlayer(mcobject ent, void=>void func)`
 
 
-## ` lazy void onEntityKillPlayer(mcobject ent, json nbt, void=>void func)`
+## lazy function onUsingItem
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onFillBucket(void=>void func)`
 
 
-## ` lazy void onFishingRodHooked(void=>void func)`
+## lazy function onUsingItem
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onFishingRodHooked(mcobject ent, void=>void func)`
 
 
-## ` lazy void onFishingRodHooked(mcobject ent, json nbt, void=>void func)`
+## lazy function onUsedTotem
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onHeroOfTheVillager(void=>void func)`
 
 
-## ` lazy void onInventoryChanged(void=>void func)`
+## lazy function onUsedTotem
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onInventoryFull(void=>void func)`
 
 
-## ` lazy void onItemDurabilityChanged(void=>void func)`
+## lazy function onUsedTotem
+### Arguments:
+- item (`mcobject`)
+- nbt (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onItemDurabilityChanged(mcobject item, void=>void func)`
 
 
-## ` lazy void onItemDurabilityChanged(mcobject item, json nbt, void=>void func)`
+## lazy function onVillagerTrade
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onItemUsedOnBlock(void=>void func)`
 
 
-## ` lazy void onItemUsedOnBlock(mcobject item, void=>void func)`
+## lazy function onVillagerTrade
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onItemUsedOnBlock(mcobject item, json nbt, void=>void func)`
 
 
-## ` lazy void onItemUsedOnBlock(mcobject item, json nbt, mcobject block, void=>void func)`
+## lazy function onVillagerTrade
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onBiome(mcobject biome, void=>void func)`
 
 
-## ` lazy void onLevivation(void=>void func)`
+## lazy function onCuredZombieVillager
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onLightningStrike(void=>void func)`
 
 
-## ` lazy void onGenerateLoot(void=>void func)`
+## lazy function onCuredZombieVillager
+### Arguments:
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onKilledByCrossbow(void=>void func)`
 
 
-## ` lazy void onPlacedBlock(void=>void func)`
+## lazy function onEffect
+### Arguments:
+- $effect (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onPlacedBlock(mcobject block, void=>void func)`
 
 
-## ` lazy void onHurtEntity(void=>void func)`
+## lazy function onEffect
+### Arguments:
+- $effect (`mcobject`)
+- amplifier (`int`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onHurtEntity(mcobject ent, void=>void func)`
 
 
-## ` lazy void onHurtEntity(int $ent, int $nbt, void=>void func)`
+## lazy function onEffect
+### Arguments:
+- $effect (`mcobject`)
+- amplifier (`int`)
+- duration (`int`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onInteractWithEntity(void=>void func)`
 
 
-## ` lazy void onInteractWithEntity(mcobject ent, void=>void func)`
+## lazy function onEnchant
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onInteractWithEntity(mcobject ent, json nbt, void=>void func)`
 
 
-## ` lazy void onKillEntity(void=>void func)`
+## lazy function onEnchant
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onKillEntity(mcobject ent, void=>void func)`
 
 
-## ` lazy void onKillEntity(mcobject ent, json nbt, void=>void func)`
+## lazy function onEnchant
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onSummonEntity(void=>void func)`
 
 
-## ` lazy void onSummonEntity(mcobject ent, void=>void func)`
+## lazy function onEnterBlock
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onSummonEntity(mcobject ent, json nbt, void=>void func)`
 
 
-## ` lazy void onTameEntity(void=>void func)`
+## lazy function onEnterBlock
+### Arguments:
+- block (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onTameEntity(mcobject ent, void=>void func)`
 
 
-## ` lazy void onTameEntity(mcobject ent, json nbt, void=>void func)`
+## lazy function onEntityHurtPlayer
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onReciepeUnlock(void=>void func)`
 
 
-## ` lazy void onReciepeUnlock(string reciepe, void=>void func)`
+## lazy function onEntityHurtPlayer
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onShotCrossbow(void=>void func)`
 
 
-## ` lazy void onShotCrossbow(mcobject item, void=>void func)`
+## lazy function onEntityHurtPlayer
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onShotCrossbow(mcobject item, json nbt, void=>void func)`
 
 
-## ` lazy void onSleep(void=>void func)`
+## lazy function onEntityKillPlayer
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onSlideDownBlock(void=>void func)`
 
 
-## ` lazy void onSlideDownBlock(mcobject block, void=>void func)`
+## lazy function onEntityKillPlayer
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onRide(void=>void func)`
 
 
-## ` lazy void onVoluntaryExile(void=>void func)`
+## lazy function onEntityKillPlayer
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onLookingAtEntity(mcobject ent, void=>void func)`
 
 
-## ` lazy void onLookingAtEntity(mcobject ent, json nbt, void=>void func)`
+## lazy function onFillBucket
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onTargetHit(void=>void func)`
 
 
-## ` lazy void onTargetHit(int power, void=>void func)`
+## lazy function onFishingRodHooked
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onTargetHit(mcobject proj, int power, void=>void func)`
 
 
-## ` lazy void onUsedEnderEye(void=>void func)`
+## lazy function onFishingRodHooked
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onUsedEnderEye(int distance, void=>void func)`
 
 
-## ` lazy void onUsedEnderEye(int dMin, int dMax, void=>void func)`
+## lazy function onFishingRodHooked
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onThrownItemPickupByEntity(void=>void func)`
 
 
-## ` lazy void onThrownItemPickupByEntity(mcobject ent, void=>void func)`
+## lazy function onHeroOfTheVillager
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onThrownItemPickupByEntity(mcobject ent, mcobject item, void=>void func)`
 
 
-## ` lazy void onThrownItemPickupByEntity(mcobject ent, json nbt_entity, mcobject item, void=>void func)`
+## lazy function onInventoryChanged
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
 
 
-## ` lazy void onThrownItemPickupByEntity(mcobject ent, json nbt_entity, mcobject item, json nbt_item, void=>void func)`
 
 
-## ` lazy void onVillage(void=>void func)`
+## lazy function onInventoryFull
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onItemDurabilityChanged
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onItemDurabilityChanged
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onItemDurabilityChanged
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onItemUsedOnBlock
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onItemUsedOnBlock
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onItemUsedOnBlock
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onItemUsedOnBlock
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- block (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onBiome
+### Arguments:
+- biome (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onLevivation
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onLightningStrike
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onGenerateLoot
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onKilledByCrossbow
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onPlacedBlock
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onPlacedBlock
+### Arguments:
+- block (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onHurtEntity
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onHurtEntity
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onHurtEntity
+### Arguments:
+- $ent (`int`)
+- $nbt (`int`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onInteractWithEntity
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onInteractWithEntity
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onInteractWithEntity
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onKillEntity
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onKillEntity
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onKillEntity
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onSummonEntity
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onSummonEntity
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onSummonEntity
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onTameEntity
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onTameEntity
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onTameEntity
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onReciepeUnlock
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onReciepeUnlock
+### Arguments:
+- reciepe (`string`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onShotCrossbow
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onShotCrossbow
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onShotCrossbow
+### Arguments:
+- item (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onSleep
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onSlideDownBlock
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onSlideDownBlock
+### Arguments:
+- block (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onRide
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onVoluntaryExile
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onLookingAtEntity
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onLookingAtEntity
+### Arguments:
+- ent (`mcobject`)
+- nbt (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onTargetHit
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onTargetHit
+### Arguments:
+- power (`int`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onTargetHit
+### Arguments:
+- proj (`mcobject`)
+- power (`int`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onUsedEnderEye
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onUsedEnderEye
+### Arguments:
+- distance (`int`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onUsedEnderEye
+### Arguments:
+- dMin (`int`)
+- dMax (`int`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onThrownItemPickupByEntity
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onThrownItemPickupByEntity
+### Arguments:
+- ent (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onThrownItemPickupByEntity
+### Arguments:
+- ent (`mcobject`)
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onThrownItemPickupByEntity
+### Arguments:
+- ent (`mcobject`)
+- nbt_entity (`json`)
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onThrownItemPickupByEntity
+### Arguments:
+- ent (`mcobject`)
+- nbt_entity (`json`)
+- item (`mcobject`)
+- nbt_item (`json`)
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onVillage
+### Arguments:
+- func (`void=>void`)
+### Return:
+- void
+
+
+
+
+## lazy function onUsingItem
+### Arguments:
+- item (`mcobject`)
+- func (`void=>void`)
+### Return:
+- void
+
+
 
 
 

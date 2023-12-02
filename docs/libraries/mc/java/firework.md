@@ -1,25 +1,73 @@
-## ` void red()`
+## function red
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void orange()`
 
 
-## ` void yellow()`
+## function orange
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void lime()`
 
 
-## ` void aqua()`
+## function yellow
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void blue()`
 
 
-## ` void purple()`
+## function lime
+### Arguments:
+
+### Return:
+- void
 
 
-## ` void white()`
+
+
+## function aqua
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function blue
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function purple
+### Arguments:
+
+### Return:
+- void
+
+
+
+
+## function white
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

@@ -1,34 +1,34 @@
 package cmd.tag
 
-def lazy add(string $tag){
-    /tag @s add $tag
+def macro add(string tag){
+    /tag @s add $(tag)
 }
 
-def lazy add(entity selector, string $tag){
+def macro add(entity selector, string tag){
     with(selector){
-        /tag @s add $tag
+        /tag @s add $(tag)
     }
 }
 
 
-def lazy remove(string $tag){
-    /tag @s remove $tag
+def macro remove(string tag){
+    /tag @s remove $(tag)
 }
-def lazy remove(entity selector, string $tag){
+def macro remove(entity selector, string tag){
     with(selector){
-        /tag @s remove $tag
+        /tag @s remove $(tag)
     }
 }
 
 
-def lazy unique(string $tag){
-    /tag @e[tag=$tag] remove $tag
-    /tag @s add $tag
+def macro unique(string tag){
+    /tag @e[tag=$(tag)] remove $(tag)
+    /tag @s add $(tag)
 }
-def lazy unique(entity selector, string $tag){
-    /tag @e[tag=$tag] remove $tag
+def macro unique(entity selector, string tag){
+    /tag @e[tag=$(tag)] remove $(tag)
     with(selector){
-        /tag @s add $tag
+        /tag @s add $(tag)
     }
 }
 

@@ -95,4 +95,8 @@ struct bint{
         value = other
         value %= bound
     }
+    lazy void __set__(json other){
+        value = other
+        value %= bound
+    }
 }

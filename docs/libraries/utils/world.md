@@ -1,7 +1,19 @@
-## ` lazy void no_drop()`
+## lazy function no_drop
+### Arguments:
+
+### Return:
+- void
 
 
-## ` lazy void kill_drop()`
+
+
+## lazy function kill_drop
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

@@ -1,7 +1,19 @@
-## ` ticking void main()`
+## ticking function main
+### Arguments:
+
+### Return:
+- void
 
 
-## ` ticking void main()`
+
+
+## ticking function main
+### Arguments:
+
+### Return:
+- void
+
+
 
 
 

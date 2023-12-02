@@ -1,43 +1,130 @@
-## ` lazy void play(string name)`
+## lazy function play
+### Arguments:
+- name (`string`)
+### Return:
+- void
+
+
 Play the music with the given name
 
-## ` lazy void add(string name, string file, int min, int sec)`
+## lazy function add
+### Arguments:
+- name (`string`)
+- file (`string`)
+- min (`int`)
+- sec (`int`)
+### Return:
+- void
+
+
 Add a new music track with the given name, file, and lengthfile must be inside the music folder
 
-## `public void stop()`
+## public function stop
+### Arguments:
+
+### Return:
+- void
+
+
 Stop the music
 
-## `public void stopForAll()`
+## public function stopForAll
+### Arguments:
+
+### Return:
+- void
+
+
 Stop the music for all players
 
-## `public void pause()`
+## public function pause
+### Arguments:
+
+### Return:
+- void
+
+
 Pause the music
 
-## `public void pauseForAll()`
+## public function pauseForAll
+### Arguments:
+
+### Return:
+- void
+
+
 Pause the music for all players
 
-## `public void continue()`
+## public function continue
+### Arguments:
+
+### Return:
+- void
+
+
 Continue the music
 
-## `public void continueForAll()`
+## public function continueForAll
+### Arguments:
+
+### Return:
+- void
+
+
 Continue the music for all players
 
-## `public void disablePlayer()`
+## public function disablePlayer
+### Arguments:
+
+### Return:
+- void
+
+
 Disable the music for the player
 
-## `public void enablePlayer()`
+## public function enablePlayer
+### Arguments:
+
+### Return:
+- void
+
+
 Enable the music for the player
 
-## `public void togglePlayer()`
+## public function togglePlayer
+### Arguments:
+
+### Return:
+- void
+
+
 Toggle the music for the player
 
-## `public void disableGlobal()`
+## public function disableGlobal
+### Arguments:
+
+### Return:
+- void
+
+
 Disable the music for all players
 
-## `public void enableGlobal()`
+## public function enableGlobal
+### Arguments:
+
+### Return:
+- void
+
+
 Enable the music for all players
 
-## `public void toggleGlobal()`
+## public function toggleGlobal
+### Arguments:
+
+### Return:
+- void
+
+
 Toggle the music for all players
 
 
