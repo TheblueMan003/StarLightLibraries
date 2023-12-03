@@ -1095,6 +1095,13 @@
                 "filename": "__extensions__.sl",
                 "version": "1.0.0"
             }
+        ],
+        "cmd.fog": [
+            {
+                "url": "cmd/fog/1_0_0.sl",
+                "filename": "cmd/fog.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }
