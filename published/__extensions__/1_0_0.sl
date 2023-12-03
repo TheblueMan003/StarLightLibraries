@@ -102,7 +102,7 @@ extension entity{
 
 extension string{
     def int standard.string.length(string s) from standard.string as length
-    def string standard.string.substring(string s, int start, int end) from standard.string as substring
+    def string standard.string.substring(string s, int start, int length) from standard.string as substring
     def bool standard.string.contains(string s, string other) from standard.string as contains
     def bool standard.string.startsWith(string s, string other) from standard.string as startsWith
     def bool standard.string.endsWith(string s, string other) from standard.string as endsWith

@@ -988,6 +988,11 @@
                 "url": "standard/collections/list/1_0_0.sl",
                 "filename": "standard/collections/list.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "standard/collections/list/1_0_1.sl",
+                "filename": "standard/collections/list.sl",
+                "version": "1.0.1"
             }
         ],
         "standard.collections.dictionnary": [
@@ -1030,6 +1035,11 @@
                 "url": "standard/string/1_0_0.sl",
                 "filename": "standard/string.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "standard/string/1_0_1.sl",
+                "filename": "standard/string.sl",
+                "version": "1.0.1"
             }
         ],
         "standard.json": [
@@ -1087,6 +1097,11 @@
                 "url": "__extensions__/1_0_0.sl",
                 "filename": "__extensions__.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "__extensions__/1_0_1.sl",
+                "filename": "__extensions__.sl",
+                "version": "1.0.1"
             }
         ],
         "cmd.fog": [
