@@ -578,13 +578,6 @@
                 "version": "1.0.0"
             }
         ],
-        "random.perlin": [
-            {
-                "url": "random/perlin/1_0_0.sl",
-                "filename": "random/perlin.sl",
-                "version": "1.0.0"
-            }
-        ],
         "standard.exception": [
             {
                 "url": "standard/exception/1_0_0.sl",
@@ -1100,6 +1093,27 @@
             {
                 "url": "cmd/fog/1_0_0.sl",
                 "filename": "cmd/fog.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "standard.collections.set": [
+            {
+                "url": "standard/collections/set/1_0_0.sl",
+                "filename": "standard/collections/set.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "random.perlin1d": [
+            {
+                "url": "random/perlin1d/1_0_0.sl",
+                "filename": "random/perlin1d.sl",
+                "version": "1.0.0"
+            }
+        ],
+        "random.perlin2d": [
+            {
+                "url": "random/perlin2d/1_0_0.sl",
+                "filename": "random/perlin2d.sl",
                 "version": "1.0.0"
             }
         ]
