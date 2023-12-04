@@ -65,7 +65,7 @@ int length(string value){
 Check if a string starts with another string.
 """
 bool startsWith(string source, string value){
-    return equals(substring(source, length(value)), value)
+    return equals(substring(source, 0, length(value)), value)
 }
 
 """
