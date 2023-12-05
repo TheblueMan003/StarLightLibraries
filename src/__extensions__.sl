@@ -89,7 +89,6 @@ extension entity{
     def game.score.forEachOrdered(entity sel, int field, bool ascending, void=>void action) from game.score as forEachOrdered
     def game.score.onNewHighScore(entity sel, int field, int previous, void=>void action) from game.score as onNewHighScore
     def game.score.onNewLowScore(entity sel, int field, int previous, void=>void action) from game.score as onNewLowScore
-    def cmd.entity.teleport(entity sel, entity loc) from cmd.entity as teleport
 
     def cmd.tag.add(entity sel, string tag) from cmd.tag as tag.add
     def cmd.tag.remove(entity sel, string tag) from cmd.tag as tag.remove
