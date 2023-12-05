@@ -1,6 +1,7 @@
 package _
 
 import standard.collections.List
+import standard::print
 
 extension entity{
     def cmd.effect.absorption(entity sel) from cmd.effect as effect.absorption
