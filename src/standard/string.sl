@@ -193,7 +193,7 @@ Return the index of `value` in `source` starting from the end.
 """
 int lastIndexOf(string source, string value){
     int ret = -1
-    int i = source.length() - value.length()
+    int i = length(source) - length(value)
     while (source != "" && ret == -1 && i < maxIterations){
         if (endsWith(source, value)){
             ret = i
