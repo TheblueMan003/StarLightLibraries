@@ -141,6 +141,7 @@ struct ListIterator<V>{
         return ret
     }
 
+    [noReturnCheck=true]
     int size(){
         Compiler.cmdstore(_ret){
             Compiler.insert($value, Compiler.getStorage(data)){
