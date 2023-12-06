@@ -1131,6 +1131,13 @@
                 "filename": "random/perlin2d.sl",
                 "version": "1.0.0"
             }
+        ],
+        "runtime.executer": [
+            {
+                "url": "runtime/executer/1_0_0.sl",
+                "filename": "runtime/executer.sl",
+                "version": "1.0.0"
+            }
         ]
     }
 }

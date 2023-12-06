@@ -3,30 +3,30 @@ package standard.collections.List
 struct List<V>{
     json data
 
-    def this(){
+    void this(){
         this.data = []
     }
 
-    def macro V get(int key){
+    macro V get(int key){
         return this.data["[$(key)]"]
     }
 
-    def lazy V __get__(int key){
+    lazy V __get__(int key){
         return get(key)
     }
 
-    def set(int key, V value){
-        def macro inner(int a){
+    void set(int key, V value){
+        macro void inner(int a){
             this.data["[$(a)]"] = value
         }
         inner(key)
     }
 
-    def lazy __set__(int key, V value){
+    lazy void __set__(int key, V value){
         set(key, value)
     }
 
-    def add(V value){
+    void add(V value){
         this.data >:= value
     }
 
@@ -45,7 +45,7 @@ struct List<V>{
     }
     
     if (Compiler.isEqualitySupported<V>()){
-        def remove(V value){
+        void remove(V value){
             json tmp = []
             for(int i = 0; i < this.size(); i++){
                 V v = get(i) 
@@ -58,7 +58,7 @@ struct List<V>{
         }
     }
 
-    def removeAt(int index){
+    void removeAt(int index){
         json tmp = []
         for(int i = 0; i < this.size(); i++){
             V v = get(i) 
@@ -71,7 +71,7 @@ struct List<V>{
     }
 
     if (Compiler.isEqualitySupported<V>()){
-        def removeAll(V=>bool pred){
+        void removeAll(V=>bool pred){
             json tmp = []
             for(int i = 0; i < this.size(); i++){
                 V v = get(i) 
@@ -108,7 +108,43 @@ struct List<V>{
         }
     }
 
-    def clear(){
+    void clear(){
         this.data = []
+    }
+
+    ListIterator<V> iterator(){
+        return new ListIterator<V>(data)
+    }
+}
+
+struct ListIterator<V>{
+    json data
+    int index
+
+    void this(json data){
+        this.data = data
+        this.index = 0
+    }
+
+    macro V get(int index){
+        return this.data["[$(index)]"]
+    }
+
+    bool hasNext(){
+        return index < size()
+    }
+
+    V next(){
+        V ret = get(index)
+        this.index++
+        return ret
+    }
+
+    int size(){
+        Compiler.cmdstore(_ret){
+            Compiler.insert($value, Compiler.getStorage(data)){
+                /data get $value
+            }
+        }
     }
 }
