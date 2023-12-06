@@ -117,4 +117,9 @@ extension string{
     def string standard.string.trim(string s) from standard.string as trim
     def string standard.string.reverse(string s) from standard.string as reverse
     def List<string> standard.string.split(string s, string separator) from standard.string as split
+    def StringIterator standard.string.iterator(json s) from standard.string as iterator
+}
+
+extension json{
+    def JsonIterator standard.json.iterator(json s) from standard.json as iterator
 }

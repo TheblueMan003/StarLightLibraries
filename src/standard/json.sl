@@ -26,3 +26,42 @@ bool equals(json a, json b){
         return false
     }
 }
+
+struct JsonIterator{
+    json data
+    int index
+
+    void this(json data){
+        this.data = data
+        this.index = 0
+    }
+
+    macro json get(int index){
+        return this.data["[$(index)]"]
+    }
+
+    bool hasNext(){
+        return index < size()
+    }
+
+    json next(){
+        json ret = get(index)
+        this.index++
+        return ret
+    }
+
+    int size(){
+        Compiler.cmdstore(_ret){
+            Compiler.insert($value, Compiler.getStorage(data)){
+                /data get $value
+            }
+        }
+    }
+}
+
+"""
+Return a json iterator
+"""
+JsonIterator iterator(json a){
+    return new JsonIterator(a)
+}

@@ -30,6 +30,7 @@ struct List<V>{
         this.data >:= value
     }
 
+    [noReturnCheck=true]
     int size(){
         Compiler.cmdstore(_ret){
             Compiler.insert($value, Compiler.getStorage(data)){

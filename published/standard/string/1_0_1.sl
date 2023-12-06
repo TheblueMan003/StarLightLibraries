@@ -289,3 +289,30 @@ List<string> split(string source, string value){
     ret.add(current)
     return ret
 }
+
+struct StringIterator{
+    string data
+    int index
+
+    void this(string data){
+        this.data = data
+        this.index = 0
+    }
+
+    bool hasNext(){
+        return index < length(data)
+    }
+
+    json next(){
+        json ret = charAt(data, index)
+        this.index++
+        return ret
+    }
+}
+
+"""
+Return a string iterator
+"""
+StringIterator iterator(json a){
+    return new StringIterator(a)
+}
