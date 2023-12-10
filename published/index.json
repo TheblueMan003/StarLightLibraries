@@ -130,6 +130,11 @@
                 "url": "cmd/bossbar/1_0_0.sl",
                 "filename": "cmd/bossbar.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/bossbar/1_0_1.sl",
+                "filename": "cmd/bossbar.sl",
+                "version": "1.0.1"
             }
         ],
         "cmd.difficulty": [
@@ -251,6 +256,11 @@
                 "url": "cmd/team/1_0_0.sl",
                 "filename": "cmd/team.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "cmd/team/1_0_1.sl",
+                "filename": "cmd/team.sl",
+                "version": "1.0.1"
             }
         ],
         "cmd.time": [

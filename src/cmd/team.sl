@@ -70,7 +70,7 @@ def lazy empty(mcobject $name){
     /team empty $name
 }
 
-def lazy delete(mcobject $name){
+def lazy remove(mcobject $name){
     /team remove $name
 }
 
@@ -177,7 +177,11 @@ struct Team{
         empty(id)
     }
     
-    def lazy delete(){
-        delete(id)
+    def lazy remove(){
+        remove(id)
+    }
+
+    def lazy operator delete(){
+        remove(id)
     }
 }

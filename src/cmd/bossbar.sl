@@ -10,7 +10,7 @@ def lazy create(mcobject $name, rawjson $display){
 """
 Delete the bossbar with `name`
 """
-def lazy delete(mcobject $name){
+def lazy remove(mcobject $name){
     /bossbar remove $name
 }
 
@@ -154,8 +154,15 @@ struct Bossbar{
     """
     Delete the bossbar
     """
-    def lazy delete(){
-        delete(id)
+    def lazy remove(){
+        remove(id)
+    }
+
+    """
+    Delete the bossbar
+    """
+    def lazy operator delete(){
+        remove(id)
     }
     
     """

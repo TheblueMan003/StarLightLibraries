@@ -45,18 +45,16 @@ struct List<V>{
         }
     }
     
-    if (Compiler.isEqualitySupported<V>()){
-        void remove(V value){
-            json tmp = []
-            for(int i = 0; i < this.size(); i++){
-                V v = get(i) 
-                if(v != value){
-                    tmp >:= v
-                }
+    void remove(V value){
+        json tmp = []
+        for(int i = 0; i < this.size(); i++){
+            V v = get(i) 
+            if(v != value){
+                tmp >:= v
             }
-
-            this.data = tmp
         }
+
+        this.data = tmp
     }
 
     void removeAt(int index){
@@ -71,42 +69,36 @@ struct List<V>{
         this.data = tmp
     }
 
-    if (Compiler.isEqualitySupported<V>()){
-        void removeAll(V=>bool pred){
-            json tmp = []
-            for(int i = 0; i < this.size(); i++){
-                V v = get(i) 
-                if(!pred(v)){
-                    tmp >:= v
-                }
+    void removeAll(V=>bool pred){
+        json tmp = []
+        for(int i = 0; i < this.size(); i++){
+            V v = get(i) 
+            if(!pred(v)){
+                tmp >:= v
             }
-
-            this.data = tmp
         }
+
+        this.data = tmp
     }
 
-    if (Compiler.isEqualitySupported<V>()){
-        bool contains(V value){
-            bool ret = false
-            for(int i = 0; i < this.size() && !ret; i++){
-                if(get(i) == value){
-                    ret = true
-                }
+    bool contains(V value){
+        bool ret = false
+        for(int i = 0; i < this.size() && !ret; i++){
+            if(get(i) == value){
+                ret = true
             }
-            return ret
         }
+        return ret
     }
 
-    if (Compiler.isEqualitySupported<V>()){
-        int indexOf(V value){
-            int ret = -1
-            for(int i = 0; i < this.size() && ret == -1; i++){
-                if(get(i) == value){
-                    ret = i
-                }
+    int indexOf(V value){
+        int ret = -1
+        for(int i = 0; i < this.size() && ret == -1; i++){
+            if(get(i) == value){
+                ret = i
             }
-            return ret
         }
+        return ret
     }
 
     void clear(){
