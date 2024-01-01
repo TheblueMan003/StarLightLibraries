@@ -6,7 +6,7 @@ if (Compiler.isBedrock){
     """
     int range(int x, int y){
         int ret
-        Compiler.random(ret, -2147483648, 2147483647)
+        Compiler.random(ret, 0, 2147483646)
         ret %= (y - x)
         ret += x
         return ret
@@ -16,7 +16,7 @@ if (Compiler.isBedrock){
     """
     lazy float range(float x, float y){
         float ret
-        Compiler.random(ret, -2147483648, 2147483647)
+        Compiler.random(ret, 0, 2147483646)
         ret %= (y - x)
         ret += x
         return ret
