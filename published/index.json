@@ -31,6 +31,11 @@
                 "url": "random/1_1_0.sl",
                 "filename": "random.sl",
                 "version": "1.1.0"
+            },
+            {
+                "url": "random/1_2_0.sl",
+                "filename": "random.sl",
+                "version": "1.2.0"
             }
         ],
         "standard": [

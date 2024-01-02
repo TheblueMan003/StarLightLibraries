@@ -52,6 +52,19 @@ if (Compiler.isJava){
 }
 
 """
+Return a random element from `value`
+"""
+lazy T choice<T>(json value){
+    lazy int length = Compiler.length(value)
+    int index = random.range(0, length)
+    T ret
+    switch(index for k in value){
+        k.index -> ret = k
+    }
+    return ret
+}
+
+"""
 Return a random number between 0 and `x` (excluded)
 """
 lazy int range(int x){
