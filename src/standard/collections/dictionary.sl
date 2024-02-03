@@ -1,10 +1,13 @@
 package standard.collections.Dictionnary
 
-struct Dictionnary<K, V>{
+struct Dictionary<K, V>{
     json data
 
-    def __init__(){
+    def lazy this(){
         this.data = {}
+    }
+    def lazy this(json values){
+        this.data = values
     }
 
     def macro V get(K key){
@@ -15,5 +18,8 @@ struct Dictionnary<K, V>{
             this.data["$(a)"] = value
         }
         inner(key)
+    }
+    def clear(){
+        this.data = {}
     }
 }

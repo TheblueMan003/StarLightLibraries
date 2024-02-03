@@ -1008,13 +1008,23 @@
                 "url": "standard/collections/list/1_0_1.sl",
                 "filename": "standard/collections/list.sl",
                 "version": "1.0.1"
+            },
+            {
+                "url": "standard/collections/list/1_0_2.sl",
+                "filename": "standard/collections/list.sl",
+                "version": "1.0.2"
             }
         ],
-        "standard.collections.dictionnary": [
+        "standard.collections.dictionary": [
             {
-                "url": "standard/collections/dictionnary/1_0_0.sl",
-                "filename": "standard/collections/dictionnary.sl",
+                "url": "standard/collections/dictionary/1_0_0.sl",
+                "filename": "standard/collections/dictionary.sl",
                 "version": "1.0.0"
+            },
+            {
+                "url": "standard/collections/dictionary/1_0_1.sl",
+                "filename": "standard/collections/dictionary.sl",
+                "version": "1.0.1"
             }
         ],
         "cmd.ride": [
