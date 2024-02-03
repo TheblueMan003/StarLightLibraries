@@ -1,7 +1,7 @@
 package _
 
 import standard.collections.List
-import standard.collections.Dictionnary
+import standard.collections.Dictionary
 import standard.collections.Set
 import math.Vector2
 import math.Vector2Int
